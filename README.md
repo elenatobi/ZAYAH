@@ -13,6 +13,17 @@ All positions and dimentions are measured and calculated in pixels and rotations
 All nodes, including shapes, containers and layouts, will be drawn onto the main node container `Graphwin`
 
 ## Quick look (ZAYAH for JavaScript)
+
+### Step 1. Import ZAYAH framework
+```html
+<script src = "ZAYAH.js"></script>
+```
+or
+```js
+import {Rect, GraphWin, ...} from "ZAYAH.js"
+```
+
+### Step 2. Implement the framework with your business
 ```js
 let graphWin = new GraphWin("myCanvas");
 
@@ -26,5 +37,26 @@ let rect1 = new Rect({
     color: "#df5d86"
 });
 
-graphWin.push(rect1)
+graphWin.push(rect1);
+```
+
+## Quick look (ZAYAH for Python (PyGame))
+```python
+from ZAYAH import *
+import math
+
+graph_win = GraphWin();
+
+rect1 = Rect(
+    x = 100,
+    y = 150,
+    width = 75,
+    height = 95,
+    skewX = 12,
+    rotation = math.pi/3,
+    color = "#df5d86"
+)
+
+graph_win.push(rect1)
+
 ```
