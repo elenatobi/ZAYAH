@@ -7,7 +7,7 @@ ZAYAH is a GUI and Graphics framework dedicated for high-performance node-nestin
 * Container: The group of nodes. All of the nodes in one group apply the same behavior (Translating, scaling, resizing, layer number chaning, color updating and so on).
 * Node: The concepts of shape and layout are collectively called as node.
 
-## Measurements and units
+## Important key features
 All positions and dimentions are measured and calculated in pixels and rotations in radians. If your users or clients request other units e.g. centimeters for positions or degreeds for angles, conversion between ZAYAH and custom business interface must be implemented by your own, as ZAYAH framework currently does not support this feature.
 
 All nodes, including shapes, containers and layouts, will be drawn onto the main node container `Graphwin`
