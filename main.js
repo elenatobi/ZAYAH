@@ -834,7 +834,3 @@ r1.bind("touch:end", function(evt){
     console.log("touch:end", evt.x, evt.y)
 })
 */
-
-window.g = g;
-window.r1 = r1;
-window.r2 = r2;
