@@ -30,157 +30,48 @@ function isFunction(value){
     return typeof value === 'function';
 }
 
-function genMouseSimple(name){
-    return function (event, hitList, _){
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire(name, {x: x, y: y});
-            }
+function getRandomColor() {
+    let r = Math.round(Math.random() * 255);
+    let g = Math.round(Math.random() * 255);
+    let b = Math.round(Math.random() * 255);
+    return `rgb(${r},${g},${b})`;
+}
+
+function genMouse(name){
+    return function(event, hit, col){
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let target = col.get(pixel[0], pixel[1], pixel[2]);
+        if (target){
+            target.fire(name, {x: x, y: y});
         }
     }
 }
 
-function genMouseOutside(name){
-    return function (event, hitList, _){
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (!hitNode.isInside(x, y)){
-                hitNode.fire(name, {x: x, y: y});
-            }
-        }
-    }
-}
-
-function genMouseOver(name){
-    return function (event, hitList, _){
-        let {offsetX: x, offsetY: y} = event;
-        for (let i = hitList.length - 1; i >= 0; i--){
-            let hitNode = hitList[i];
-            if (hitNode.isInside(x, y)){
-                hitNode.fire(name, {x: x, y: y});
-                break;
+function genMouseOut(name){
+    return function(event, hit, col){
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let target = col.get(pixel[0], pixel[1], pixel[2]);
+        for (let color in col.colorsHash){
+            let node = col.colorsHash[color];
+            if (node != target){
+                node.fire(name, {x: x, y: y});
             }
         }
     }
 }
 
 const eventMap = {
-    'mouse:move': ["mousemove", genMouseSimple('mouse:move')],
-    'mouse:down': ["mousedown", genMouseSimple('mouse:down')],
-    'mouse:up': ['mouseup', genMouseSimple('mouse:up')],
-    'mouse:move:out': ["mousemove", genMouseOutside('mouse:move:out')],
-    'mouse:down:out': ["mousedown", genMouseOutside('mouse:down:out')],
-    'mouse:up:out': ['mouseup', genMouseOutside('mouse:up:out')],
-    'mouse:move:over': ["mousemove", genMouseOver('mouse:move:over')],
-    'mouse:down:over': ["mousedown", genMouseOver('mouse:down:over')],
-    'mouse:up:over': ['mouseup', genMouseOver('mouse:up:over')],
-    'drag:start': ['mousedown', function(event, hitList, cargo){
-        if (cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:start", {x: x, y: y});
-            }
-        }
-        cargo.isDragging = true;
-    }],
-    'drag:move': ['mousemove', function(event, hitList, cargo){
-        if (!cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:move", {x: x, y: y});
-            }
-        }
-    }],
-    'drag:end': ['mouseup', function(event, hitList, cargo){
-        if (!cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:end", {x: x, y: y});
-            }
-        }
-        cargo.isDragging = false;
-    }],
-    'drag:start:over': ['mousedown', function(event, hitList, cargo){
-        if (cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:start:over", {x: x, y: y});
-            }
-        }
-        cargo.isDragging = true;
-    }],
-    'drag:move:over': ['mousemove', function(event, hitList, cargo){
-        if (!cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:move:over", {x: x, y: y});
-            }
-        }
-    }],
-    'drag:end:over': ['mouseup', function(event, hitList, cargo){
-        if (!cargo.isDragging){
-            return;
-        }
-        let {offsetX: x, offsetY: y} = event;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("drag:end:over", {x: x, y: y});
-            }
-        }
-        cargo.isDragging = false;
-    }],
-    'touch:start': ['touchstart', function(event, hitList, cargo){
-        let touch = event.touches[0];
-        let rect = event.target.getBoundingClientRect();
-        let x = touch.clientX - rect.left;
-        let y = touch.clientY - rect.top;
-        cargo.x = x;
-        cargo.y = y;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("touch:start", {x: x, y: y});
-            }
-        }
-    }],
-    'touch:move': ['touchmove', function(event, hitList, cargo){
-        let touch = event.touches[0];
-        let rect = event.target.getBoundingClientRect();
-        let x = touch.clientX - rect.left;
-        let y = touch.clientY - rect.top;
-        cargo.x = x;
-        cargo.y = y;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("touch:move", {x: x, y: y});
-            }
-        }
-    }],
-    'touch:end': ['touchend', function(event, hitList, cargo){
-        let x = cargo.x;
-        let y = cargo.y;
-        for (let hitNode of hitList){
-            if (hitNode.isInside(x, y)){
-                hitNode.fire("touch:end", {x: x, y: y});
-            }
-        }
-    }],
-};
+    "mousemove": ["mousemove", genMouse("mousemove")],
+    "mousedown": ["mousedown", genMouse("mousedown")],
+    "mouseup": ["mouseup", genMouse("mouseup")],
+    "mousemoveout": ["mousemove", genMouseOut("mousemoveout")],
+    "mousedownout": ["mousedown", genMouseOut("mousedownout")],
+    "mouseupout": ["mouseup", genMouseOut("mouseupout")],
+}
 
 class Transform {
     constructor(a = 1, b = 0, c = 0, d = 1, e = 0, f = 0) {
@@ -344,20 +235,55 @@ class Transform {
     }
 }
 
+class ColorKeyManager{
+    constructor(){
+        this.colorsHash = {};
+    }
+    
+    get(r, g, b){
+        let color = `rgb(${r},${g},${b})`;
+        let node = this.colorsHash[color];
+        if (node){
+            return node;
+        }
+        return null;
+    }
+    
+    assignColor(node){
+        let colorKey = getRandomColor();
+        if (this.colorsHash[colorKey]){
+            colorKey = getRandomColor();
+        }
+        node.colorKey = colorKey;
+        this.colorsHash[colorKey] = node;
+    }
+    
+    removeByColor(colorKey){
+        delete this.colorsHash[colorKey];
+    }
+}
+
 class Context {
     constructor(canvas = document.createElement("canvas")) {
         this.c = canvas;
-        this.ctx = this.c.getContext('2d');
+        this.ctx = this.c.getContext('2d', {willReadFrequently: true});
         this.dirty = true;
-        this.scale = window.devicePixelRatio;
     }
 
-    resize(width, height) {
-        this.c.width = width * this.scale;
-        this.c.height = height * this.scale;
+    sharpResize(width, height) {
+        let scale = window.devicePixelRatio;
+        this.c.width = width * scale;
+        this.c.height = height * scale;
         this.c.style.width = `${width}px`;
         this.c.style.height = `${height}px`;
-        this.ctx.scale(this.scale, this.scale);
+        this.ctx.scale(scale, scale);
+    }
+    
+    resize(width, height){
+        this.c.width = width;
+        this.c.height = height;
+        this.c.style.width = `${width}px`;
+        this.c.style.height = `${height}px`;
     }
 
     requireRefresh() {
@@ -466,50 +392,7 @@ class Context {
     }
     
     getImageData(x, y, width, height){
-        return this.ctx.getImageData(x, y, width, height).data;
-    }
-}
-
-class HitManager{
-    constructor(canvas){
-        this.c = canvas;
-        this.dirty = true;
-        this.nodes = [];
-        this.boundHandlers = {};
-        this.handlerCargo = {};
-    }
-    
-    hasBound(name){
-        return isFunction(this.boundHandlers[name]);
-    }
-    
-    start(name){
-        if (this.hasBound(name)){
-            return;
-        }
-        if (!eventMap[name]){
-            console.warn(`Oops, seems like ${name} is not implemented`);
-            return;
-        }
-        let [HTMLname, handler] = eventMap[name];
-        let nodes = this.nodes;
-        let cargo = this.handlerCargo;
-        let wrapper = function(event){
-            event.preventDefault();
-            if (nodes){
-                handler(event, nodes, cargo);
-            }
-        }
-        this.boundHandlers[name] = wrapper;
-        this.c.addEventListener(HTMLname, wrapper);
-    }
-    
-    clear(){
-        this.nodes = [];
-    }
-    
-    add(node){
-        this.nodes.push(node);
+        return this.ctx.getImageData(x, y, width, height);
     }
 }
 
@@ -518,7 +401,8 @@ class GraphWin {
         this.c = document.getElementById(n);
         this.ctx = new Context(this.c);
         this.hit = new Context();
-        this.hitManager = new HitManager(this.c);
+        this.col = new ColorKeyManager();
+        this.fps = 24;
         this.lowerNodes = [];
         this.start();
     }
@@ -533,13 +417,21 @@ class GraphWin {
                 gr.render(ctx);
                 ctx.dirty = false;
             }
-            if (hm.dirty){
-                for (let node of gr.lowerNodes){
-                    node.traverse(hm.add.bind(hm));
-                }
-                hm.dirty = false;
+        }, 1000 / this.fps);
+    }
+    
+    startEvent(name){
+        let gr = this;
+        let [eventName, handler] = eventMap[name];
+        let hit = this.hit;
+        let col = this.col;
+        this.c.addEventListener(eventName, function(event){
+            if (hit.dirty){
+                gr.renderHit(hit);
+                hit.dirty = false;
             }
-        }, 1000 / 24);
+            handler(event, hit, col);
+        });
     }
 
     render(ctx) {
@@ -549,12 +441,21 @@ class GraphWin {
         }
     }
     
+    renderHit(ctx){
+        ctx.clearAll();
+        for (let lowerNode of this.lowerNodes) {
+            lowerNode.renderHit(ctx);
+        }
+    }
+    
     requireRefresh(){
         this.ctx.requireRefresh();
+        this.hit.requireRefresh();
     }
 
     resize(width, height) {
-        this.ctx.resize(width, height);
+        this.ctx.sharpResize(width, height);
+        this.hit.resize(width, height);
     }
 
     add(node) {
@@ -565,19 +466,20 @@ class GraphWin {
 
 class Node {
     constructor() {
+        this.colorKey = "rgb(0, 0, 0)";
         this.fill = 'black';
         this.rotation = 0;
         this.stroke = 'transparent';
         this.lineWidth = 0;
         this.lineDash = SOLID;
         this.handlers = {};
-        this.hitContext = null;
         this.outerTransform = new Transform();
         this.__glob = null;
     }
 
     inject(glob) {
         this.__glob = glob;
+        this.__glob.col.assignColor(this);
     }
 
     requireRefresh() {
@@ -612,28 +514,19 @@ class Node {
         this.sceneFunc(ctx);
         ctx.restore();
     }
-
-    isInside(x, y) {
+    
+    renderHit(ctx) {
         if (!this.sceneFunc) {
-            return false;
+            return;
         }
-        if (!this.hitContext){
-            this.hitContext = new Context();
-        }
-        let ctx = this.hitContext;
-        //let ctx = this.__glob.hit;
-        if (ctx.dirty){
-            console.log("Hit dirty! Refreshing hit")
-            let [xP, yP] = this.pivot();
-            ctx.clearAll();
-            ctx.save();
-            ctx.transform(this.outerTransform);
-            ctx.rotate(this.rotation, xP, yP);
-            this.sceneFunc(ctx);
-            ctx.restore();
-            ctx.dirty = false;
-        }
-        return ctx.isPointInPath(x, y);
+        ctx.setFill(this.colorKey);
+        ctx.setStroke(this.colorKey);
+        ctx.setLineWidth(this.lineWidth);
+        let [x, y] = this.pivot();
+        ctx.save();
+        ctx.rotate(this.rotation, x, y);
+        this.sceneFunc(ctx);
+        ctx.restore();
     }
 
     fire(name, event) {
@@ -650,7 +543,7 @@ class Node {
             this.handlers[name].push(handler);
         }
         else{
-            this.__glob.hitManager.start(name);
+            this.__glob.startEvent(name);
             this.handlers[name] = [handler];
         }
     }
@@ -661,9 +554,6 @@ class Node {
         }
         let handlers = this.handlers[name];
         arrayRemoveByValue(handlers, handler);
-        if (arrayIsEmpty(handlers)){
-            delete this.handlers[name];
-        }
     }
 
     sceneFunc(ctx) {
@@ -793,44 +683,20 @@ g.add(r1);
 g.add(r2);
 
 
-r1.bind('mouse:move:over', function (evt) {
-    this.fill = "orange";
-    this.requireRefresh();
-});
-
-r1.bind('mouse:move:out', function(evt){
-    this.fill = "red";
-    this.requireRefresh()
+r1.bind("mousemove", function(evt){
+    if (this.fill != "orange"){
+        this.fill = "orange";
+        this.requireRefresh();
+    }
 })
 
 
-/*
-r2.bind('mouse:move:over', function (evt) {
-    console.log('mouse:down over 2');
-});
-*/
-
-
-/*
-r1.bind("touch:start", function(evt){
-    console.log("touch:start", evt.x, evt.y)
-})
-*/
-
-r1.bind('mouse:down', function (evt) {
-    console.log('mouse:down over 1');
-});
-
-r1.bind("touch:move", function(evt){
-    console.log("touch:move1", evt.x, evt.y)
+r1.bind("mousemoveout", function(evt){
+    if (this.fill != "red"){
+        this.fill = "red";
+        this.requireRefresh();
+    }
 })
 
-r2.bind("touch:move", function(evt){
-    console.log("touch:move2", evt.x, evt.y)
-})
-
-/*
-r1.bind("touch:end", function(evt){
-    console.log("touch:end", evt.x, evt.y)
-})
-*/
+window.g = g;
+window.r1 = r1;
