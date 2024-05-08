@@ -1,6 +1,8 @@
 # ZAYAH
 ZAYAH is a GUI and Graphics framework dedicated for high-performance node-nesting, layering, animation, rendering, filtering and event-handling, implemented usign both versions in Python (PyGame) and JavaScript (HTML5 canvas).
 
+***Important! This project is dedicated for educational purposes only.***
+
 ## Key concept definitions:
 * Shape: The geometry object displayed in canvas, include rectangle, line, ellipse and so on.
 * Single element: Only one element that can be displayed onto the canvas, including shapes, text and image.
