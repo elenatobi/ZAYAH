@@ -2,23 +2,27 @@ const VERTEX = 0;
 const CACHE = 1;
 
 const ROOT_INDEX = 0;
-const ROOT_NAME = "~";
+const ROOT_NAME = '~';
 
-function isNumber(value){
+function isNull(value) {
+    return value === null;
+}
+
+function isNumber(value) {
     return typeof value === 'number' && Number.isFinite(value);
 }
 
-function isDefined(value){
-    return typeof value !== 'undefined'
+function isDefined(value) {
+    return typeof value !== 'undefined';
 }
 
-function arrayHas(array, value){
+function arrayHas(array, value) {
     return array.indexOf(value) !== -1;
 }
 
-function arrayClear(array){
+function arrayClear(array) {
     let length = array.length;
-    for (let i = 0; i < length; i++){
+    for (let i = 0; i < length; i++) {
         array.pop();
     }
 }
@@ -26,169 +30,181 @@ function arrayClear(array){
 function deleteFromArray(array, value) {
     let i = 0;
     while (i < array.length) {
-    if (array[i] === value) {
-        array.splice(i, 1);
+        if (array[i] === value) {
+            array.splice(i, 1);
+        } else {
+            i++;
+        }
     }
-    else {
-        i++;
-    }
-  }
 }
 
-function arrayMove(array, index1, index2){
+function arrayMove(array, index1, index2) {
     array.splice(index2, 0, array.splice(index1, 1)[0]);
 }
 
-class Timeline{
-    constructor(){
+class Timeline {
+    constructor() {
         this.undoStack = [];
         this.redoStack = [];
     }
-    
-    action(value){
+
+    action(value) {
         this.undoStack.push(value);
         arrayClear(this.redoStack);
     }
-    
-    undo(){
+
+    undo() {
         let value = this.undoStack.pop();
         this.redoStack.push(value);
         return value;
     }
-    
-    redo(){
+
+    redo() {
         let value = this.redoStack.pop();
         this.undoStack.push(value);
         return value;
     }
 }
 
-class Graph{
-    constructor(data = {}){
+class Graph {
+    constructor(data = {}) {
         this.data = data;
     }
-    
-    hasOwnProperty(vertex){
+
+    hasOwnProperty(vertex) {
         return isDefined(this.data[vertex]);
     }
-    
-    getVertices(vertex){
-        if (!this.data[vertex]){
+
+    getVertices(vertex) {
+        if (!this.data[vertex]) {
             throw new Error(`No vertex named "${vertex}"`);
         }
         return this.data[vertex][VERTEX];
     }
-    
-    getCache(vertex){
-        if (!this.data[vertex]){
+
+    getCache(vertex) {
+        if (!this.data[vertex]) {
             throw new Error(`No vertex named "${vertex}"`);
         }
         return this.data[vertex][CACHE];
     }
-    
-    addVertex(vertex){
-        if (this.data[vertex]){
-            throw new Error("Vertex has been already added");
+
+    addVertex(vertex) {
+        if (this.data[vertex]) {
+            throw new Error('Vertex has been already added');
         }
         this.data[vertex] = [[], []];
     }
-    
-    addEdge(vertex1, vertex2, sortIndex = null){
+
+    addEdge(vertex1, vertex2, sortIndex = null) {
         let v1 = this.getVertices(vertex1);
-        if (arrayHas(v1, vertex2)){
+        if (arrayHas(v1, vertex2)) {
             throw new Error(`${vertex1} has already ${vertex2}`);
         }
-        if (sortIndex){
+        if (!isNull(sortIndex)) {
             v1.splice(sortIndex, 0, vertex2);
-        }
-        else{
+        } else {
             v1.push(vertex2);
         }
         this.getCache(vertex2).push(vertex1);
     }
-    
-    updateEdge(vertex1, vertex2, newVertex1){
+
+    updateEdge(vertex1, vertex2, newVertex1) {
         this.deleteEdge(vertex1, vertex2);
         this.addEdge(newVertex1, vertex2, null);
     }
-    
-    sortEdge(vertex1, vertex2, newSortId){
+
+    sortEdge(vertex1, vertex2, newSortId) {
         let v1 = this.getVertices(vertex1);
         let sortId = v1.indexOf(vertex2);
-        if (sortId === -1){
+        if (sortId === -1) {
             throw new Error(`No vertex named ${vertex2}`);
         }
         arrayMove(v1, sortId, newSortId);
     }
-    
-    deleteVertex(vertex){
-        for (let vertex1 of this.getCache(vertex)){
-deleteFromArray(this.getVertices(vertex1), vertex);
+
+    deleteVertex(vertex) {
+        for (let vertex1 of this.getCache(vertex)) {
+            deleteFromArray(this.getVertices(vertex1), vertex);
         }
-        for (let vertex2 of this.getVertices(vertex)){
+        for (let vertex2 of this.getVertices(vertex)) {
             deleteFromArray(this.getCache(vertex2), vertex);
         }
         delete this.data[vertex];
     }
-    
-    deleteEdge(vertex1, vertex2){
+
+    deleteEdge(vertex1, vertex2) {
         let v1 = this.getVertices(vertex1);
         let v2 = this.getCache(vertex2);
-        if (!arrayHas(v1, vertex2)){
+        if (!arrayHas(v1, vertex2)) {
             throw new Error(`${vertex1} has no ${vertex2}`);
         }
         deleteFromArray(v1, vertex2);
         deleteFromArray(v2, vertex1);
     }
-    
-    DFS(startVertex, handler, visited = new Set()){
+
+    DFS(startVertex, handler, visited = new Set()) {
         visited.add(startVertex);
         handler(startVertex);
-        for (let vertex of this.getVertices(startVertex)){
-            if (!visited.has(vertex)){
+        for (let vertex of this.getVertices(startVertex)) {
+            if (!visited.has(vertex)) {
                 this.DFS(vertex, handler, visited);
             }
         }
     }
-    
-    display(){
-        for (let property in this.data){
+
+    display() {
+        for (let property in this.data) {
             let [nodes, cache] = this.data[property];
-            console.log(property, "->", nodes, "/", cache);
+            console.log(property, '->', nodes, '/', cache);
         }
     }
 }
 
-class AuraEditor{
-    constructor(){
+class AuraEditor {
+    constructor() {
         this.graph = new Graph();
-        this.values = {ROOT_INDEX: ROOT_NAME};
+        this.values = {};
         this.idPath = [ROOT_INDEX];
         this.namePath = [ROOT_NAME];
         this.nextId = ROOT_INDEX + 1;
         this.graph.addVertex(ROOT_INDEX);
+        this.values[ROOT_INDEX] = ROOT_NAME;
     }
-    
-    getId(){
-        return this.idPath[this.idPath.length-1];
+
+    getId() {
+        return this.idPath[this.idPath.length - 1];
     }
-    
-    sourceId(srcId){
-        return srcId = srcId ? srcId : this.getId();
+
+    getPath() {
+        this.namePath.join('/');
     }
-    
-    addVertex(item, sortId=null, srcId = null){
+
+    sourceId(srcId) {
+        return (srcId = srcId ? srcId : this.getId());
+    }
+
+    addVertex(item, sortId = null, srcId = null) {
         srcId = this.sourceId(srcId);
         this.values[this.nextId] = item;
         this.graph.addVertex(this.nextId);
         this.graph.addEdge(srcId, this.nextId, sortId);
-        this.nextId ++;
+        this.nextId++;
     }
-    
-    list(srcId = null){
+
+    addEdge(srcId, destId, sortId = null) {
+        srcId = this.sourceId(srcId);
+        this.graph.addEdge(srcId, destId, sortId);
+    }
+
+    updateVertex(id, newItem) {
+        this.values[id] = newItem;
+    }
+
+    list(srcId = null) {
         srcId = this.sourceId(srcId);
         let result = [];
-        for (let id of this.graph.getVertices(srcId)){
+        for (let id of this.graph.getVertices(srcId)) {
             result.push([id, this.values[id]]);
         }
         return result;
@@ -212,7 +228,7 @@ g.display();
 g.sortEdge(1, 6, 1);
 g.display();
 let result = [];
-g.DFS(1, function(vertex){
+g.DFS(1, function (vertex) {
     result.push(vertex);
 });
 console.log(result);
