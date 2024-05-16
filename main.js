@@ -9,7 +9,7 @@ const TOUCHMOVE = 'touchmove';
 
 const SOLID = [];
 
-function arrayRemoveByValue(array, value){
+function arrayRemoveByValue(array, value) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === value) {
             array.splice(i, 1);
@@ -18,15 +18,15 @@ function arrayRemoveByValue(array, value){
     }
 }
 
-function arrayIsEmpty(array){
-    return (array.length === 0);
+function arrayIsEmpty(array) {
+    return array.length === 0;
 }
 
-function objectIsEmpty(object){
-    return (Object.keys(object).length === 0);
+function objectIsEmpty(object) {
+    return Object.keys(object).length === 0;
 }
 
-function isFunction(value){
+function isFunction(value) {
     return typeof value === 'function';
 }
 
@@ -37,41 +37,41 @@ function getRandomColor() {
     return `rgb(${r},${g},${b})`;
 }
 
-function genMouse(name){
-    return function(event, hit, col){
+function genMouse(name) {
+    return function (event, hit, col) {
         let x = event.offsetX;
         let y = event.offsetY;
         let pixel = hit.getImageData(x, y, 1, 1).data;
         let target = col.get(pixel[0], pixel[1], pixel[2]);
-        if (target){
-            target.fire(name, {x: x, y: y});
+        if (target) {
+            target.fire(name, { x: x, y: y });
         }
-    }
+    };
 }
 
-function genMouseOut(name){
-    return function(event, hit, col){
+function genMouseOut(name) {
+    return function (event, hit, col) {
         let x = event.offsetX;
         let y = event.offsetY;
         let pixel = hit.getImageData(x, y, 1, 1).data;
         let target = col.get(pixel[0], pixel[1], pixel[2]);
-        for (let color in col.colorsHash){
+        for (let color in col.colorsHash) {
             let node = col.colorsHash[color];
-            if (node != target){
-                node.fire(name, {x: x, y: y});
+            if (node != target) {
+                node.fire(name, { x: x, y: y });
             }
         }
-    }
+    };
 }
 
 const eventMap = {
-    "mousemove": ["mousemove", genMouse("mousemove")],
-    "mousedown": ["mousedown", genMouse("mousedown")],
-    "mouseup": ["mouseup", genMouse("mouseup")],
-    "mousemoveout": ["mousemove", genMouseOut("mousemoveout")],
-    "mousedownout": ["mousedown", genMouseOut("mousedownout")],
-    "mouseupout": ["mouseup", genMouseOut("mouseupout")],
-}
+    mousemove: ['mousemove', genMouse('mousemove')],
+    mousedown: ['mousedown', genMouse('mousedown')],
+    mouseup: ['mouseup', genMouse('mouseup')],
+    mousemoveout: ['mousemove', genMouseOut('mousemoveout')],
+    mousedownout: ['mousedown', genMouseOut('mousedownout')],
+    mouseupout: ['mouseup', genMouseOut('mouseupout')],
+};
 
 class Transform {
     constructor(a = 1, b = 0, c = 0, d = 1, e = 0, f = 0) {
@@ -235,38 +235,38 @@ class Transform {
     }
 }
 
-class ColorKeyManager{
-    constructor(){
+class ColorKeyManager {
+    constructor() {
         this.colorsHash = {};
     }
-    
-    get(r, g, b){
+
+    get(r, g, b) {
         let color = `rgb(${r},${g},${b})`;
         let node = this.colorsHash[color];
-        if (node){
+        if (node) {
             return node;
         }
         return null;
     }
-    
-    assignColor(node){
+
+    assignColor(node) {
         let colorKey = getRandomColor();
-        if (this.colorsHash[colorKey]){
+        if (this.colorsHash[colorKey]) {
             colorKey = getRandomColor();
         }
         node.colorKey = colorKey;
         this.colorsHash[colorKey] = node;
     }
-    
-    removeByColor(colorKey){
+
+    removeByColor(colorKey) {
         delete this.colorsHash[colorKey];
     }
 }
 
 class Context {
-    constructor(canvas = document.createElement("canvas")) {
+    constructor(canvas = document.createElement('canvas')) {
         this.c = canvas;
-        this.ctx = this.c.getContext('2d', {willReadFrequently: true});
+        this.ctx = this.c.getContext('2d', { willReadFrequently: true });
         this.dirty = true;
     }
 
@@ -278,8 +278,8 @@ class Context {
         this.c.style.height = `${height}px`;
         this.ctx.scale(scale, scale);
     }
-    
-    resize(width, height){
+
+    resize(width, height) {
         this.c.width = width;
         this.c.height = height;
         this.c.style.width = `${width}px`;
@@ -390,8 +390,8 @@ class Context {
     isPointInPath(x, y) {
         return this.ctx.isPointInPath(x, y);
     }
-    
-    getImageData(x, y, width, height){
+
+    getImageData(x, y, width, height) {
         return this.ctx.getImageData(x, y, width, height);
     }
 }
@@ -419,14 +419,14 @@ class GraphWin {
             }
         }, 1000 / this.fps);
     }
-    
-    startEvent(name){
+
+    startEvent(name) {
         let gr = this;
         let [eventName, handler] = eventMap[name];
         let hit = this.hit;
         let col = this.col;
-        this.c.addEventListener(eventName, function(event){
-            if (hit.dirty){
+        this.c.addEventListener(eventName, function (event) {
+            if (hit.dirty) {
                 gr.renderHit(hit);
                 hit.dirty = false;
             }
@@ -440,15 +440,15 @@ class GraphWin {
             lowerNode.render(ctx);
         }
     }
-    
-    renderHit(ctx){
+
+    renderHit(ctx) {
         ctx.clearAll();
         for (let lowerNode of this.lowerNodes) {
             lowerNode.renderHit(ctx);
         }
     }
-    
-    requireRefresh(){
+
+    requireRefresh() {
         this.ctx.requireRefresh();
         this.hit.requireRefresh();
     }
@@ -466,7 +466,7 @@ class GraphWin {
 
 class Node {
     constructor() {
-        this.colorKey = "rgb(0, 0, 0)";
+        this.colorKey = 'rgb(0, 0, 0)';
         this.fill = 'black';
         this.rotation = 0;
         this.stroke = 'transparent';
@@ -495,9 +495,14 @@ class Node {
     getBoundingRect() {
         throw new Error('.getBoundingRect() not implemented');
     }
-    
-    traverse(handler){
-        handler(this);
+
+    getRotateTransform() {
+        let transform = new Transform();
+        let [x, y] = this.pivot();
+        transform.translate(x, y);
+        transform.rotate(this.rotation);
+        transform.translate(-x, -y);
+        return transform;
     }
 
     render(ctx) {
@@ -514,14 +519,22 @@ class Node {
         this.sceneFunc(ctx);
         ctx.restore();
     }
-    
+
     renderHit(ctx) {
         if (!this.sceneFunc) {
             return;
         }
-        ctx.setFill(this.colorKey);
+        if (this.fill === 'transparent') {
+            ctx.setFill('transparent');
+        } else {
+            ctx.setFill(this.colorKey);
+        }
         ctx.setStroke(this.colorKey);
-        ctx.setLineWidth(this.lineWidth);
+        if (this.lineWidth < 5) {
+            ctx.setLineWidth(5);
+        } else {
+            ctx.setLineWidth(this.lineWidth);
+        }
         let [x, y] = this.pivot();
         ctx.save();
         ctx.rotate(this.rotation, x, y);
@@ -541,15 +554,14 @@ class Node {
     bind(name, handler) {
         if (this.handlers[name]) {
             this.handlers[name].push(handler);
-        }
-        else{
+        } else {
             this.__glob.startEvent(name);
             this.handlers[name] = [handler];
         }
     }
-    
-    unbind(name, handler){
-        if (!this.handlers[name]){
+
+    unbind(name, handler) {
+        if (!this.handlers[name]) {
             return;
         }
         let handlers = this.handlers[name];
@@ -570,6 +582,26 @@ class BoxNode extends Node {
 
     pivot() {
         return this.dim.point(0.5, 0.5);
+    }
+
+    getBoundingRect() {
+        let full = this.getRotateTransform().mul(this.dim);
+        let [p1x, p1y] = full.point(0, 0);
+        let [p2x, p2y] = full.point(0, 1);
+        let [p3x, p3y] = full.point(1, 0);
+        let [p4x, p4y] = full.point(1, 1);
+        let xMin = Math.min(p1x, p2x, p3x, p4x);
+        let yMin = Math.min(p1y, p2y, p3y, p4y);
+        let xMax = Math.max(p1x, p2x, p3x, p4x);
+        let yMax = Math.max(p1y, p2y, p3y, p4y);
+        return [xMin, yMin, xMax - xMin, yMax - yMin];
+    }
+
+    transform(transform) {
+        this.dim.rmul(this.getRotateTransform());
+        this.dim.rmul(transform);
+        this.dim.rmul(this.getRotateTransform().iinv());
+        this.requireRefresh();
     }
 
     set x(value) {
@@ -654,6 +686,15 @@ class Rect extends BoxNode {
     }
 }
 
+class Ellipse extends BoxNode {
+    sceneFunc(ctx) {
+        ctx.beginPath();
+        ctx.rect(this.dim);
+        ctx.closePath();
+        ctx.fillStroke();
+    }
+}
+
 let g = new GraphWin('myCanvas');
 g.resize(500, 200);
 
@@ -668,7 +709,7 @@ let r1 = new Rect({
     stroke: 'green',
     lineWidth: 1,
     lineDash: [5],
-    rotation: Math.PI/3
+    rotation: Math.PI / 3,
 });
 
 let r2 = new Rect({
@@ -676,27 +717,72 @@ let r2 = new Rect({
     y: 35,
     width: 37,
     height: 57,
-    fill: 'yellow'
-})
+    fill: 'yellow',
+});
+
+let [xBound, yBound, wBound, hBound] = r1.getBoundingRect();
+
+let r1b = new Rect({
+    x: xBound,
+    y: yBound,
+    width: wBound,
+    height: hBound,
+    fill: 'transparent',
+    stroke: 'aquamarine',
+});
+
+let r1t = new Rect({
+    x: 320,
+    y: 50,
+    width: 75,
+    height: 35,
+    skewX: 10,
+    skewY: 20,
+    fill: 'rgba(255, 0, 0, 0.3)',
+    stroke: 'green',
+    lineWidth: 1,
+    lineDash: [5],
+    rotation: Math.PI / 3,
+});
 
 g.add(r1);
 g.add(r2);
+g.add(r1b);
+g.add(r1t);
 
+let m = new Transform().translate(xBound, yBound).scale(2, 1.5).translate(-xBound, -yBound);
 
-r1.bind("mousemove", function(evt){
-    if (this.fill != "orange"){
-        this.fill = "orange";
+r1t.transform(m);
+
+r1.bind('mousemove', function (evt) {
+    if (this.fill != 'orange') {
+        this.fill = 'orange';
         this.requireRefresh();
     }
-})
+});
 
-
-r1.bind("mousemoveout", function(evt){
-    if (this.fill != "red"){
-        this.fill = "red";
+r1.bind('mousemoveout', function (evt) {
+    if (this.fill != 'red') {
+        this.fill = 'red';
         this.requireRefresh();
     }
-})
+});
+
+r1b.bind('mousemove', function (evt) {
+    if (this.stroke != 'violet') {
+        this.stroke = 'violet';
+        this.requireRefresh();
+    }
+});
+
+r1b.bind('mousemoveout', function (evt) {
+    if (this.stroke != 'aquamarine') {
+        this.stroke = 'aquamarine';
+        this.requireRefresh();
+    }
+});
 
 window.g = g;
 window.r1 = r1;
+
+document.body.appendChild(g.hit.c);
