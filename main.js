@@ -382,6 +382,10 @@ class Context {
         this.ctx.closePath();
     }
 
+    drawImage(img, x, y, width, height) {
+        this.ctx.drawImage(img, x, y, width, height);
+    }
+
     fillStroke() {
         this.ctx.fill();
         this.ctx.stroke();
@@ -538,7 +542,7 @@ class Node {
         let [x, y] = this.pivot();
         ctx.save();
         ctx.rotate(this.rotation, x, y);
-        this.sceneFunc(ctx);
+        this.hitFunc(ctx);
         ctx.restore();
     }
 
@@ -570,6 +574,10 @@ class Node {
 
     sceneFunc(ctx) {
         throw new Error('.sceneFunc() not implemented');
+    }
+
+    hitFunc(ctx) {
+        this.sceneFunc(ctx);
     }
 }
 
@@ -687,7 +695,50 @@ class Rect extends BoxNode {
 }
 
 class Ellipse extends BoxNode {
+    constructor(config) {
+        super();
+        this.startAngle = 0;
+        this.endAngle = Math.PI * 2;
+        this.antiClockwise = false;
+        Object.assign(this, config);
+    }
+
     sceneFunc(ctx) {
+        ctx.beginPath();
+        ctx.ellipse(this.dim, this.startAngle, this.endAngle, this.antiClockwise);
+        ctx.closePath();
+        ctx.fillStroke();
+    }
+}
+
+class Image extends BoxNode {
+    constructor(config) {
+        super();
+        this.element = null;
+        Object.assign(this, config);
+    }
+
+    set src(value) {
+        this.element = document.createElement('img');
+        this.element.src = value;
+        this.element.onload = () => {
+            if (this.width === 0 || this.height === 0) {
+                this.width = this.element.width;
+                this.height = this.element.height;
+            }
+        };
+    }
+
+    get src() {
+        return this.element.src;
+    }
+
+    sceneFunc(ctx) {
+        ctx.transform(this.dim);
+        ctx.drawImage(this.element, 0, 0, 1, 1);
+    }
+
+    hitFunc(ctx) {
         ctx.beginPath();
         ctx.rect(this.dim);
         ctx.closePath();
@@ -711,6 +762,7 @@ let r1 = new Rect({
     lineDash: [5],
     rotation: Math.PI / 3,
 });
+g.add(r1);
 
 let r2 = new Rect({
     x: 365,
@@ -719,6 +771,30 @@ let r2 = new Rect({
     height: 57,
     fill: 'yellow',
 });
+g.add(r2);
+
+let e1 = new Ellipse({
+    x: 132,
+    y: 50,
+    width: 75,
+    height: 35,
+    startAngle: 0,
+    endAngle: Math.PI / 2,
+    antiClockwise: true,
+    rotation: Math.PI / 3,
+    fill: 'blue',
+});
+g.add(e1);
+
+let i1 = new Image({
+    x: 25,
+    y: 10,
+    width: 75,
+    height: 35,
+    rotation: Math.PI / 2,
+    src: 'https://www.gstatic.com/webp/gallery/1.jpg',
+});
+g.add(i1);
 
 let [xBound, yBound, wBound, hBound] = r1.getBoundingRect();
 
@@ -730,6 +806,7 @@ let r1b = new Rect({
     fill: 'transparent',
     stroke: 'aquamarine',
 });
+g.add(r1b);
 
 let r1t = new Rect({
     x: 320,
@@ -744,10 +821,6 @@ let r1t = new Rect({
     lineDash: [5],
     rotation: Math.PI / 3,
 });
-
-g.add(r1);
-g.add(r2);
-g.add(r1b);
 g.add(r1t);
 
 let m = new Transform().translate(xBound, yBound).scale(2, 1.5).translate(-xBound, -yBound);
@@ -782,7 +855,22 @@ r1b.bind('mousemoveout', function (evt) {
     }
 });
 
+e1.bind('mousemove', function (evt) {
+    if (this.fill != 'lightblue') {
+        this.fill = 'lightblue';
+        this.requireRefresh();
+    }
+});
+
+e1.bind('mousemoveout', function (evt) {
+    if (this.fill != 'blue') {
+        this.fill = 'blue';
+        this.requireRefresh();
+    }
+});
+
 window.g = g;
 window.r1 = r1;
+window.e1 = e1;
 
 document.body.appendChild(g.hit.c);
