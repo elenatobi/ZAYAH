@@ -180,13 +180,88 @@ class Table{
     }
 }
 
-/*
-class RelationalStructure{
-    constructor(){
-        this.data = [];
+function fulfillCondition(condition, data){
+    switch (condition.constructor){
+        case String:
+            return data === condition;
+        case RegExp:
+            return condition.test(data);
+    }
+    return false;
+}
+
+function inputRead(data, currentState){
+    let position = 0;
+    let entry = "";
+    let result = [];
+    while (data.charAt(position) !== ""){
+        let character = data.charAt(position);
+        let index = 0;
+        let running = true;
+        while (index < currentState.length && running){
+            let [condition, nextState, consume, record] = currentState[index];
+            if (fulfillCondition(condition, character)){
+                if (record){
+                    entry += character;
+                }
+                if (consume){
+                    position++;
+                }
+                if (nextState){
+                    result.push(entry);
+                    entry = "";
+                    currentState = nextState;
+                }
+                running = false;
+            }
+            index++;
+        }
+        if (running){
+            return `Following data is malformed: "${data}"`;
+        }
+    }
+    result.push(entry);
+    return result;
+}
+
+const typeMap = {
+    "$T": function(object){
+        let result = new Table();
+        for (let row of object){
+            let rowResult = inputRead(row, tableLineBegin)
+            if (rowResult.constructor === String){
+                return rowResult;
+            }
+            rowResult.pop()
+            result.append(rowResult);
+        }
+        return result;
     }
 }
-*/
+
+const headerBegin = [];
+const headerReadType = [];
+const headerReadName = [];
+
+headerBegin.push(["$", headerReadType, false, false]);
+headerBegin.push(["\\", headerReadName, true, false]);
+headerBegin.push([/./, headerReadName, false, false]);
+
+headerReadType.push([/^\S+$/, null, true, true]);
+headerReadType.push([" ", headerReadName, true, false]);
+
+headerReadName.push([/./, null, true, true]);
+
+const tableLineBegin = [];
+const tableLineColumn = [];
+const tableLineEnd = [];
+
+tableLineBegin.push([/[^\[]/, null, true, true]);
+tableLineBegin.push(["[", tableLineColumn, true, false]);
+
+tableLineColumn.push([/[^\s\]]/, null, true, true]);
+tableLineColumn.push([" ", tableLineColumn, true, false]);
+tableLineColumn.push(["]", tableLineEnd, true, false]);
 
 class AuraEditor{
     constructor(){
@@ -195,17 +270,58 @@ class AuraEditor{
         this.graph.addVertex(ROOT_INDEX, ROOT_NAME);
     }
     
-    importObject(object, srcId = ROOT_INDEX){
+    __importObject(object, srcId = ROOT_INDEX){
         for (let entry of object){
+            let item = null;
+            let itemType = null;
+            let itemName = null;
+            let subObject = [];
             if (isObject(entry)){
-                let item = Object.keys(entry)[0];
-                let destId = this.addVertex(srcId, item);
-                this.importObject(entry[item], destId);
+                item = Object.keys(entry)[0];
+                subObject = entry[item]
             }
             else if (isString(entry)){
-                this.addVertex(srcId, `Interpret: ${entry}`);
+                item = entry;
+            }
+            let itemResult = inputRead(item, headerBegin);
+            if (itemResult.length === 2){
+                [, itemName] = itemResult;
+            }
+            else if (itemResult.length === 3){
+                [, itemType, itemName] = itemResult;
+            }
+            if (itemType){
+                let data = typeMap[itemType](subObject);
+                if (data.constructor === String){
+                    return data;
+                }
+                this.addVertex(srcId, [itemName, data]);
+            }
+            else{
+                let destId = this.addVertex(srcId, itemName);
+                let errorMessage = this.__importObject(subObject, destId);
+                if (errorMessage){
+                    return errorMessage;
+                }
             }
         }
+        return null;
+    }
+    
+    reset(){
+        this.graph.removeAll();
+        this.nextId = ROOT_INDEX + 1;
+        this.graph.addVertex(ROOT_INDEX, ROOT_NAME);
+    }
+    
+    importObject(object){
+        this.reset();
+        let errorMessage = this.__importObject(object);
+        if (errorMessage){
+            this.reset();
+            return errorMessage;
+        }
+        return null;
     }
     
     addVertex(srcId, item, sortId = null){
@@ -223,6 +339,8 @@ class AuraEditor{
     }
 }
 
+
 window.a = new AuraEditor()
-a.importObject(jsyaml.load(data))
-console.log(a)
+let errorMessage = a.importObject(jsyaml.load(data))
+console.log(a.graph.data)
+console.log(errorMessage)
