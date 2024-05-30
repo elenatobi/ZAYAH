@@ -2,8 +2,7 @@ const SRC_VERTEX = 0;
 const DEST_VERTEX = 1;
 const VERTEX_INFO = 2;
 
-const ROOT_INDEX = 0;
-const ROOT_NAME = "Root";
+// Utility functions
 
 function isNull(value) {
     return value === null;
@@ -40,8 +39,140 @@ function arrayDelete(array, value) {
     }
 }
 
-class Graph{
+function arrayClear(array){
+    array.splice(0, array.length)
+}
+
+// Input reader (Very ugly code) 
+
+function fulfillCondition(condition, data){
+    switch (condition.constructor){
+        case String:
+            return data === condition;
+        case RegExp:
+            return condition.test(data);
+    }
+    return false;
+}
+
+function inputRead(data, currentState){
+    let position = 0;
+    let entry = "";
+    let result = [];
+    while (data.charAt(position) !== ""){
+        let character = data.charAt(position);
+        let index = 0;
+        let running = true;
+        while (index < currentState.length && running){
+            let [condition, nextState, consume, record] = currentState[index];
+            if (fulfillCondition(condition, character)){
+                if (record){
+                    entry += character;
+                }
+                if (consume){
+                    position++;
+                }
+                if (nextState){
+                    result.push(entry);
+                    entry = "";
+                    currentState = nextState;
+                }
+                running = false;
+            }
+            index++;
+        }
+        if (running){
+            return `Following data is malformed: "${data}"`;
+        }
+    }
+    result.push(entry);
+    return result;
+}
+
+const headerBegin = [];
+const headerReadType = [];
+const headerReadName = [];
+
+headerBegin.push(["$", headerReadType, false, false]);
+headerBegin.push(["\\", headerReadName, true, false]);
+headerBegin.push([/./, headerReadName, false, false]);
+
+headerReadType.push([/^\S+$/, null, true, true]);
+headerReadType.push([" ", headerReadName, true, false]);
+
+headerReadName.push([/./, null, true, true]);
+
+const refBegin = [];
+const refReadType = [];
+const refReadName = [];
+
+refBegin.push(["=", refReadType, false, false]);
+refBegin.push(["\\", refReadName, true, false]);
+refBegin.push([/./, refReadName, false, false]);
+
+refReadType.push([/^\S+$/, null, true, true]);
+refReadType.push([" ", refReadName, true, false]);
+
+refReadName.push([/./, null, true, true]);
+
+const tableLineBegin = [];
+const tableLineColumn = [];
+const tableLineEnd = [];
+
+tableLineBegin.push([/[^\[]/, null, true, true]);
+tableLineBegin.push(["[", tableLineColumn, true, false]);
+
+tableLineColumn.push([/[^\s\]]/, null, true, true]);
+tableLineColumn.push([" ", tableLineColumn, true, false]);
+tableLineColumn.push(["]", tableLineEnd, true, false]);
+
+function readHeader(item){
+    let itemName = "";
+    let itemType = "";
+    let itemResult = inputRead(item, headerBegin);
+    if (itemResult.length === 2){
+        [, itemName] = itemResult;
+    }
+    else if (itemResult.length === 3){
+        [, itemType, itemName] = itemResult;
+    }
+    return [itemName, itemType];
+}
+
+function readRef(item){
+    let itemRef = "";
+    let itemName = "";
+    let itemResult = inputRead(item, refBegin);
+    if (itemResult.length === 2){
+        [, itemName] = itemResult;
+    }
+    else if (itemResult.length === 3){
+        [, itemRef, itemName] = itemResult;
+    }
+    return [itemName, itemRef];
+}
+
+// Aura Core features
+
+class AuraCoreBase{
+    fromObject(object){
+        throw new Error(".fromObject is not implemented yet");
+    }
+    
+    toObject(object){
+        throw new Error(".toObject is not implemented yet");
+    }
+    
+    static create(object){
+        let result = new this();
+        result.fromObject(object);
+        return result;
+    }
+}
+
+class Graph extends AuraCoreBase{
     constructor(){
+        super();
         this.data = {};
     }
     
@@ -137,8 +268,9 @@ class Graph{
     }
 }
 
-class Table{
+class Table extends AuraCoreBase{
     constructor(colNames = [], data = []){
+        super();
         this.colNames = colNames;
         this.data = data;
     }
@@ -150,6 +282,22 @@ class Table{
         if (col < 0 || col >= this.data[row].length){
             throw new Error(`No col number named ${col}`);
         }
+    }
+    
+    fromObject(array){
+        arrayClear(this.data);
+        for (let row of array){
+            let rowResult = inputRead(row, tableLineBegin)
+            if (rowResult.constructor === String){
+                return rowResult;
+            }
+            rowResult.pop()
+            this.data.push(rowResult);
+        }
+    }
+    
+    toObject(){
+        
     }
     
     append(data){
@@ -180,111 +328,9 @@ class Table{
     }
 }
 
-function fulfillCondition(condition, data){
-    switch (condition.constructor){
-        case String:
-            return data === condition;
-        case RegExp:
-            return condition.test(data);
-    }
-    return false;
-}
-
-function inputRead(data, currentState){
-    let position = 0;
-    let entry = "";
-    let result = [];
-    while (data.charAt(position) !== ""){
-        let character = data.charAt(position);
-        let index = 0;
-        let running = true;
-        while (index < currentState.length && running){
-            let [condition, nextState, consume, record] = currentState[index];
-            if (fulfillCondition(condition, character)){
-                if (record){
-                    entry += character;
-                }
-                if (consume){
-                    position++;
-                }
-                if (nextState){
-                    result.push(entry);
-                    entry = "";
-                    currentState = nextState;
-                }
-                running = false;
-            }
-            index++;
-        }
-        if (running){
-            return `Following data is malformed: "${data}"`;
-        }
-    }
-    result.push(entry);
-    return result;
-}
-
-const headerBegin = [];
-const headerReadType = [];
-const headerReadName = [];
-
-headerBegin.push(["$", headerReadType, false, false]);
-headerBegin.push(["\\", headerReadName, true, false]);
-headerBegin.push([/./, headerReadName, false, false]);
-
-headerReadType.push([/^\S+$/, null, true, true]);
-headerReadType.push([" ", headerReadName, true, false]);
-
-headerReadName.push([/./, null, true, true]);
-
-const refBegin = [];
-const refReadType = [];
-const refReadName = [];
-
-refBegin.push(["@", refReadType, false, false]);
-refBegin.push(["\\", refReadName, true, false]);
-refBegin.push([/./, refReadName, false, false]);
-
-refReadType.push([/^\S+$/, null, true, true]);
-refReadType.push([" ", refReadName, true, false]);
-
-refReadName.push([/./, null, true, true]);
-
-const tableLineBegin = [];
-const tableLineColumn = [];
-const tableLineEnd = [];
-
-tableLineBegin.push([/[^\[]/, null, true, true]);
-tableLineBegin.push(["[", tableLineColumn, true, false]);
-
-tableLineColumn.push([/[^\s\]]/, null, true, true]);
-tableLineColumn.push([" ", tableLineColumn, true, false]);
-tableLineColumn.push(["]", tableLineEnd, true, false]);
-
-function readHeader(item){
-    let itemName = "";
-    let itemType = "";
-    let itemResult = inputRead(item, headerBegin);
-    if (itemResult.length === 2){
-        [, itemName] = itemResult;
-    }
-    else if (itemResult.length === 3){
-        [, itemType, itemName] = itemResult;
-    }
-    return [itemName, itemType];
-}
-
-function readRef(item){
-    let itemRef = "";
-    let itemName = "";
-    let itemResult = inputRead(item, refBegin);
-    if (itemResult.length === 2){
-        [, itemName] = itemResult;
-    }
-    else if (itemResult.length === 3){
-        [, itemRef, itemName] = itemResult;
-    }
-    return [itemName, itemRef];
+const structureMap = {
+    "$T": Table,
+    "$G": Graph
 }
 
 function extractEntry(entry){
@@ -300,87 +346,60 @@ function extractEntry(entry){
     return [item, subObject];
 }
 
-const typeMap = {
-    "$T": function(object){
-        let result = new Table();
-        for (let row of object){
-            let rowResult = inputRead(row, tableLineBegin)
-            if (rowResult.constructor === String){
-                return rowResult;
+function createLoop(object, typeMap){
+    let result = [];
+    for (let entry of object){
+        let [item, subObject] = extractEntry(entry);
+        let [itemName, itemType] = readHeader(item);
+        let subResult = null;
+        if (itemType){
+            let classEntity = typeMap[itemType];
+            if (!classEntity){
+                return `Type ${itemType} is invalid in "${item}"`;
             }
-            rowResult.pop()
-            result.append(rowResult);
+            subResult = classEntity.create(subObject);
         }
-        return result;
+        else{
+            subResult = createLoop(subObject, typeMap);
+        }
+        if (subResult.constructor === String){
+            return subResult;
+        }
+        result.push([itemName, subResult]);
     }
+    return result;
 }
 
-class AuraEditor{
+class CollectionSegment extends AuraCoreBase{
     constructor(){
-        this.graph = new Graph();
-        this.nextId = ROOT_INDEX + 1;
-        this.graph.addVertex(ROOT_INDEX, ROOT_NAME);
+        super();
+        this.data = [];
     }
     
-    __importObject(object, srcId = ROOT_INDEX, refHash = {}){
-        for (let entry of object){
-            let [item, subObject] = extractEntry(entry);
-            let [itemName, itemType] = readHeader(item);
-            if (itemType){
-                let data = typeMap[itemType](subObject);
-                if (data.constructor === String){
-                    return data;
-                }
-                this.addVertex(srcId, [itemName, data]);
-                
-            }
-            else{
-                let destId = this.addVertex(srcId, itemName);
-                let errorMessage = this.__importObject(subObject, destId, refHash);
-                if (errorMessage){
-                    return errorMessage;
-                }
-            }
+    fromObject(object){
+        let resultData = createLoop(object, structureMap);
+        if (resultData.constructor === String){
+            return resultData;
         }
-        return null;
-    }
-    
-    reset(){
-        this.graph.removeAll();
-        this.nextId = ROOT_INDEX + 1;
-        this.graph.addVertex(ROOT_INDEX, ROOT_NAME);
-    }
-    
-    importObject(object){
-        this.reset();
-        let errorMessage = this.__importObject(object);
-        if (errorMessage){
-            this.reset();
-            return errorMessage;
-        }
-        return null;
-    }
-    
-    addVertex(srcId, item, sortId = null){
-        this.graph.addVertex(this.nextId, item);
-        this.graph.addEdge(srcId, this.nextId, sortId);
-        return this.nextId++;
-    }
-    
-    addEdge(srcId, destId, sortId = null){
-        this.graph.addEdge(srcId, destId, sortId);
-    }
-    
-    updateVertex(id, newItem){
-        this.graph.setVertexInfo(id, newItem);
+        this.data = resultData;
     }
 }
 
-/*
-window.a = new AuraEditor()
-let errorMessage = a.importObject(jsyaml.load(data))
-console.log("Data", a.graph.data)
-console.log("Error message", errorMessage)
-*/
+const collectionMap = {
+    "$S": CollectionSegment
+};
 
-console.log(readRef("@a $T Something"))
+class AuraBloodGemCore extends CollectionSegment{
+    fromObject(object){
+        let resultData = createLoop(object, collectionMap);
+        if (resultData.constructor === String){
+            return resultData;
+        }
+        this.data = resultData;
+    }
+}
+
+let structure = jsyaml.load(data)
+let a = new AuraBloodGemCore()
+a.fromObject(structure)
+console.log(a)
