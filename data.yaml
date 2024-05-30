@@ -1,4 +1,5 @@
-- Chemistry:
+- $S Chemistry:
+  - Stochiometry
   - Organic Chemistry:
     - $T Alkanes:
       - 1[Methane]
@@ -16,28 +17,23 @@
     - Thiols
     - Disulfides
     - Nitro compounds
-  - Biochemistry:
+- $S Biochemistry:
+  - Cell Biology:
+    - Cells
+    - Cell types
+  - Genetics
+  - Biomolecules:
     - Carbohydrates
     - Lipids
     - Proteins
     - Nucleic acids
   - Metabolism:
-    - The metabolism
+    - General metabolic pathways
     - Cellular respiration
     - Photosynthesis
     - Replication
     - Transcription
     - Translation
-  - Biology:
-    - Genetics:
-      - Replication
-      - Transcription
-      - Translation
-    - Cell Biology:
-      - Cells
-      - Cell types
-      - The metabolism
-      - Cellular respiration
-      - Photosynthesis
-    - Plants and fungi
-    - Physiology
+- $S Biology:
+  - Plants and fungi
+  - Physiology
