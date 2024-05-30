@@ -1,5 +1,5 @@
 # ZAYAH
-ZAYAH is a GUI and Graphics framework dedicated for high-performance node-nesting, layering, animation, rendering, filtering and event-handling, implemented usign both versions in Python (PyGame) and JavaScript (HTML5 canvas).
+ZAYAH is a GUI and Graphics framework dedicated for high-performance node-nesting, layering, animation, rendering, filtering and event-handling, implemented usign both versions in Python (PyGame) and JavaScript (HTML5 canvas). In this repository, ZAYAH framework is implemented in Aura BloodGem software, which helps user to design charts and reference guides including for knowledge.
 
 ***Important! This project is dedicated for educational purposes only.***
 
