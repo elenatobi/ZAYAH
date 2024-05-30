@@ -224,6 +224,82 @@ function inputRead(data, currentState){
     return result;
 }
 
+const headerBegin = [];
+const headerReadType = [];
+const headerReadName = [];
+
+headerBegin.push(["$", headerReadType, false, false]);
+headerBegin.push(["\\", headerReadName, true, false]);
+headerBegin.push([/./, headerReadName, false, false]);
+
+headerReadType.push([/^\S+$/, null, true, true]);
+headerReadType.push([" ", headerReadName, true, false]);
+
+headerReadName.push([/./, null, true, true]);
+
+const refBegin = [];
+const refReadType = [];
+const refReadName = [];
+
+refBegin.push(["@", refReadType, false, false]);
+refBegin.push(["\\", refReadName, true, false]);
+refBegin.push([/./, refReadName, false, false]);
+
+refReadType.push([/^\S+$/, null, true, true]);
+refReadType.push([" ", refReadName, true, false]);
+
+refReadName.push([/./, null, true, true]);
+
+const tableLineBegin = [];
+const tableLineColumn = [];
+const tableLineEnd = [];
+
+tableLineBegin.push([/[^\[]/, null, true, true]);
+tableLineBegin.push(["[", tableLineColumn, true, false]);
+
+tableLineColumn.push([/[^\s\]]/, null, true, true]);
+tableLineColumn.push([" ", tableLineColumn, true, false]);
+tableLineColumn.push(["]", tableLineEnd, true, false]);
+
+function readHeader(item){
+    let itemName = "";
+    let itemType = "";
+    let itemResult = inputRead(item, headerBegin);
+    if (itemResult.length === 2){
+        [, itemName] = itemResult;
+    }
+    else if (itemResult.length === 3){
+        [, itemType, itemName] = itemResult;
+    }
+    return [itemName, itemType];
+}
+
+function readRef(item){
+    let itemRef = "";
+    let itemName = "";
+    let itemResult = inputRead(item, refBegin);
+    if (itemResult.length === 2){
+        [, itemName] = itemResult;
+    }
+    else if (itemResult.length === 3){
+        [, itemRef, itemName] = itemResult;
+    }
+    return [itemName, itemRef];
+}
+
+function extractEntry(entry){
+    let item = null;
+    let subObject = [];
+    if (isObject(entry)){
+        item = Object.keys(entry)[0];
+        subObject = entry[item]
+    }
+    else if (isString(entry)){
+        item = entry;
+    }
+    return [item, subObject];
+}
+
 const typeMap = {
     "$T": function(object){
         let result = new Table();
@@ -239,30 +315,6 @@ const typeMap = {
     }
 }
 
-const headerBegin = [];
-const headerReadType = [];
-const headerReadName = [];
-
-headerBegin.push(["$", headerReadType, false, false]);
-headerBegin.push(["\\", headerReadName, true, false]);
-headerBegin.push([/./, headerReadName, false, false]);
-
-headerReadType.push([/^\S+$/, null, true, true]);
-headerReadType.push([" ", headerReadName, true, false]);
-
-headerReadName.push([/./, null, true, true]);
-
-const tableLineBegin = [];
-const tableLineColumn = [];
-const tableLineEnd = [];
-
-tableLineBegin.push([/[^\[]/, null, true, true]);
-tableLineBegin.push(["[", tableLineColumn, true, false]);
-
-tableLineColumn.push([/[^\s\]]/, null, true, true]);
-tableLineColumn.push([" ", tableLineColumn, true, false]);
-tableLineColumn.push(["]", tableLineEnd, true, false]);
-
 class AuraEditor{
     constructor(){
         this.graph = new Graph();
@@ -270,36 +322,21 @@ class AuraEditor{
         this.graph.addVertex(ROOT_INDEX, ROOT_NAME);
     }
     
-    __importObject(object, srcId = ROOT_INDEX){
+    __importObject(object, srcId = ROOT_INDEX, refHash = {}){
         for (let entry of object){
-            let item = null;
-            let itemType = null;
-            let itemName = null;
-            let subObject = [];
-            if (isObject(entry)){
-                item = Object.keys(entry)[0];
-                subObject = entry[item]
-            }
-            else if (isString(entry)){
-                item = entry;
-            }
-            let itemResult = inputRead(item, headerBegin);
-            if (itemResult.length === 2){
-                [, itemName] = itemResult;
-            }
-            else if (itemResult.length === 3){
-                [, itemType, itemName] = itemResult;
-            }
+            let [item, subObject] = extractEntry(entry);
+            let [itemName, itemType] = readHeader(item);
             if (itemType){
                 let data = typeMap[itemType](subObject);
                 if (data.constructor === String){
                     return data;
                 }
                 this.addVertex(srcId, [itemName, data]);
+                
             }
             else{
                 let destId = this.addVertex(srcId, itemName);
-                let errorMessage = this.__importObject(subObject, destId);
+                let errorMessage = this.__importObject(subObject, destId, refHash);
                 if (errorMessage){
                     return errorMessage;
                 }
@@ -339,8 +376,11 @@ class AuraEditor{
     }
 }
 
-
+/*
 window.a = new AuraEditor()
 let errorMessage = a.importObject(jsyaml.load(data))
-console.log(a.graph.data)
-console.log(errorMessage)
+console.log("Data", a.graph.data)
+console.log("Error message", errorMessage)
+*/
+
+console.log(readRef("@a $T Something"))
