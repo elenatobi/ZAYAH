@@ -9,11 +9,11 @@ function isNull(value) {
 }
 
 function isNumber(value) {
-    return typeof value === 'number' && Number.isFinite(value);
+    return typeof value === "number" && Number.isFinite(value);
 }
 
 function isString(value) {
-    return typeof value === 'string';
+    return typeof value === "string";
 }
 
 function isObject(value) {
@@ -39,14 +39,14 @@ function arrayDelete(array, value) {
     }
 }
 
-function arrayClear(array){
-    array.splice(0, array.length)
+function arrayClear(array) {
+    array.splice(0, array.length);
 }
 
-// Input reader (Very ugly code) 
+// Input reader (Very ugly code)
 
-function fulfillCondition(condition, data){
-    switch (condition.constructor){
+function fulfillCondition(condition, data) {
+    switch (condition.constructor) {
         case String:
             return data === condition;
         case RegExp:
@@ -55,24 +55,24 @@ function fulfillCondition(condition, data){
     return false;
 }
 
-function inputRead(data, currentState){
+function inputRead(data, currentState) {
     let position = 0;
     let entry = "";
     let result = [];
-    while (data.charAt(position) !== ""){
+    while (data.charAt(position) !== "") {
         let character = data.charAt(position);
         let index = 0;
         let running = true;
-        while (index < currentState.length && running){
+        while (index < currentState.length && running) {
             let [condition, nextState, consume, record] = currentState[index];
-            if (fulfillCondition(condition, character)){
-                if (record){
+            if (fulfillCondition(condition, character)) {
+                if (record) {
                     entry += character;
                 }
-                if (consume){
+                if (consume) {
                     position++;
                 }
-                if (nextState){
+                if (nextState) {
                     result.push(entry);
                     entry = "";
                     currentState = nextState;
@@ -81,7 +81,7 @@ function inputRead(data, currentState){
             }
             index++;
         }
-        if (running){
+        if (running) {
             return `Following data is malformed: "${data}"`;
         }
     }
@@ -126,27 +126,25 @@ tableLineColumn.push([/[^\s\]]/, null, true, true]);
 tableLineColumn.push([" ", tableLineColumn, true, false]);
 tableLineColumn.push(["]", tableLineEnd, true, false]);
 
-function readHeader(item){
+function readHeader(item) {
     let itemName = "";
     let itemType = "";
     let itemResult = inputRead(item, headerBegin);
-    if (itemResult.length === 2){
+    if (itemResult.length === 2) {
         [, itemName] = itemResult;
-    }
-    else if (itemResult.length === 3){
+    } else if (itemResult.length === 3) {
         [, itemType, itemName] = itemResult;
     }
     return [itemName, itemType];
 }
 
-function readRef(item){
+function readRef(item) {
     let itemRef = "";
     let itemName = "";
     let itemResult = inputRead(item, refBegin);
-    if (itemResult.length === 2){
+    if (itemResult.length === 2) {
         [, itemName] = itemResult;
-    }
-    else if (itemResult.length === 3){
+    } else if (itemResult.length === 3) {
         [, itemRef, itemName] = itemResult;
     }
     return [itemName, itemRef];
@@ -154,215 +152,215 @@ function readRef(item){
 
 // Aura Core features
 
-class AuraCoreBase{
-    fromObject(object){
+class AuraCoreBase {
+    fromObject(object) {
         throw new Error(".fromObject is not implemented yet");
     }
-    
-    toObject(object){
+
+    toObject(object) {
         throw new Error(".toObject is not implemented yet");
     }
-    
-    static create(object){
+
+    static create(object) {
         let result = new this();
         result.fromObject(object);
         return result;
     }
 }
 
-class Graph extends AuraCoreBase{
-    constructor(){
+class Graph extends AuraCoreBase {
+    constructor() {
         super();
         this.data = {};
     }
-    
-    checkVertex(vertex){
-        if (!this.data[vertex]){
+
+    checkVertex(vertex) {
+        if (!this.data[vertex]) {
             throw new Error(`No vertex named "${vertex}"`);
         }
     }
-    
-    getSrcVertices(vertex){
+
+    getSrcVertices(vertex) {
         this.checkVertex(vertex);
         return this.data[vertex][SRC_VERTEX];
     }
-    
-    getDestVertices(vertex){
+
+    getDestVertices(vertex) {
         this.checkVertex(vertex);
         return this.data[vertex][DEST_VERTEX];
     }
-    
-    setVertexInfo(vertex, vertexInfo){
+
+    setVertexInfo(vertex, vertexInfo) {
         this.checkVertex(vertex);
         this.data[vertex][VERTEX_INFO] = vertexInfo;
     }
-    
-    getVertexInfo(vertex){
+
+    getVertexInfo(vertex) {
         this.checkVertex(vertex);
         return this.data[vertex][VERTEX_INFO];
     }
-    
-    hasOwnProperty(vertex){
+
+    hasOwnProperty(vertex) {
         return vertex in this.data;
     }
-    
+
     addVertex(vertex, vertexInfo = null) {
         if (this.data[vertex]) {
-            throw new Error('Vertex has been already added');
+            throw new Error("Vertex has been already added");
         }
         this.data[vertex] = [[], [], vertexInfo];
     }
-    
+
     addEdge(srcVertex, destVertex, sortIndex = null) {
         let destVertices = this.getDestVertices(srcVertex);
         if (arrayHas(destVertices, destVertex)) {
-            throw new Error(`Edge between ${srcVertex} and ${destVertex} has already been added`);
+            throw new Error(
+                `Edge between ${srcVertex} and ${destVertex} has already been added`
+            );
         }
         if (isNull(sortIndex)) {
             destVertices.push(destVertex);
-        }
-        else {
+        } else {
             destVertices.splice(sortIndex, 0, destVertex);
         }
         this.getSrcVertices(destVertex).push(srcVertex);
     }
-    
-    updateEdge(srcVertex, destVertex, newSrcVertex){
+
+    updateEdge(srcVertex, destVertex, newSrcVertex) {
         this.removeEdge(srcVertex, destVertex);
         this.addEdge(newSrcVertex, destVertex, null);
     }
-    
-    sortEdge(srcVertex, destVertex, newSortIndex){
+
+    sortEdge(srcVertex, destVertex, newSortIndex) {
         let destVertices = this.getDestVertices(srcVertex);
         let oldSortIndex = destVertices.indexOf(destVertex);
-        if (oldSortIndex === -1){
-            throw new Error(`No edge exists between ${srcVertex} and ${destVertex}`);
+        if (oldSortIndex === -1) {
+            throw new Error(
+                `No edge exists between ${srcVertex} and ${destVertex}`
+            );
         }
         arrayMove(destVertices, oldSortIndex, newSortIndex);
     }
-    
-    removeVertex(vertex){
-        for (let srcVertex of this.getSrcVertices(vertex)){
+
+    removeVertex(vertex) {
+        for (let srcVertex of this.getSrcVertices(vertex)) {
             arrayDelete(this.getDestVertices(srcVertex), vertex);
         }
-        for (let destVertex of this.getDestVertices(vertex)){
+        for (let destVertex of this.getDestVertices(vertex)) {
             arrayDelete(this.getSrcVertices(destVertex), vertex);
         }
         delete this.data[vertex];
     }
-    
-    removeEdge(srcVertex, destVertex){
+
+    removeEdge(srcVertex, destVertex) {
         let srcVertices = this.getSrcVertices(destVertex);
         let destVertices = this.getDestVertices(srcVertex);
-        if (!arrayHas(destVertices, destVertex)){
-            throw new Error(`Cannot delete non-existing edge between ${srcVertex} and ${destVertex}`);
+        if (!arrayHas(destVertices, destVertex)) {
+            throw new Error(
+                `Cannot delete non-existing edge between ${srcVertex} and ${destVertex}`
+            );
         }
         arrayDelete(srcVertices, srcVertex);
         arrayDelete(destVertices, destVertex);
     }
-    
-    removeAll(){
-        for (let vertex of Object.keys(this.data)){
+
+    removeAll() {
+        for (let vertex of Object.keys(this.data)) {
             delete this.data[vertex];
         }
     }
 }
 
-class Table extends AuraCoreBase{
-    constructor(colNames = [], data = []){
+class Table extends AuraCoreBase {
+    constructor(colNames = [], data = []) {
         super();
         this.colNames = colNames;
         this.data = data;
     }
-    
-    __checkRowCol(row, col){
-        if (row < 0 || row >= this.data.length){
+
+    __checkRowCol(row, col) {
+        if (row < 0 || row >= this.data.length) {
             throw new Error(`No row number named ${row}`);
         }
-        if (col < 0 || col >= this.data[row].length){
+        if (col < 0 || col >= this.data[row].length) {
             throw new Error(`No col number named ${col}`);
         }
     }
-    
-    fromObject(array){
+
+    fromObject(array) {
         arrayClear(this.data);
-        for (let row of array){
-            let rowResult = inputRead(row, tableLineBegin)
-            if (rowResult.constructor === String){
+        for (let row of array) {
+            let rowResult = inputRead(row, tableLineBegin);
+            if (rowResult.constructor === String) {
                 return rowResult;
             }
-            rowResult.pop()
+            rowResult.pop();
             this.data.push(rowResult);
         }
     }
-    
-    toObject(){
-        
-    }
-    
-    append(data){
+
+    toObject() {}
+
+    append(data) {
         this.data.push(data);
     }
-    
-    add(row, data){
+
+    add(row, data) {
         this.data.splice(row, 0, data);
     }
-    
-    remove(row = -1){
-        if (row === -1 || row === this.data.length-1){
+
+    remove(row = -1) {
+        if (row === -1 || row === this.data.length - 1) {
             this.data.pop();
-        }
-        else{
+        } else {
             this.data.splice(row, 1);
         }
     }
-    
-    set(row, col, data){
+
+    set(row, col, data) {
         this.__checkRowCol(row, col);
         this.data[row][col] = data;
     }
-    
-    get(row, col){
+
+    get(row, col) {
         this.__checkRowCol(row, col);
         return this.data[row][col];
     }
 }
 
 const structureMap = {
-    "$T": Table,
-    "$G": Graph
-}
+    $T: Table,
+    $G: Graph,
+};
 
-function extractEntry(entry){
+function extractEntry(entry) {
     let item = null;
     let subObject = [];
-    if (isObject(entry)){
+    if (isObject(entry)) {
         item = Object.keys(entry)[0];
-        subObject = entry[item]
-    }
-    else if (isString(entry)){
+        subObject = entry[item];
+    } else if (isString(entry)) {
         item = entry;
     }
     return [item, subObject];
 }
 
-function createLoop(object, typeMap){
+function createLoop(object, typeMap) {
     let result = [];
-    for (let entry of object){
+    for (let entry of object) {
         let [item, subObject] = extractEntry(entry);
         let [itemName, itemType] = readHeader(item);
         let subResult = null;
-        if (itemType){
+        if (itemType) {
             let classEntity = typeMap[itemType];
-            if (!classEntity){
+            if (!classEntity) {
                 return `Type ${itemType} is invalid in "${item}"`;
             }
             subResult = classEntity.create(subObject);
-        }
-        else{
+        } else {
             subResult = createLoop(subObject, typeMap);
         }
-        if (subResult.constructor === String){
+        if (subResult.constructor === String) {
             return subResult;
         }
         result.push([itemName, subResult]);
@@ -370,15 +368,15 @@ function createLoop(object, typeMap){
     return result;
 }
 
-class CollectionSegment extends AuraCoreBase{
-    constructor(){
+class CollectionSegment extends AuraCoreBase {
+    constructor() {
         super();
         this.data = [];
     }
-    
-    fromObject(object){
+
+    fromObject(object) {
         let resultData = createLoop(object, structureMap);
-        if (resultData.constructor === String){
+        if (resultData.constructor === String) {
             return resultData;
         }
         this.data = resultData;
@@ -386,20 +384,60 @@ class CollectionSegment extends AuraCoreBase{
 }
 
 const collectionMap = {
-    "$S": CollectionSegment
+    $S: CollectionSegment,
 };
 
-class AuraBloodGemCore extends CollectionSegment{
-    fromObject(object){
+class AOORABloodGemCore extends CollectionSegment {
+    fromObject(object) {
         let resultData = createLoop(object, collectionMap);
-        if (resultData.constructor === String){
+        if (resultData.constructor === String) {
             return resultData;
         }
         this.data = resultData;
     }
 }
 
-let structure = jsyaml.load(data)
-let a = new AuraBloodGemCore()
-a.fromObject(structure)
-console.log(a)
+function updateTreeView(container, data) {
+    console.log(container);
+    container.innerHTML = "";
+    data.forEach(([key, value]) => {
+        let div = document.createElement("div");
+        let span = document.createElement("span");
+        span.textContent = key;
+        if (Array.isArray(value)) {
+            createExpandableSubtree(span, div, value);
+        }
+        div.appendChild(span);
+        container.appendChild(div);
+    });
+}
+
+function createExpandableSubtree(span, div, value) {
+    span.style.color = "#880808";
+    span.style.fontWeight = "bold";
+    span.addEventListener("click", function () {
+        let subContainer = div.querySelector("div");
+        if (!subContainer) {
+            subContainer = document.createElement("div");
+            subContainer.style.paddingLeft = "10px";
+            updateTreeView(subContainer, value);
+            div.appendChild(subContainer);
+        }
+        subContainer.style.display =
+            subContainer.style.display === "block" ? "none" : "block";
+    });
+}
+
+class AOORABloodGemWrapper {
+    constructor() {
+        this.core = new AOORABloodGemCore();
+        this.treeView = document.getElementById("treeView");
+        let structure = jsyaml.load(data);
+        this.core.fromObject(structure);
+        updateTreeView(this.treeView, this.core.data);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    let aw = new AOORABloodGemWrapper();
+});
