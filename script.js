@@ -398,46 +398,151 @@ class AOORABloodGemCore extends CollectionSegment {
 }
 
 function updateTreeView(container, data) {
-    console.log(container);
     container.innerHTML = "";
+
     data.forEach(([key, value]) => {
         let div = document.createElement("div");
         let span = document.createElement("span");
+        div.className = "tree-item";
+        div.draggable = true;
         span.textContent = key;
         if (Array.isArray(value)) {
-            createExpandableSubtree(span, div, value);
+            span.className = "collection";
+            span.addEventListener("click", function () {
+                let subContainer = div.querySelector("div");
+                if (!subContainer) {
+                    subContainer = document.createElement("div");
+                    subContainer.className = "items";
+                    updateTreeView(subContainer, value);
+                    div.appendChild(subContainer);
+                }
+                subContainer.style.display =
+                    subContainer.style.display === "block" ? "none" : "block";
+            });
         }
         div.appendChild(span);
         container.appendChild(div);
     });
 }
 
-function createExpandableSubtree(span, div, value) {
-    span.style.color = "#880808";
-    span.style.fontWeight = "bold";
-    span.addEventListener("click", function () {
-        let subContainer = div.querySelector("div");
-        if (!subContainer) {
-            subContainer = document.createElement("div");
-            subContainer.style.paddingLeft = "10px";
-            updateTreeView(subContainer, value);
-            div.appendChild(subContainer);
+function applyDrag(tree) {
+    let draggingEle;
+    let placeholder;
+
+    const createPlaceholder = function () {
+        const placeholder = document.createElement("div");
+        placeholder.className = "tree-item placeholder";
+        return placeholder;
+    };
+
+    const onDragStart = function (e) {
+        draggingEle = e.target;
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", null);
+
+        placeholder = createPlaceholder();
+        draggingEle.parentNode.insertBefore(
+            placeholder,
+            draggingEle.nextSibling
+        );
+
+        setTimeout(() => {
+            draggingEle.style.display = "none";
+        }, 0);
+    };
+
+    const onDragOver = function (e) {
+        e.preventDefault();
+        const target = e.target;
+
+        if (
+            target &&
+            target !== draggingEle &&
+            target.classList.contains("tree-item")
+        ) {
+            if (target.style.display !== "block") {
+                target.style.display === "block";
+            }
+            const rect = target.getBoundingClientRect();
+            const upperY = rect.top + rect.height / 6;
+            const lowerY = rect.top + (5 * rect.height) / 6;
+            const parentNode = target.parentNode;
+
+            if (e.clientY < upperY) {
+                parentNode.insertBefore(placeholder, target);
+            } else if (upperY < e.clientY && e.clientY < lowerY) {
+                if (!target.contains(placeholder)) {
+                    target.appendChild(placeholder);
+                }
+            } else {
+                parentNode.insertBefore(placeholder, target.nextSibling);
+            }
         }
-        subContainer.style.display =
-            subContainer.style.display === "block" ? "none" : "block";
-    });
+    };
+
+    const onDrop = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        draggingEle.style.display = "block";
+
+        const target = e.target;
+        if (target && target.classList.contains("tree-item")) {
+            const rect = target.getBoundingClientRect();
+            const midY = rect.top + rect.height / 2;
+
+            const parentNode = target.parentNode;
+            if (e.clientY > midY) {
+                parentNode.insertBefore(draggingEle, target.nextSibling);
+            } else {
+                parentNode.insertBefore(draggingEle, target);
+            }
+        } else {
+            tree.appendChild(draggingEle);
+        }
+
+        if (placeholder && placeholder.parentNode) {
+            placeholder.parentNode.removeChild(placeholder);
+        }
+
+        draggingEle = null;
+        placeholder = null;
+    };
+
+    const onDragEnd = function () {
+        if (placeholder && placeholder.parentNode) {
+            placeholder.parentNode.removeChild(placeholder);
+        }
+
+        if (draggingEle) {
+            draggingEle.style.display = "block";
+        }
+
+        draggingEle = null;
+        placeholder = null;
+    };
+
+    tree.addEventListener("dragstart", onDragStart);
+    tree.addEventListener("dragover", onDragOver);
+    tree.addEventListener("drop", onDrop);
+    tree.addEventListener("dragend", onDragEnd);
 }
 
 class AOORABloodGemWrapper {
     constructor() {
         this.core = new AOORABloodGemCore();
         this.treeView = document.getElementById("treeView");
+    }
+
+    run() {
         let structure = jsyaml.load(data);
         this.core.fromObject(structure);
         updateTreeView(this.treeView, this.core.data);
+        applyDrag(this.treeView);
     }
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
     let aw = new AOORABloodGemWrapper();
+    aw.run();
 });
