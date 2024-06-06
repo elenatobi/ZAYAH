@@ -4,7 +4,7 @@ AOORA BloodGem is a editing software dedicated for templates, reference guides a
 ***Important! This project is dedicated for educational purposes only.***
 
 ## AOORA BloodGem
-AOORA BloodGem is a efficient and high-performance software, written in Python and JavaScript, dedicated for editing template, reference guide and chart designs, including visualization of knowledge concepts. Each page in the editor can contain designs of templates and reference guides with charts and the pages are bundled collectively into a design. Ultimately, designs can be stored and saved into local files with custom binary file format using file extension .BLOODGEM. Alternatively, they can be stored as YAML files instead.
+AOORA BloodGem is a efficient and high-performance software, written in Python and JavaScript, dedicated for editing template, reference guide and chart designs, including visualization of knowledge concepts. Each page in the editor contain designs of templates and reference guides with charts while the pages are bundled collectively into a design. Ultimately, designs can be stored and saved into local files with custom binary file format using file extension .BLOODGEM. Alternatively, they can be stored as YAML files instead.
 
 ## ZAYAH
 The software AOORA BloodGem is implemented by ZAYAH which is a GUI and Graphics framework dedicated for high-performance node-nesting, layering, animation, rendering, filtering and event-handling, implemented using both versions in Python (PyGame) and JavaScript (HTML5 canvas). In this repository, ZAYAH framework is implemented in AOORA BloodGem software, which helps user to design charts and reference guides including for knowledge. However, ZAYAH framework can also be implemented in other software projects.
