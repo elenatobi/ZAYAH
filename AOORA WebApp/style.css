@@ -1,0 +1,40 @@
+.tree-view {
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 500px;
+    border: 1px solid silver;
+    overflow: auto;
+}
+.node{
+    padding: 1px 3px;
+    margin: 1px;
+    min-height: 19px;
+    background-color: #f7f9fb;
+    border: 1px solid silver;
+}
+.node.active{
+    border: 2px solid #0095ff;
+}
+.node.placeholder {
+    background-color: #cce5ff;
+    border: 2px dashed #0095ff;
+    height: 21px;
+}
+.node.group>span.node-name {
+    min-width: 50px;
+    color: #880808;
+}
+.node.expanded>span.node-name{
+    font-weight: bold;
+}
+.nodes {
+    margin-left: 1px;
+}
+.hidden{
+    display: none;
+}
+
+table>tbody>tr>td{
+    vertical-align: top;
+}

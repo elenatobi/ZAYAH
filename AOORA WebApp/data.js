@@ -1,0 +1,45 @@
+const data = `
+- Natural sciences:
+  - Mathematics
+  - Physics:
+    - $S Mechanics
+  - Chemistry:
+    - $S Stochiometry
+    - $S Organic Chemistry:
+      - $T Alkanes:
+        - 1[Methane]
+        - 2[Ethane]
+      - Alkenes
+      - Alkynes
+      - Alcohols
+      - Phenols
+      - Aldehydes
+      - Ketones
+      - Carboxylic acids
+      - Esters
+      - Ethers
+      - Amines
+      - Thiols
+      - Disulfides
+      - Nitro compounds
+  - $S Biochemistry:
+    - Cell Biology:
+      - Cells
+      - Cell types
+    - Genetics
+    - Biomolecules:
+      - Carbohydrates
+      - Lipids
+      - Proteins
+      - Nucleic acids
+    - Metabolism:
+      - General metabolic pathways
+      - Cellular respiration
+      - Photosynthesis
+      - Replication
+      - Transcription
+      - Translation
+  - $S Biology:
+    - Plants and fungi
+    - Physiology
+`;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="google" content="notranslate">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src = "jquery.js"></script>
+        <script src = "jsyaml.js"></script>
+        <script src = "data.js"></script>
+        <script src = "script.js"></script>
+        <title>Aura Webapp</title>
+    </head>
+    <body onload = "window.sys = new AOORABloodGemWrapper()">
+        <table>
+            <td>
+                <div id = "treeTools" class="hidden">
+                    <button id = "create-group" onclick = "sys.append(['New node', []])">Create group</button>
+                    <button id = "create" onclick = "sys.append()">Create</button>
+                    <button id = "delete" onclick = "sys.delete()">Delete</button>
+                </div>
+                <div class="tree-view" id="treeView"></div>
+            </td>
+            <td id = "mainView">
+                MainView
+            </td>
+        </table>
+    </body>
+</html>
