@@ -399,34 +399,34 @@ class AOORABloodGemCore extends CollectionSegment {
 
 // Wrappers
 
-function create(name, clsName, txt = ""){
+function create(name, clsName, txt = "") {
     let HTMLElement = document.createElement(name);
     HTMLElement.className = clsName;
     HTMLElement.textContent = txt;
     return HTMLElement;
 }
 
-function clear(){
+function clear() {
     HTMLElement.innerHTML = "";
 }
 
-function hide(HTMLElement){
+function hide(HTMLElement) {
     HTMLElement.style.display = "none";
 }
 
-function show(HTMLElement){
+function show(HTMLElement) {
     HTMLElement.style.display = "block";
 }
 
-function isShown(HTMLElement){
+function isShown(HTMLElement) {
     return HTMLElement.style.display === "block";
 }
 
 function DragPlaceholder() {
     return create("div", "node placeholder");
-};
+}
 
-function ENode(node){
+function ENode(node) {
     let [nodeName, subnodes] = node;
     let eNode = create("div", "node");
     let eNodeName = create("span", "node-name", nodeName);
@@ -434,12 +434,11 @@ function ENode(node){
     eNode.node = node;
     eNode.subnodes = subnodes;
     eNode.isClickable = true;
-    
+
     let origNodeName = null;
     if (Array.isArray(subnodes)) {
         eNode.classList.add("group");
-    }
-    else{
+    } else {
         eNode.classList.add("leaf");
     }
     eNodeName.addEventListener("dblclick", function (evt) {
@@ -453,16 +452,16 @@ function ENode(node){
     eNodeName.addEventListener("focusout", function (evt) {
         evt.target.contentEditable = "false";
         eNode.isClickable = true;
-        if (eNodeName.textContent.trim() === ""){
-            eNodeName.textContent = origNodeName
+        if (eNodeName.textContent.trim() === "") {
+            eNodeName.textContent = origNodeName;
         }
     });
     eNodeName.addEventListener("keydown", function (evt) {
         if (evt.keyCode === 13) {
             evt.target.contentEditable = "false";
             eNode.isClickable = true;
-            if (eNodeName.textContent.trim() === ""){
-                eNodeName.textContent = origNodeName
+            if (eNodeName.textContent.trim() === "") {
+                eNodeName.textContent = origNodeName;
             }
         }
     });
@@ -470,7 +469,7 @@ function ENode(node){
     return eNode;
 }
 
-function ENodes(nodes){
+function ENodes(nodes) {
     let eNodes = create("div", "nodes");
     for (let node of nodes) {
         eNodes.appendChild(ENode(node));
@@ -478,19 +477,19 @@ function ENodes(nodes){
     return eNodes;
 }
 
-function isExpanded(eNode){
+function isExpanded(eNode) {
     let subENodes = eNode.querySelector("div");
-    if (!subENodes){
+    if (!subENodes) {
         return false;
     }
     return isShown(subENodes);
 }
 
-function isLeaf(eNode){
+function isLeaf(eNode) {
     return eNode.classList.contains("leaf");
 }
 
-function expand(eNode){
+function expand(eNode) {
     let subENodes = eNode.querySelector("div");
     if (!subENodes) {
         subENodes = ENodes(eNode.subnodes);
@@ -500,51 +499,59 @@ function expand(eNode){
     eNode.classList.add("expanded");
 }
 
-function collapse(eNode){
+function collapse(eNode) {
     let subENodes = eNode.querySelector("div");
-    if (!subENodes){
-        return
+    if (!subENodes) {
+        return;
     }
     hide(subENodes);
     eNode.classList.remove("expanded");
 }
 
-function activate(eNode){
-    if (!eNode){
+function activate(eNode) {
+    if (!eNode) {
         return;
     }
     eNode.classList.add("active");
 }
 
-function deactivate(eNode){
-    if (!eNode){
+function deactivate(eNode) {
+    if (!eNode) {
         return;
     }
     eNode.classList.remove("active");
 }
 
-function getESubnodes(eNode){
-    if (isLeaf(eNode)){
+function isActive(eNode) {
+    if (!eNode) {
+        return false;
+    }
+    return eNode.classList.contains("active");
+}
+
+function getESubnodes(eNode) {
+    if (isLeaf(eNode)) {
         return null;
     }
     let children = eNode.children;
-    if (children.length < 2){
+    if (children.length < 2) {
         expand(eNode);
     }
     return children[1];
 }
 
-function ETab(tabName){
+function ETab(tabName, node) {
     let eTab = create("div", "tab", tabName);
-    let eDel = create("span", "del", "X")
+    let eDel = create("span", "del", "X");
     eTab.draggable = true;
+    eTab.node = node;
     eTab.appendChild(eDel);
-    
+
     return eTab;
 }
 
-class AOORABloodGemWrapper{
-    constructor(){
+class AOORABloodGemWrapper {
+    constructor() {
         this.core = new AOORABloodGemCore();
         this.treeTools = document.getElementById("treeTools");
         this.treeView = document.getElementById("treeView");
@@ -555,94 +562,114 @@ class AOORABloodGemWrapper{
         this.eTabActive = null;
         this.start();
     }
-    
-    start(){
+
+    start() {
         const structure = jsyaml.load(data);
         this.core.fromObject(structure);
         this.updateTreeView();
         this.enableEdit();
-        this.treeView.addEventListener("click", function(evt){
-            this.updateEActive(evt.target);
-        }.bind(this));
-        
+        this.treeView.addEventListener(
+            "click",
+            function (evt) {
+                this.updateEActive(evt.target);
+            }.bind(this)
+        );
+        this.mainTabs.addEventListener(
+            "click",
+            function (evt) {
+                this.updateETabActive(evt.target);
+            }.bind(this)
+        );
+
         // Only for testing
         const appealNode = this.core.data[0][1][3];
         this.addTab(appealNode);
         //this.appeal(appealNode);
-        
     }
-    
-    enableEdit(){
+
+    enableEdit() {
         show(this.treeTools);
     }
-    
-    updateTreeView(){
+
+    updateTreeView() {
         clear(this.treeView);
         this.treeView.appendChild(ENodes(this.core.data));
     }
-    
-    updateEActive(neweActive){
+
+    updateEActive(neweActive) {
         deactivate(this.eActive);
-        if (neweActive.classList.contains("node")){
+        if (neweActive.classList.contains("node")) {
             this.eActive = neweActive;
-        }
-        else if (neweActive.classList.contains("node-name")){
+        } else if (neweActive.classList.contains("node-name")) {
             this.eActive = neweActive.parentNode;
-            if (isLeaf(this.eActive)){
+            if (isLeaf(this.eActive)) {
                 this.addTab(this.eActive.node);
-            }
-            else if (this.eActive.isClickable){
-                if (isExpanded(this.eActive)){
+            } else if (this.eActive.isClickable) {
+                if (isExpanded(this.eActive)) {
                     collapse(this.eActive);
-                }
-                else{
+                } else {
                     expand(this.eActive);
                 }
             }
         }
         activate(this.eActive);
     }
-    
-    addTab(node){
+
+    updateETabActive(eTab) {
+        let neweTabActive = eTab;
+        if (eTab.classList.contains("del")) {
+            let removedETab = eTab.parentElement;
+            neweTabActive = removedETab.previousSibling;
+            if (!neweTabActive) {
+                neweTabActive = removedETab.nextSibling;
+            }
+            console.log("Remove tab here", removedETab);
+        }
+        deactivate(this.eTabActive);
+        this.eTabActive = neweTabActive;
+        activate(this.eTabActive);
+        this.appeal(eTab.node);
+    }
+
+    addTab(node) {
         let name = node[0];
         let eTab = null;
-        if (this.tabs.has(node)){
+        if (this.tabs.has(node)) {
             eTab = this.tabs.get(node);
-            console.log("eTab has already!")
-        }
-        else{
-            eTab = ETab(name);
+        } else {
+            eTab = ETab(name, node);
             this.mainTabs.appendChild(eTab);
             this.tabs.set(node, eTab);
         }
+        this.updateETabActive(eTab);
         this.appeal(node);
     }
-    
-    appeal(node){
-        
+
+    removeTab(node) {}
+
+    appeal(node) {
         this.mainView.innerHTML = node[1].data.flat(Infinity);
-        
     }
-    
-    append(node = ["New node", null]){
+
+    append(node = ["New node", null]) {
         let subENodes = getESubnodes(this.eActive);
-        if (!subENodes){
+        if (!subENodes) {
             return;
         }
         let neweNode = ENode(node);
         subENodes.appendChild(neweNode);
         expand(this.eActive);
     }
-    
-    delete(){
+
+    delete() {
         let parentElement = this.eActive.parentElement;
         parentElement.removeChild(this.eActive);
     }
 }
 
-function main(){
+function main() {
     const treeView = document.getElementById("treeView");
-    
+
     let draggingEle = null;
     let placeholder = null;
 
@@ -656,12 +683,11 @@ function main(){
             placeholder,
             draggingEle.nextSibling
         );
-        
-        setTimeout(function(){
+
+        setTimeout(function () {
             hide(draggingEle);
         }, 0);
-
-    };
+    }
 
     function onDragOver(e) {
         e.preventDefault();
@@ -676,8 +702,8 @@ function main(){
             const rect = target.getBoundingClientRect();
             let upperY = rect.top + rect.height / 3;
             let lowerY = rect.top + (2 * rect.height) / 3;
-            
-            if (target.classList.contains("leaf")){
+
+            if (target.classList.contains("leaf")) {
                 upperY = rect.top + rect.height / 2;
                 lowerY = upperY;
             }
@@ -692,7 +718,7 @@ function main(){
                 parentNode.insertBefore(placeholder, target.nextSibling);
             }
         }
-    };
+    }
 
     function onDrop(e) {
         e.preventDefault();
@@ -721,7 +747,7 @@ function main(){
 
         draggingEle = null;
         placeholder = null;
-    };
+    }
 
     function onDragEnd() {
         if (placeholder && placeholder.parentNode) {
@@ -734,8 +760,8 @@ function main(){
 
         draggingEle = null;
         placeholder = null;
-    };
-    
+    }
+
     treeView.addEventListener("dragstart", onDragStart);
     treeView.addEventListener("dragover", onDragOver);
     treeView.addEventListener("drop", onDrop);
