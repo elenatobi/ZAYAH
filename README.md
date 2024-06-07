@@ -6,6 +6,15 @@ AOORA BloodGem is a editing software dedicated for templates, reference guides a
 ## AOORA BloodGem
 AOORA BloodGem is a efficient and high-performance software, written in Python and JavaScript, dedicated for editing template, reference guide and chart designs, including visualization of knowledge concepts. Each page in the editor contain designs of templates and reference guides with charts while the pages are bundled collectively into a design. Ultimately, designs can be stored and saved into local files with custom binary file format using file extension .BLOODGEM. Alternatively, they can be stored as YAML files instead.
 
+Sources for AOORA BloodGem data contents (for future usage):
+ * https://essayrx.com/blog/reviews/what-is-metabolism-and-how-it-works/
+ * https://www.behance.net/gallery/38270165/Metro-Map-of-Metabolism-The-Overview
+ * https://upload.wikimedia.org/wikipedia/commons/a/a8/Human_Metabolism_-_Pathways.jpg
+ * https://reactome.org/PathwayBrowser/#/R-HSA-8953854
+ * https://reactome.org/PathwayBrowser/#/R-HSA-168256
+ * https://en.wikipedia.org/wiki/File:Metabolic_Metro_Map.svg
+ * https://rsc.bg/2023/09/11/restoring-corrupted-mysql-innodb-database/
+
 ## ZAYAH
 The software AOORA BloodGem is implemented by ZAYAH which is a GUI and Graphics framework dedicated for high-performance node-nesting, layering, animation, rendering, filtering and event-handling, implemented using both versions in Python (PyGame) and JavaScript (HTML5 canvas). In this repository, ZAYAH framework is implemented in AOORA BloodGem software, which helps user to design charts and reference guides including for knowledge. However, ZAYAH framework can also be implemented in other software projects.
 
