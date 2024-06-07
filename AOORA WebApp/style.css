@@ -1,3 +1,15 @@
+body{
+    margin: 0;
+}
+
+table>tbody>tr>td{
+    vertical-align: top;
+}
+
+.hidden{
+    display: none;
+}
+
 .tree-view {
     padding: 0;
     margin: 0;
@@ -31,10 +43,14 @@
 .nodes {
     margin-left: 1px;
 }
-.hidden{
-    display: none;
-}
 
-table>tbody>tr>td{
-    vertical-align: top;
+
+.tab{
+    width: 149px;
+    padding: 1px 5px;
+    background-color: #f7f9fb;
+    border: 1px solid silver;
+}
+.tab>.del{
+    float: right;
 }
