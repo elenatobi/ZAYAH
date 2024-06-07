@@ -534,12 +534,25 @@ function getESubnodes(eNode){
     return children[1];
 }
 
+function ETab(tabName){
+    let eTab = create("div", "tab", tabName);
+    let eDel = create("span", "del", "X")
+    eTab.draggable = true;
+    eTab.appendChild(eDel);
+    
+    return eTab;
+}
+
 class AOORABloodGemWrapper{
     constructor(){
         this.core = new AOORABloodGemCore();
         this.treeTools = document.getElementById("treeTools");
         this.treeView = document.getElementById("treeView");
+        this.mainTabs = document.getElementById("mainTabs");
+        this.mainView = document.getElementById("mainView");
+        this.tabs = new Map();
         this.eActive = null;
+        this.eTabActive = null;
         this.start();
     }
     
@@ -551,6 +564,12 @@ class AOORABloodGemWrapper{
         this.treeView.addEventListener("click", function(evt){
             this.updateEActive(evt.target);
         }.bind(this));
+        
+        // Only for testing
+        const appealNode = this.core.data[0][1][3];
+        this.addTab(appealNode);
+        //this.appeal(appealNode);
+        
     }
     
     enableEdit(){
@@ -570,7 +589,7 @@ class AOORABloodGemWrapper{
         else if (neweActive.classList.contains("node-name")){
             this.eActive = neweActive.parentNode;
             if (isLeaf(this.eActive)){
-                this.appeal(this.eActive.node);
+                this.addTab(this.eActive.node);
             }
             else if (this.eActive.isClickable){
                 if (isExpanded(this.eActive)){
@@ -584,8 +603,25 @@ class AOORABloodGemWrapper{
         activate(this.eActive);
     }
     
+    addTab(node){
+        let name = node[0];
+        let eTab = null;
+        if (this.tabs.has(node)){
+            eTab = this.tabs.get(node);
+            console.log("eTab has already!")
+        }
+        else{
+            eTab = ETab(name);
+            this.mainTabs.appendChild(eTab);
+            this.tabs.set(node, eTab);
+        }
+        this.appeal(node);
+    }
+    
     appeal(node){
-        console.log("Node appealled", node);
+        
+        this.mainView.innerHTML = node[1].data.flat(Infinity);
+        
     }
     
     append(node = ["New node", null]){
@@ -700,15 +736,10 @@ function main(){
         placeholder = null;
     };
     
-    function enableEdit(){
-        treeView.addEventListener("dragstart", onDragStart);
-        treeView.addEventListener("dragover", onDragOver);
-        treeView.addEventListener("drop", onDrop);
-        treeView.addEventListener("dragend", onDragEnd);
-    }
-    
-    enableEdit();
-    
+    treeView.addEventListener("dragstart", onDragStart);
+    treeView.addEventListener("dragover", onDragOver);
+    treeView.addEventListener("drop", onDrop);
+    treeView.addEventListener("dragend", onDragEnd);
 }
 
 document.addEventListener("DOMContentLoaded", main);
