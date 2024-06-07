@@ -2,28 +2,38 @@
 <html lang="en" translate="no">
     <head>
         <meta charset="UTF-8" />
-        <meta name="google" content="notranslate">
+        <meta name="google" content="notranslate" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <script src = "jsyaml.js"></script>
-        <script src = "data.js"></script>
-        <script src = "script.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"
+            integrity="sha512-CwxrLIN0dww6lRc/oKeZiI9oGlOob2HPMU0Yu0g+P3/G1cuTii+tt0jpyEKhilfrV7D/zmvKiVPIHUDU6xbBxg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="data.js"></script>
+        <script src="script.js"></script>
         <title>Aura Webapp</title>
     </head>
-    <body onload = "window.sys = new AOORABloodGemWrapper()">
+    <body onload="window.sys = new AOORABloodGemWrapper()">
         <table>
-            <tr height = "100%">
-                <td id = "treeTools" class="tree-tools hidden">
-                    <button id = "create-group" onclick = "sys.append(['New node', []])">Create group</button>
-                    <button id = "create" onclick = "sys.append()">Create</button>
-                    <button id = "delete" onclick = "sys.delete()">Delete</button>
+            <tr height="100%">
+                <td id="treeTools" class="tree-tools hidden">
+                    <button
+                        id="create-group"
+                        onclick="sys.append(['New node', []])"
+                    >
+                        Create group
+                    </button>
+                    <button id="create" onclick="sys.append()">Create</button>
+                    <button id="delete" onclick="sys.delete()">Delete</button>
                 </td>
-                <td id = "mainTabs"></td>
+                <td id="mainTabs"></td>
             </tr>
             <tr>
                 <td class="tree-view" id="treeView"></td>
-                <td id = "mainView">MainView Default</td>
+                <td id="mainView">MainView Default</td>
             </tr>
         </table>
     </body>
