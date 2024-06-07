@@ -1,12 +1,12 @@
-body{
+body {
     margin: 0;
 }
 
-table>tbody>tr>td{
+table > tbody > tr > td {
     vertical-align: top;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -18,14 +18,14 @@ table>tbody>tr>td{
     border: 1px solid silver;
     overflow: auto;
 }
-.node{
+.node {
     padding: 1px 3px;
     margin: 1px;
     min-height: 19px;
     background-color: #f7f9fb;
     border: 1px solid silver;
 }
-.node.active{
+.node.active {
     border: 2px solid #0095ff;
 }
 .node.placeholder {
@@ -33,24 +33,27 @@ table>tbody>tr>td{
     border: 2px dashed #0095ff;
     height: 21px;
 }
-.node.group>span.node-name {
+.node.group > span.node-name {
     min-width: 50px;
     color: #880808;
 }
-.node.expanded>span.node-name{
+.node.expanded > span.node-name {
     font-weight: bold;
 }
 .nodes {
     margin-left: 1px;
 }
 
-
-.tab{
+.tab {
     width: 149px;
     padding: 1px 5px;
     background-color: #f7f9fb;
     border: 1px solid silver;
 }
-.tab>.del{
+.tab > .del {
     float: right;
+}
+.tab.active {
+    font-weight: bold;
+    background-color: #e7e9eb;
 }
