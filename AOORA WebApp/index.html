@@ -18,21 +18,35 @@
     </head>
     <body onload="window.sys = new AOORABloodGemWrapper()">
         <table>
-            <tr height="100%">
-                <td id="treeTools" class="tree-tools hidden">
-                    <button
-                        id="create-group"
-                        onclick="sys.append(['New node', []])"
-                    >
-                        Create group
-                    </button>
-                    <button id="create" onclick="sys.append()">Create</button>
-                    <button id="delete" onclick="sys.delete()">Delete</button>
+            <tr>
+                <td>AOORA BloodGem</td>
+                <td>File</td>
+                <td>Edit</td>
+                <td>Modify</td>
+                <td>View</td>
+                <td>Help</td>
+            </tr>
+        </table>
+        <table style="min-width: 950px;">
+            <tr height = "21">
+                <td width = "305">
+                    <div id="treeTools" class="tree-tools hidden">
+                        <button
+                            id="create-group"
+                            onclick="sys.append(['New node', []])"
+                        >
+                            Create group
+                        </button>
+                        <button id="create" onclick="sys.append()">Create</button>
+                        <button id="delete" onclick="sys.delete()">Delete</button>
+                    </div>
                 </td>
-                <td id="mainTabs"></td>
+                <td>
+                    <table id = "mainTabs" style = "table-layout: fixed;"></table>
+                </td>
             </tr>
             <tr>
-                <td class="tree-view" id="treeView"></td>
+                <td width = "305" class="tree-view" id="treeView"></td>
                 <td id="mainView">MainView Default</td>
             </tr>
         </table>
