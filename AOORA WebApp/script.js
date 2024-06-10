@@ -541,7 +541,7 @@ function getESubnodes(eNode) {
 }
 
 function ETab(tabName, node) {
-    let eTab = create("div", "tab", tabName);
+    let eTab = create("td", "tab", tabName);
     let eDel = create("span", "del", "X");
     eTab.draggable = true;
     eTab.node = node;
@@ -619,16 +619,26 @@ class AOORABloodGemWrapper {
         let neweTabActive = eTab;
         if (eTab.classList.contains("del")) {
             let removedETab = eTab.parentElement;
-            neweTabActive = removedETab.previousSibling;
-            if (!neweTabActive) {
-                neweTabActive = removedETab.nextSibling;
+            if (this.eTabActive === removedETab){
+                neweTabActive = removedETab.previousSibling;
+                if (!neweTabActive) {
+                    neweTabActive = removedETab.nextSibling;
+                    console.log("neweTabActive", neweTabActive);
+                }
             }
-            console.log("Remove tab here", removedETab);
+            else{
+                neweTabActive = this.eTabActive;
+            }
+            this.tabs.delete(removedETab.node);
+            removedETab.parentElement.removeChild(removedETab);
+            
         }
         deactivate(this.eTabActive);
         this.eTabActive = neweTabActive;
-        activate(this.eTabActive);
-        this.appeal(eTab.node);
+        if (this.eTabActive){
+            activate(this.eTabActive);
+            this.appeal(this.eTabActive.node);
+        }
     }
 
     addTab(node) {
