@@ -6,12 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"
-            integrity="sha512-CwxrLIN0dww6lRc/oKeZiI9oGlOob2HPMU0Yu0g+P3/G1cuTii+tt0jpyEKhilfrV7D/zmvKiVPIHUDU6xbBxg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
+        <script src="jsyaml.js"></script>
         <script src="data.js"></script>
         <script src="script.js"></script>
         <title>Aura Webapp</title>
@@ -29,18 +24,7 @@
         </table>
         <table style="min-width: 950px;">
             <tr height = "21">
-                <td width = "305">
-                    <div id="treeTools" class="tree-tools hidden">
-                        <button
-                            id="create-group"
-                            onclick="sys.append(['New node', []])"
-                        >
-                            Create group
-                        </button>
-                        <button id="create" onclick="sys.append()">Create</button>
-                        <button id="delete" onclick="sys.delete()">Delete</button>
-                    </div>
-                </td>
+                <td width = "305">&nbsp;</td>
                 <td>
                     <table id = "mainTabs" style = "table-layout: fixed;"></table>
                 </td>
