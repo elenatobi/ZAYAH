@@ -29,9 +29,6 @@ table > tbody > tr > td {
     background-color: #f7f9fb;
     border: 1px solid silver;
 }
-.node.active {
-    border: 2px solid #0095ff;
-}
 .node.placeholder {
     background-color: #cce5ff;
     border: 2px dashed #0095ff;
