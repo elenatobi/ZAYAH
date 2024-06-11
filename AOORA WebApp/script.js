@@ -553,7 +553,6 @@ function ETab(tabName, node) {
 class AOORABloodGemWrapper {
     constructor() {
         this.core = new AOORABloodGemCore();
-        this.treeTools = document.getElementById("treeTools");
         this.treeView = document.getElementById("treeView");
         this.mainTabs = document.getElementById("mainTabs");
         this.mainView = document.getElementById("mainView");
@@ -566,8 +565,7 @@ class AOORABloodGemWrapper {
     start() {
         const structure = jsyaml.load(data);
         this.core.fromObject(structure);
-        this.updateTreeView();
-        this.enableEdit();
+        this.updateTreeUI();
         this.treeView.addEventListener(
             "click",
             function (evt) {
@@ -581,38 +579,33 @@ class AOORABloodGemWrapper {
             }.bind(this)
         );
 
+        /*
         // Only for testing
         const appealNode = this.core.data[0][1][3];
         this.addTab(appealNode);
         //this.appeal(appealNode);
+        */
     }
-
-    enableEdit() {
-        show(this.treeTools);
-    }
-
-    updateTreeView() {
+    
+    updateTreeUI(){
         clear(this.treeView);
         this.treeView.appendChild(ENodes(this.core.data));
     }
 
     updateEActive(neweActive) {
-        deactivate(this.eActive);
-        if (neweActive.classList.contains("node")) {
-            this.eActive = neweActive;
-        } else if (neweActive.classList.contains("node-name")) {
-            this.eActive = neweActive.parentNode;
-            if (isLeaf(this.eActive)) {
-                this.addTab(this.eActive.node);
-            } else if (this.eActive.isClickable) {
-                if (isExpanded(this.eActive)) {
-                    collapse(this.eActive);
+        if (neweActive.classList.contains("node-name")) {
+            neweActive = neweActive.parentNode;
+            if (isLeaf(neweActive)) {
+                this.addTab(neweActive.node);
+            } else if (neweActive.isClickable) {
+                if (isExpanded(neweActive)) {
+                    collapse(neweActive);
                 } else {
-                    expand(this.eActive);
+                    expand(neweActive);
                 }
             }
         }
-        activate(this.eActive);
+        
     }
 
     updateETabActive(eTab) {
@@ -660,22 +653,9 @@ class AOORABloodGemWrapper {
     appeal(node) {
         this.mainView.innerHTML = node[1].data.flat(Infinity);
     }
-
-    append(node = ["New node", null]) {
-        let subENodes = getESubnodes(this.eActive);
-        if (!subENodes) {
-            return;
-        }
-        let neweNode = ENode(node);
-        subENodes.appendChild(neweNode);
-        expand(this.eActive);
-    }
-
-    delete() {
-        let parentElement = this.eActive.parentElement;
-        parentElement.removeChild(this.eActive);
-    }
 }
+
+/*
 
 function main() {
     const treeView = document.getElementById("treeView");
@@ -779,3 +759,4 @@ function main() {
 }
 
 document.addEventListener("DOMContentLoaded", main);
+*/
