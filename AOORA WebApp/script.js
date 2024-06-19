@@ -43,6 +43,259 @@ function arrayClear(array) {
     array.splice(0, array.length);
 }
 
+// HTML5 Canvas Graphics/GUI
+
+function getRandomRGBColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+const colorMap = {};
+
+const eventMap = {
+    "mousemove": ["mousemove", function(event){
+        return [event.offsetX, event.offsetY];
+    }]
+};
+
+class GraphWin {
+    constructor(id) {
+        this.canvas = document.getElementById(id);
+        this.ctx = this.canvas.getContext("2d");
+        this.hit = document.createElement("canvas");
+        this.hitCtx = this.hit.getContext("2d", {willReadFrequently: true});
+        this.dirty = true;
+        this.hitDirty = true;
+        this.nodes = [];
+        this.setSize(this.canvas.width, this.canvas.height);
+        requestAnimationFrame(this.rerender.bind(this));
+    }
+
+    setSize(width, height) {
+        const ratio = window.devicePixelRatio;
+        this.hit.width = width;
+        this.hit.height = height;
+        this.canvas.width = width * ratio;
+        this.canvas.height = height * ratio;
+        this.canvas.style.width = `${width}px`;
+        this.canvas.style.height = `${height}px`;
+        this.ctx.scale(ratio, ratio);
+    }
+    
+    add(node){
+        this.nodes.push(node);
+    }
+    
+    render(ctx){
+        let rect = this.canvas.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+        for (let node of this.nodes){
+            node.render(ctx);
+        }
+    }
+    
+    renderHit(ctx){
+        let rect = this.hit.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+        for (let node of this.nodes){
+            node.renderHit(ctx);
+        }
+    }
+    
+    rerender(){
+        if (!this.dirty){
+            return;
+        }
+        this.render(this.ctx);
+        this.dirty = false;
+        requestAnimationFrame(this.rerender.bind(this));
+        console.log("Re-rendered!")
+    }
+    
+    startEvent(name){
+        let sys = this;
+        let [basicName, calcPos] = eventMap[name];
+        this.canvas.addEventListener(basicName, function(event){
+            if (sys.hitDirty){
+                sys.renderHit(sys.hitCtx);
+                sys.hitDirty = false;
+            }
+            let [x, y] = calcPos(event);
+            let pixel = sys.hitCtx.getImageData(x, y, 1, 1).data;
+            let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+            let target = colorMap[color];
+            if (target){
+                target.fire(name, {x: x, y: y});
+            }
+        });
+    }
+}
+
+class Node {
+    constructor() {
+        this.color = "black";
+        this.borderWidth = 0;
+        this.borderDash = [];
+        this.borderColor = "transparent";
+        this.rotation = 0;
+        this.handlers = {};
+        this.colorKey = getRandomRGBColor();
+        while (this.colorKey in colorMap){
+            this.colorKey = getRandomRGBColor();
+        }
+        colorMap[this.colorKey] = this;
+    }
+
+    sceneFunc(ctx) {
+        throw new Error("sceneFunc is not implemented");
+    }
+
+    hitFunc(ctx) {
+        this.sceneFunc(ctx);
+    }
+
+    get pivot() {
+        throw new Error(".pivot is not implemented");
+    }
+    
+    bind(name, handler){
+        if (!(name in this.handlers)){
+            this.handlers[name] = [];
+        }
+        this.handlers[name].push(handler);
+    }
+    
+    unbind(name, handler){
+        if (!(name in this.handlers)){
+            return;
+        }
+        arrayDelete(this.handlers[name], handler);
+    }
+    
+    unbindAll(name){
+        if (!(name in this.handlers)){
+            return;
+        }
+        delete this.handlers[name];
+    }
+    
+    fire(name, event){
+        if (!(name in this.handlers)){
+            return;
+        }
+        for (let handler of this.handlers[name]){
+            handler.call(this, event);
+        }
+    }
+    
+    destroy(){
+        delete colorMap[this.colorKey];
+        delete this.colorKey;
+        delete this;
+    }
+}
+
+class BoxNode extends Node{
+    constructor(){
+        super();
+        this.x = 0;
+        this.y = 0;
+        this.width = 0;
+        this.height = 0;
+        this.skewX = 0;
+        this.skewY = 0;
+    }
+    
+    __setTransform(ctx){
+        let xFactor = this.width > 0 ? 1 : -1;
+        let yFactor = this.height > 0 ? 1 : -1;
+
+        if (this.rotation){
+            let [centerX, centerY] = this.pivot;
+            ctx.translate(centerX, centerY);
+            ctx.rotate(this.rotation);
+            ctx.translate(-centerX, -centerY);
+        }
+        
+        let skewScaleX = this.skewX / this.height;
+        let skewScaleY = this.skewY / this.width;
+        
+        ctx.transform(1, skewScaleY, skewScaleX, 1, this.x, this.y);
+        ctx.scale(xFactor, yFactor);
+    }
+    
+    get pivot() {
+        let x = this.x + (this.width + this.skewX) / 2;
+        let y = this.y + (this.height + this.skewY) / 2;
+        return [x, y];
+    }
+    
+    render(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.color;
+        ctx.strokeStyle = this.borderColor;
+        ctx.lineWidth = this.borderWidth;
+        ctx.setLineDash(this.borderDash);
+        this.sceneFunc(ctx);
+        ctx.restore();
+    }
+    
+    renderHit(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.colorKey;
+        ctx.strokeStyle = this.colorKey;
+        ctx.lineWidth = this.borderWidth;
+        this.sceneFunc(ctx);
+        ctx.restore();
+    }
+}
+
+class Rect extends BoxNode {
+    constructor(config) {
+        super();
+        Object.assign(this, config);
+    }
+
+    sceneFunc(ctx) {
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height)
+        ctx.beginPath();
+        ctx.fillRect(0, 0, width, height);
+        ctx.strokeRect(0, 0, width, height);
+        ctx.closePath();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const g = new GraphWin("mainView");
+    g.hit.style.border = "1px solid red";
+    document.body.appendChild(g.hit);
+    g.setSize(500, 400);
+    let r = new Rect({
+        x: 232,
+        y: 170,
+        width: 125,
+        height: 35,
+        skewX: 51,
+        skewY: 29,
+        color: "red",
+    });
+    r.bind("mousemove", function(event){
+        console.log(event.x, event.y);
+    });
+    g.add(r);
+    // Only for testing
+    window.r = r;
+    window.g = g;
+    window.colorMap = colorMap;
+});
+
 // Input reader (Very ugly code)
 
 function fulfillCondition(condition, data) {
@@ -410,104 +663,6 @@ function clear() {
     HTMLElement.innerHTML = "";
 }
 
-function hide(HTMLElement) {
-    HTMLElement.style.display = "none";
-}
-
-function show(HTMLElement) {
-    HTMLElement.style.display = "block";
-}
-
-function isShown(HTMLElement) {
-    return HTMLElement.style.display === "block";
-}
-
-function DragPlaceholder() {
-    return create("div", "node placeholder");
-}
-
-function ENode(node) {
-    let [nodeName, subnodes] = node;
-    let eNode = create("div", "node");
-    let eNodeName = create("span", "node-name", nodeName);
-    eNode.draggable = true;
-    eNode.node = node;
-    eNode.subnodes = subnodes;
-    eNode.isClickable = true;
-
-    let origNodeName = null;
-    if (Array.isArray(subnodes)) {
-        eNode.classList.add("group");
-    } else {
-        eNode.classList.add("leaf");
-    }
-    eNodeName.addEventListener("dblclick", function (evt) {
-        evt.preventDefault();
-        evt.stopImmediatePropagation();
-        evt.target.contentEditable = "true";
-        eNode.isClickable = false;
-        evt.target.focus();
-        origNodeName = eNodeName.textContent;
-    });
-    eNodeName.addEventListener("focusout", function (evt) {
-        evt.target.contentEditable = "false";
-        eNode.isClickable = true;
-        if (eNodeName.textContent.trim() === "") {
-            eNodeName.textContent = origNodeName;
-        }
-    });
-    eNodeName.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 13) {
-            evt.target.contentEditable = "false";
-            eNode.isClickable = true;
-            if (eNodeName.textContent.trim() === "") {
-                eNodeName.textContent = origNodeName;
-            }
-        }
-    });
-    eNode.appendChild(eNodeName);
-    return eNode;
-}
-
-function ENodes(nodes) {
-    let eNodes = create("div", "nodes");
-    for (let node of nodes) {
-        eNodes.appendChild(ENode(node));
-    }
-    return eNodes;
-}
-
-function isExpanded(eNode) {
-    let subENodes = eNode.querySelector("div");
-    if (!subENodes) {
-        return false;
-    }
-    return isShown(subENodes);
-}
-
-function isLeaf(eNode) {
-    return eNode.classList.contains("leaf");
-}
-
-function expand(eNode) {
-    let subENodes = eNode.querySelector("div");
-    if (!subENodes) {
-        subENodes = ENodes(eNode.subnodes);
-        eNode.appendChild(subENodes);
-    }
-    show(subENodes);
-    eNode.classList.add("expanded");
-}
-
-function collapse(eNode) {
-    let subENodes = eNode.querySelector("div");
-    if (!subENodes) {
-        return;
-    }
-    hide(subENodes);
-    eNode.classList.remove("expanded");
-}
-
 function activate(eNode) {
     if (!eNode) {
         return;
@@ -529,35 +684,13 @@ function isActive(eNode) {
     return eNode.classList.contains("active");
 }
 
-function getESubnodes(eNode) {
-    if (isLeaf(eNode)) {
-        return null;
-    }
-    let children = eNode.children;
-    if (children.length < 2) {
-        expand(eNode);
-    }
-    return children[1];
-}
-
-function ETab(tabName, node) {
-    let eTab = create("td", "tab", tabName);
-    let eDel = create("span", "del", "X");
-    eTab.draggable = true;
-    eTab.node = node;
-    eTab.appendChild(eDel);
-
-    return eTab;
-}
-
 class AOORABloodGemWrapper {
     constructor() {
         this.core = new AOORABloodGemCore();
         this.treeView = document.getElementById("treeView");
         this.mainTabs = document.getElementById("mainTabs");
         this.mainView = document.getElementById("mainView");
-        this.tabs = new Map();
-        this.eActive = null;
+        this.tabs = [];
         this.eTabActive = null;
         this.start();
     }
@@ -566,197 +699,106 @@ class AOORABloodGemWrapper {
         const structure = jsyaml.load(data);
         this.core.fromObject(structure);
         this.updateTreeUI();
-        this.treeView.addEventListener(
-            "click",
-            function (evt) {
-                this.updateEActive(evt.target);
-            }.bind(this)
-        );
-        this.mainTabs.addEventListener(
-            "click",
-            function (evt) {
-                this.updateETabActive(evt.target);
-            }.bind(this)
-        );
-
-        /*
-        // Only for testing
-        const appealNode = this.core.data[0][1][3];
-        this.addTab(appealNode);
-        //this.appeal(appealNode);
-        */
-    }
-    
-    updateTreeUI(){
-        clear(this.treeView);
-        this.treeView.appendChild(ENodes(this.core.data));
     }
 
-    updateEActive(neweActive) {
-        if (neweActive.classList.contains("node-name")) {
-            neweActive = neweActive.parentNode;
-            if (isLeaf(neweActive)) {
-                this.addTab(neweActive.node);
-            } else if (neweActive.isClickable) {
-                if (isExpanded(neweActive)) {
-                    collapse(neweActive);
+    __createTree(node) {
+        let sys = this;
+        let [nodeName, subnodes] = node;
+        let eNode = create("div", "node");
+        let eNodeName = create("span", "node-name", nodeName);
+        eNode.draggable = true;
+
+        if (Array.isArray(subnodes)) {
+            eNode.classList.add("group");
+            eNodeName.addEventListener("click", function () {
+                let subENodes = eNode.querySelector("div");
+                if (!subENodes) {
+                    subENodes = create("div", "nodes");
+                    for (let subnode of subnodes) {
+                        subENodes.appendChild(sys.__createTree(subnode));
+                    }
+                    eNode.appendChild(subENodes);
+                    eNode.classList.add("expanded");
                 } else {
-                    expand(neweActive);
+                    if (subENodes.style.display === "block") {
+                        subENodes.style.display = "none";
+                        eNode.classList.remove("expanded");
+                    } else {
+                        subENodes.style.display = "block";
+                        eNode.classList.add("expanded");
+                    }
                 }
-            }
-        }
-        
-    }
-
-    updateETabActive(eTab) {
-        let neweTabActive = eTab;
-        if (eTab.classList.contains("del")) {
-            let removedETab = eTab.parentElement;
-            if (this.eTabActive === removedETab){
-                neweTabActive = removedETab.previousSibling;
-                if (!neweTabActive) {
-                    neweTabActive = removedETab.nextSibling;
-                    console.log("neweTabActive", neweTabActive);
-                }
-            }
-            else{
-                neweTabActive = this.eTabActive;
-            }
-            this.tabs.delete(removedETab.node);
-            removedETab.parentElement.removeChild(removedETab);
-            
-        }
-        deactivate(this.eTabActive);
-        this.eTabActive = neweTabActive;
-        if (this.eTabActive){
-            activate(this.eTabActive);
-            this.appeal(this.eTabActive.node);
-        }
-    }
-
-    addTab(node) {
-        let name = node[0];
-        let eTab = null;
-        if (this.tabs.has(node)) {
-            eTab = this.tabs.get(node);
+            });
         } else {
-            eTab = ETab(name, node);
-            this.mainTabs.appendChild(eTab);
-            this.tabs.set(node, eTab);
+            eNode.classList.add("leaf");
+            eNodeName.addEventListener("click", function () {
+                sys.addTab(node);
+            });
         }
-        this.updateETabActive(eTab);
-        this.appeal(node);
+
+        eNode.appendChild(eNodeName);
+        return eNode;
+    }
+
+    updateTreeUI() {
+        clear(this.treeView);
+        for (let node of this.core.data) {
+            this.treeView.appendChild(this.__createTree(node));
+        }
+    }
+
+    addTab(newNode) {
+        let newETab = null;
+        for (let [node, eTab] of this.tabs) {
+            if (node === newNode) {
+                newETab = eTab;
+            }
+        }
+        if (!newETab) {
+            let sys = this;
+            let name = newNode[0];
+            let newVNode = newNode[1].data.flat(Infinity);
+            newETab = create("td", "tab", name);
+            let eDel = create("span", "del", "X");
+            newETab.draggable = true;
+            newETab.appendChild(eDel);
+            newETab.addEventListener("click", function () {
+                deactivate(sys.eTabActive);
+                sys.eTabActive = newETab;
+                if (sys.eTabActive) {
+                    activate(sys.eTabActive);
+                    sys.appeal(newVNode);
+                }
+            });
+            eDel.addEventListener("click", function (evt) {
+                evt.stopPropagation();
+                let neweTabActive = sys.eTabActive;
+                if (sys.eTabActive === newETab) {
+                    neweTabActive = newETab.nextSibling;
+                    if (!neweTabActive) {
+                        neweTabActive = newETab.previousSibling;
+                    }
+                }
+                var index = sys.tabs.findIndex(function (x) {
+                    return x[1] === newETab;
+                });
+                if (index > -1) {
+                    sys.tabs.splice(index, 1);
+                }
+                newETab.parentElement.removeChild(newETab);
+                if (neweTabActive){
+                    neweTabActive.click();
+                }
+            });
+            this.mainTabs.appendChild(newETab);
+            this.tabs.push([newNode, newETab]);
+        }
+        newETab.click();
     }
 
     removeTab(node) {}
 
-    appeal(node) {
-        this.mainView.innerHTML = node[1].data.flat(Infinity);
+    appeal(data) {
+        console.log(data);
     }
 }
-
-/*
-
-function main() {
-    const treeView = document.getElementById("treeView");
-
-    let draggingEle = null;
-    let placeholder = null;
-
-    function onDragStart(e) {
-        draggingEle = e.target;
-        e.dataTransfer.effectAllowed = "move";
-        e.dataTransfer.setData("text/plain", null);
-
-        placeholder = DragPlaceholder();
-        draggingEle.parentNode.insertBefore(
-            placeholder,
-            draggingEle.nextSibling
-        );
-
-        setTimeout(function () {
-            hide(draggingEle);
-        }, 0);
-    }
-
-    function onDragOver(e) {
-        e.preventDefault();
-        const target = e.target;
-
-        if (
-            target &&
-            target !== draggingEle &&
-            target.classList.contains("node")
-        ) {
-            const parentNode = target.parentNode;
-            const rect = target.getBoundingClientRect();
-            let upperY = rect.top + rect.height / 3;
-            let lowerY = rect.top + (2 * rect.height) / 3;
-
-            if (target.classList.contains("leaf")) {
-                upperY = rect.top + rect.height / 2;
-                lowerY = upperY;
-            }
-
-            if (e.clientY < upperY) {
-                parentNode.insertBefore(placeholder, target);
-            } else if (upperY < e.clientY && e.clientY < lowerY) {
-                if (!target.contains(placeholder)) {
-                    target.appendChild(placeholder);
-                }
-            } else {
-                parentNode.insertBefore(placeholder, target.nextSibling);
-            }
-        }
-    }
-
-    function onDrop(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        show(draggingEle);
-
-        const target = e.target;
-        if (target && target.classList.contains("node")) {
-            const rect = target.getBoundingClientRect();
-            const midY = rect.top + rect.height / 2;
-
-            const parentNode = target.parentNode;
-            if (e.clientY > midY) {
-                parentNode.insertBefore(draggingEle, target.nextSibling);
-            } else {
-                parentNode.insertBefore(draggingEle, target);
-            }
-        } else {
-            treeView.appendChild(draggingEle);
-        }
-
-        if (placeholder && placeholder.parentNode) {
-            placeholder.parentNode.removeChild(placeholder);
-        }
-
-        draggingEle = null;
-        placeholder = null;
-    }
-
-    function onDragEnd() {
-        if (placeholder && placeholder.parentNode) {
-            placeholder.parentNode.removeChild(placeholder);
-        }
-
-        if (draggingEle) {
-            show(draggingEle);
-        }
-
-        draggingEle = null;
-        placeholder = null;
-    }
-
-    treeView.addEventListener("dragstart", onDragStart);
-    treeView.addEventListener("dragover", onDragOver);
-    treeView.addEventListener("drop", onDrop);
-    treeView.addEventListener("dragend", onDragEnd);
-}
-
-document.addEventListener("DOMContentLoaded", main);
-*/
