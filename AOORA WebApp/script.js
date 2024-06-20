@@ -54,10 +54,43 @@ function getRandomRGBColor() {
 
 const colorMap = {};
 
+function genMouse(name) {
+    return function (event, hit) {
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+        let target = colorMap[color];
+        if (target){
+            target.fire(name, {x: x, y: y});
+        }
+    };
+}
+
+function genMouseOut(name) {
+    return function (event, hit) {
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+        let target = colorMap[color];
+        for (let color in colorMap) {
+            let node = colorMap[color];
+            if (node != target) {
+                node.fire(name, { x: x, y: y });
+            }
+        }
+    };
+}
+
 const eventMap = {
-    "mousemove": ["mousemove", function(event){
-        return [event.offsetX, event.offsetY];
-    }]
+    mousemove: ['mousemove', genMouse('mousemove')],
+    mousedown: ['mousedown', genMouse('mousedown')],
+    mouseup: ['mouseup', genMouse('mouseup')],
+    mousemoveout: ['mousemove', genMouseOut('mousemoveout')],
+    mousedownout: ['mousedown', genMouseOut('mousedownout')],
+    mouseupout: ['mouseup', genMouseOut('mouseupout')],
+    
 };
 
 class GraphWin {
@@ -69,6 +102,7 @@ class GraphWin {
         this.dirty = true;
         this.hitDirty = true;
         this.nodes = [];
+        this.activeEventListeners = {};
         this.setSize(this.canvas.width, this.canvas.height);
         requestAnimationFrame(this.rerender.bind(this));
     }
@@ -85,6 +119,7 @@ class GraphWin {
     }
     
     add(node){
+        node.inject(this);
         this.nodes.push(node);
     }
     
@@ -111,25 +146,28 @@ class GraphWin {
         this.render(this.ctx);
         this.dirty = false;
         requestAnimationFrame(this.rerender.bind(this));
-        console.log("Re-rendered!")
     }
     
-    startEvent(name){
+    requestRefresh(){
+        this.dirty = true;
+        requestAnimationFrame(this.rerender.bind(this));
+    }
+    
+    startEvent(name) {
+        if (name in this.activeEventListeners){
+            return;
+        }
         let sys = this;
         let [basicName, calcPos] = eventMap[name];
-        this.canvas.addEventListener(basicName, function(event){
+        let handler = function(event){
             if (sys.hitDirty){
                 sys.renderHit(sys.hitCtx);
                 sys.hitDirty = false;
             }
-            let [x, y] = calcPos(event);
-            let pixel = sys.hitCtx.getImageData(x, y, 1, 1).data;
-            let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
-            let target = colorMap[color];
-            if (target){
-                target.fire(name, {x: x, y: y});
-            }
-        });
+            calcPos(event, sys.hitCtx);
+        };
+        this.activeEventListeners[name] = [basicName, handler];
+        this.canvas.addEventListener(basicName, handler);
     }
 }
 
@@ -142,10 +180,18 @@ class Node {
         this.rotation = 0;
         this.handlers = {};
         this.colorKey = getRandomRGBColor();
+        this.__glob = null;
         while (this.colorKey in colorMap){
             this.colorKey = getRandomRGBColor();
         }
         colorMap[this.colorKey] = this;
+    }
+    
+    inject(glob){
+        this.__glob = glob;
+        for (let name in this.handlers){
+            this.__glob.startEvent(name);
+        }
     }
 
     sceneFunc(ctx) {
@@ -163,6 +209,9 @@ class Node {
     bind(name, handler){
         if (!(name in this.handlers)){
             this.handlers[name] = [];
+            if (this.__glob){
+                this.__glob.startEvent(name);
+            }
         }
         this.handlers[name].push(handler);
     }
@@ -193,7 +242,6 @@ class Node {
     destroy(){
         delete colorMap[this.colorKey];
         delete this.colorKey;
-        delete this;
     }
 }
 
@@ -254,6 +302,24 @@ class BoxNode extends Node{
         this.sceneFunc(ctx);
         ctx.restore();
     }
+    
+    translate(xDelta, yDelta){
+        this.x += xDelta;
+        this.y += yDelta;
+    }
+    
+    scale(xScale, yScale){
+        this.x *= xScale;
+        this.y *= yScale;
+        this.width *= xScale;
+        this.height *= yScale;
+        this.skewX *= xScale;
+        this.skewY *= yScale;
+    }
+    
+    rotate(rotationDelta){
+        this.rotation += rotationDelta;
+    }
 }
 
 class Rect extends BoxNode {
@@ -277,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function () {
     g.hit.style.border = "1px solid red";
     document.body.appendChild(g.hit);
     g.setSize(500, 400);
-    let r = new Rect({
+    let r1 = new Rect({
         x: 232,
         y: 170,
         width: 125,
@@ -286,12 +352,21 @@ document.addEventListener("DOMContentLoaded", function () {
         skewY: 29,
         color: "red",
     });
-    r.bind("mousemove", function(event){
-        console.log(event.x, event.y);
+    let r1t = new Rect({
+        x: 232,
+        y: 170,
+        width: 125,
+        height: 35,
+        skewX: 51,
+        skewY: 29,
+        color: "rgba(255, 0, 0, 0.5)",
     });
-    g.add(r);
+    r1t.translate(-232, -170);
+    r1t.scale(1.5, 1);
+    r1t.translate(232, 170);
+    g.add(r1);
+    g.add(r1t);
     // Only for testing
-    window.r = r;
     window.g = g;
     window.colorMap = colorMap;
 });
