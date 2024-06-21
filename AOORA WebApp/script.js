@@ -299,11 +299,36 @@ class BoxNode extends Node{
         ctx.fillStyle = this.colorKey;
         ctx.strokeStyle = this.colorKey;
         ctx.lineWidth = this.borderWidth;
-        this.sceneFunc(ctx);
+        this.hitFunc(ctx);
         ctx.restore();
     }
     
-    translate(xDelta, yDelta){
+    get bound(){
+        let s = Math.sin(this.rotation);
+        let c = Math.cos(this.rotation);
+        let x1 = this.x*c - this.y*s;
+        let y1 = this.x*s + this.y*c;
+        let x2 = this.width*c - this.skewY*s + this.x*c - this.y*s;
+        let y2 = this.width*s + this.skewY*c + this.x*s + this.y*c;
+        let x3 = this.skewX*c - this.height*s + this.x*c - this.y*s;
+        let y3 = this.skewX*s + this.height*c + this.x*s + this.y*c;
+        let x4 = this.width*c - this.skewY*s + this.skewX*c - this.height*s + this.x*c - this.y*s;
+        let y4 = this.width*s + this.skewY*c + this.skewX*s + this.height*c + this.x*s + this.y*c;
+        let xMin = Math.min(x1, x2, x3, x4);
+        let yMin = Math.min(y1, y2, y3, y4);
+        let xMax = Math.max(x1, x2, x3, x4);
+        let yMax = Math.max(y1, y2, y3, y4);
+        
+        return [xMin, yMin, xMax - xMin, yMax - yMin];
+    }
+    
+    /*
+    transform(sx, ry, rx, sy, dx, dy){
+        let s = Math.sin(this.rotation);
+        let c = Math.cos(this.rotation);
+    }
+    
+    translate(dx, dy){
         this.x += xDelta;
         this.y += yDelta;
     }
@@ -316,6 +341,7 @@ class BoxNode extends Node{
         this.skewX *= xScale;
         this.skewY *= yScale;
     }
+    */
     
     rotate(rotationDelta){
         this.rotation += rotationDelta;
@@ -330,11 +356,108 @@ class Rect extends BoxNode {
 
     sceneFunc(ctx) {
         let width = Math.abs(this.width);
-        let height = Math.abs(this.height)
+        let height = Math.abs(this.height);
         ctx.beginPath();
         ctx.fillRect(0, 0, width, height);
         ctx.strokeRect(0, 0, width, height);
         ctx.closePath();
+    }
+}
+
+class Ellipse extends BoxNode {
+    constructor(config){
+        super();
+        this.startAngle = 0;
+        this.endAngle = 2*Math.PI;
+        Object.assign(this, config);
+    }
+    
+    sceneFunc(ctx){
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.beginPath();
+        ctx.ellipse(width/2, height/2, width/2, height/2, 0, this.startAngle, this.endAngle);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    }
+}
+
+class IText extends BoxNode{
+    constructor(config){
+        super();
+        this.content = "";
+        this.textAlign = "start";
+        this.textBaseline = "top";
+        this.fontFamily = "Arial";
+        this.fontStyle = "";
+        Object.assign(this, config);
+    }
+    
+    sceneFunc(ctx){
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.textAlign = this.textAlign;
+        ctx.textBaseline = this.textBaseline;
+        ctx.font = `${this.fontStyle} ${height}px ${this.fontFamily}`;
+        ctx.fillText(this.content, 0, 0, width);
+        ctx.strokeText(this.content, 0, 0, width);
+    }
+    
+    hitFunc(ctx){
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.beginPath();
+        ctx.fillRect(0, 0, width, height);
+        ctx.strokeRect(0, 0, width, height);
+        ctx.closePath();
+    }
+}
+
+class Image extends BoxNode{
+    constructor(config){
+        super();
+        this.element = null;
+        Object.assign(this, config);
+    }
+    
+    set src(src){
+        this.element = document.createElement("img");
+        this.element.src = src;
+    }
+    
+    get src(){
+        return this.element.src;
+    }
+    
+    sceneFunc(ctx){
+        if (!this.element){
+            return;
+        }
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.drawImage(this.element, 0, 0, width, height);
+    }
+    
+    hitFunc(ctx){
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.beginPath();
+        ctx.fillRect(0, 0, width, height);
+        ctx.strokeRect(0, 0, width, height);
+        ctx.closePath();
+    }
+}
+
+class Layout extends BoxNode{
+    constructor(config){
+        super();
+        this.dx = 0;
+        this.dy = 0;
+        this.sx = 1;
+        this.sy = 1;
+        this.skewX = 0;
+        this.skewY = 0;
     }
 }
 
@@ -343,29 +466,31 @@ document.addEventListener("DOMContentLoaded", function () {
     g.hit.style.border = "1px solid red";
     document.body.appendChild(g.hit);
     g.setSize(500, 400);
-    let r1 = new Rect({
-        x: 232,
-        y: 170,
-        width: 125,
-        height: 35,
-        skewX: 51,
-        skewY: 29,
+    let i1 = new Image({
+        x: 350,
+        y: 150,
+        width: 70,
+        height: 80,
+        skewX: 0,
+        skewY: 0,
         color: "red",
+        src: "cat.png",
     });
-    let r1t = new Rect({
-        x: 232,
-        y: 170,
-        width: 125,
-        height: 35,
-        skewX: 51,
-        skewY: 29,
-        color: "rgba(255, 0, 0, 0.5)",
+    /*
+    i1.bind("mousemove", function(){
+        if (this.color !== "yellow"){
+            this.color = "yellow";
+            g.requestRefresh();
+        }
     });
-    r1t.translate(-232, -170);
-    r1t.scale(1.5, 1);
-    r1t.translate(232, 170);
-    g.add(r1);
-    g.add(r1t);
+    i1.bind("mousemoveout", function(){
+        if (this.color !== "red"){
+            this.color = "red";
+            g.requestRefresh();
+        }
+    });
+    */
+    g.add(i1);
     // Only for testing
     window.g = g;
     window.colorMap = colorMap;
