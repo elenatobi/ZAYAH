@@ -83,6 +83,8 @@ function genMouseOut(name) {
     };
 }
 
+let isDragging = false;
+
 const eventMap = {
     mousemove: ['mousemove', genMouse('mousemove')],
     mousedown: ['mousedown', genMouse('mousedown')],
@@ -90,7 +92,44 @@ const eventMap = {
     mousemoveout: ['mousemove', genMouseOut('mousemoveout')],
     mousedownout: ['mousedown', genMouseOut('mousedownout')],
     mouseupout: ['mouseup', genMouseOut('mouseupout')],
-    
+    dragstart: ['mousedown', function(event, hit){
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+        let target = colorMap[color];
+        if (target){
+            target.fire("dragstart", {x: x, y: y});
+        }
+        isDragging = true;
+    }],
+    drag: ['mousemove', function(event, hit){
+        if (!isDragging){
+            return;
+        }
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+        let target = colorMap[color];
+        if (target){
+            target.fire("drag", {x: x, y: y});
+        }
+    }],
+    dragend: ['mouseup', function(event, hit){
+        if (!isDragging){
+            return;
+        }
+        let x = event.offsetX;
+        let y = event.offsetY;
+        let pixel = hit.getImageData(x, y, 1, 1).data;
+        let color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
+        let target = colorMap[color];
+        if (target){
+            target.fire("dragend", {x: x, y: y});
+        }
+        isDragging = false;
+    }],
 };
 
 class GraphWin {
@@ -104,6 +143,7 @@ class GraphWin {
         this.nodes = [];
         this.activeEventListeners = {};
         this.setSize(this.canvas.width, this.canvas.height);
+        
         requestAnimationFrame(this.rerender.bind(this));
     }
 
@@ -116,6 +156,7 @@ class GraphWin {
         this.canvas.style.width = `${width}px`;
         this.canvas.style.height = `${height}px`;
         this.ctx.scale(ratio, ratio);
+        this.startEvent("dragend");
     }
     
     add(node){
@@ -140,17 +181,17 @@ class GraphWin {
     }
     
     rerender(){
-        if (!this.dirty){
-            return;
+        if (this.dirty){
+            this.render(this.ctx);
+            this.dirty = false;
         }
-        this.render(this.ctx);
-        this.dirty = false;
         requestAnimationFrame(this.rerender.bind(this));
     }
     
     requestRefresh(){
         this.dirty = true;
-        requestAnimationFrame(this.rerender.bind(this));
+        this.hitDirty = true;
+        // requestAnimationFrame(this.rerender.bind(this));
     }
     
     startEvent(name) {
@@ -450,8 +491,9 @@ class Image extends BoxNode{
 }
 
 class Layout extends BoxNode{
-    constructor(config){
+    constructor(){
         super();
+        this.subNodes = [];
         this.dx = 0;
         this.dy = 0;
         this.sx = 1;
@@ -459,22 +501,163 @@ class Layout extends BoxNode{
         this.skewX = 0;
         this.skewY = 0;
     }
+    
+    inject(glob){
+        super.inject(glob);
+        for (let subNode of this.subNodes){
+            subNode.inject(glob);
+        }
+        
+    }
+    
+    add(node){
+        node.inject(this.__glob);
+        this.subNodes.push(node);
+    }
+    
+    sceneFunc(ctx) {
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.beginPath();
+        ctx.rect(0, 0, width, height);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    }
 }
+
+class CoordinatorLayout extends Layout{
+    constructor(config){
+        super();
+        Object.assign(this, config);
+    }
+    
+    render(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.color;
+        ctx.strokeStyle = this.borderColor;
+        ctx.lineWidth = this.borderWidth;
+        ctx.setLineDash(this.borderDash);
+        this.sceneFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.render(ctx);
+        }
+        
+        ctx.restore();
+    }
+    
+    renderHit(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.colorKey;
+        ctx.strokeStyle = this.colorKey;
+        ctx.lineWidth = this.borderWidth;
+        this.hitFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.renderHit(ctx);
+        }
+        
+        ctx.restore();
+    }
+}
+
+class LinearLayout extends Layout{
+    constructor(config){
+        super();
+        Object.assign(this, config);
+    }
+    
+    render(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.color;
+        ctx.strokeStyle = this.borderColor;
+        ctx.lineWidth = this.borderWidth;
+        ctx.setLineDash(this.borderDash);
+        this.sceneFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.render(ctx);
+            let [_, _, _, boundHeight] = subNode.bound;
+            ctx.translate(0, boundHeight);
+        }
+        
+        ctx.restore();
+    }
+    
+    renderHit(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.colorKey;
+        ctx.strokeStyle = this.colorKey;
+        ctx.lineWidth = this.borderWidth;
+        this.hitFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.renderHit(ctx);
+            let [_, _, _, boundHeight] = subNode.bound;
+            ctx.translate(0, boundHeight);
+        }
+        
+        ctx.restore();
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const g = new GraphWin("mainView");
     g.hit.style.border = "1px solid red";
     document.body.appendChild(g.hit);
     g.setSize(500, 400);
+    let C1 = new CoordinatorLayout({
+        x: 15,
+        y: 20,
+        width: 450,
+        height: 300,
+        skewX: 0,
+        skewY: 0,
+        color: "grey"
+    });
     let i1 = new Image({
-        x: 350,
-        y: 150,
+        x: 100,
+        y: 50,
         width: 70,
         height: 80,
         skewX: 0,
         skewY: 0,
         color: "red",
         src: "cat.png",
+    });
+    let xStart = 0;
+    let yStart = 0;
+    
+    C1.bind("dragstart", function(evt){
+        xStart = evt.x;
+        yStart = evt.y;
+    });
+    C1.bind("drag", function(evt){
+        let dx = evt.x - xStart;
+        let dy = evt.y - yStart;
+        xStart = evt.x;
+        yStart = evt.y;
+        this.dx += dx;
+        this.dy += dy;
+        g.requestRefresh();
     });
     /*
     i1.bind("mousemove", function(){
@@ -490,7 +673,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     */
-    g.add(i1);
+    C1.add(i1);
+    
+    let r1 = new Rect({
+        x: 15,
+        y: 320,
+        width: 30,
+        height: 15,
+        color: "blue"
+    });
+    g.add(r1);
+    
+    g.add(C1);
     // Only for testing
     window.g = g;
     window.colorMap = colorMap;
