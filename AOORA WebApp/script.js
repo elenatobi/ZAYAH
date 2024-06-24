@@ -63,6 +63,7 @@ function genMouse(name) {
         let target = colorMap[color];
         if (target){
             target.fire(name, {x: x, y: y});
+            // console.log("Fired target:", target)
         }
     };
 }
@@ -222,6 +223,7 @@ class Node {
         this.handlers = {};
         this.colorKey = getRandomRGBColor();
         this.__glob = null;
+        this.superNode = null;
         while (this.colorKey in colorMap){
             this.colorKey = getRandomRGBColor();
         }
@@ -272,11 +274,13 @@ class Node {
     }
     
     fire(name, event){
-        if (!(name in this.handlers)){
-            return;
+        if (name in this.handlers){
+            for (let handler of this.handlers[name]){
+                handler.call(this, event);
+            }
         }
-        for (let handler of this.handlers[name]){
-            handler.call(this, event);
+        if (this.superNode){
+            this.superNode.fire(name, event);
         }
     }
     
@@ -493,26 +497,12 @@ class Image extends BoxNode{
 class Layout extends BoxNode{
     constructor(){
         super();
-        this.subNodes = [];
         this.dx = 0;
         this.dy = 0;
         this.sx = 1;
         this.sy = 1;
         this.skewX = 0;
         this.skewY = 0;
-    }
-    
-    inject(glob){
-        super.inject(glob);
-        for (let subNode of this.subNodes){
-            subNode.inject(glob);
-        }
-        
-    }
-    
-    add(node){
-        node.inject(this.__glob);
-        this.subNodes.push(node);
     }
     
     sceneFunc(ctx) {
@@ -526,7 +516,27 @@ class Layout extends BoxNode{
     }
 }
 
-class CoordinatorLayout extends Layout{
+class SpaceLayout extends Layout{
+    constructor(){
+        super();
+        this.subNodes = [];
+    }
+    
+    inject(glob){
+        super.inject(glob);
+        for (let subNode of this.subNodes){
+            subNode.inject(glob);
+        }
+    }
+    
+    add(node){
+        node.inject(this.__glob);
+        node.superNode = this;
+        this.subNodes.push(node);
+    }
+}
+
+class CoordinatorLayout extends SpaceLayout{
     constructor(config){
         super();
         Object.assign(this, config);
@@ -570,7 +580,7 @@ class CoordinatorLayout extends Layout{
     }
 }
 
-class LinearLayout extends Layout{
+class LinearLayout extends SpaceLayout{
     constructor(config){
         super();
         Object.assign(this, config);
@@ -590,8 +600,8 @@ class LinearLayout extends Layout{
         ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
         for (let subNode of this.subNodes){
             subNode.render(ctx);
-            let [_, _, _, boundHeight] = subNode.bound;
-            ctx.translate(0, boundHeight);
+            let [, boundY, , boundHeight] = subNode.bound;
+            ctx.translate(0, boundY + boundHeight);
         }
         
         ctx.restore();
@@ -610,12 +620,90 @@ class LinearLayout extends Layout{
         ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
         for (let subNode of this.subNodes){
             subNode.renderHit(ctx);
-            let [_, _, _, boundHeight] = subNode.bound;
-            ctx.translate(0, boundHeight);
+            let [, boundY, , boundHeight] = subNode.bound;
+            ctx.translate(0, boundY + boundHeight);
         }
         
         ctx.restore();
     }
+}
+
+class TableLayout extends Layout{
+    constructor(config){
+        super();
+        this.colSizes = [];
+        this.rowSizes = [];
+        this.data = [];
+        Object.assign(this, config);
+    }
+    
+    inject(glob){
+        super.inject(glob);
+        for (let row of this.data){
+            for (let node of row){
+                node.inject(glob);
+            }
+        }
+    }
+    
+    addRow(){
+        for (let node of row){
+            node.inject(this.__glob);
+            node.superNode = this;
+        }
+        this.data.push([]);
+    }
+    
+    addColumn(rowIndex, node){
+        let row = this.data[rowIndex];
+        if (!row){
+            return;
+        }
+        row.push(node);
+    }
+    
+    /*
+    render(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.color;
+        ctx.strokeStyle = this.borderColor;
+        ctx.lineWidth = this.borderWidth;
+        ctx.setLineDash(this.borderDash);
+        this.sceneFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.render(ctx);
+            let [, boundY, , boundHeight] = subNode.bound;
+            ctx.translate(0, boundY + boundHeight);
+        }
+        
+        ctx.restore();
+    }
+    
+    renderHit(ctx){
+        ctx.save();
+        this.__setTransform(ctx);
+        
+        ctx.fillStyle = this.colorKey;
+        ctx.strokeStyle = this.colorKey;
+        ctx.lineWidth = this.borderWidth;
+        this.hitFunc(ctx);
+        
+        ctx.clip();
+        ctx.transform(this.sx, this.skewY, this.skewX, this.sy, this.dx, this.dy);
+        for (let subNode of this.subNodes){
+            subNode.renderHit(ctx);
+            let [, boundY, , boundHeight] = subNode.bound;
+            ctx.translate(0, boundY + boundHeight);
+        }
+        
+        ctx.restore();
+    }
+    */
 }
 
 
@@ -624,7 +712,8 @@ document.addEventListener("DOMContentLoaded", function () {
     g.hit.style.border = "1px solid red";
     document.body.appendChild(g.hit);
     g.setSize(500, 400);
-    let C1 = new CoordinatorLayout({
+    
+    let C1 = new LinearLayout({
         x: 15,
         y: 20,
         width: 450,
@@ -633,9 +722,20 @@ document.addEventListener("DOMContentLoaded", function () {
         skewY: 0,
         color: "grey"
     });
+    g.add(C1);
+    
+    let r1 = new Rect({
+        x: 10,
+        y: 15,
+        width: 100,
+        height: 100,
+        color: "red",
+    });
+    C1.add(r1);
+    
     let i1 = new Image({
-        x: 100,
-        y: 50,
+        x: 5,
+        y: 5,
         width: 70,
         height: 80,
         skewX: 0,
@@ -643,48 +743,23 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "red",
         src: "cat.png",
     });
-    let xStart = 0;
-    let yStart = 0;
-    
-    C1.bind("dragstart", function(evt){
-        xStart = evt.x;
-        yStart = evt.y;
-    });
-    C1.bind("drag", function(evt){
-        let dx = evt.x - xStart;
-        let dy = evt.y - yStart;
-        xStart = evt.x;
-        yStart = evt.y;
-        this.dx += dx;
-        this.dy += dy;
-        g.requestRefresh();
-    });
-    /*
-    i1.bind("mousemove", function(){
-        if (this.color !== "yellow"){
-            this.color = "yellow";
-            g.requestRefresh();
-        }
-    });
-    i1.bind("mousemoveout", function(){
-        if (this.color !== "red"){
-            this.color = "red";
-            g.requestRefresh();
-        }
-    });
-    */
     C1.add(i1);
     
-    let r1 = new Rect({
-        x: 15,
-        y: 320,
-        width: 30,
-        height: 15,
-        color: "blue"
-    });
-    g.add(r1);
+    let e1 = new Ellipse({
+        x: 0,
+        y: 0,
+        width: 50,
+        height: 20,
+        color: "orange"
+    })
+    C1.add(e1);
     
-    g.add(C1);
+    e1.bind("mousemove", function(){
+        console.log("mousemove")
+    })
+    
+
+    
     // Only for testing
     window.g = g;
     window.colorMap = colorMap;
