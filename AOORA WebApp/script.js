@@ -43,6 +43,12 @@ function arrayClear(array) {
     array.splice(0, array.length);
 }
 
+function sum(array){
+    return array.reduce(function(partialSum, x){
+        return partialSum + x;
+    })
+}
+
 // HTML5 Canvas Graphics/GUI
 
 function getRandomRGBColor() {
@@ -53,6 +59,8 @@ function getRandomRGBColor() {
 }
 
 const colorMap = {};
+const testCanvas = document.createElement("canvas");
+const testCtx = testCanvas.getContext("2d");
 
 function genMouse(name) {
     return function (event, hit) {
@@ -494,6 +502,167 @@ class Image extends BoxNode{
     }
 }
 
+/*
+class Table extends BoxNode{
+    constructor(config){
+        super();
+        this.data = [];
+        this.rowSizes = [];
+        this.colSizes = [];
+        this.fontSizes = [];
+        this.__rowSizes = [];
+        this.__colSizes = [];
+        this.__sizeDirty = false;
+        Object.assign(this, config);
+    }
+    
+    addRow(row){
+        this.data.push(row);
+        this.__sizeDirty = true;
+    }
+    
+    insertRow(rowIndex, row){
+        this.data.splice(row, 0, row);
+        this.__sizeDirty = true;
+    }
+    
+    __calcSizes(){
+        if (!this.__sizeDirty){
+            return;
+        }
+        this.__rowSizes = [];
+        this.__colSizes = [];
+        for (let i = 0; i < this.data.length; i++){
+            let row = this.data[i];
+            let rowSizeCustom = this.rowSizes[i];
+            if (rowSizeCustom){
+                this.__rowSizes.push(rowSizeCustom)
+            }
+            else{
+                this.__rowSizes.push(rowSizeCustom)
+            }
+        }
+    }
+    
+    sceneFunc(ctx){
+        
+    }
+}
+*/
+
+class TextTable extends BoxNode{
+    constructor(config){
+        super();
+        
+        this.data = [];
+        this.colSizes = [];
+        this.rowSizes = [];
+        this.fontSize = 14;
+        this.fontFamily = "Arial";
+        this.color = "black";
+        this.borderColor = "black";
+        
+        this.__colSizes = [];
+        this.__rowSizes = [];
+        this.__sizeDirty = true;
+        
+        Object.assign(this, config);
+    }
+    
+    /*
+    addRow(row){
+        this.data.push(row);
+        this.__sizeDirty = true;
+    }
+    
+    insertRow(rowIndex, row){
+        this.data.splice(row, 0, row);
+        this.__sizeDirty = true;
+    }
+    */
+
+    calculateDynamicSizes(ctx) {
+        if (!this.__sizeDirty){
+            return;
+        }
+        this.__colSizes = this.colSizes.slice();
+        this.__rowSizes = this.rowSizes.slice();
+        this.__sizeDirty = false;
+        
+        ctx.font = `${this.fontSize}px ${this.fontFamily}`;
+        for (let col = 0; col < this.__colSizes.length; col++) {
+            if (this.__colSizes[col] === 0) {
+                let maxWidth = 0;
+                for (let row = 0; row < this.data.length; row++) {
+                    const text = this.data[row][col] || '';
+                    const textWidth = ctx.measureText(text).width;
+                    if (textWidth > maxWidth) {
+                        maxWidth = textWidth;
+                    }
+                }
+                this.__colSizes[col] = maxWidth + 10;
+            }
+        }
+
+        for (let row = 0; row < this.__rowSizes.length; row++) {
+            if (this.__rowSizes[row] === 0) {
+                let maxHeight = 0;
+                for (let col = 0; col < this.data[row].length; col++) {
+                    const text = this.data[row][col] || '';
+                    const textHeight = this.fontSize;
+                    if (textHeight > maxHeight) {
+                        maxHeight = textHeight;
+                    }
+                }
+                this.__rowSizes[row] = maxHeight + 10;
+            }
+        }
+        this.width = sum(this.__colSizes);
+        this.height = sum(this.__rowSizes);
+    }
+    
+    render(ctx){
+        this.calculateDynamicSizes(ctx);
+        super.render(ctx);
+    }
+    
+    renderHit(ctx){
+        this.calculateDynamicSizes(ctx);
+        super.renderHit(ctx);
+    }
+
+    sceneFunc(ctx) {
+        ctx.font = `${this.fontSize}px ${this.fontFamily}`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        let y = 0;
+        for (let row = 0; row < this.data.length; row++) {
+            let x = 0;
+            for (let col = 0; col < this.data[row].length; col++) {
+                const cellWidth = this.__colSizes[col];
+                const cellHeight = this.__rowSizes[row];
+
+                ctx.strokeRect(x, y, cellWidth, cellHeight);
+                const text = this.data[row][col] || '';
+                ctx.fillText(text, x + cellWidth / 2, y + cellHeight / 2);
+
+                x += cellWidth;
+            }
+            y += this.__rowSizes[row];
+        }
+    }
+    
+    hitFunc(ctx){
+        let width = Math.abs(this.width);
+        let height = Math.abs(this.height);
+        ctx.beginPath();
+        ctx.fillRect(0, 0, width, height);
+        ctx.strokeRect(0, 0, width, height);
+        ctx.closePath();
+    }
+}
+
 class Layout extends BoxNode{
     constructor(){
         super();
@@ -711,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const g = new GraphWin("mainView");
     g.hit.style.border = "1px solid red";
     document.body.appendChild(g.hit);
-    g.setSize(500, 400);
+    g.setSize(1000, 400);
     
     let C1 = new LinearLayout({
         x: 15,
@@ -754,15 +923,30 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     C1.add(e1);
     
-    e1.bind("mousemove", function(){
+    let t1 = new TextTable({
+        x: 500,
+        y: 10,
+        data: [
+            ['1', 'Methane', 'C1', 'D1'],
+            ['2', 'Ethane', 'C2', 'D2'],
+            ['3', 'Propane', 'C3', 'D3'],
+            ['4', 'Butane', 'C4', 'D4'],
+            ['5', "Pentane", "C5", "D5"],
+            ['6', "Hexane", "C5", "D5"],
+            ['7', "Heptane", "C5", "D5"],
+            ['8', "Octane", "C5", "D5"],
+            ['9', "Nonane", "C5", "D5"],
+            ['10', "Decane", "C5", "D5"],
+        ],
+        colSizes: [50, 0, 0, 0],
+        rowSizes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        
+    });
+    t1.bind("mousemove", function(){
         console.log("mousemove")
     })
+    g.add(t1);
     
-
-    
-    // Only for testing
-    window.g = g;
-    window.colorMap = colorMap;
 });
 
 // Input reader (Very ugly code)
