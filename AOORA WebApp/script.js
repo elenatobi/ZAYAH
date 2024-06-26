@@ -502,54 +502,6 @@ class Image extends BoxNode{
     }
 }
 
-/*
-class Table extends BoxNode{
-    constructor(config){
-        super();
-        this.data = [];
-        this.rowSizes = [];
-        this.colSizes = [];
-        this.fontSizes = [];
-        this.__rowSizes = [];
-        this.__colSizes = [];
-        this.__sizeDirty = false;
-        Object.assign(this, config);
-    }
-    
-    addRow(row){
-        this.data.push(row);
-        this.__sizeDirty = true;
-    }
-    
-    insertRow(rowIndex, row){
-        this.data.splice(row, 0, row);
-        this.__sizeDirty = true;
-    }
-    
-    __calcSizes(){
-        if (!this.__sizeDirty){
-            return;
-        }
-        this.__rowSizes = [];
-        this.__colSizes = [];
-        for (let i = 0; i < this.data.length; i++){
-            let row = this.data[i];
-            let rowSizeCustom = this.rowSizes[i];
-            if (rowSizeCustom){
-                this.__rowSizes.push(rowSizeCustom)
-            }
-            else{
-                this.__rowSizes.push(rowSizeCustom)
-            }
-        }
-    }
-    
-    sceneFunc(ctx){
-        
-    }
-}
-*/
-
 class TextTable extends BoxNode{
     constructor(config){
         super();
@@ -882,70 +834,22 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(g.hit);
     g.setSize(1000, 400);
     
-    let C1 = new LinearLayout({
-        x: 15,
-        y: 20,
-        width: 450,
-        height: 300,
-        skewX: 0,
-        skewY: 0,
-        color: "grey"
-    });
-    g.add(C1);
+    const structure = jsyaml.load(data);
+    let path0 = structure[0]["Natural sciences"][2]["Chemistry"][1]["$S Organic Chemistry"];
+    console.log(path0);
     
-    let r1 = new Rect({
-        x: 10,
-        y: 15,
-        width: 100,
-        height: 100,
-        color: "red",
-    });
-    C1.add(r1);
+    let path = structure[0]["Natural sciences"][2]["Chemistry"][1]["$S Organic Chemistry"][0]["$T Alkanes"];
+    let t1 = createTable(path)
+    if (t1.constructor === TextTable){
+        t1.bind("mousemove", function(){
+            console.log("mousemove")
+        })
+        g.add(t1);
+    }
+    else{
+        console.log(`PROBLEM: ${t1}`);
+    }
     
-    let i1 = new Image({
-        x: 5,
-        y: 5,
-        width: 70,
-        height: 80,
-        skewX: 0,
-        skewY: 0,
-        color: "red",
-        src: "cat.png",
-    });
-    C1.add(i1);
-    
-    let e1 = new Ellipse({
-        x: 0,
-        y: 0,
-        width: 50,
-        height: 20,
-        color: "orange"
-    })
-    C1.add(e1);
-    
-    let t1 = new TextTable({
-        x: 500,
-        y: 10,
-        data: [
-            ['1', 'Methane', 'C1', 'D1'],
-            ['2', 'Ethane', 'C2', 'D2'],
-            ['3', 'Propane', 'C3', 'D3'],
-            ['4', 'Butane', 'C4', 'D4'],
-            ['5', "Pentane", "C5", "D5"],
-            ['6', "Hexane", "C5", "D5"],
-            ['7', "Heptane", "C5", "D5"],
-            ['8', "Octane", "C5", "D5"],
-            ['9', "Nonane", "C5", "D5"],
-            ['10', "Decane", "C5", "D5"],
-        ],
-        colSizes: [50, 0, 0, 0],
-        rowSizes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        
-    });
-    t1.bind("mousemove", function(){
-        console.log("mousemove")
-    })
-    g.add(t1);
     
 });
 
@@ -1303,6 +1207,61 @@ class AOORABloodGemCore extends CollectionSegment {
     }
 }
 
+// Onion peeler
+
+function peelOnion(array, handler, result = []){
+    for (let object of array){
+        let name = "";
+        let subArray = null;
+        if (object.constructor === Object){
+            name = Object.keys(object)[0];
+            subArray = Object.values(object)[0];
+        }
+        else if (object.constructor === String){
+            name = object;
+        }
+        
+        let [flag, problem] = handler(result, name, subArray);
+        if (problem){
+            return problem;
+        }
+        
+        if (subArray && flag){
+            peelOnion(subArray, handler);
+        }
+    }
+    return result;
+}
+
+function onionPeeler1(name, array){
+    console.log("O", name, array);
+    
+    return true;
+}
+
+function createLayout(array){
+    
+}
+
+function createTable(array){
+    let data = [];
+    for (let row of array){
+        let rowResult = inputRead(row, tableLineBegin);
+        if (rowResult.constructor === String) {
+            return rowResult;
+        }
+        rowResult.pop();
+        data.push(rowResult);
+    }
+    return new TextTable({
+        x: 0,
+        y: 0,
+        data: data,
+        colSizes: new Array(data[0].length).fill(0),
+        rowSizes: new Array(data.length).fill(0),
+    });
+}
+
 // Wrappers
 
 function create(name, clsName, txt = "") {
@@ -1340,6 +1299,7 @@ function isActive(eNode) {
 class AOORABloodGemWrapper {
     constructor() {
         this.core = new AOORABloodGemCore();
+        this.layout = null;
         this.treeView = document.getElementById("treeView");
         this.mainTabs = document.getElementById("mainTabs");
         this.mainView = document.getElementById("mainView");
