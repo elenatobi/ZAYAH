@@ -519,6 +519,7 @@ class TextTable extends BoxNode{
         this.__sizeDirty = true;
         
         Object.assign(this, config);
+        this.calculateDynamicSizes(testCtx);
     }
     
     /*
@@ -573,6 +574,7 @@ class TextTable extends BoxNode{
         this.height = sum(this.__rowSizes);
     }
     
+    /*
     render(ctx){
         this.calculateDynamicSizes(ctx);
         super.render(ctx);
@@ -582,6 +584,7 @@ class TextTable extends BoxNode{
         this.calculateDynamicSizes(ctx);
         super.renderHit(ctx);
     }
+    */
 
     sceneFunc(ctx) {
         ctx.font = `${this.fontSize}px ${this.fontFamily}`;
@@ -641,6 +644,10 @@ class SpaceLayout extends Layout{
     constructor(){
         super();
         this.subNodes = [];
+        this.__width = 0;
+        this.__height = 0;
+        this.fitX = false;
+        this.fitY = false
     }
     
     inject(glob){
@@ -654,6 +661,7 @@ class SpaceLayout extends Layout{
         node.inject(this.__glob);
         node.superNode = this;
         this.subNodes.push(node);
+        this.__calculateSize();
     }
 }
 
@@ -661,6 +669,29 @@ class CoordinatorLayout extends SpaceLayout{
     constructor(config){
         super();
         Object.assign(this, config);
+    }
+    
+    __calculateSize(){
+        if (!(this.fitX || this.fitY)){
+            return;
+        }
+        if (this.fitX){
+            this.width = 0;
+        }
+        if (this.fitY){
+            this.height = 0;
+        }
+        for (let subNode of this.subNodes){
+            let [bx, by, bw, bh] = subNode.bound;
+            blockWidth = bx + bw;
+            blockHeight = by + bh;
+            if (blockWidth > this.width && this.fitX){
+                this.width = blockWidth;
+            }
+            if (blockHeight > this.height && this.fitY){
+                this.height = blockHeight;
+            }
+        }
     }
     
     render(ctx){
@@ -707,7 +738,32 @@ class LinearLayout extends SpaceLayout{
         Object.assign(this, config);
     }
     
+    __calculateSize(){
+        if (!(this.fitX || this.fitY)){
+            return;
+        }
+        if (this.fitX){
+            this.width = 0;
+        }
+        if (this.fitY){
+            this.height = 0;
+        }
+        
+        for (let subNode of this.subNodes){
+            let [bx, by, bw, bh] = subNode.bound;
+            let blockWidth = bx + bw;
+            let blockHeight = by + bh;
+            if (blockWidth > this.width && this.fitX){
+                this.width = blockWidth;
+            }
+            if (this.fitY){
+                this.height += blockHeight;
+            }
+        }
+    }
+    
     render(ctx){
+        this.__calculateSize();
         ctx.save();
         this.__setTransform(ctx);
         
@@ -729,6 +785,7 @@ class LinearLayout extends SpaceLayout{
     }
     
     renderHit(ctx){
+        this.__calculateSize();
         ctx.save();
         this.__setTransform(ctx);
         
@@ -827,6 +884,75 @@ class TableLayout extends Layout{
     */
 }
 
+// Traversals
+
+function readName(name){
+    
+}
+
+function createLayout(array){
+    let result = new LinearLayout({
+        x: 0,
+        y: 0,
+        width: 500,
+        color: "white",
+        borderColor: "orange",
+        fitY: true,
+    });
+    for (let object of array){
+        let layoutName = "";
+        let subArray = [];
+        if (object.constructor === Object){
+            layoutName = Object.keys(object)[0];
+            subArray = Object.values(object)[0];
+        }
+        else if (object.constructor === String){
+            layoutName = object;
+        }
+        
+        let subResult = null;
+        let [name, type] = readHeader(layoutName);
+        result.add(new IText({
+            x: 10,
+            y: 10,
+            width: 200,
+            height: 17,
+            color: "blue",
+            content: name,
+        }));
+        if (type === "$T"){
+            subResult = createTable(subArray);
+            
+        }
+        else if (type === ""){
+            subResult = createLayout(subArray);
+        }
+        if (subResult.constructor === String){
+            return subResult;
+        }
+        result.add(subResult);
+    }
+    return result;
+}
+
+function createTable(array){
+    let data = [];
+    for (let row of array){
+        let rowResult = inputRead(row, tableLineBegin);
+        if (rowResult.constructor === String) {
+            return rowResult;
+        }
+        rowResult.pop();
+        data.push(rowResult);
+    }
+    return new TextTable({
+        x: 0,
+        y: 0,
+        data: data,
+        colSizes: new Array(data[0].length).fill(0),
+        rowSizes: new Array(data.length).fill(0),
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const g = new GraphWin("mainView");
@@ -835,20 +961,15 @@ document.addEventListener("DOMContentLoaded", function () {
     g.setSize(1000, 400);
     
     const structure = jsyaml.load(data);
-    let path0 = structure[0]["Natural sciences"][2]["Chemistry"][1]["$S Organic Chemistry"];
-    console.log(path0);
+    
+    let path0 = structure[0]["Natural sciences"][2]["Chemistry"][1]["$S Organic Chemistry"]
+    let layout = createLayout(path0)
+    layout.dy = -250;
+    console.log(layout);
+    g.add(layout);
+    
     
     let path = structure[0]["Natural sciences"][2]["Chemistry"][1]["$S Organic Chemistry"][0]["$T Alkanes"];
-    let t1 = createTable(path)
-    if (t1.constructor === TextTable){
-        t1.bind("mousemove", function(){
-            console.log("mousemove")
-        })
-        g.add(t1);
-    }
-    else{
-        console.log(`PROBLEM: ${t1}`);
-    }
     
     
 });
@@ -960,9 +1081,9 @@ function readRef(item) {
     return [itemName, itemRef];
 }
 
-// Aura Core features
+// AOORA Core features
 
-class AuraCoreBase {
+class AOORACoreBase {
     fromObject(object) {
         throw new Error(".fromObject is not implemented yet");
     }
@@ -978,7 +1099,7 @@ class AuraCoreBase {
     }
 }
 
-class Graph extends AuraCoreBase {
+class Graph extends AOORACoreBase {
     constructor() {
         super();
         this.data = {};
@@ -1081,7 +1202,7 @@ class Graph extends AuraCoreBase {
     }
 }
 
-class Table extends AuraCoreBase {
+class Table extends AOORACoreBase {
     constructor(colNames = [], data = []) {
         super();
         this.colNames = colNames;
@@ -1178,7 +1299,7 @@ function createLoop(object, typeMap) {
     return result;
 }
 
-class CollectionSegment extends AuraCoreBase {
+class CollectionSegment extends AOORACoreBase {
     constructor() {
         super();
         this.data = [];
@@ -1239,29 +1360,6 @@ function onionPeeler1(name, array){
     return true;
 }
 
-function createLayout(array){
-    
-}
-
-function createTable(array){
-    let data = [];
-    for (let row of array){
-        let rowResult = inputRead(row, tableLineBegin);
-        if (rowResult.constructor === String) {
-            return rowResult;
-        }
-        rowResult.pop();
-        data.push(rowResult);
-    }
-    return new TextTable({
-        x: 0,
-        y: 0,
-        data: data,
-        colSizes: new Array(data[0].length).fill(0),
-        rowSizes: new Array(data.length).fill(0),
-    });
-}
-
 // Wrappers
 
 function create(name, clsName, txt = "") {
@@ -1299,7 +1397,6 @@ function isActive(eNode) {
 class AOORABloodGemWrapper {
     constructor() {
         this.core = new AOORABloodGemCore();
-        this.layout = null;
         this.treeView = document.getElementById("treeView");
         this.mainTabs = document.getElementById("mainTabs");
         this.mainView = document.getElementById("mainView");
@@ -1370,7 +1467,7 @@ class AOORABloodGemWrapper {
         if (!newETab) {
             let sys = this;
             let name = newNode[0];
-            let newVNode = newNode[1].data.flat(Infinity);
+            let newVNode = newNode[1];
             newETab = create("td", "tab", name);
             let eDel = create("span", "del", "X");
             newETab.draggable = true;
@@ -1408,8 +1505,6 @@ class AOORABloodGemWrapper {
         }
         newETab.click();
     }
-
-    removeTab(node) {}
 
     appeal(data) {
         console.log(data);
