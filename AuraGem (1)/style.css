@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial;
+    color: #4d4d4d;
+    flex-direction: column;
+}
+table {
+    border-collapse: collapse;
+}
+table td {
+    vertical-align: top;
+}
+
+.section-main {
+    flex: 1;
+}
+.section-item {
+    display: table-cell;
+    padding: 0 7px;
+    height: 27px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.section-item:hover {
+    background: #e7e7e7;
+    color: black;
+}
+.section-menu {
+    padding-left: 11px;
+    padding-top: 0px;
+    height: 37px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.sidebar {
+    padding: 0;
+    margin: 0;
+    border: 2px solid #e3d5e1;
+    overflow: auto;
+}
+.sidebar-header{
+    padding-left: 5px;
+    height: 31px;
+    background: #e3d5e1;
+    color: #53374f;
+    line-height: 31px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: middle;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.tree-node {
+    padding: 1px 0 1px 3px;
+    margin: 1px;
+    min-height: 17px;
+    font-size: 14px;
+    background-color: #fbfdff;
+    border: 1px solid #dfdfdf;
+}
+.tree-node.group > span.node-name {
+    min-width: 50px;
+    color: #53374f;
+}
+.tree-node.expanded > span.node-name {
+    font-weight: bold;
+}
+
+.main-tabs {
+    width: 720px;
+    height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.main-tabs:hover, .main-tabs:active, .main-tabs:focus{
+    height: 35px;
+    overflow-x: auto;
+}
+.tab {
+    display: inline-block;
+    width: 149px;
+    height: 100%;
+    padding: 1px 5px;
+    font-size: 15px;
+    background-color: #f7f9fb;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
+}
+.tab > .del {
+    float: right;
+}
+.tab.active {
+    font-weight: bold;
+    background-color: #ffffff;
+    border-bottom: none;
+}

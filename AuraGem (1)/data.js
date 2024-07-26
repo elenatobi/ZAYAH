@@ -1,0 +1,305 @@
+const data = `
+- Natural sciences/Naturvetenskap:
+  - Mathematics/Matematik
+  - Physics/Fysik:
+    - $S Astronomy/Astronomi
+    - $S Rigid body mechanics/Stel mekanik
+    - $S Fluid mechanics/Strömningsmekanik
+    - $S Electricity and magnetism/Elektricitet och magnetism
+    - $S Thermodynamics/Termodynamik
+    - $S Waves/Vågor
+    - $S Nuclear physics/Kärnfysik
+    - $S Quantum mechanics/Kvantfysik
+  - Chemistry/Kemi:
+    - $S Commons/Gemensam:
+      - $T Reactivity/Reaktivitet:
+        - .[Most_common/Vanligast]
+        - F[Flammable/Brandfarlig]
+        - H[Highly_flammable/Lättbrinnande]
+        - E[Explosive/Explosiv]
+        - S[Stable/Stabil]
+        - C[Corrosive/Frätande]
+        - R[Reactive/Reaktiv]
+        - O[Combustible/Brännbar]
+      - $T Structure/Struktur:
+        - L[Lightest/Lättast]
+        - H[Heavy/Tung]
+        - V[Viscous/Viskös]
+        - O[Oily/Oljig]
+        - W[Heavy_vapors/Tunga_ånger]
+        - N[Shiny/Glänsande]
+        - S[Solid/Fast]
+        - C[Crystal_form/Kristallform]
+        - A[Highly_volatile/Lättflyktig]
+        - I[Viscous/Trögflytande]
+      - $T Color/Färg:
+        - TRA[Transparent/Genomskinlig]
+        - GRE[Grey/Grå]
+        - BLA[Black/Svart]
+        - BRO[Brown/Brun]
+        - SIL[Silver/Silver]
+        - YEL[Yellow/Gul]
+        - LYE[Light_yellow/Ljusgul]
+        - GRE[Green/Grön]
+        - WHI[White/Vit]
+        - RED[Red_Red/Röd]
+        - ORA[Orange_color/Orange]
+        - BLU[Blue_color/Blå]
+      - $T Odor/Lukt:
+        - .[Odorless/Luktlös]
+        - F[Faint_odor/Svag_lukt]
+        - M[Mild_odor/Mild_lukt]
+        - P[Penetrating_odor/Genomträngade_lukt]
+        - U[Pungent_odor/Stickande_lukt]
+        - S[Sweet/Sackarossmak]
+        - B[Burning_taste/Brännande_smak]
+      - $T Toxicity/Toxicitet:
+        - .[Toxic/Giftig]
+        - C[Carcinogenic_when_metabolized/Cancerframkallande_vid_metabolism]
+        - D[Dizziness/Yrsel]
+        - N[Dullness/]
+        - T[Tiredness/Trötthet]
+        - V[Vomiting/Kräkningar]
+        - N[Nauseating/Illamående]
+        - O[Confusing/]
+        - A[Arrhythmias/]
+        - U[Unconsciousness/]
+        - L[Lung_inflamation/]
+        - R[Respiration_system_damages/]
+        - E[Liver_damages/]
+        - K[Kidney_damages/]
+        - B[Celebral~Neural_damages/Celebral~Neurala_skador]
+        - I[Irritating/Irriterande]
+    - $S Regular chemistry:
+      - $T Periodic system:
+        - 1H[1.008 .25 1312 2.20 -259.1 -252.9 90]
+    - $S Organic Chemistry:
+      - $T Legend:
+        - (*)[Toxic/Harmful_to_health]
+        - TRA[Transparent]
+        - W[White]
+        - S[Solid]
+        - CR[Crystalform]
+        - VT[Volatile]
+        - H[Heavy]
+        - O[Oily]
+        - OL[Odorless]
+        - PO[Penetration_odor]
+        - WO[Weak_odor]
+        - SO[Sweet_odor]
+        - ST[Sweet_taste]
+        - R[Reactive]
+        - F[Flammable]
+        - B[Burnable]
+        - C[Carcinogenic]
+        - D[Dizziness]
+        - DN[Dullness]
+        - T[Tiredness]
+        - V[Vomiting]
+        - N[Nauseating]
+        - CF[Confusion]
+        - I[Irritation]
+        - A[Arrhythmias]
+        - UC[Unconsciousness]
+        - LI[Lung_inflammation]
+        - RD[Respiration_system_damages]
+        - LD[Liver_damages]
+        - KD[Kidney_damages]
+        - CED[Celebral/Neural_damages]
+      - Organic reaction pathways
+      - Reaction mechanism
+      - $T Alkanes (-):
+        - _[Melt Boil Color Smell Toxic]
+        - 1[-183 -162 TRA+F OL *]
+        - 2[-183 -89 TRA OL -]
+        - 3[-188 -44 - - -]
+        - 4[-138 0 - - -]
+        - 5[-129 36 - - -]
+        - 6[-95 69 - - -]
+        - 7[-91 98 - - -]
+        - 8[-57 126 - - -]
+        - 9[-51 151 - - -]
+        - 10[-30 174 - - -]
+        - (1)3[-160 -12 - - -]
+        - (2-1)4[-160 28 - - -]
+        - (2,2-1)3[-16 10 - - -]
+      - $T Cycloalkanes (~n):
+        - _[Melt Boil Color Smell Toxic]
+        - ~3[-128 -33 TRA - F*]
+        - ~4[-91 13 - - -]
+        - ~5[-94 50 - - -]
+        - ~6[6 81 - - -]
+      - $T Alkenes (=):
+        - _[Melt Boil Color Smell Toxic]
+        - 2=[-169.2 -103.7 B - -]
+        - 3=[-185.2 -47.6 - - -]
+        - 4=[-185.3 -6.3 - - -]
+        - 5=[-165.2 36.1 - - -]
+        - 6=[-140 62.8 - - -]
+        - 7=[-119 93 - - -]
+        - 8=[-101 122 - - -]
+        - 9=[-57.5 101 - - -]
+        - 10=[-45.5 163 - - -]
+        - (2-1)3[-140.4 -6.9 - - -]
+        - T4.2[106 0.3 - - -]
+      - $T Alkynes (≡):
+        - _[Melt Boil Color Smell Toxic]
+        - 2≡[-84 -80.8 TRA Garlic X*]
+        - 3≡[-103 -23.2 - - -]
+        - 4≡[-125.7 8.1 TRA Garlic -]
+        - 5≡[-106 40 - - -]
+        - 6≡[-131 70 - - -]
+        - 7≡[-81 100 - - -]
+        - 8≡[-42.6 128 - - -]
+        - 9≡[-50 150 - - -]
+        - 10≡[-44 174 - - -]
+      - $T Arenes (~~n):
+        - _[Melt Boil Color Smell Toxic]
+        - ~~1[5.5 80.1 R - C]
+        - (1)~~1[-95 110.6 TRA+F Petroleum CED*]
+        - (1,2-1)~~1[-25 135 - - D+DN+V+UC+LI]
+        - (1,3-1)~~1[-48 140 - - -]
+        - (1,4-1)~~1[13 145 - - -]
+        - ~~2[80.3 218 W+CR PO -]
+        - ~~3[217.5 340 TRA - *]
+        - ~~5[179 495 - - *]
+        - 2~~1[155 251 W+S Medical *]
+        - 2*1[69 256 TRA+CR - *]
+      - $T Haloalkane/alkyl halogenide (-X):
+        - _[Melt Boil Color Smell Toxic]
+        - Cl+1[-97.7 -24.2 TRA SO D+T+CF+RD+CED]
+        - Cl+2[-138.3 12.3 TRA - CED(block_signal)]
+        - Cl+3[-122.8 46.7 TRA - CED+I]
+        - Cl+4[-123 77 TRA+F - *]
+        - Cl+5[-99 107 TRA+F - -]
+        - 2Cl+1[-97 40 VT+H SO N*]
+        - 3Cl+1[-63 62 TRA - LD+A]
+        - 4Cl+1[-23 76 H SO LD+KD+CED]
+        - 2Cl+2[-35.7 83.5 TRA+O - -]
+        - 3Cl+2[-35.5 113.6 TRA - LD+KD+CED]
+        - (1Cl,1-2)4[- - - - -]
+        - (1Cl-2*2-2)3[- - - - -]
+        - F+1[- - - - -]
+        - F+2[- - - - -]
+        - F+3[- - - - -]
+        - F+4[- - - - -]
+        - F+5[- - - - -]
+        - (F,3Cl)1[-110.5 23.7 TRA - -]
+        - (2F,2Cl)1[-157.8 -29.8 TRA - -]
+        - (3F,Cl)1[-181 -81.5 TRA SO -]
+        - (Br,2F,Cl)1[-159.5 -3.7 TRA - -]
+        - (Br,3F)1[-108.9 7 TRA]
+        - (2Br,2Cl,3F-1)2[-76 73 - - -]
+      - $T Alcohols (-OH):
+        - 1[-98 64.7 TRA WO Blind*]
+      - Phenols
+      - Aldehydes
+      - Ketones
+      - Carboxylic acids
+      - Esters
+      - Ethers
+      - Amines
+      - Thiols
+      - Disulfides
+      - Nitro compounds
+    - $S Stochiometry:
+      - $T Stochiometry basics:
+        - eq(equation)[S(P_i) => S(R_j)]
+        - m(mass)[S(m_i=M_i*n_i) = S(m_j=M_j*n_j)]
+        - M(molmass)[M_i _ M_j]
+        - n(amount of substance, <limiting>)[:(n_i) . :(n_j)]
+        - n0[n0_i _ n0_j]
+        - Δn[:(Δn_i) _ -:(Δn_j)]
+        - n1[n0_i+Δn_i _ n0_j+Δn_j]
+        - c[n_i/V _ n_j/V]
+      - Other:
+        - K = P(c_j)/P(c_i)
+        - Ka = [H3O+][A-]/[HA]
+        - Kb = [HB+][OH-]/[B]
+        - Kw = Ka*Kb = [H3O+][OH-] = 1e-14
+        - Ks = [A+][B-]
+        - pKa = -lg Ka
+        - pKb = -lg Kb
+        - pKw = pKa+pKb = pH+pOH = -lg Kw = 14
+        - pH = -lg[H3O+]
+      - Titration:
+        - ...
+  - $S Biochemistry/Biokemi:
+    - Cell Biology:
+      - Cells
+      - Cell types
+    - Genetics
+    - Biomolecules:
+      - Carbohydrates
+      - Lipids
+      - Proteins
+      - Nucleic acids
+    - Metabolism:
+      - General metabolic pathways
+      - Cellular respiration
+      - Photosynthesis
+      - Replication
+      - Transcription
+      - Translation
+  - $S Biology/Biologi:
+    - Plants and fungi
+    - Physiology
+- Languages/Språk:
+  - $S Svenska ord:
+    - $T INBOX:
+      - Senare[Sedermera Sedan (där)Efter(åt)]
+      - (be)Röra(ing)[]
+      - Punkt[]
+      - Lika[]
+      - (fast)Binda/(sam)band[Likhet &Beröringspunkt]
+      - (be)Skydd(a)[Hålla_någon_om_ryggen]
+      - Mörk[Dunkel Oklar Obskyr(a) Skum]
+      - Verka(n)[]
+      - Flyta[]
+      - Omvälv(ande)[Omstörta(ande) Radikal Revolutionerande]
+      - Påverka(ande)[&Inflytande(else)(rik)]
+      - Krok[]
+      - Skev(het)[Sned &Krokig (för)Vränga(d)]
+      - Antasta[Besvär(a/lig) Kritisera]
+      - Röja(ning)(undan)[Rensa.Städa(ning)(upp)]
+      - Belamrad[]
+      - (Re)Citat(era)[]
+      - Strid(a)[]
+      - Neka[]
+      - Avvisa[Dementera &Förneka &Bestrida]
+      - Vista(else)[Sejour]
+      - Gebit[Område]
+      - Form[Figur ->Skepnad]
+      - 1[->Transgression]
+      - Stå(nd)[]
+      - Sträva(ig)[]
+      - Motstånd[&Motsträvig &Motspänstig]
+      - Medborgare[Undersåte]
+      - Självsäker[Karsk Kaxig]
+      - Modig[Tapper Djärv]
+      - Vilse(leda)[Förvillande/Villovägar]
+      - Fyrkantighet[->]
+    - $T Saker:
+      - Holk[]
+    - $T Röra(else):
+      - Rörlig[Vig Smidig ->Spänstig]
+      - Falla[]
+      - (an/över)falla[Ta_på_sängen]
+      - (om)Vända(else)[]
+      - Välta[Välva]
+      - Störta[]
+    - $T Visa (upp):
+      - (be)Visa[Certifikation Verifiera/Veritabel Attest]
+      - Presentera[Representant]
+    - $T Säga:
+      - (ut)Tal(a/ande)[utsaga]
+      - (upp)Mana(ing)[Vädja(n) Bud Order]
+      - Konstatera[Framstå/hålla/häva påstå ...]
+      - (ut)Sända(ande)[Emission]
+      - Sänd(are/ebud)[Emissarie Representant]
+  $S English words:
+    - $T INBOX:
+      - (In/Af)fluence
+      - Push[->Nudge]
+      - Instict(ive)[->Visceral]
+`;
