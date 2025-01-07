@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Virtual Keyboard</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="tabs.js"></script>
+        <style>
+            .keyboard-container {
+                display: block;
+                text-align: center;
+                position: absolute;
+                padding-bottom: 5px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                background: #fdfeff;
+                box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            }
+
+            .keyboard-set {
+                display: none;
+            }
+
+            .letter {
+                width: 9%;
+                max-width: 66px;
+            }
+
+            .wide {
+                width: 27%;
+                min-width: 87px;
+                max-width: 198px;
+            }
+
+            .key {
+                margin: 2px;
+                height: 29px;
+                background: #f3f4f5;
+                border: none;
+                border-radius: 3px;
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .key:hover {
+                opacity: 0.8;
+            }
+
+            .key:active {
+                box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            }
+
+            .active {
+                display: block;
+            }
+
+            .purple3 {
+                background: #f3ebfa;
+                color: #251431;
+            }
+
+            .green3 {
+                background: #e9f5de;
+                color: #002108;
+            }
+
+            .red3 {
+                background: #ffe9e2;
+                color: #400014;
+            }
+        </style>
+    </head>
+    <body>
+        <textarea
+            id="output"
+            rows="4"
+            cols="50"
+            placeholder="Type here..."
+        ></textarea>
+        <button id="keyboardBtn">Toggle keyboard</button>
+        <div id="keyboard" class="keyboard-container" static-tabs-container>
+            <div class="tab-container">
+                <div class="tab-item fit active" data-tab="latin">Latin</div>
+                <div class="tab-item fit" data-tab="greek">Greek</div>
+                <div class="tab-item fit" data-tab="algebra">Algebra</div>
+                <div class="tab-item fit" data-tab="geometry">Geometry</div>
+                <div class="tab-item fit" data-tab="statistics">Statistics</div>
+            </div>
+            <div class="keyboard-set active" id="latin" tab-content>
+                <div class="horizontal-container">
+                    <button class="letter key">Q</button>
+                    <button class="letter key">W</button>
+                    <button class="letter key">E</button>
+                    <button class="letter key">R</button>
+                    <button class="letter key">T</button>
+                    <button class="letter key">Y</button>
+                    <button class="letter key">U</button>
+                    <button class="letter key">I</button>
+                    <button class="letter key">O</button>
+                    <button class="letter key">P</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">A</button>
+                    <button class="letter key">S</button>
+                    <button class="letter key">D</button>
+                    <button class="letter key">F</button>
+                    <button class="letter key">G</button>
+                    <button class="letter key">H</button>
+                    <button class="letter key">J</button>
+                    <button class="letter key">K</button>
+                    <button class="letter key">L</button>
+                </div>
+                <div class="horizontal-container">
+                    <button id="shift" class="letter key">^^</button>
+                    <button class="letter key">Z</button>
+                    <button class="letter key">X</button>
+                    <button class="letter key">C</button>
+                    <button class="letter key">V</button>
+                    <button class="letter key">B</button>
+                    <button class="letter key">N</button>
+                    <button class="letter key">M</button>
+                    <button id="backspace" class="letter key">&lt;=</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">ABC</button>
+                    <button class="letter key">,</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button id="space" class="wide key">&nbsp;</button>
+
+                    <button class="letter key">&lt;&lt;</button>
+                    <button class="letter key">&gt;&gt;</button>
+                    <button class="letter key">&lt;-</button>
+                </div>
+            </div>
+            <div class="keyboard-set" id="greek" tab-content>
+                <div class="horizontal-container">
+                    <button class="letter key">ϕ</button>
+                    <button class="letter key">ς</button>
+                    <button class="letter key">ε</button>
+                    <button class="letter key">ρ</button>
+                    <button class="letter key">τ</button>
+                    <button class="letter key">υ</button>
+                    <button class="letter key">θ</button>
+                    <button class="letter key">ι</button>
+                    <button class="letter key">ο</button>
+                    <button class="letter key">π</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">α</button>
+                    <button class="letter key">σ</button>
+                    <button class="letter key">δ</button>
+                    <button class="letter key">φ</button>
+                    <button class="letter key">γ</button>
+                    <button class="letter key">η</button>
+                    <button class="letter key">ξ</button>
+                    <button class="letter key">κ</button>
+                    <button class="letter key">λ</button>
+                </div>
+                <div class="horizontal-container">
+                    <button id="shift" class="letter key">^^</button>
+                    <button class="letter key">ζ</button>
+                    <button class="letter key">χ</button>
+                    <button class="letter key">ψ</button>
+                    <button class="letter key">ω</button>
+                    <button class="letter key">β</button>
+                    <button class="letter key">ν</button>
+                    <button class="letter key">μ</button>
+                    <button id="backspace" class="letter key">&lt;=</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">αβγ</button>
+                    <button class="letter key">,</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button id="space" class="wide key">&nbsp;</button>
+                    <button class="letter key">&lt;&lt;</button>
+                    <button class="letter key">&gt;&gt;</button>
+                    <button class="letter key">&lt;-</button>
+                </div>
+            </div>
+            <div class="keyboard-set" tab-content>
+                <div class="horizontal-container">
+                    <button class="letter key">Φ</button>
+                    <button class="letter key">Σ</button>
+                    <button class="letter key">Ε</button>
+                    <button class="letter key">Ρ</button>
+                    <button class="letter key">Τ</button>
+                    <button class="letter key">Υ</button>
+                    <button class="letter key">Θ</button>
+                    <button class="letter key">Ι</button>
+                    <button class="letter key">Ο</button>
+                    <button class="letter key">Π</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">Α</button>
+                    <button class="letter key">Σ</button>
+                    <button class="letter key">Δ</button>
+                    <button class="letter key">Φ</button>
+                    <button class="letter key">Γ</button>
+                    <button class="letter key">Η</button>
+                    <button class="letter key">Ξ</button>
+                    <button class="letter key">Κ</button>
+                    <button class="letter key">Λ</button>
+                </div>
+                <div class="horizontal-container">
+                    <button id="shift" class="letter key">^^</button>
+                    <button class="letter key">Ζ</button>
+                    <button class="letter key">Χ</button>
+                    <button class="letter key">Ψ</button>
+                    <button class="letter key">Ω</button>
+                    <button class="letter key">Β</button>
+                    <button class="letter key">Ν</button>
+                    <button class="letter key">Μ</button>
+                    <button id="backspace" class="letter key">&lt;=</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="letter key">αβγ</button>
+                    <button class="letter key">,</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button id="space" class="wide key">&nbsp;</button>
+                    <button class="letter key">&lt;&lt;</button>
+                    <button class="letter key">&gt;&gt;</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" id="algebra" tab-content>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key" id="shift">^^</button>
+                    <button class="purple3 letter key">^</button>
+                    <button class="purple3 letter key">!</button>
+                    <button class="purple3 letter key">nCr</button>
+                    <button class="purple3 letter key">nPr</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">sin</button>
+                    <button class="purple3 letter key">cos</button>
+                    <button class="purple3 letter key">tan</button>
+                    <button class="purple3 letter key">hyp</button>
+                    <button class="purple3 letter key">π</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">d</button>
+                    <button class="purple3 letter key">∫</button>
+                    <button class="purple3 letter key">lim</button>
+                    <button class="purple3 letter key">∑</button>
+                    <button class="purple3 letter key">∞</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">∈</button>
+                    <button class="purple3 letter key">⊆</button>
+                    <button class="purple3 letter key">∩</button>
+                    <button class="purple3 letter key">∪</button>
+                    <button class="purple3 letter key">∅</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">[]</button>
+                    <button class="purple3 letter key">det</button>
+                    <button class="purple3 letter key">^T</button>
+                    <button class="purple3 letter key">&lt;&lt;</button>
+                    <button class="purple3 letter key">&gt;&gt;</button>
+                    <button class="letter key">e</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" tab-content>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key" id="shift">^^</button>
+                    <button class="purple3 letter key">√</button>
+                    <button class="purple3 letter key">|x|</button>
+                    <button class="purple3 letter key">x/y</button>
+                    <button class="purple3 letter key">^(-1)</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">asin</button>
+                    <button class="purple3 letter key">acos</button>
+                    <button class="purple3 letter key">atan</button>
+                    <button class="purple3 letter key">hyp</button>
+                    <button class="purple3 letter key">°</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">∂</button>
+                    <button class="purple3 letter key">∮</button>
+                    <button class="purple3 letter key">lim</button>
+                    <button class="purple3 letter key">Π</button>
+                    <button class="purple3 letter key">∇</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">∉</button>
+                    <button class="purple3 letter key">⊇</button>
+                    <button class="purple3 letter key">N</button>
+                    <button class="purple3 letter key">Z</button>
+                    <button class="purple3 letter key">Q</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="purple3 letter key">I</button>
+                    <button class="purple3 letter key">R</button>
+                    <button class="purple3 letter key">C</button>
+                    <button class="purple3 letter key">&lt;&lt;</button>
+                    <button class="purple3 letter key">&gt;&gt;</button>
+                    <button class="letter key">i</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" id="geometry" tab-content>
+                <div class="horizontal-container">
+                    <button class="green3 letter key" id="shift">^^</button>
+                    <button class="green3 letter key">^</button>
+                    <button class="green3 letter key">!</button>
+                    <button class="green3 letter key">nCr</button>
+                    <button class="green3 letter key">nPr</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">sin</button>
+                    <button class="green3 letter key">cos</button>
+                    <button class="green3 letter key">tan</button>
+                    <button class="green3 letter key">hyp</button>
+                    <button class="green3 letter key">π</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">d</button>
+                    <button class="green3 letter key">∫</button>
+                    <button class="green3 letter key">lim</button>
+                    <button class="green3 letter key">∑</button>
+                    <button class="green3 letter key">∞</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">∈</button>
+                    <button class="green3 letter key">⊆</button>
+                    <button class="green3 letter key">∩</button>
+                    <button class="green3 letter key">∪</button>
+                    <button class="green3 letter key">∅</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">[]</button>
+                    <button class="green3 letter key">det</button>
+                    <button class="green3 letter key">^T</button>
+                    <button class="green3 letter key">&lt;&lt;</button>
+                    <button class="green3 letter key">&gt;&gt;</button>
+                    <button class="letter key">e</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" tab-content>
+                <div class="horizontal-container">
+                    <button class="green3 letter key" id="shift">^^</button>
+                    <button class="green3 letter key">√</button>
+                    <button class="green3 letter key">|x|</button>
+                    <button class="green3 letter key">x/y</button>
+                    <button class="green3 letter key">^(-1)</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">asin</button>
+                    <button class="green3 letter key">acos</button>
+                    <button class="green3 letter key">atan</button>
+                    <button class="green3 letter key">hyp</button>
+                    <button class="green3 letter key">°</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">∂</button>
+                    <button class="green3 letter key">∮</button>
+                    <button class="green3 letter key">lim</button>
+                    <button class="green3 letter key">Π</button>
+                    <button class="green3 letter key">∇</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">∉</button>
+                    <button class="green3 letter key">⊇</button>
+                    <button class="green3 letter key">N</button>
+                    <button class="green3 letter key">Z</button>
+                    <button class="green3 letter key">Q</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="green3 letter key">I</button>
+                    <button class="green3 letter key">R</button>
+                    <button class="green3 letter key">C</button>
+                    <button class="green3 letter key">&lt;&lt;</button>
+                    <button class="green3 letter key">&gt;&gt;</button>
+                    <button class="letter key">i</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" id="statistics" tab-content>
+                <div class="horizontal-container">
+                    <button class="red3 letter key" id="shift">^^</button>
+                    <button class="red3 letter key">^</button>
+                    <button class="red3 letter key">!</button>
+                    <button class="red3 letter key">nCr</button>
+                    <button class="red3 letter key">nPr</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">sin</button>
+                    <button class="red3 letter key">cos</button>
+                    <button class="red3 letter key">tan</button>
+                    <button class="red3 letter key">hyp</button>
+                    <button class="red3 letter key">π</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">d</button>
+                    <button class="red3 letter key">∫</button>
+                    <button class="red3 letter key">lim</button>
+                    <button class="red3 letter key">∑</button>
+                    <button class="red3 letter key">∞</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">∈</button>
+                    <button class="red3 letter key">⊆</button>
+                    <button class="red3 letter key">∩</button>
+                    <button class="red3 letter key">∪</button>
+                    <button class="red3 letter key">∅</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">[]</button>
+                    <button class="red3 letter key">det</button>
+                    <button class="red3 letter key">^T</button>
+                    <button class="red3 letter key">&lt;&lt;</button>
+                    <button class="red3 letter key">&gt;&gt;</button>
+                    <button class="letter key">e</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+            <div class="keyboard-set" tab-content>
+                <div class="horizontal-container">
+                    <button class="red3 letter key" id="shift">^^</button>
+                    <button class="red3 letter key">√</button>
+                    <button class="red3 letter key">|x|</button>
+                    <button class="red3 letter key">x/y</button>
+                    <button class="red3 letter key">^(-1)</button>
+                    <button class="letter key">(</button>
+                    <button class="letter key">)</button>
+                    <button class="letter key">&lt;=</button>
+                    <button class="letter key">/</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">asin</button>
+                    <button class="red3 letter key">acos</button>
+                    <button class="red3 letter key">atan</button>
+                    <button class="red3 letter key">hyp</button>
+                    <button class="red3 letter key">°</button>
+                    <button class="letter key">7</button>
+                    <button class="letter key">8</button>
+                    <button class="letter key">9</button>
+                    <button class="letter key">*</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">∂</button>
+                    <button class="red3 letter key">∮</button>
+                    <button class="red3 letter key">lim</button>
+                    <button class="red3 letter key">Π</button>
+                    <button class="red3 letter key">∇</button>
+                    <button class="letter key">4</button>
+                    <button class="letter key">5</button>
+                    <button class="letter key">6</button>
+                    <button class="letter key">-</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">∉</button>
+                    <button class="red3 letter key">⊇</button>
+                    <button class="red3 letter key">N</button>
+                    <button class="red3 letter key">Z</button>
+                    <button class="red3 letter key">Q</button>
+                    <button class="letter key">1</button>
+                    <button class="letter key">2</button>
+                    <button class="letter key">3</button>
+                    <button class="letter key">+</button>
+                </div>
+                <div class="horizontal-container">
+                    <button class="red3 letter key">I</button>
+                    <button class="red3 letter key">R</button>
+                    <button class="red3 letter key">C</button>
+                    <button class="red3 letter key">&lt;&lt;</button>
+                    <button class="red3 letter key">&gt;&gt;</button>
+                    <button class="letter key">i</button>
+                    <button class="letter key">0</button>
+                    <button class="letter key">.</button>
+                    <button class="letter key">-&gt;</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggle(element) {
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+
+            const keyboard = document.getElementById("keyboard");
+            const keyboardButton = document.getElementById("keyboardBtn");
+
+            keyboardButton.addEventListener("click", function () {
+                toggle(keyboard);
+            });
+        </script>
+    </body>
+</html>
