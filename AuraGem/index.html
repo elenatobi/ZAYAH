@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="util.js"></script>
+        <script src="assets/js/ZAYAH.js"></script>
+        <script src="assets/js/jsyaml.js"></script>
+
+        <script src="datatree.js"></script>
+
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+        <title>Aura Webapp</title>
+    </head>
+    <body onload="window.sys = new AuraBloodGemWrapper()">
+        <div class="section-menu">
+            <div class="section-item">File</div>
+            <div class="section-item">Edit</div>
+            <div class="section-item">Modify</div>
+            <div class="section-item">View</div>
+            <div class="section-item">Help</div>
+        </div>
+        <table class="section-main" width="1100">
+            <tr height="25">
+                <td>&nbsp;</td>
+                <td>
+                    <div class = "main-tabs" id="mainTabs"></div>
+                </td>
+            </tr>
+            <tr>
+                <td width="249" class="sidebar">
+                    <div class="sidebar-header">Pages:</div>
+                    <div id="treeView"></div>
+                </td>
+                <td>
+                    <canvas
+                        id="mainView"
+                        style="border: 1px solid #dfdfdf"
+                    ></canvas>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

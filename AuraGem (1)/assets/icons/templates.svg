@@ -1,0 +1,11 @@
+<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 32.5134 -31.5665 0 2399.53 7095.13)">
+      <stop offset="0" style="stop-color:#fb4ead;stop-opacity:1"/>
+      <stop offset="1" style="stop-color:#ca0f75;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <use xlink:href="#a" width="35.944" height="35.944" transform="matrix(.99844 0 0 .99843 -.011 -.015)"/>
+  <path d="M2417.26 7103.16c0-4.62-3.67-8.38-8.2-8.38h-16.39c-4.52 0-8.2 3.76-8.2 8.38v16.76c0 4.63 3.68 8.38 8.2 8.38h16.39c4.53 0 8.2-3.75 8.2-8.38z" style="fill:url(#b)" transform="matrix(.97601 0 0 .95482 -2325.306 -6772.868)"/>
+  <path d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2m-11-4 2.03 2.71L16 11l4 5H8zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6z" style="fill:#fff;fill-rule:nonzero" transform="matrix(.8 0 0 .8 7.754 8.582)"/>
+</svg>
