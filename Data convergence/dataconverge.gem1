@@ -1,8 +1,10 @@
 - Mathematics/Matematik:
   - $S Algebra:
     - $T Expansion and factorization:
+      - Expansion/utveckling =>, Factorization/Faktorisering <=
       - x+(y+z)=x+y+z
-      - x(y+z)=xy+xz
+      - (x+y)z = xy+xz
+      - (x+y)/z = x/z+y/z
       - ...
   - $S Geometry
   - $S Analytic Geometry

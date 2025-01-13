@@ -52,8 +52,6 @@
           - N-N=Z Z/Z=Q
       - Algebra:
         - Algebra symboler:
-          - SIM(Förenkling =>)
-          - FAC(Faktorisera <=)
           - ANU(x~n=m)
           - IDE(x~y=x)
           - ASO(x~y=y~x)
