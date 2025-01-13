@@ -1,8 +1,9 @@
 - Mathematics/Matematik:
   - $S Algebra:
     - $T Expansion and factorization:
-      - 1[x+(y+z)=x+y+z]
-      - 2[x(y+z)=xy+xz]
+      - x+(y+z)=x+y+z
+      - x(y+z)=xy+xz
+      - ...
   - $S Geometry
   - $S Analytic Geometry
   - $S Statistics
