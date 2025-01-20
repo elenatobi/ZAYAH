@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "servor --reload"
+        "start": "servor /home/elenatobi/ZAYAH/src"
     },
     "dependencies": {
         "servor": "^4.0.2"
