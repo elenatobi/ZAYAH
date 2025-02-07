@@ -21,23 +21,24 @@
     - [-] Reaction mechanisms/Reaktionsmekanismer
     - [-] Stochiometry/Stökiometri
   - Biochemistry/Biokemi:
-    - [-] Biomolecules
-    - [-] Metabolism
-    - [-] Cells
-    - [-] Cell types
-    - [-] Genetics
+    - [-] Biomolecules/Biomolekyler
+    - [-] Cells/Celler
+    - [-] Cell types/Celltyper
+    - [-] Genetics/Genetik
+    - [-] Metabolism/Metabolism
   - Biology/Biologi:
     - [-] Evolution
     - [-] Animals
     - [-] Plants and fungi
   - Computer science/Datorvetenskap
-  - Geography
-  - Psychology
-  - Economics
-  - Politics
-  - Law
-  - Communication and media
-  - ...
+  - Geography/Geografi
+  - Psychology/Psykologi
+  - Economics/Ekonomi
+  - Politics/Politik
+  - Law/Juridik
+  - Communication and media/Kommunikationer och media
+  - History/Historia
+  - Theology/Teologi
 
 - [0] Algebra:
   (Expansion/utveckling =>, Factorization/Faktorisering <=)
@@ -47,6 +48,7 @@
     - (x+y...)/z = x/z+y/z...
     - ...
   - Trigonometry
-  - Calculus
-
-- []
+  - Limits
+  - Calculus:
+    - d/dx x^n = nx^(n-1)
+    - ∫x^n dx = x^(n+1)/(n+1)
