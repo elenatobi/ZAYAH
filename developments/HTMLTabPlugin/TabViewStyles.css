@@ -1,0 +1,15 @@
+#tabPanel {
+    width: 100%;
+    border-collapse: collapse;
+}
+#tabPanel td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#tabHeaders td {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+#tabHeaders .active {
+    background-color: #ddd;
+}
