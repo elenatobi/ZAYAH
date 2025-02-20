@@ -1,0 +1,83 @@
+* {
+    color: #4D4D4D;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body, ul, table, tr, td {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lato";
+    color: #4D4D4D;
+    border-collapse: collapse;
+}
+
+div.meny {
+    display: flex;
+    padding: 3px 9px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+div.menu, div.toolbar {
+    display: flex;
+}
+
+    div.menu:nth-child(2) {
+        margin-left: auto;
+    }
+
+    div.menu div {
+        margin: 0 1px;
+        padding: 7px;
+        font-size: 12px;
+        text-align: center;
+        cursor: default;
+    }
+
+    div.toolbar div {
+        font-family: "Material Icons";
+        padding: 3px 5px;
+        font-size: 19px;
+        border: 0;
+    }
+
+
+        div.menu div:hover, div.toolbar div:hover {
+            background-color: #E1E1E1;
+        }
+
+.p-none {
+    padding: 0 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background: #E1E1E1;
+}
+
+#file {
+    padding: 5px;
+    border: 1px solid #E0E0E0;
+    background: #E1E1E1;
+}
+
+#account {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+    background: #b30000;
+}
+
+#size {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+    font-size: 7px;
+}

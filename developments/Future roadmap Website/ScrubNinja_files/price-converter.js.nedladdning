@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(function(){var e,n;e=[],(n=document.querySelectorAll("[data-price]")).forEach((function(n,t){e.push({index:t,price:n.dataset.price})})),e.length&&fetch(funnelRoute("checkout.price-converter"),{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify({items:e})}).then((function(e){return e.json()})).then((function(e){e.forEach((function(e){n[e.index].textContent=e.price}))}))}));
+//# sourceMappingURL=price-converter.js.map

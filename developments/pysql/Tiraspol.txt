@@ -1,0 +1,12 @@
+ct <itemname>
+
+INSERT INTO tempdb.nametable (item) VALUES (<itemname>); -> <idname>
+INSERT INTO tempdb.relationship (parentid, childid) VALUES (<position>, <idname>);
+
+cl <idname>
+
+INSERT INTO tempdb.relationship (parentid, childid) VALUES (<position>, <idname>);
+
+ls
+
+SELECT E1.id AS parentid, E1.item AS parent, E2.id AS childid, E2.item AS child FROM tempdb.relationship R LEFT JOIN tempdb.nameTable E1 ON R.parentId = E1.id LEFT JOIN tempdb.nameTable E2 ON R.childId = E2.id WHERE R.parentId = <id> ORDER BY R.parentId, R.sortId, R.childId;

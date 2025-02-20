@@ -1,0 +1,230 @@
+/* ============================================================================
+   COLUMN - Default
+   ========================================================================= */
+.mkhb-col {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	vertical-align: top;
+	border-width: 0;
+	border-color: #ffffff;
+	border-style: solid;
+}
+
+.mkhb-col--bg-image {
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+}
+
+/* ============================================================================
+   COLUMN - Inline Container
+   ========================================================================= */
+.mkhb-col__container-inline__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.mkhb-col__container-inline__wrap div[class^=mkhb-col__container-inline__] {
+    flex: 1;
+    display: flex;
+}
+
+.mkhb-col__container-inline__left {
+    justify-content: flex-start;
+}
+
+.mkhb-col__container-inline__center {
+    justify-content: center;
+}
+
+.mkhb-col__container-inline__right {
+    justify-content: flex-end;
+}
+
+/* ============================================================================
+   COLUMN - Vertical alignment
+   ========================================================================= */
+.mkhb-col--align-top div[class^=mkhb-col__container-inline__] {
+    align-items: flex-start;
+}
+
+.mkhb-col--align-middle div[class^=mkhb-col__container-inline__] {
+    align-items: center;
+}
+
+.mkhb-col--align-bottom div[class^=mkhb-col__container-inline__] {
+    align-items: flex-end;
+}
+
+/* ============================================================================
+   COLUMN - General
+   ========================================================================= */
+.mkhb-col__container {
+    width: 100%;
+}
+
+.mkhb-col-md-1,
+.mkhb-col-md-10,
+.mkhb-col-md-11,
+.mkhb-col-md-12,
+.mkhb-col-md-2,
+.mkhb-col-md-3,
+.mkhb-col-md-4,
+.mkhb-col-md-5,
+.mkhb-col-md-6,
+.mkhb-col-md-7,
+.mkhb-col-md-8,
+.mkhb-col-md-9,
+.mkhb-col-sm-1,
+.mkhb-col-sm-10,
+.mkhb-col-sm-11,
+.mkhb-col-sm-12,
+.mkhb-col-sm-2,
+.mkhb-col-sm-3,
+.mkhb-col-sm-4,
+.mkhb-col-sm-5,
+.mkhb-col-sm-6,
+.mkhb-col-sm-7,
+.mkhb-col-sm-8,
+.mkhb-col-sm-9,
+.mkhb-col-xs-1,
+.mkhb-col-xs-10,
+.mkhb-col-xs-11,
+.mkhb-col-xs-12,
+.mkhb-col-xs-2,
+.mkhb-col-xs-3,
+.mkhb-col-xs-4,
+.mkhb-col-xs-5,
+.mkhb-col-xs-6,
+.mkhb-col-xs-7,
+.mkhb-col-xs-8,
+.mkhb-col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.mkhb-col-xs-1,
+.mkhb-col-xs-10,
+.mkhb-col-xs-11,
+.mkhb-col-xs-12,
+.mkhb-col-xs-2,
+.mkhb-col-xs-3,
+.mkhb-col-xs-4,
+.mkhb-col-xs-5,
+.mkhb-col-xs-6,
+.mkhb-col-xs-7,
+.mkhb-col-xs-8,
+.mkhb-col-xs-9 {
+    float: left;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .mkhb-col-sm-1,
+    .mkhb-col-sm-10,
+    .mkhb-col-sm-11,
+    .mkhb-col-sm-12,
+    .mkhb-col-sm-2,
+    .mkhb-col-sm-3,
+    .mkhb-col-sm-4,
+    .mkhb-col-sm-5,
+    .mkhb-col-sm-6,
+    .mkhb-col-sm-7,
+    .mkhb-col-sm-8,
+    .mkhb-col-sm-9 {
+        float: left
+    }
+    .mkhb-col-sm-12 {
+        width: 100%
+    }
+    .mkhb-col-sm-11 {
+        width: 91.66666667%
+    }
+    .mkhb-col-sm-10 {
+        width: 83.33333333%
+    }
+    .mkhb-col-sm-9 {
+        width: 75%
+    }
+    .mkhb-col-sm-8 {
+        width: 66.66666667%
+    }
+    .mkhb-col-sm-7 {
+        width: 58.33333333%
+    }
+    .mkhb-col-sm-6 {
+        width: 50%
+    }
+    .mkhb-col-sm-5 {
+        width: 41.66666667%
+    }
+    .mkhb-col-sm-4 {
+        width: 33.33333333%
+    }
+    .mkhb-col-sm-3 {
+        width: 25%
+    }
+    .mkhb-col-sm-2 {
+        width: 16.66666667%
+    }
+    .mkhb-col-sm-1 {
+        width: 8.33333333%
+    }
+}
+
+@media (min-width: 992px) {
+    .mkhb-col-md-1,
+    .mkhb-col-md-10,
+    .mkhb-col-md-11,
+    .mkhb-col-md-12,
+    .mkhb-col-md-2,
+    .mkhb-col-md-3,
+    .mkhb-col-md-4,
+    .mkhb-col-md-5,
+    .mkhb-col-md-6,
+    .mkhb-col-md-7,
+    .mkhb-col-md-8,
+    .mkhb-col-md-9 {
+        float: left
+    }
+    .mkhb-col-md-12 {
+        width: 100%
+    }
+    .mkhb-col-md-11 {
+        width: 91.66666667%
+    }
+    .mkhb-col-md-10 {
+        width: 83.33333333%
+    }
+    .mkhb-col-md-9 {
+        width: 75%
+    }
+    .mkhb-col-md-8 {
+        width: 66.66666667%
+    }
+    .mkhb-col-md-7 {
+        width: 58.33333333%
+    }
+    .mkhb-col-md-6 {
+        width: 50%
+    }
+    .mkhb-col-md-5 {
+        width: 41.66666667%
+    }
+    .mkhb-col-md-4 {
+        width: 33.33333333%
+    }
+    .mkhb-col-md-3 {
+        width: 25%
+    }
+    .mkhb-col-md-2 {
+        width: 16.66666667%
+    }
+    .mkhb-col-md-1 {
+        width: 8.33333333%
+    }
+}

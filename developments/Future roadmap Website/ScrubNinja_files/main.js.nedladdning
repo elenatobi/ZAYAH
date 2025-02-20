@@ -1,0 +1,169 @@
+
+$(function () {
+    initScrollable();
+    initAccordion();
+    initGallerySlider();
+
+
+    $('.header__menu').click(function () {
+        $(this).toggleClass('header__menu--opened');
+
+        $('.header__nav-wrapper').slideToggle();
+    });
+});
+
+
+function initGallerySlider() {
+    $('.step__carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: true,
+        arrows:false,
+        autoplay:true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    unslick: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    autoplay:true,
+                }
+            },
+
+            {
+                breakpoint: 481,
+                settings: {
+                    unslick: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay:true,
+                    autoplaySpeed: 3000,
+                    adaptiveHeight: false,
+                }
+            },
+        ]
+    });
+    $('.reviews__carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: true,
+        arrows:false,
+        autoplay:true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    unslick: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    autoplay:true,
+                    arrows:true,
+                }
+            },
+
+            {
+                breakpoint: 481,
+                settings: {
+                    unslick: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay:true,
+                    autoplaySpeed: 3000,
+                    adaptiveHeight: true,
+                    arrows:true,
+                }
+            },
+        ]
+    });
+    $('.rec__carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: true,
+        arrows:false,
+        autoplay:true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    unslick: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay:true
+                }
+            }
+        ]
+    });
+}
+
+function initScrollable() {
+    $('[data-scrollable]').click(function () {
+        var selector = $(this).data('scrollable-target')
+        scrollToElement($(selector))
+    })
+}
+
+function scrollToElement(element, offset) {
+    var offsetTop = offset === undefined ? 0 : offset
+    $('html, body').animate({
+        scrollTop: element.offset().top - offsetTop
+    }, 1000);
+}
+
+
+
+function countdown(id, minutes) {
+    var seconds = 60;
+    var mins = minutes;
+
+    function tick() {
+        var counter = document.getElementById(id);
+        var current_minutes = mins - 1
+        seconds--;
+        counter.innerHTML =
+            current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if (seconds > 0) {
+            setTimeout(tick, 1000);
+        }
+        else {
+            if (mins > 1) {
+                // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+                setTimeout(function () {
+                    countdown(id, mins - 1);
+                }, 1000);
+
+            }
+        }
+    }
+
+    tick();
+}
+
+
+
+function initAccordion() {
+    $('[data-accordion-head]').click(function () {
+        $(this).closest('[data-accordion-root]').toggleClass('active');
+        $(this).next('[data-accordion-body]').slideToggle();
+    });
+
+    $('[data-accordion-root]').each(function (i, el) {
+        $(el).find('[data-accordion-body]').toggle($(this).hasClass('active'));
+    });
+}
+

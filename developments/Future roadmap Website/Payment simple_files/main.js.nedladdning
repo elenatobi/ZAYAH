@@ -1,0 +1,184 @@
+$(function () {
+
+  $('.reviews-slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 600,
+    adaptiveHeight: true,
+    arrows: false,
+    autoplay: true
+  });
+
+
+  $('.tiles__item').click(function () {
+    $('.tiles__item').removeClass('tiles__item--active');
+    $(this).addClass('tiles__item--active');
+    $(this).find('.variant__input:not(:checked)').prop('checked', true).trigger('change');
+  });
+
+  $('.recently__close').click(function () {
+    $('.recently__notice').hide();
+  })
+});
+
+function countdown(id, minutes) {
+  var seconds = 60;
+  var mins = minutes;
+
+  function tick() {
+    var counter = document.getElementById(id);
+    var current_minutes = mins - 1
+    seconds--;
+    counter.innerHTML =
+      current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+    if (seconds > 0) {
+      setTimeout(tick, 1000);
+    } else {
+      if (mins > 1) {
+        // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+        setTimeout(function () {
+          countdown(id, mins - 1);
+        }, 1000);
+
+      }
+    }
+  }
+
+  tick();
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.addEventListener('checkout:loaded', function (data) {
+
+    let checkout = data.detail.checkout;
+
+    $('.variant__input').change(function () {
+      updateCart();
+    });
+
+    $('.shipping-block').click(function () {
+      $(this).find('.shipping__input').prop('checked', !$('.shipping__input').is(':checked')).trigger('change');
+    });
+
+    $('.shipping__input').change(function () {
+      updateCart();
+    });
+
+    checkout.cart.onSummaryUpdated(() => {
+
+      $('.variant__input').each((i, el) => {
+        let container = $(el).closest('.tiles__item');
+        let variant = checkout.getVariant($(el).val());
+        container.find('.tiles__name-qty').text(variant.quantity)
+        container.find('.tiles__price').text(variant.price);
+        container.find('.tiles__price-old').text(variant.meta.old_price);
+        
+        let installmentsValue = checkout.cart.summary.installments;
+        if (installmentsValue > 1) {
+           container.find('.tiles__price').text(variant.installments[installmentsValue]);
+        }
+      })
+
+      let warrantyVariant = checkout.getVariant(getWarrantyVariantId());
+      $('.warranty__value').text(warrantyVariant.price);
+
+    })
+
+    function getVariantId() {
+      return $('.variant__input:checked').val();
+    }
+
+    function getWarrantyVariantId() {
+      return $('.variant__input:checked').attr('data-warranty-variant');
+    }
+
+    let defaultItemIds = [];
+
+    if ($('.shipping__input').is(':checked')) {
+      defaultItemIds.push(getWarrantyVariantId());
+    }
+
+    defaultItemIds.push(getVariantId())
+
+    checkout.cart.setItems(defaultItemIds);
+
+    $('.tiles-block').removeClass('load');
+    $('.checkout__form-outer').removeClass('load');
+
+
+    $('.recently__item-country').text(checkout.country);
+
+    let variants = $('.variant__input').map(function () {
+      return checkout.getVariant($(this).val())
+    }).get();
+
+    initNotifications();
+
+    function initNotifications() {
+      if ($(window).width() > 480) {
+        handleNotification(0);
+      } else {
+        handleNotificationMobile(0);
+      }
+    }
+
+    function handleNotification() {
+
+      let randomVariant = variants[Math.floor(Math.random() * variants.length)];
+
+      $('.recently__item-name').text(randomVariant.title);
+      $('.recently__img-wrapper img').prop('src', randomVariant.image);
+
+      setTimeout(function () {
+        var notice = $('.recently__notice');
+        notice.css({
+          left: 0
+        });
+        setTimeout(function () {
+          notice.css({
+            left: '-400px'
+          });
+          handleNotification()
+        }, 5000)
+      }, 15000);
+    }
+
+    function handleNotificationMobile() {
+
+      let randomVariant = variants[Math.floor(Math.random() * variants.length)];
+
+      $('.recently__item-name').text(randomVariant.title);
+      $('.recently__img-wrapper img').prop('src', randomVariant.image);
+
+      setTimeout(function () {
+        var notice = $('.recently__notice');
+        notice.fadeToggle()
+        setTimeout(function () {
+          notice.fadeToggle()
+          handleNotificationMobile()
+        }, 5000)
+      }, 15000);
+    }
+
+    function updateCart() {
+
+      checkout.cart.clear();
+
+      let items = [
+        getVariantId()
+      ]
+
+      if ($('.shipping__input').is(':checked')) {
+
+        items.push(getWarrantyVariantId());
+
+      }
+
+      checkout.cart.setItems(
+        items
+      );
+    }
+
+  })
+})
