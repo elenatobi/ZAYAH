@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "servor developments/AbstractParser --reload"
+        "start": "servor jsdev/AbstractParser --reload"
     },
     "dependencies": {
         "servor": "^4.0.2"
