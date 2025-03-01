@@ -1,0 +1,397 @@
+- Ekonomins grunder:
+  (Ekonomins grundläggande dilemma: Eftersom människans behov och önskemål är stora, men resurserna är begränsade, handlar ekonomin om hushållning med begränsade tillgångar och prioriteringar för att tillgodose olika mänskliga behov och önskemål. (Grekiska ”oikonomia”: hushållning))
+  - Ekonomins grundläggande:
+    - ...
+  - $COM(C) Ekonomiska tillfogande:
+    - Behov:
+      (Ekonomins roll angår tillfredställning av mänskliga behov och önskemål inom Maslows behovshierarki
+      Maslows behovshierarki -> Mänskliga behov och önskemål, både medvetna och omedvetna, driver människans handlingar, behovet kan snabbt växa i betydelser
+      Ekonomi handlar om att tillgodose mänskliga behov och önskemål.
+      Historiskt -> kroppsliga behov
+      Idag -> psykologiska och sociala behov (Upplevelseindustrin) till följd av effektivisering att tillgodose grundläggande behov i den rika världen)
+      - Grundläggande kroppsliga behov: Näring, vätska, sömn.
+      - Trygghet: Säkerhet om att behoven blir tillgodosedda.
+      - Gemenskap: Kärlek, närhet, vänner.
+      - Uppskattning: Att bli uppskattad för den man är.
+      - Självförverkligande: Underhållning, personlig utveckling.
+    - Resurser:
+      (Tillfogandet att få behoven och önskemålen tillgodosedda
+	  Produktionens roll: För att utnyttja resurserna måste en produktion sättas igång, vilket sker genom resurssamling till ett företag)
+	  - Fria nyttigheter (obegränsade och gratis utan arbetsinsats) e.g. rent luft och vatten i Sverige
+      - Begränsade resurser: (Begränsade, arbetsinsatskrävande) e.g. Drickbart vatten genom rening och transport.
+	- Samlade resurser/Produktionsfaktorer:
+	  (Resurser för framställning av varor och tjänster)
+      - Naturresurser: (Olika råvaror som genom produktionen förädlas till färdiga produkter) Jord, skog, vatten, mineraler, metaller, energiresurser (kol, olja, vattenkraft), halvfabrikat och bearbetade naturtillgångar (stål, plast).
+      - Mänsklig arbetskraft: (naturresurser -> färdiga produkter med mänskliga förmågor) kroppsstyrka, fingerfärdighet, problemlösningsförmåga och social kompetens. Humankapital: Människans intellektuella och sociala förmågor
+      - Kapital: Krävande tillgångar för bearbetning av naturresurser/råvaror till färdiga produkter:
+        - realkapital (fysiska hjälpmedel) maskiner och verktyg, anläggningar, företagslokaler
+        - finansiellt kapital (penningmässiga tillgångar, både egna och lånade) -> Satsa på produktion (underhålla/förnya realkapital)
+  - $COM(C*) Ekonomins huvudfrågor:
+    (Grundläggande uppgift: Produktion och rättvis fördelning av varor och tjänster mellan samhällsmedlemmarna utifrån deras behov och önskemål
+    Samhällets avvägning mellan ekonomisk effektivitet och social rättvisa: -> Högst produktion och rättvis resursfördelning)
+    - Produktionens frågor:
+	  (svara mot behov utan resursslöseri, beslut om vilka produkter som produceras, i vilken omfattning, arbetsorganisation, hänsyn till naturens sårbarhet och ändliga resurser)
+	  - Vad ska produceras?: Begränsade resurser -> Produktionsmöjlighetskurvan: Val mellan olika produktionsmöjligheter (A eller B)
+      - Vad ska produktionsresultatet användas till?
+	    - 80% -> Konsumption: Nutida tillfredsställning, reinvestering, underhåll/modernisering av realkapital
+        - 20% -> Investering: Framtida behovtillfredsställelse, nyinvestering, utöka realkapital -> Ökad produktion
+      - Hur ska produktionen organiseras:
+        - Välfungerande samhällsinstitutioner -> mobilisera medborgarna till produktiva ändamål.
+        - Effektiv arbetsorganisation och produktionsteknik -> Vem ska göra vad? Toppstyrda organisation/självstyrande nätverk, beslut av chef med överblick/produktionsarbete
+        - Hänsyn till ekologisk hållbarhet och långsiktig effektivitet med ändliga resurser, längre sikt
+      - Investeringar och placeringar:
+        - Köp av lägenhet: Privatekonomi: Investering, nationalekonomi -> Omfördelning, samhällsekonomi: placering
+        - Nybyggd hus: Investering
+    - Fördelningsfrågan:
+      (- Distribution: Fysiska förflyttningen av produkter från företag till hushåll, hanteras genom logistik (marknadsföring, transport och försäjning)
+      - Inkomstfördelning: Hur produktionsresultatet fördelas ekonomiskt mellan medborgarna, beroende på deras inkomst och förmögenhet. (Vem ska köpa produkter och tjänster?)
+	  Politikens roll: Lagstiftning och beskattning -> omfördela inkomster och förmögenheter, utjämna orättvisor. (Behovsprincipen)
+      Värderingar och ideologi: Fördelningsfrågan påverkas av värderingar och ideologiska synsätt på människa och samhälle.
+	  John Rawls teori om rättvisa: Teckning av samhällskontrakt innan födseln, utan förkunskap om framtida öde.
+      - Skillnader som hjälper de sämst ställda: Ett samhälle med vissa ojämlikheter kan vara nödvändigt, men dessa skillnader ska till slut hjälpa de sämst ställda.
+      - Kritik från nyliberalt håll: Rawls idéer kritiseras för att ge staten rätt att omfördela privata inkomster och förmögenheter.)
+      - Likhetsprincipen: Alla får lika mycket-> Principen inom socialliberalistisk ideologi
+      - Prestationsprincipen: Den som bidrar mest får mest, baserat på utbildning, kompetens och ansvar. (Vem ska värdera prestation? Olika funktionsdugligheter/förutsättningar?) -> Teorin: arbetet/fri lönutdelning
+      - Behovsprincipen: Den som behöver mest får mest, exempelvis de som är hungrigast får största tårtbiten. -> Sjukvården
+  - Självhushållning:
+    ((99% av människans tid, tradition (långsam förändring)) 
+	Levnadssätt/inhemsk försörjning nära naturen (jakt, naturbruk och boskapsskötsel))
+	
+  - Marknadsekonomi:
+    ((Liberalismen, borgare, industriägare, fabriksägare, köpmän)
+	Industrialiseringen och tekniska jordbrukseffektiviseringar -> urbanisering
+	Friare ekonomi -> bättre förutsättningar för snabbare ekonomisk utveckling)
+	
+  - Planekonomi:
+    ((Karl Marx -> socialism), Reaktion mot de ekonomiska orättvisorna och sociala spänningar i industrisamhället. Arbetarrörelsens kritik mot marknadsekonomi, liberalismens ekonomi -> Gemensamt ägande
+    Politiker (centralstyrning) från olika komitter beslutar ekonomin -> 5årsplaner)
+	Fördelar:
+    Eliminering av arbetslöshet -> Fördelning av arbete och inkomst -> Styra produktion -> Fördela inkomster och resurser i samhället
+    Funktion vid en snabb industrialisering för att snabbt öka volymen av enkla varor såsom stål och cement
+    
+	
+    Många köer - Informationsproblemet:
+    Svårt att mäta människors behov, tycke, smak efter staten har avskaffat utbud och efterfrågan -> köer (för lite utbud) och svarta marknader (Byter till sig) -> Ineffektiv
+    Vissa åtgärd -> Kvotsystem
+    
+    Byråkratiskt och odemokratiskt system
+    Ineffektiv produktion och slöseri av naturresurser -> Ingen strävan efter effektivitet (svårt med ny innovation, kreativitet, utveckling av realkapital), ingen incitament
+    
+    -> Flesta länder med planekonomin har avreglerat sin ekonomin efter kalla kriget, levnadsstandard har halkat efter i jämförelser med marknadsekonomi
+  - Blandekonomi: (Glidande skala) (Socialliberal) Flesta moderna ekonomier med grunden på marknadsekonomins principer, politiken ingriper när marknaden misslyckas eller grundläggande behov hotas.
+  - Kretsloppsekonomi: (Kritik mot marknadsekonomins bristande hänsyn till natur och miljö) Grön ekonomi (till ekologiska sammanhang och hållbar utveckling) Ekologismen med kretsloppsekonomin som ekonomiskt system
+  
+- Svensk ekonomisk system:
+  - ...
+  
+- Grundläggande historia:
+  - $L Källkritik:
+    (Historia -> studera det förflutna (böcker, internet, källor som brev, intervjuer, dokument).
+    Problem: flera versioner av samma händelse, osäkra minnen.)
+	Källkritikens roll
+	Historisk utveckling: från maktens redskap -> vetenskap (sekelskiftet 1900).
+    Begränsningar: källkritik förklarar ej orsaker, styrs av perspektiv.
+    Historia -> ständig omtolkning (nya infallsvinklar, diskussioner).
+    (Källkritik -> bedöma information med sunt förnuft (fyra huvudprinciper))
+    - Äkthet:
+       Fråga: är källan vad den utger sig för att vara?
+       Exempel: falska Hitlers dagböcker (äkta papper, men tillverkat efter 1950).
+       Metod: kunskap om epoken, andra källkritiska kriterier.
+    - Tid:
+       Närhet i tid -> mer tillförlitlig information.
+       Problem: glömska, minnesbearbetning (ändrade samband, sammanslagna minnen).
+       Exempel: samtida källor (dagböcker, brev, intervjuer).
+       Undantag: upprepade handlingar, starka intressen -> minnet tillförlitligt.
+    - Beroende:
+       Oberoende källor -> högre trovärdighet.
+       Problem: sekundärkällor, narrativ smitta (gruppminnen påverkas).
+       Exempel: rykten (ändrad information i varje led), medier (återkommande uppgifter från samma ursprung).
+    - Tendens:
+       Intressen bakom källan -> risk för vinklad information.
+       Exempel: politiska skildringar, statistik (bönder underrapporterade skördar -> undvika högre skatt).
+       Teknik: faktaurval (sant innehåll, men skev helhetsbild).
+	- Beskrivande källor: händelsebeskrivning (kungakrönikor)
+    - Kvarlevor: direkta spår (ruiner, vapen, fingeravtryck), mer trovärdiga (äkthet viktigt)
+	  Berättelser som kvarlevor (propaganda, samhällsattityder)
+  - $COM(R) Historiebruk:
+    (Handlar samhällets historieanvändning för olika syften, analyserar hur människor använder historia och deras uppfyllda funktioner)
+    Historievetenskapen försöker ta reda på vad som är sant om det förflutna, medan vanliga människor kan använda historia på andra sätt.
+	- Vetenskapligt:
+	  - Syfte: Fastställning av sanna händelser
+	  - Tillämpning: Genom källkritik, rekonstruktioner, tolkningar
+	  - Samhällsroll: Granskning, ifrågasättande, omtolkning av etablerade fakta
+	  - Konkretioner: Historiska forskningsartiklar, akademiska avhandlingar (av professionella historiker, populärhistoriker och historielärare)
+	- Existentiellt:
+	  - Syfte: Identitetsförstärkning (nationell, etnisk, etc.)
+	  - Tillämpning: Genom framlyftning av centrala historia händelser för en grupps identitet
+	  - Samhällsroll: Skapande/Stärkning av gruppidentitet, sammanhållning, bearbetning av existentiella frågor
+	  - Konkretioner: Stärkt bindning inom utsatta minoritetsgrupper
+	- Moralisk:
+	  - Syfte: Granskning och kritisering genom att lyfta fram orättvisor och utsatta grupper
+	  - Tillämpning: Genom belysning av begångna orättvisor och utsatta grupper, avgöra rätt/fel inom historia/nutid
+	  - Samhällsroll: Maktifrågasättande och återupprättning av drabbade grupper
+	  - Konkretioner: Orättvis särbehandling av utsatta grupper
+	- Ideologiskt:
+	  - Syfte: Stärkning/legitimering av ideologi, kritisera andra ideogolier
+	  - Tillämpning: Framlyftning av historia som stödjer egna ideologin, kritiserar andra
+	  - Samhällsroll: Legitimering av politiska beslut/ideologier
+	  - Konkretioner: Olika synvinklar och historia hos olika partier
+    - Pedagogisk:
+	  - Syfte: Historiska lärdom
+	  - Tillämpning: Jämförelse mellan historiska händelser med idag för legitimering/kritik av beslut
+	  - Samhällsroll: Förmåga att fatta bättre beslut idag
+	  - Konkretioner: Vägledning inom politiska beslut, åtgärder vid politiska felsteg
+	- Kommersiellt:
+	  - Syfte: Produktförsäljning
+	  - Tillämpning: Historieanvändning i marknadsföring, underhållning
+	  - Samhällsroll: Locka/Engagera människor genom historiska teman
+	  - Konkretioner: Turistsouvenier, historiska filmer
+	- Icke-bruk av historia:
+	  - Syfte: Undvika potentiellt problematiska historia (historiska felsteg)
+	  - Tillämpning: Ignorering/undvikelse av en del historiska händelser
+	  - Samhällsroll: Undvika att legitimera/ifrågasätta egna ideologin/samhället
+	  - Konkretioner: Partiprogrammens undvikelse av sitt mörka ideologihistoria
+  - $COM(C*) Historisk tolkningsperspektiv:
+    (En specifik syn på vilka drivkrafter som är avgörande för ekonomiska, politiska och sociala samhällsförändringar under olika tidsepoker, Liknas vid olika slags "glasögon" som appliceras i den historiska analysen)
+	- Materialistisk/Strukturperspektiv: (Karl Marx och Friedrich Engels)
+	  (Historiska processer som resultatet av mänskliga förhållanden i naturen (materiella), utveckling förklaras genom att studera sociala klasser och deras motsättningar, Avlägsnar idén om moral och idéer som motorer i historisk utveckling)
+	  Ekonomi+produktionsförhållande -> Samhällsrelationer -> Människan (sättet att tänka) -> Ideer/kultur (Samhället formar människan)
+	  - Primitivt samhälle:
+	    - Ekonomisk: Små grupper, försöjning genom jakt, fiske, samling, ingen privat egendom/klasskillnader
+		- Sociala: Egalitärt, resurser delas lika, arbetsdelning baseras på ålder och kön
+	  - Slavsamhälle (Antiken, Romarriket):
+	    - Ekonomisk: Jordbruksutveckling, vissa kunde kontrollera större resurser och mark -> jordägare + slavar (klass)
+		- Sociala: Hierarkisk, liten elit av jordägare som kontrollerar majoriteten av resurserna och en stor klass av slavar som utför arbetet
+	  - Feodalt samhälle (Medeltiden):
+	    - Ekonomisk: Jordägande adelsmän (feodalherrar) kontrollerar marken och bönder (livegna) arbetar i utbyte mot skydd och en del av produktionen
+		- Sociala: Starkt hierarkiskt, feodalherrar på toppen och livegna bönder längst ner. Kyrkan -> legitimera den sociala ordningen
+	  - Kapitalistiskt samhälle (Upplysningstiden, 1800-talet):
+	    - Ekonomisk: Industrialiseringen och kapitalismens framväxt -> produktionsmedlen (fabriker, maskiner) ägs av kapitalister, medan arbetarna säljer arbetskraft för lön.
+		- Sociala: Centrala klassmotsättningarna mellan kapitalister (bourgeoisie) och arbetare (proletariat)
+	  - Kommunistiskt samhälle (framtida vision):
+	    - Ekonomiska: Produktionsmedlen ägs gemensamt, klasskillnader avskaffas, produktionen tillgodoser allas behov än privat vinst
+		- Sociala: Egalitär (jämlikhet), frihet, resurser fördelas efter behov, staten som verktyg för klassherravälde försvinner
+	- Idealistisk/Aktörperspektiv: (Kant, Fichte, Friedrich von Schelling och Hegel)
+	  (Som reaktion på franska revolutionen och franska materialismen på 1700-talet)
+	  (framhäver individers och idéers betydelse framför massornas levnadsförhållanden)
+	  Ideer/ideologier+historiska personligheter -> Människan -> Samhällsrelationer -> Ekonomi+produktionsförhållande
+  
+- Ideologier och nationalismen:
+  - $L+D Ideologier:
+    (Gemensam grund: Upplysningsfilosofins tro på samhällsutveckling och vetenskapens betydelse, strävan efter att knyta samman vetenskap och politik för att forma helhetsbild av mänskliga villkor och framtid.
+	Upplysning, Fransk/industriell revolution -> Modern politisk debatt, städer(affärsmän, lärare, jurist) -> politik för fler
+    Olika samhällsklasser -> olika ideologier	
+	Konservativa, liberala -> privat äganderätt
+	Liberaler och socialister motståndare till gamla ståndssamhälle med priviligerad elit)
+	- Konservatism: (Edmund Burke) "Tankar om revolutionen i Frankrike" (1790)
+	  tradition och sammanhållning, kritisk mot upplysningsförfattarens tro på förnuftet, snabba samhällsförändringar -> samhällsordning som familj med ansvar och hierarki, statens inskräkning är nödvändiga
+	  I början kritik mot industriella revolutionen, samhälle som planta i stället för konstgjord förnuftskapelse, fabriksamhälle-> Ekonomisk misär, alkolism, omoraliska arbetare, liberalism som hjärtlös egoism
+	  Skärpt temp i samhällsutveckling för borgerlighetens liberalism, social oro i deras spår
+	  - Reaktionär: mot all förändring
+	- Socialism: Karl Marx och Friedrich Engels "Kommunistiska manifestet" (1848), "Teori om samhällsutveckling"
+	  Jämlikhet och gemensamt ägande av produktionsmedel, Välkomnar fransk/individuell revolution men störta kapitalistisk industrisamhälle och liberalismens frihetsbegrepp -> Rättvisare samhälle utan klasskillnader, jämlikhet som verklig frihet (ingen ekonomisk skillnad)
+	  Den stora arbetarklassen saknar egendomar/produktionsmedel, arbete för överlevnad, växande klyftor, klasskampen
+	  - Reformism: Fredliga överenskommelser och demokratiska reformer
+	  - Kommunism: Våldsam revolutionär förändring efter 1917
+	- Socialliberalism: John Stuart Mill (Reformism)
+	  Statliga ingripanden och sociala reformer för att skapa jämlika möjligheter -> Socialdemokratiska partier i Europa
+	- Liberalism: Adam Smith "Nationernas välstånd" (1776) (kritik mot tullar och skråsystem)
+	  (Affärsmän, akademiker, tjänstemän som missgynnas i ståndssamhället)
+	  individens frihet, lika rättigheter och skyldigheter, fri konkurrens -> yttrande- och tryckfrihet samt begränsad rösträtt baserad på utbildning och förmögenhet, positiv till samhällsomvandling, allmän skydd mot överhetens maktmissbruk
+    - Socialkonservatism: Lindra nöden i industrisamhället utan att rubba äldre maktförhållanden
+	  Sociala reformer hindrar socialismens spridningoch fri arbetare att sluta bakom gamla ledare
+	- Nationalismen: Ingen enhetlig ideologi, kombineras med andra
+	  Ordet "nation" används mer allmänt efter franska revolutionen
+	  Napoleonkrigen: Tanken att ett folk med liknande språk, religion och seder utgör en nation uppstod -> en syn på nationen i Tyskland som baserades på gemenskap i historia, kultur, språk och härstamning (folksjälen)
+	  Genombrott i samband med 1848 revolution
+	  Genomgripande betydelse för 1800-talet politik/kultur -> Gränsomdragning, nya stater i Europa
+	  folk i mångnationella välden försökte bryta sig ut och forma egna stater,(mot Habsburgs)
+	  folk som levde uppsplittrade i olika riken ville slå sig samman.
+	  -> Utbildning och identitet: Folkskolor lär barnen stoltheten över sin nationella identitet/historia.
+      -> Nya stormakter: Italien och Tyskland växte fram som nya stormakter i Europa
+	  Panslavism: I öster fanns en rörelse som ville samla alla slaviska folk, den så kallade panslavismen.
+      Skandinavism: I norr fanns skandinavismen, som ville ena de nordiska länderna.
+  - $COM(C) $MAIN:
+    - (1848 Folkets vår):
+	  (Mot Habsburgska väldet, oeniga upprorsmännen, sommaren revolter slås ner småningom, ryska tsaren Nikolaj I ingriper aktivt)
+	  - Ungern (Habsburg): Ungersk folkledare Kossuth revolt -> Barrikader på Wiens gator 10 dagar -> Habsburgs starka man Metternich flyr till England
+      - Preussen: Upplopp i Berlin mitten av mars -> preussiske kungen lovar ny konstitution -> Tyska småstater kollapsade och delegater samlades i Frankfurt för att bilda en alltysk nationalförsamling i Frankfurt (mars~april)
+      - Italien: (Senmars) Österrikiska garnisonen drivs ut ur Milano och soldater från splittrad italiensk halvö -> Österrike
+	- (Industriella revolutionen/Kommunikationsrevolutionen):
+	  - 1850~70: Spridning av industriella revolutionen över Europa: världshandeln tredubblades. Storbritannien, USA, Tyskland, Frankrike som medtävlare
+	    Nya transportmedel: Ångbåtar, järnvägar och telegrafen -> Snabbväxande ekonomi
+		Phileas fogg (slutet 1860-talet) -> Jorden runt på 80 dagar
+      - 1850~80: järnvägssträckorna i världen tiodubblades -> stor marknad för järn/stålframställning, verkstadsindustri.
+        (Nya stålframställning, förbättrade maskinkonstruktioner)
+        Ångfartyg, nya vattenvägar (Suezkanalen 1869)
+        Telegrafen -> snabb kommunikation över stora avstånd, nödvändig att hantera komplicerad trafiksystem
+		Knyter samman bygder, nya centra för råvaruutveckling, produktionshandeln
+      Politisk utveckling och nationalism:
+      - Europas länder knöts samman genom handel, industri och kommunikation
+      - Nationalismens genombrott präglade den politiska utvecklingen. Varje stat satsade på att bli starkare än sina grannar och konkurrenter.
+    - Storbrittanien:
+	  (Reformister: Föredöme för gradvis reformering)
+	  - 1688 "den ärorika revolutionen" -> En konstitutionell monarki (Maria II och Vilhelm III), Englands Bill of Rights
+	    Underhuset (Godsägare), Överhuset (House of lords) (Företrädare för adel med livslång mandat)
+	    Parlamentet ett grundval av gammal valkretsindelning utan hänsyn till industralismens geografisk omfördelning -> Ruttna köpingar/Rotten boroughs
+      - 1820-talet: Utpräglad konservativ regering (Tories)
+	    Konservativa jordägare en rad hinder för fria varu och arbetsmarknad som eftersträvas av industriägare
+        Liberala krav:
+		  1. Valreform stärker städernas borgerskapens representation i parlamentet.
+          2. Avskaffande av spannmålstullarna -> billigare bröd, fabriksägare sänker arbetares löner
+          3. Ny fattigvårdslag för att tvinga de fattiga att söka arbete i industrin med straff av särskilda fängelser (arbetshus)
+		Partistrider mellan konservativa (Tories) och liberaler (Whigs), växande social oro
+		Lågkonjunktur efter Napoleonkriget, dyrhet och arbetslöshet bland hemvända soldater
+	  - 1830 Revolution i Frankrike -> London revolt i industridistrikt, konservativa
+		Whigs bildar regering -> 1832: Ny vallag ökar antalet röstberättigade (500000 -> 813000) (män med god industriinkomst) och avskaffade "ruttna köpingarna"
+	  - 1845: Potatispest i Irland -> spannmålsskörd slår fel -> en miljon dog, flykt till Amerika
+      - Liberala reformer (1846): Ny fattigvårdslag med stränga regler -> tvinga de fattiga till jobb (Industrins väg)
+	  - Rösträtten breddas småningom genom kompromisser
+	- Frankrike:
+	  (Revolutionärer: Inspiration för revolutionära medel)
+	  - Bourbon dynasti Henry IV
+	  - Ludvig XIII
+	  - Ludvig XIV (solkung)
+	  - Ludvig XV
+	  - Ludvig XVI
+      - 1789 - 1799 franska revolutionen
+      - 1805 - 1814 Napoleon
+      - 1815 Wienkongressen. Gamla kungahuset återinförs, emigrerade fransmän återvänder för gammal stöldgods och maktpositioner
+      - 1830 Kungen Karl X försökte återinföra envälde -> Revolutionen 1830 -> Kungen abdikerar och flyr till England, Förmögna delen av medelklass tar ledning över revolution -> En konstitutionell monarki (Louis Philippe), avskaffad sista ärftlig ämbete och fördubbla antal röstberättigade men endast 3% vuxna i medelkassen
+	  - 1847~8 vinter Medelklassens bristande rösträtt (valreformkrav), svältkatastrof (dålig spannmålsskörd, potatispest), ekonomisk kris (industri, hantverkare arbetslöshet)
+      - -> Revolutionen 1848 -> provisorisk regeringen av liberala republikaner och några arbetsbefolkningens socialistiska ministrar, förmögen borgerligheten ingen kontroll
+	    Krav på 10h arbetsdag, statsunderstödda nationalverkstäder
+      - 1848 April val till församling att forumlera ny republikansk konstitution -> konservativt utslag
+      - Juniupproret 1848 (arbetare) -> Politisk reform följs av social omvandling (I grund ekonomisk systemförändring) -> konstituerande församling att lämna maktbefogande till militär -> 3 dagar öppet lag -> Förlust (Revolutionärer dödas/deporteras)
+      - Presidentvalet 1848: Louis Napoleon (Napoleon III) (Napoleons brorson)
+	  - 1852 Napoleon III till kejsare -> Ivrig påskyndare till modernisering, industrialisering, frihandel, utvecklad bankväsende, satsning på väg/järnvägbyggen
+      - 1870 - 1871 Fransk-preussiska kriget
+	- Ryssland (Ryska härskadömet):
+	  (Reaktionärer: Skydd mot förändringens vindar)
+	  (Utbildad elit: demokratisering, industrialisering, sekularisering
+	  Slavofiler: Motvikt mot gudlöshet och materalism i väst)
+	  - 1848 Ryssland framstod som "reaktionens fäste" i europeisk politik.
+	  - 1853~6 Krimkriget (Förlust): mot Osmanska riket, Frankrike, Storbrittanien
+	    Stark västerländsk markerad elit -> fråga om rysk modernisering -> Frågan om livegenskap (även hos konservativa kretsar)
+      - 1861 Alexander II avskaffade livegenskapen men begränsad reform och stagnerande jordbruk utan kapitaltillskott, tyngt av avgift och ingen utbrytare för eget initativ
+	    1/2 jord -> bönders ägo, bondeavgifer -> kompensera adeln
+	    Slavofiler motstånd mot reformen (stor inflytande)
+      - 1870-talet Ny opposition: intellektuella (universitet) ansåg att tsardömet måste störtas med våld, sociala klyftan mellan akademiker och bönder stor (revolutionär landsbygd) -> Individuell terror som enda framkomliga vägen
+      - 1881 Mordet på Alexander II -> nya tsarväldet slog ner på oppositionen med ännu brutalare medel och avbröt alla ansatser till demokratisering.
+      - 1917 Ryska revolutionen
+    - Italien:
+	  (Nationalismen)
+	  (Kungariket Sardinien, Norra Italien under Österrike (Lombardiet), kungariket Sicilien)
+	  - 1820-talet: radikal oppositionsrörelse kräver Italiens enande.
+      - 1830: (Inspiration från Frankrike) försök till revolution 1830 misslyckades.
+        Premiärminister Cavour (Kungariket Sardinien), en liberal politiker (ena och modernisera), lierade sig med Frankrike för att driva ut österrikarna som initiativ
+      - 1848: Italien (mot Habsburgska väldet)
+      - 1858 marscherade den franska hären över Alperna (Krig mot Österrike)
+      - Efter fredsslutet 1859 Sardinien erhöll Lombardiet från Österrike, händelseutveckling -> revolter i små hertigdömen i mellersta Italien
+        Garibaldi, en republikansk veteran (rödskjortorna), utrustade en väpnad styrka och erövrade södra Italien med Cavours stöd.
+      - 1861: Enat Italien 1861: Ett enat Italien utropades med Viktor Emanuel II som kung
+	- Preussen (Tyskland):
+	  (Nationalismen)
+	  - 1805 - 1814: Tanken om enad tysk nation väcktes i liberala kretsar under Napoleonkrigen
+      - 1848: Ett alltyskt parlament i Frankfurt försökte skapa ett enat Tyskland 1848, men misslyckades.
+      - Otto von Bismarck Tiders stora frågor inte genom tal och majoritet utan blod och järn: Preussens rikskansler, en konservativ politiker, motståndare till liberala ideers, nationalismen -> naatinoalismen effektiv sätt att vinna popularitet och bygga en stark stat under preussisk ledning, uppbyggning av modern militärmakt
+      - 1864: Krig mot Danmark -> erövrade Schleswig och Holstein (övervägane tysk befolkning), spetsen för opposition mot dansk styre, förbund med Österrike
+      - 1866: Krig mot Österrike (över erövrade områdens administration) (7 veckor anfall)-> grundligen besegrar Habsburgska styrkor -> Ett nordtyskt förbund under preussisk ledning
+      - 1870 - 1871: Krig mot Frankrike (Protester från Napoleon III, stormaktstatus hotas av Preussens tillväxt) (Några veckor) -> Frankrike tvingades avstå Alsace-Lorraine/Elsass-Lothringen (kol, järn) och betala ett stort krigsskadestånd, södra furstendömen ansluter sig, Napoleon III i tysk fångenskap
+      - 1871 Jan: Utropandet av Tyska riket (Ceremoni i Versailles): Preussens kung Wilhelm I som kejsare och Bismarck som rikskansler
+      -> Motsägelsefull konstitution: Den nya staten hade en alltysk riksdag med allmän rösträtt för män, men den verkliga makten låg hos regeringen och rikskanslern, som var ansvarig inför kejsaren.
+      -> Militär dominans&stark ställning i det nya riket (speglades i bordsplaceringen vid kejserliga middagar)
+      -> Aggressiv stormaktsnationalism: ödesdiger roll för Europas fortsatta historia.
+	- USA:
+      - 1860-talet: Amerikansk nationsbygge (Expansion västerut) "Homestead Act" ger nybyggare gratis tillgång till jord, befolkningstillväxt: 7 -> 81 miljoner under 1800-talet
+      - 1870-talet: Järnvägen byggdes ut över hela kontinenten.
+      -> Kränkning av indianernas rättigheter, Kultur och identitet som hyllade den starke och obundne individen utan inskränkningar
+      - 1861-1865: Amerikanska inbördeskriget, klyfta mellan nord och sydstater, fråga om expansion västerut och slaveriinställning
+	    Nordstater: Individuell småjordbruk för hemmamarknad och industrialisering, tullskydd för gryende industri (Abolitionister)
+		Sydstater: stora slavplantager (råbomull, världens främst producent), frihandel -> Brittiska industrivaror
+		Abraham Lincoln (vals till president 1860) -> skyddstullar, jord för nybyggare och järnvägsbyggen, 11 sydstater utträdde ur unionen -> Inbördeskrig
+	    Nordstaterna vann och USA förvandlades till en modern nationalstat.
+      -> Rekonstruktionen: Period av centralstyrd anpassningspolitik där radikala republikaner styrde Södern. Slaveriet förbjöds 1865, men frigivna slavar fick ingen jord och en brutal rasåtskillnadspolitik infördes.
+
+- Etik och moral:
+  (Etik: Teoretiska resonemang om rätt/fel (Teori, tanke, insikt) (Systematisk reflektion över mänskliga värderingar och handlingar), Etik analyserar och systematiserar argument för och emot handlingar Grekiska "Ethos")
+  (Moral: Praktiskt handlande och konkreta handlingar (Praktik, tillämpning, insats) Latinets "Mores")
+  - $L Viktiga begrepp:
+    - Axiom: Grundläggande antaganden som inte kan bevisas men utgör en utgångspunkt för etiska ställningstaganden.
+    - Beslutskompetens: Förmåga att fatta välgrundade beslut i sitt eget långsiktiga intresse.
+  - $L Vårdetikens grundprinciper:
+    - Hippokratiska eden: (Första sammanhängande läkaretiken) Betonar patientens bästa och etisk medvetenhet
+    - Autonomi: Individens rätt till självbestämmande och förmåga att inse egna handlingars konsekvenserna
+      Patientens rätt att acceptera/avböja vård, men inte beställa specifik vård
+      Vårdpersonalens skyldighet att informera patienten -> Patientens egna beslutsfattning
+    - Rättvisa: Behandling för alla baserat på medicinskt behov, oberoende av ålder, kön, förmågor, funktion, handlar inte om pengar utan om etiska övervägande
+      Prioriteringar för att optimalt använda begränsade resurser
+    - Godhetsprincipen – "Att göra gott": Grundläggande princip i många religioner och livsåskådningar. Godhet sprider sig och leder till positiva kedjereaktioner.
+      Att göra gott kan ibland innebära att överväga vad som faktiskt är bäst för individen, även om det kan upplevas som negativt på kort sikt.
+    - Inte skada: Agera att undvika skada, Flera handlingsalternativ -> val för minimerad skada/lidande
+      Vid etiska dilemman, som dödshjälp, vägs aktuell skada mot framtida nytta
+  - $L Etikens Utgångspunkter
+    - Moralens Grunder: Inlärning/Insikter om rätt/fel tidigt i barndomen, parallellt med språkutvecklingen
+    - Gemensam Värdegrund: Hjälpa, inte utnyttja, skadad/svag, inte misshandla    
+    - Moralisk Medvetenhet: Sker genom reflektion över handling/värdering, etisk ställningstagande ingår i människans villkor
+	(Sokrates betoning av att inte okritiskt överta andras normer)
+	- Val och prioriteringar: Handling innebär en val, prioritering av vissa värden framför andra (Behovet att försvara sina värderingar inför sig själva och andra)
+  - $L Etikens Aktualitet:
+    - Förändrade samhällets värderingar (snabba) -> gamla förebilder prövas och omprövas, etiken som en gemensam bas -> ta ställning till viktiga livsfrågor, trots olika livsåskådningar
+    - Ökat etisk intresse (medicinsk/miljö/press/massmedia/affär)
+    - Skydd av Svaga Grupper: Myndigheter och institutioner bevakar att svaga grupper inte utsätts för negativ särbehandling (Skolor, massmedia och folkrörelser har ansvar, Individer måste reflektera över egna värderingar)
+    - Utveckling inom Biologi och Medicin -> Etiska utmaningar
+      (Nuvarande grunder anses tillräckliga, men kontinuerlig etisk prövning är viktig)
+    - Teknisk utveckling/möjligheter (inom miljö, nanoteknologi, AI, genteknik) kräver etisk prövning -> undvika negativa långsiktiga konsekvenser
+    - Vårdprioriteringar (central fråga med etiska dimensioner) (människovärdesprincipen, behovs- och solidaritetsprincipen, och kostnadseffektivitetsprincipen)
+      Medicinska behov, inte betalningsförmåga, ska styra vården.
+    - Etikens Roll (sammanhållande kitt mellan människor med olika bakgrunder och livsåskådningar, främjar kritiskt och konstruktivt tänkande, men kräver också robust vetenskap och beprövad erfarenhet)
+  - $L Etikens redskap:
+	(Etisk reflektion och argumentation är central, Auktoriteter kan vara förebilder, Sokrates använde den maieutiska metoden (Sokratiska metoden med fråga och svar) för att hjälpa elever till insikt)
+    - Intuition: (Viktigt under tid/kunskapsbrist) Bygger på livserfarenhet, används inom konkreta situationer, viktigt att träna på hantering av etisk dilemma, men oreflekterad
+    - Förnuft: (Kräver aktiv kunskapsinsamling/relevant medicinsk fakta för etisk analys, kritisk dialog, argumentförståelse) Kunskapsunderlag inkluderar diagnos, prognos, nytta, risker, lagar, praxis och de berördas inställning
+    - Samvete: Resultat av uppfostran och spegel av kulturella och sociala normer (Personlig, påverkas av privat/professionell erfarenhet)
+	  Samvetsstress: Konflikter mellan privat moral, professionell etik
+    - Empati: (viktig i etisk analys) Inkännande i någons lidande, hjälper att förstå patienters känslor/lidande, patientens egna önskningar/värderingar prioriteras
+    - Fakta och Värderingar: (Etisk problemlösning) Fakta kompletteras med etiska övervägande om människosyn, självbestämmande, rättvisa, grundläggande värde, Oenighet beror på faktatolkning än grundläggande värderingar
+    (Reflekterat Etiskt Förhållningssätt: Balans mellan förnuft, etiska principer, intuition, samvete, handlingar, Analys och reflektion hjälper att justera/balansera dessa element -> Genomtänkt/Analyserad inställning till etiska frågor)
+  - $L Människosyn/Etikens innehåll:
+    - Humanistisk människosyn: förnuftsvarelse med fri vilja, ansvar, värdighet. Aldrig behandlas enbart som medel utan alltid som mål i sig (Grund till mänskliga rättigheter)
+    - Deterministisk människosyn: (Förlegad syn) saknar självbestämmande, förutbestämd reaktion på stimuli
+    - Fundamental människosyn: Bokstavstrogen tolkning av religiösa urkunder, avvisar pluralism och vetenskapligt synsätt
+	- Människors lika värde, oavsett biologiska eller ekonomiska värden, knutet till existens inte till prestationer -> Grund till mänskliga rättigheter
+	- Integritetsprincipen: Människans värdighet, värderingar, önskningar, åsikter respekteras oavsett yttre förhållanden (ej överlåtas)
+	- Autonomiprincipen: Rätt att bestämma om handlingar och beslut som berör en själv, Förmågan varierar mellan individer (kan överlåtas) Medicinsk paternalism: Läkare fattar beslut för patientens bästa när patientens autonomi är nedsatt.
+  - $COM(R) Etiska modeller:
+    - Dygdetik:
+	  - Definition: Bygger på människans inre egenskaper/dygder (plikttrogenhet, hjälpsamhet, ärlighet, solidaritet,  omtänksamhet)
+	  - Exempel: Heinz dilemma olika attityder och inställningar verkar lösningsförslag
+	  - Viktiga aspekter: Träning och förebilder vid utveckling av dygder, balans mellan dygder
+	- Regeletik/Pliktetik:
+	  - Definition: Handling bedöms utifrån centrala regler (Gudomliga/samhälleliga)
+	  - Exempel: Trafikregler och ömsesidighetens princip
+	  - Viktiga aspekter: Centraletik (grundregler som skydda liv och vara ärlig) och signaletik (regler som signalerar grupptillhörighet)
+	- Sinnelagsetik:
+	  - Definition: Handlingen bedöms utifrån bakomliggande avsikt
+	  - Exempel: Björntjänst
+	  - Viktiga aspekter: Avsikten är central, men modellen är mindre användbar att i förväg avgöra rätt handling.
+	- Konsekvensetik/Teleologi:
+	  - Definition: Handlingen bedöms utifrån kortsiktiga och långsiktiga konsekvenser, utilitarianism: handlingen är rätt vid maximal gott för flesta människor
+	  - Exempel: (...)
+	  - Viktiga aspekter: Skillnad mellan egenvärde (värden som fred, frihet) och instrumentellt värde (medel för att uppnå egenvärden), svårt med realistisk identifiering/bedömning av konsekvenser, rättviseproblemet
+	  - Richard Hare 2 nivåer av etisk tänkande (Pliktetik + konsekvensetik): Nå jämvikt mellan principer, intuitioner
+	    Intuitiv Nivå: Använder regler och principer för snabba beslut med ofullständigt underlag.
+        Kritisk Nivå: Analyserar situationer och konsekvenser för svåra avvägningar och intressekonflikter.
+  - $COM(R) Modellers tillämpningar:
+    - Brott och straff:
+	  - Sinneslagsetik:
+	    - ...
+	- Att klara sitt uppehälle
+	- När det rätta är ifrågasatt
+  - $GRA Modell för etisk analys:
+    [1, 1] 1. Klargörelse av problem/dilemma
+	[2, 0] 2. Samvete/Intution
+	[0, 2] 3. Fakta: Medicinsk, juridisk, intresser, konflikter
+	[2, 1] 4. Värdering (För/emot): Människovärdesprincipen, Vårdens fyra principer, etiska normteorier
+	[3, 1] 5. Beslutsfattning
+	
