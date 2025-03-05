@@ -402,15 +402,233 @@
       - Naturtillgångar (skog, vattenkraft, järnmalm) -> industrialisering, export  
       - Tjänstesektor: ~75% av BNP  
       - Global ekonomi: ökande integration  
-    Tillgångars:
-      (Tillgångar: BNP (inhemsk produktion, större del) + Import (Från utlandet))
+    - Tillgångar:
+      - BNP (inhemsk produktion, större del)
+      - Import (Från utlandet)
+    - Tillgångars tillämpning:
       - Inhemsk konsumtion: 
         Privat: Tillfogande inom hushåll (livsmedel, kläder, taxiresor)  
         Offentlig: stat, kommun, landsting (sjukvård, skola, socialtjänst)
       - Investeringar: Satsningar att underhålla, modernisera, utöka realkapital (Bygga bostäder, reparera vägar, köpa datorer, lagerinvesteringar)
       - Export: 1/3 av inhemsk produktion -> Stor betydelse för ekonomin
+  - $COM Näringsliv och arbetsmarknad:
+    - Näringslivet:
+      - Privata företag: (huvudsakligen, nästan hela varuproduktion(livsmedel, verktyg, taktegel)) av privatpersoner (aktiebolag, handelsbolag, enskilda firmor)
+      (- Tjänsteproduktion: ~1/2 offentliga tjänster, ~1/2 privata tjänster(taxibolag, restauranger, reklambyråer och livsmedelsaffärer).)
+      - Kooperativa företag: Gemensamt ägande/bedrift av ekonomiska föreningar (LRF, KF) vissa privatisering (TeliaSonera)
+      - Statliga/kommunala bolag: Bedriver affärsmässig verksamhet, ibland bolagisering/privatisering (LKAB, Sveaskog)
+      - Vissa bolag har staten valt att behålla(Vattenfall, Systembolaget, Svenska Spel)
+    - Produktionssektorer (andel av BNP):  
+      - Naturbruk: 2%  
+      - Industri: 28%  
+      - Offentliga tjänster: 20%  
+      - Privata tjänster: 50%  
+      - Total andel: Varor 30%, Tjänster 70%
+    - Sysselsättning och arbetslöshet:
+      - Arbetsför ålder (20-65 år): 5,4 miljoner svenskar
+      - I arbete: Drygt 4,5 miljoner
+      - Utanför arbetsmarknaden: >1/5 (studerande, korttidsarbetslösa, långtidssjukskrivna, förtidspensionerade)
+    - Fackliga huvudorganisationer och medlemsförbund:
+      - LO - Landsorganisationen: 14 fackförbund
+        - Byggnads - Svenska Byggnadsarbetareförbundet
+        - Kommunal - Svenska Kommunalarbetareförbundet
+        - Seko - Facket för Service och Kommunikation
+        - IF Metall - Industrifacket Metall
+      - TCO - Tjänstemännens Centralorganisation: 15 medlemsförbund
+        - Unionen - fackförbund för tjänstemän inom privat näringsliv
+        - SKTF - fackförbund för offentligt och privat anställda tjänstemän med anknytning till kommun, landsting eller kyrka
+      - SACO - Sveriges Akademikers Centralorganisation: 23 förbund
+        - Jusek - fackförbund för jurister, civilekonomer, systemvetare, personalvetare och samhällsvetare
+        - Sveriges läkarförbund
+        - LR - Lärarnas Riksförbund
+        - Officersförbundet
+        - Lärarförbundet
+        - Sveriges Arkitekter
+    - Spelregler:
+      - Staten stiftar arbetsmarknadslagar, parterna förhandlar om löner och arbetsvillkor, kollektivavtal (av störst betydelse) sluts mellan huvudorganisationer
+      - Svenska modellen: Förhandlingar mellan arbetsgivar- och löntagarorganisationer, nu mer decentraliserad
+      - Centrala löntagarorganisationer har förlorat inflytande, fler förhandlingar på fackförbundsnivå
+      - Fackförbund bildar förhandlingskarteller (ex. PTK, OFR)
+      - Decentraliserad förhandlingsmodell har fungerat bra, fler långsiktiga avtal (ex. treåriga)
+      (Förändringar i modellen (Minskad centralisering -> fackförbund mer självständiga, Industrin längst i decentralisering) -> Fler långsiktiga avtal (ex. treåriga))
+    - Arbetslösheten:
+      - Orsaker:
+        - Konjunkturella orsaker: ekonomiska konjunktursvängningar (Lågkonjunkturer -> minskad efterfrågan, avsked, nedskärningar)
+        - Säsongsarbetslöshet: årstidens växlingar (snöröjning, turism).
+        - Strukturella orsaker: Förändringar i näringsstrukturen, teknisk utveckling, ändrade konsumtionsmönster och internationell konkurrens.
+        - Friktionsarbetslöshet (inom strukturella orsaker): frivillig arbetsbyten, tillfälligt mellan jobb
+      - Situation:
+        - Öppet arbetslösa: Aktiva arbetssökande med arbetslöshetsersättning
+        - Arbetsmarknadspolitiska program: Omskolning, arbetspraktik, ungdomsplatser
+        - Dold arbetslöshet: Svårmätt (hemstuderande, hemarbetande, förtidspensionärer, långtidssjukskrivna som vill ha arbete)
+      - Konsekvenser:
+        - Samhällsnivå:
+          Ökade utgifter för offentliga sektorn
+          Minskade inkomster för offentliga sektorn
+          Större osäkerhet – minskade investeringar
+        - Gruppnivå:
+          Färre arbetskamrater
+          Ökad risk för skiljsmässa
+        - Invidivnivå:
+          Ökad risk för depression
+          Ekonomisk osäkerhet – ökad risk för fattigdom
+          Lägre livskvalitet i form av dålig ekonomi, sämre fysisk och psykisk hälsa
+      - Åtgärder:
+        - Arbetsmarknadspolitik (Selektiva åtgärder): omskolning, arbetsförmedling, beredskapsjobb, starta-eget-bidrag
+        - Ekonomisk politik (Generella åtgärder)
+          Penningpolitik(Stabilisering → räntestyrning)
+          Finanspolitik(Ge företag goda villkor (skattelättnader, infrastruktur (ex. bredband i glesbygd)))
+  - $COM Offentliga sektorn:
+    - Gemensamma uppgifter (Berör alla medborgare):
+      - Infrastruktur: övergångsställen, trafikljus  
+      - Skydd: försvar, polis, domstolar  
+      - Service: brandförsvar, samhällsplanering, miljövård  
+    - Nivåer -> Syfte: effektivitet, beslut nära medborgarna:
+      - Stat: nationella frågor  
+      - Landsting/regioner: regionala frågor (20 st)  
+      - Kommuner: lokala frågor (290 st)  
+      - Socialförsäkringssektorn: sjukförsäkring, pensioner  
+    - Huvuduppgifter:
+      - 1. Tjänster (≈ 50%) (Gemensamma nyttigheter: skydd, service, Individuella nyttigheter: skola, vård, omsorg)
+      - 2. Omfördelning av pengar(≈ 50%) : skatter, sociala avgifter som bidrag till barn, äldre, sjuka, arbetslösa, funktionsnedsatta
+    - Skatter och avgifter (Offentliga sektorns finansiering för bedrift av huvuduppgifter):
+      - Skatter: Allmänna pengar till den offentliga sektorns kassakista, ej kopplade till specifika tjänster 
+      - Avgifter: Betalning för specifika tjänster (ex. bussresa) 
+    - Typer av skatter:
+      - Inkomstskatt:  Betalas till kommunen, statlig inkomstskatt vid högre inkomst (Preliminär skatt dras av arbetsgivaren)
+      - Sociala avgifter: Arbetsgivaravgifter, täcker pension, sjukförsäkring, Dras av arbetsgivaren från lönen
+      - Konsumtionsskatt: Moms(Allmän konsumtionsskatt), Punktskatt: alkohol, tobak, bensin (minska konsumtion, täcka samhällskostnader)
+      - Kapitalskatt:  På inkomster från finansiella förmögenheter, fasta tillgångar (skatt på aktievinster, fastighetsavgift)  
+    - Skatters viktiga funktioner:  
+      - Finansiering av offentliga tjänster (Skola, sjukvård, infrastruktur)
+      - Omfördelning av resurser (Inkomster, förmögenheter mellan grupper, generationer, verksamheter)
+      - Påverkan på beteenden: Minska användningen av tobak, alkohol
+      - Påskynda alternativutveckling: Betalning av samhällskostnader(bensinskatt, miljöavgifter) mot skadliga, miljöfarliga verksamheter
+    - Skattetryck:
+      - Totala skatter (2012): 1 600 miljarder kronor  
+      - Skattens andel av BNP: Nästan 50%  
+      - Skattetryck (skattekvot): Högt, bland de högsta i världen (jämfört med Danmark)
+    - Statens finanser:  
+      - Riksdagens roll: Stiftar lagar, beslutar om statens skatter, styr medelåt för statens användning  
+      - Regeringens ansvar: Förvaltar statens finanser på riksdagens uppdrag  
+    - Budgetarbetet:  
+      - Vårpropositionen (vår): Ekonomiskt läge/politik för kommande år, riktlinjer och ramar för höstens budgetarbete  
+      - Budgetpropositionen (höst):  Detaljerad plan för statens inkomster och utgifter för nästa år (Granskning, debatt, beslut av riksdagen)
 
-  
+      Budgetsaldo: Skillnaden mellan inkomster och utgifter (överskott, underskott) (Max underskott: 3% av inkomster, utgiftstak)
+      Inkomster (moms, egendomsskatter, punktskatter):
+      Skatt på arbete (193 mdr)
+      Inkomster (Överskott från statliga bolag, EU-bidrag)
+      Löneskatt (19%)
+      Skatt på kapital (23%)
+      Skatt på konsumtion (55%)
+      
+      Utgifter:
+      Räntor (4%)
+      Investeringar (5%)
+      Tjänster (23%)
+      Försvar, polis, forskning, förvaltning
+      Transfereringar (68%)
+      T.ex. aktivitets- och sjukersättning, arbetslöshetsersättning, sjukpenning, barnbidrag, stöd till hushåll
+      Totalt: 862 miljarder kronor.
+      
+      Statsskulden (påverkas av budgetunderskott), täcks genom lån via Riksgälden, genom värdepapper (obligationer, krediter) 
+      Köpare: pensionsfonder, storföretag, försäkringsbolag, utländska placerare, småsparare (t.ex. premieobligationer)  
+      
+      - Aktuell statsskuld (2013):  
+        Cirka 1 200 miljarder kronor (≈ 1/3 av BNP)  
+        Utlandslån: 25% av lånen i utländsk valuta
+  - $COM Finanssektorn:
+    (livsnerv för samhällsekonomin, Säkerställer pengar finns på rätt plats och vid rätt tidpunkt för näringslivet och offentlig sektor, Består av mötesplatser med pengarförmedling i olika former)
+    - Finansiella marknader:
+      - Kapitalmarknaden: Handel med svenska kronor
+      - Valutamarknaden: Handel med internationella betalningsmedel
+      - Värdepapper: Obligationer, aktier -> underlätta förmedlingen av pengar., Finanssektor byter pengar mot värdepapper
+    - Finanssektorns uppgifter:
+      - Betalningsförmedling: Förser samhällsekonomin med pengar och genomför betalningstransaktioner.
+      - Kreditgivning: Samlar upp överskottet på pengar och överför det till sektorer med lånebehov.
+      - Riskhantering: Ger möjligheter/hjälper att hantera ekonomisk risk och osäkerhet.
+    - Bankers funktion:
+      Sparande -> Inlåning (pengar placeras i finanssektorn som sparmedel) -> Utlåning (i form av krediter/lån), kredit(rätt att använda pengar under en tid), Amortering + ränta (Hyra för lånade pengar, signal för sparare och låntagare om kostnader)
+    (Ständig uppdaterad värdepapperskurser, räntesatser, valutakurser, uppmärksammad av media, med varierande åsikter om ekonomins vardagsbetydelse)
+    - Riksbankens roll:
+      (Sveriges centralbank, flera viktiga uppgifter)
+      - Främja /ansvarar för bruk av säker/effektiv betalningssystem, betrodda pengar, krisförebyggande
+      - upprätthålla stabil penningvärde genom kontrollera inflation , räntenivån -> Penningpolitik) -> Hålla inflation 2%/år
+      
+      - Prisstabilitet: Hålla inflationen låg och stabil, vanligtvis runt 2% per år.
+      - Penningpolitik: Styr räntenivån i samhället för att påverka ekonomin.
+      - Finansiell stabilitet: Säkerställa att betalningssystemet fungerar effektivt och stabilt.
+      - Förvaltning av valutareserven: Hantera Sveriges valutareserv för att kunna påverka valutakursen och säkerställa finansiell stabilitet.
+    
+    - Kapitalmarknaden:
+      - Kreditmarknad: Kanalisera kapitalöverskott till lånebehov 
+        - Långivare: Framgångsrika företag än att återinvestera i produktionen, hushåll med överskott
+        - Låntagare: Staten->(offentlig verksamhet), bolåneinstitut->(bostadsbyggande, husköp), företag, entreprenörer)
+        - Kreditinstitut: Banker och andra institut fungerar som mellanhänder mellan långivare och låntagare (Inlåning, utlåning, rådgivning, betalningsförmedling)
+        - Bankerna lever på ersättning från skillnad mellan inlåningsränta och utlåningsränta
+    
+      - Aktiemarknad: Handel med äganderätter i företag.
+        - Aktier: Delägarbevis i aktiebolag, ger företagen kapital och ägarna möjlighet till avkastning, Företag kan emittera aktier för att få in pengar -> Aktiekapital
+        - Avkastning i form av årlig utdelning men innebär en risk
+        - Säljning på andrahandsmarknad -> Få eventuell värdestegring
+    
+        - Aktiehandeln sker i huvudsak på Stockholmsbörsen (Liten del av alla aktier för försäjning (300000 aktiebolag -> 250 noterade på börsen))
+         - Nasdaq OMX Nordic: Gemensam nordisk lista för svenska, danska och finska börser med 3 listor på företagsstorlek(Large, Mid, Small Cap), mindre tillväxtföretag (First North och Aktietorget)
+         - Automatiserad handel via datoriserade system och nätet (Betalningar överförs via Riksbanken)
+         - Index: Generalindex (OMX-index i Stockholm) sammanfattar upp- och nedgångar för de största bolagens aktier. (Dow Jones, Nasdaq)
+  - Ekonomisk politik:
+    (Hantera samhällsekonomins störningar och problem, konjunktursvängningar, överutnyttjande av naturresurser, inkomstorättvisa -> Politisk styrning (Hur mycket är nödvändig?))
+    - Mål för svensk samhällsekonomi:
+      - Hållbar ekonomisk utveckling på lång sikt
+      - Samhällsekonomisk balans: Jämn och balanserad ekonomisk utveckling på kort sikt
+      - Rättvis inkomstfördelning: Rättvis fördelning av samhällets resurser
+    (Politisk styrning -> Ekonomiska problem och sociala orättvisor, ekonomisk politik: åtgärder att styra samhällsekonomin mot målen
+    Svensk politik: Större grad av politisk styrning och ekonomisk planering jämfört med många andra länder.)
+    - Ekonomisk-politiska medel:
+      - Tillväxtpolitik: Skapa förutsättningar för bestående ekonomisk tillväxt, Effektiv resursanvändning, hållbar utveckling  (IT-infrastruktur, konkurrenslagstiftning, regionalpolitiska insatser, miljöavgifter)
+      - Stabiliseringspolitik: Dämpa konjunktursvängningar och främja jämn ekonomisk utveckling (Dämpa inflation, öka sysselsättning)
+      - Fördelningspolitik: Utjämna skillnader i livsvillkor genom omfördelning av inkomster och förmögenheter (omfördelning genom socialförsäkringssystemet)
+    - Samhällspolitiska mål:
+      - Ekonomisk tillväxt: Hållbar utveckling
+      - Samhällsekonomisk balans: Stabila priser, hög sysselsättning
+      - Rättvis fördelning: Ekonomisk trygghet
+    - Målkonflikter (Ekonomisk politik kräver ständiga avvägningar och kompromisser mellan målen):
+      - Tillväxt vs. stabilitet: Hög tillväxt kan leda till instabilitet och arbetslöshet, medan fokus på stabilitet kan hämma tillväxt
+      - Tillväxt vs. rättvis fördelning: Ekonomisk tillväxt kan öka inkomstskillnader
+      - Tillväxt vs. hållbar utveckling: Kortvarig tillväxt kan ske på bekostnad av miljön och framtida tillväxt
+    - Inflationsmål prioriteras:
+      - Inflationens effekt: Minskar köpkraften, ger färre varor för samma pengar  
+      - Tidigare prioritering: Låg arbetslöshet prioriterades fram till 1970-talet  
+      - Omprioritering efter 1990-talets kris: Låg inflation blev viktigaste målet  
+      - Kort sikt: Lägre inflation -> Högre arbetslöshet  
+      - Längre sikt: Låg inflation -> Låg arbetslöshet utan ökning
+    - Phillipskurvan ifrågasatt:  
+      - Phillips samband mellan arbetslöshet och inflation gällde inte för Sverige efter 1965.
+      - Fram till 1991: Arbetslöshet låg (2-3%), inflation rörde sig fritt.
+      - Efter 1990-talskrisen: Omprioritering mot inflationsbekämpning -> ökande arbetslöshet på kort sikt, men lägre på lång sikt.
+    - Jämviktsarbetslöshet (NAIRU):  
+      - Ny nivå på arbetslösheten -> lodrät linje (inte kurva).
+      - Om arbetslösheten kryper under denna nivå -> arbetskraftsbrist -> löneökningar -> inflation.
+      - Jämviktsarbetslöshet ≈ 6%.
+      - Rörlighet på arbetsmarknaden: Studenter, uppsägningar, företagsexpansion -> konstant grupp arbetssökande.
+      Inflationens effekter:  Deflation kan minska efterfrågan -> lägre konsumtion -> ökad arbetslöshet
+    - Stabiliseringspolitik:
+      (Skapa förutsättningar för hållbar ekonomisk tillväxt och balans på kort sikt
+      Kontracyklisk: Motverkar konjunktursvängningar genom att "gasa" i lågkonjunktur och "bromsa" i högkonjunktur)
+      - Penningpolitik:
+        (Styrs av Riksbanken genom räntenivån (reporäntan) för att kontrollera inflationen)
+        - Mål: Låg inflation, med en genomsnittlig inflationstakt på cirka två procent.
+        - Räntestyrning: Riksbanken justerar reporäntan för att påverka marknadsräntor, konsumtion, investeringar och växelkurs.
+        - Marknadsoperationer: Riksbanken köper eller säljer statspapper för att påverka penningmängden.
+      - Finanspolitik:
+        (Styrs av regeringen genom statsbudgeten (från riksdagen) för att påverka inkomster och utgifter)
+        - Mål: Påverka samhällsekonomin genom statens inkomster och utgifter.
+        - Lågkonjunktur: Staten kan stimulera ekonomin genom offentliga investeringar och satsningar.
+        - Begränsningar: Globalisering och EU:s stabilitets- och tillväxtpakt begränsar möjligheterna för aktiv finanspolitik.
+        - Budgetbalans: Huvudmålet är att hålla statsbudgeten i balans, vilket minskar finanspolitikens roll i kortsiktig stabilisering.
+
+
 - Grundläggande historia:
   - $L Källkritik:
     (Historia -> studera det förflutna (böcker, internet, källor som brev, intervjuer, dokument).
@@ -639,6 +857,16 @@
         Abraham Lincoln (vals till president 1860) -> skyddstullar, jord för nybyggare och järnvägsbyggen, 11 sydstater utträdde ur unionen -> Inbördeskrig
         Nordstaterna vann och USA förvandlades till en modern nationalstat.
       -> Rekonstruktionen: Period av centralstyrd anpassningspolitik där radikala republikaner styrde Södern. Slaveriet förbjöds 1865, men frigivna slavar fick ingen jord och en brutal rasåtskillnadspolitik infördes.
+      
+- Imperialismen:
+  (Innebörd för herravälde, ett lands strävan att utsträcka sin makt och inflytande över egna gränser, Europeisk erövringspolitik 1870 (Tysklands enande) ~ 1914
+  Bakgrund: Geografiska upptäckter, industrialisering, starka europeiska nationalstater, länder och områden i Afrika och Asien med svag centralmakt, evolutionsläran
+  Herbert Spencer (1820~1903): Utvidgar evolutionsläran inom människan (lägre till högre civilizationer), The survival of the fittest
+  The White man's burden -> Jungelboken (Vild människobarn blir civiliserad))
+  Ekonomisk: Behov av råvaror till industri
+  Politisk: Stormaktsrivalitet
+  Ideologisk: Socialdarwinism, rastänkande
+  Berlinkonferensen 1884~5
 
 - Etik och moral:
   (Etik: Teoretiska resonemang om rätt/fel (Teori, tanke, insikt) (Systematisk reflektion över mänskliga värderingar och handlingar), Etik analyserar och systematiserar argument för och emot handlingar Grekiska "Ethos")
