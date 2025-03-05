@@ -356,21 +356,23 @@
       - Betalningsmedel: Används för att betala för varor och tjänster
     - Inflation:
       - Orsaker:
-        - EFTERFRÅGEINFLATION: Efterfrågan är större än utbudet
+        - EFTERFRÅGEINFLATION: Efterfrågan är större än utbudet (För många pengar i omlopp, produktionen hinner inte ikapp)
+          (Högkonjunktur, Höga lönerörelser, jobbskatteavdrag, generös bidragspolitik)
         - KOSTNADESINFLATION: Företagens kapital-, råvaru- och lönekostnader ökar
-        - FÖRVÄNTNINGAR: (om prisökningar)
+        - FÖRVÄNTNINGAR: (om prisökningar/lönespiral, löneökning mer än inflationskompensation)
       - Situation:
         - Inflation: En allmän stegring av prisnivån i samhället, pengars valörer devalveras
         - Deflation: En allmän nedgång av prisnivå (Priserna sjunker, -> sparar istället för konsumtion, lågkonjunktur, stigande arbetslöshet)
         - Mäts med hjälp av beräkning av förändring av konsumentprisindex (KPI), som jämför priser på en korg med varor och tjänster över tid
-      - Åtgärder:
-        - Penningpolitik - rikts främst mot orsakerna
-        - Finanspolitik - riktas främst mot konsekvenserna
+      - Åtgärder (Stabiliseringspolitik -> Platt kurva):
+        - Penningpolitik -> orsakerna (Höja styrräntan -> Avlägsna pengar ur kretsloppet)
+        - Finanspolitik -> konsekvenserna (Höja/Sänka skatter, höja bidrag, satsningar i offentliga sektor -> arbetskraft)
         - Väl fungerande marknader
       - Konsekvenser:
         - MINSKAD PRODUKTION OCH SYSSELSÄTTNING
           kostnaderna ökar för företagen och köpkraften minskar för hushållen
-          dyrare kostnad -> företagen får svårare att konkurrera på världsmarknaden
+          dyrare kostnad, svagare valuta -> bättre/billigare export men försämrad import
+          (/export -> företagen får svårare att konkurrera på världsmarknaden)
           större osäkerhet, minskade investeringar
         - OMFÖRDELNING AV INKOMSTER OCH FÖRMÖGENHETER
           vinnare: låntagare och de som har fasta tillgångar
@@ -394,9 +396,20 @@
     ((Kritik mot marknadsekonomins bristande hänsyn till natur och miljö) Grön ekonomi (till ekologiska sammanhang och hållbar utveckling) Ekologismen med kretsloppsekonomin som ekonomiskt system)
   
 - Svensk ekonomisk system:
-  - $G Struktur:
-    - 1 -> 2 -> 3 -> 4 -> 5
-    - Hushåll, företag, finanssektor, offentliga sektor
+  - $COM Försöjningsbalansen:
+    (Försörjningsbalansen: Redovisning av Sveriges tillgångar och deras tillämpning inom en fördelning, SCB utför årligen redovisning)
+    - Fördelning:
+      - Naturtillgångar (skog, vattenkraft, järnmalm) -> industrialisering, export  
+      - Tjänstesektor: ~75% av BNP  
+      - Global ekonomi: ökande integration  
+    Tillgångars:
+      (Tillgångar: BNP (inhemsk produktion, större del) + Import (Från utlandet))
+      - Inhemsk konsumtion: 
+        Privat: Tillfogande inom hushåll (livsmedel, kläder, taxiresor)  
+        Offentlig: stat, kommun, landsting (sjukvård, skola, socialtjänst)
+      - Investeringar: Satsningar att underhålla, modernisera, utöka realkapital (Bygga bostäder, reparera vägar, köpa datorer, lagerinvesteringar)
+      - Export: 1/3 av inhemsk produktion -> Stor betydelse för ekonomin
+
   
 - Grundläggande historia:
   - $L Källkritik:
