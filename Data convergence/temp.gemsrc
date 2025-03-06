@@ -349,34 +349,33 @@
       - Argument för att ekonomisk tillväxt ökar välfärden och främjar demokratisk utveckling.
       - Marknadsekonomiska lösningar och lagstiftning för att hantera miljöproblem och överutnyttjande av resurser.
     - Pengar:
-      (Kontanter (<1/10 av alla pengar i samhället) och elektroniska pengar, flesta pengar finns som tillgodohavanden på bankkonton och flyttas elektroniskt
-      Penningmängden beräknas med måttet M3 (kontanter och lättillgängliga bankmedel), Pengar med hög likviditet kan omgående användas för betalningar)
-      - Värdemätare: Möjliggör prissättning och jämförelse av olika produkter
+      (Kontanter (<1/10 fysiska pengar),  elektroniska pengar, flesta pengar finns som tillgodohavanden på bankkonton och flyttas elektroniskt
+      Mätning: M3 (kontanter och lättillgängliga bankmedel), Pengar med hög likviditet kan omgående användas för betalningar)
+      - Värdemätare (prissättning och jämförelse av olika produkter
       - Värdebevarare: Bevarar värden som skapas i ekonomin, t.ex. en bondes mjölkproduktion
       - Betalningsmedel: Används för att betala för varor och tjänster
     - Inflation:
       - Orsaker:
-        - EFTERFRÅGEINFLATION: Efterfrågan är större än utbudet (För många pengar i omlopp, produktionen hinner inte ikapp)
-          (Högkonjunktur, Höga lönerörelser, jobbskatteavdrag, generös bidragspolitik)
-        - KOSTNADESINFLATION: Företagens kapital-, råvaru- och lönekostnader ökar
-        - FÖRVÄNTNINGAR: (om prisökningar/lönespiral, löneökning mer än inflationskompensation)
+        (1) EFTERFRÅGEINFLATION: Efterfrågan större än utbudet (För mycket pengar i omlopp, produktionen hinner inte ikapp)
+        (Högkonjunktur, Höga lönerörelser, jobbskatteavdrag, generös bidragspolitik)
+        (2) (kapital/råvaru/lön) KOSTNADESINFLATION (företagen kapital/råvaru/lön
+        (3) FÖRVÄNTNINGAR/Lönespiral (mer än inflationskompensation
       - Situation:
-        - Inflation: En allmän stegring av prisnivån i samhället, pengars valörer devalveras
-        - Deflation: En allmän nedgång av prisnivå (Priserna sjunker, -> sparar istället för konsumtion, lågkonjunktur, stigande arbetslöshet)
-        - Mäts med hjälp av beräkning av förändring av konsumentprisindex (KPI), som jämför priser på en korg med varor och tjänster över tid
+        - Inflation: Allmän prisstegring, penningvärde devalveras
+        - Deflation: Allmän prisnedgång, sparar istället för konsumtion, lågkonjunktur, stigande arbetslöshet)
+        - Mätning: konsumentprisindex(KPI)förändring, pridjämförelde mednvarukorg av varor, tjänster över tid
       - Åtgärder (Stabiliseringspolitik -> Platt kurva):
         - Penningpolitik -> orsakerna (Höja styrräntan -> Avlägsna pengar ur kretsloppet)
         - Finanspolitik -> konsekvenserna (Höja/Sänka skatter, höja bidrag, satsningar i offentliga sektor -> arbetskraft)
         - Väl fungerande marknader
       - Konsekvenser:
-        - MINSKAD PRODUKTION OCH SYSSELSÄTTNING
-          kostnaderna ökar för företagen och köpkraften minskar för hushållen
-          dyrare kostnad, svagare valuta -> bättre/billigare export men försämrad import
+        (2) MINSKAD PRODUKTION OCH SYSSELSÄTTNING, köpkraft
+        (2) svagare valuta -> billigare export men dyrare import
           (/export -> företagen får svårare att konkurrera på världsmarknaden)
           större osäkerhet, minskade investeringar
         - OMFÖRDELNING AV INKOMSTER OCH FÖRMÖGENHETER
-          vinnare: låntagare och de som har fasta tillgångar
-          förlorare: sparare och de som får inkomster i pengar
+          vinnare: låntagare, fast egendomhavare
+          förlorare: sparare, inkomsthavare
   - Planekonomi:
     ((Karl Marx -> socialism), Reaktion mot de ekonomiska orättvisorna och sociala spänningar i industrisamhället. Arbetarrörelsens kritik mot marknadsekonomi, liberalismens ekonomi -> Gemensamt ägande
     Politiker (centralstyrning) från olika komitter beslutar ekonomin -> 5årsplaner)
