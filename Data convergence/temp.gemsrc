@@ -231,7 +231,7 @@
         Ekologisk hållbarhet, långsiktig effektivitet med ändliga resurser, minskad slöseri, ändliga resurser, naturens sårbarhet
       - Investering (Ny produkt), omfördelning(nationalekonomi)/placering(samhällsekonomi): förflyttning
     - Fördelningsfrågan (inkomst och förmögenhet):
-      - Distribution: (marknadsföring, transport och försäjning) företag -> hushåll
+      - Distribution: (marknadsföring, transport, försäjning) företag -> hushåll
       - Inkomstfördelning av produktionsresultat: Vem ska köpa produkter och tjänster?
       - Lagstiftning och beskattning (politik) -> omfördelning, utjämna orättvisor. (Behovsprincipen)
       - John Rawls rättvisateori: Samhällskontrakt innan födseln utan förkunskap om öde, nödvändigt med vissa ojämnlikheter men hjäler de sämst ställda, kritik från nyliberala att statens rätt för omfördelning
@@ -252,7 +252,7 @@
     - Nackdelar:
       (Vissa marknader avregleras -> Hyror, löner anpassas till marknadskrafter)
       (-> Få större företag)
-      - Få perfekt konkurrens/Välfungerande marknader (aktiemarknaden, valutamarknaden, vissa råvarumarknader)
+      - Få perfekt konkurrens/Välfungerande marknader (aktie/valuta/vissa råvaru-)
       - Stordriftsfördelar/Serietillverkning
       - Karteller: Illegalt samarbete/överenskommelse (Bensinföretag)
       - Monopol
@@ -261,7 +261,7 @@
       - Konsumenter har ingen full information
       - Kollektiva nyttigheter (Alla samhällsmedborgare) (Offentliga myndigheter -> militärt försvar, vägar, rättsväsende)
       - Externa effekter: Ingen korrekt prissättning av all kostnad -> Punktskatt
-      - Mänsklig hänsyn: Orimliga orättvisor bland människor med olika funktionalitet (arbetsmarknad, bostadsmarknad och jordbruksmarknad)
+      - Mänsklig hänsyn: Orimliga orättvisor bland människor med olika funktionalitet (arbets/bostads/jordbruks-)
     - Förutsättningar:
       (Näring: Företagsbedrift/marknadstillträde)
       - Näringsfrihet
@@ -269,7 +269,7 @@
       - Fri konkurrens(tävling): utan samverkan, bittra rivaler
       - Privat ägande: Personligt ansvar, ökad motivation -> Långsiktiga investeringar/risktagande
       - Fasta spelregler: överenskommelser, avtal -> Tillit
-      - Fullständig information om marknaden (för aktörer) -> kloka beslut
+      - Aktörers fullständig marknadsinformation -> kloka beslut
       - Laissez-faire (Lämna ifred): Minimal statlig inblandning, känsliga marknadsmekanismen
     - -Marknader:
       (Mötesplats för personer som efterfrågar eller erbjuder varor och tjänster)
@@ -370,18 +370,19 @@
       - Situation:
         - Allmän prisnedgång, sparar, låg konsumtion, lågkonjunktur, stigande arbetslöshet
   - Planekonomi:
-    ((Karl Marx -> socialism), Reaktion mot de ekonomiska orättvisorna och sociala spänningar i industrisamhället. Arbetarrörelsens kritik mot marknadsekonomi, liberalismens ekonomi -> Gemensamt ägande
+    ((Karl Marx -> socialism), Reaktion mot de ekonomiska orättvisorna, sociala spänningar i industrisamhället. Arbetarrörelsens kritik mot marknadsekonomi, liberalismens ekonomi -> Gemensamt ägande, fördelning
     Politiker (centralstyrning) från olika komitter beslutar ekonomin -> 5årsplaner)
     - Fördelar:
-      - Eliminering av arbetslöshet -> Fördelning av arbete och inkomst -> Styra produktion -> Fördela inkomster och resurser i samhället
-      - Funktion vid en snabb industrialisering för att snabbt öka volymen av enkla varor såsom stål och cement
+      - Eliminering av arbetslöshet
+      - Snabb industrialisering (Ökad varuvolym)
     - Nackdelar:
       - Många köer - Informationsproblemet
-      - Svårt att mäta människors behov, tycke, smak efter staten har avskaffat utbud och efterfrågan -> köer (för lite utbud) och svarta marknader (Byter till sig) -> Ineffektiv
+      - Svårmätt behov, tycke, smak -> Låg utbud -> köer, svart marknad, byteshandel
       - Vissa åtgärd -> Kvotsystem
       - Byråkratiskt och odemokratiskt system
-      - Ineffektiv produktion och slöseri av naturresurser -> Ingen strävan efter effektivitet (svårt med ny innovation, kreativitet, utveckling av realkapital), ingen incitament
-    (-> Flesta länder med planekonomin har avreglerat sin ekonomin efter kalla kriget, levnadsstandard har halkat efter i jämförelser med marknadsekonomi)
+      - Ingen effektivitetssträvan (Innovation/kreativitet/realkapital utveckling)
+      - Ineffektiv produktion/slöseri av naturresurser
+    (-> Planekonomiländer halkar efter och avregleras efter kalla kriget)
   - Blandekonomi:
     (Glidande skala, Socialliberal, Flesta moderna ekonomier med grunden på marknadsekonomins principer, politiken ingriper när marknaden misslyckas eller grundläggande behov hotas)
   - Kretsloppsekonomi:
@@ -605,16 +606,25 @@
       - Jämviktsarbetslöshet ≈ 6%.
       - Rörlighet på arbetsmarknaden: Studenter, uppsägningar, företagsexpansion -> konstant grupp arbetssökande.
       Inflationens effekter:  Deflation kan minska efterfrågan -> lägre konsumtion -> ökad arbetslöshet
+      
+      
+      
+      
     - Stabiliseringspolitik:
       (Skapa förutsättningar för hållbar ekonomisk tillväxt och balans på kort sikt
       Kontracyklisk: Motverkar konjunktursvängningar genom att "gasa" i lågkonjunktur och "bromsa" i högkonjunktur)
       - Penningpolitik:
-        (Styrs av Riksbanken genom räntenivån (reporäntan) för att kontrollera inflationen)
+        (Styrs av Riksbanken genom räntenivån (reporäntan/styrränta) för att kontrollera inflationen)
         - Mål: Låg inflation, med en genomsnittlig inflationstakt på cirka två procent.
         - Räntestyrning: Riksbanken justerar reporäntan för att påverka marknadsräntor, konsumtion, investeringar och växelkurs.
         - Marknadsoperationer: Riksbanken köper eller säljer statspapper för att påverka penningmängden.
       - Finanspolitik:
+        - 1. Subventioner,
+        - 2. Skatter: Minskad skatter -> mer pengar hushållens
+        - 3. Stora statliga satsningar -> stimulerar ekonomin, staten belånar sig
+        Riksbanken -> 2% Kraftig -> Höja styrräntan, 2% låg styrränta
         (Styrs av regeringen genom statsbudgeten (från riksdagen) för att påverka inkomster och utgifter)
+        Sänkta ränta, (bidrag (bostad), subventioner) -> Billigare att låna
         - Mål: Påverka samhällsekonomin genom statens inkomster och utgifter.
         - Lågkonjunktur: Staten kan stimulera ekonomin genom offentliga investeringar och satsningar.
         - Begränsningar: Globalisering och EU:s stabilitets- och tillväxtpakt begränsar möjligheterna för aktiv finanspolitik.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <script type="text/javascript" src="visnetwork.js"></script>
+</head>
+<body>
+    <div id="network" style="width: 800px; height: 600px;"></div>
+
+    <script>
+        // Define the nodes and edges of your graph
+        const nodes = new vis.DataSet([
+            { id: 1, label: 'A' },
+            { id: 2, label: 'B' },
+            { id: 3, label: 'C' },
+            { id: 4, label: 'D' }
+        ]);
+
+        const edges = new vis.DataSet([
+            { from: 1, to: 2 },
+            { from: 1, to: 3 },
+            { from: 2, to: 4 },
+            { from: 3, to: 4 }
+        ]);
+
+        // Create a network
+        const container = document.getElementById('network');
+        const data = { nodes, edges };
+        const options = {
+            nodes: {
+                shape: 'dot',
+                size: 20
+            },
+            edges: {
+                width: 2
+            }
+        };
+        const network = new vis.Network(container, data, options);
+    </script>
+</body>
+</html>
