@@ -1,0 +1,189 @@
+- Mathematics/Matematik:
+  - Algebra/Algebra:
+    *Factorization/Faktorisering -> Expansion/Utveckling
+    (+, *) -> ASO, DIS
+    (x+y)z = xz+yz: 2(2x-3)=2*2x+2(-3)=4x-6
+    (x+y)(z+t) = xz+xt+yz+yt: (x+3)(2x+4)=2x^2+4x+6x+12=2x^2+10x+12
+    (x+y)/z = x/z+y/z: (2-3x)/5=2/5-3x/5
+    (x+y)^2 = x^2+2xy+y^2: (3x+4)^2=9x^2+24x+16
+    (x-y)^2 = x^2-2xy+y^2: (7x-2)^2=49x^2-28x+4
+    (x+y)(x-y) = x^2-y^2: (x+4)(x-4)=x^2-16
+    (x+y)^3 = x^3+3x^2*y+3xy^2+y^3: (7x+8)^3=343x^3+1176x^2+1344x+512
+    (x-y)^3 = x^3-3x^2*y+3xy^2-y^3: (9x-2)^3=729x^3-486x^2+108x-8
+    (x+y)(x^2-xy+y^2) = x^3+y^3: (7x+3)(49x^2-21x+9)=49x^3+27
+    (x-y)(x^2+xy+y^2) = x^3-y^3: (3x-5)(9x^2+15x+25)
+    (xy)^z = x^z*y^z: (9x)^6=531441x^6
+    (x/y)^z = x^z/y^z: (7/x)^2=49/x^2
+    z^(x+y) = z^x*z^y: 4^(5n/2+1)=4^(3n/2+n+1)=16^(3n/4)*4^(n+1)
+    z^(x-y) = z^x/z^y:
+    z^(xy) = (z^x)^y: 4^(3n/2)=4^(2*3n/4)=16^(3n/4)
+    log(xy) = log(x)+log(y): log(45)=log(4*5)=log(5)+log(9)
+    log(x/y) = log(x)-log(y): log(9)=log(27/3)=log(27)-log(3)
+    log(x^y) = ylog(x): log(5^2)=2log(5)
+    log_n(x) = log(x)/log(n): log_2(10)=log(10)/log(2)
+
+    *Simplification/Förenkling
+    (x^2-12x+36)/(x^2-36)=(x-6)^2/((x+6)(x-6))=(x-6)/(x+6)
+    (9-a^2)/(a-3)=(3+a)(3-a)/(a-3)=-(a-3)(3+a)/(a-3)=-(3+a)=3-a
+    x^2+2x-15=(x-3)(x+5)
+    √2/(√3+√5+√7)=√2(√3+√5-√7)/((√3+√5+√7)(√3+√5-√7))=√2(√3+√5-√7)/((√3+√5)^2-7)=√2(√3+√5-√7)/(2√15+1)=√2(√3+√5-√7)/(2√15+1)=
+
+    *Partial Fraction Decomposition/Partialbråksuppdelning
+    (x+2)/x=1+2/x
+    x/(x+2)=(x+2-2)/(x+2)=1-2/(x+2)
+    3/(x(x-1))=(A/x+B/(x-1)=(A(x-1)+Bx)/(x(x-1))=((A+B)x-A)/(x(x-1))=>A=-3,B=3)=-3/x+3/x+1
+
+    *Equation solution/Ekvationslösning:
+    ax^2+bx+c=0 => Δ=b^2-4ac x=(-b+√Δ)/(2a)
+    x^2+px+q => x=-p/2+√((p/2)^2-q)
+    ax^3+bx^2+cx+d => ...
+  - Function/Funktion:
+    x -> y mapping relationship/sambandsform
+    Definitionsmängd: Tillåtna x-värde
+    Värdemängd: Definitionsmängd ger värdemängd
+    Kontinuerlighet: Sammanhängande för alla x inom definitionsmängd
+    Polynomial/Polynom: f(x)=Σ(k=0,n)p_k*x^k
+    Gradtal: Största exponenten med en variabel
+    Standard form, intercept form
+    Polynomdivision
+
+  - Limit/Gränsvärde:
+    *General
+    lim x->∞ 1/x = 0
+    lim x->∞ 1/x^n = 0
+    lim x->∞ a^(-x) = 0
+    lim x->0 sin(x)/x = 0
+
+    lim x->4 (x^2-3)=4^2-3=16-3=13
+    lim x->0[(x^2+4x)/x=x(x+4)/x=x+4]=4
+    lim x->∞[(6x-10)/(20-x)[1/x]=(6-10/x)/(20/x-1)]=6/1=6
+
+    *Asymptotes/Asymptoter
+    Vertical/Vertikal: lim x->0 f(x)=±∞
+    Horizontal/Horizontell: lim x->∞ f(x)=m
+    Oblique/Sneda: y=kx+m k=lim x->∞ f(x)/x m=lim x->∞ (f(x)-kx)
+  - Geometry/Geometri:
+    ...
+  - Trigonometry/Trigonometri:
+    T(Aα b C⊥ a B) sin(α)=a/c cos(α)=b/c tan(α)=a/b inv:arc
+    C(O L )
+    0 π/6(30°) π/4(45°) π/3(60°) π/2(90°)
+    sin: 0 1/2 √2/2 √3/2 1
+    cos: 1 √3/2 √2/2 1/2 0
+    tan: 0 1/√3 1 √3 -
+
+    *Unit circle/Enhetscirkeln
+    - -α 90 180 270 360(±α)
+    s -s +c  ∓s  -c  ±s
+    c +c ∓s  -c  ±s  +c
+    t -t ∓r  ±t  ∓r  ±t
+    f(x)=Asin(x)+Bcos(x)=Csin(x+Φ) A=Ccos(Φ) B=Csin(Φ)
+    f(x)=Asin(ωx+Φ)+B
+    f(x)=Atan(ωx+Φ)+B
+
+  - Calculus/Kalkyl:
+    *Derivative/Derivata d/dx f(x)
+    Average/Medel->Secant/Sekant: Δf/Δx = (f(x+h)-f(x))/h
+    Instantaneous/Momentan->Tangent/Tangent: df/dx = lim(h->0)(f(x+h)-f(x))/h
+    d/dx n = 0
+    d/dx x = 1
+    d/dx kx^n = nkx^(n-1)
+    d/dx e^x = e^x
+    d/dx a^x = a^x*ln(a)
+    d/dx ln(x) = 1/x
+    d/dx sin(x) = cos(x)
+    d/dx cos(x) = -sin(x)
+
+    d/dx f+g = f'+g'
+    d/dx f-g = f'-g'
+    d/dx f*g = f'g+fg'
+    d/dx f/g = (f'g-fg')/g^2
+    d/dx f(g) = f'(g)g'
+
+    *Max/Min Derivative
+    ...
+
+    *Integral: ∫f dx = Σ...
+    Integral -> Area
+    Indefinite integral: ∫f dx
+    Definite integral: ∫(a,b) f dx
+  - Statistics/Statistik:
+    ...
+
+- Physics/Fysik:
+  - Rigid body mechanics/Stel mekanik
+    ...
+  - Fluid mechanics/Vätskemekanik
+    ...
+  - Electromagnetism/Elektromagnetism
+    ...
+  - Thermodynamics/Termodynamik
+    ...
+  - Waves/Vågor
+    ...
+  - Quantum physics/Kvantfysik
+    ...
+  - Astronomy/Astronomi
+    ...
+
+- Chemistry/Kemi:
+  - Organic chemistry/Organisk kemi:
+    ...
+    Functional group amount: Monovalent, divalent, trivalent, polyvalent groups
+    Antal funktionella grupper: Envärd, tvåvärd, trevärd, flervärda grupper
+    Functional group position: Primary, secondary, tertiary, quaternary
+    Position av funktionella grupper: Primär, sekundär, tertiär, kvartär
+    Nomenclature/Nomenklatur (IUPAC): ...
+
+    *Class Prefix Suffix Electrodensity
+    Number Melt Boil Color Smell Toxic
+    *Alkanes(-) Alkyle- -ane Non-polar:
+    (SUB -X)
+    1 -183 -162
+    2 -183 -89
+    3 -188 -44
+    4 -138 0
+    5 -129 36
+    6 -95 69
+    7 -91 98
+    8 -57 126
+    9 -51 151
+    10 -30 174
+    [1]-3 -160 -12
+    [2-1]-4 -160 28
+    [(2,2)1]3 -16 10
+    *Cycloalkanes(~):
+    3 -128 -33
+    4 -91 13
+    5 -94 50
+    6 6 81
+    *Alkenes(=) Alkenyle- -ene Non-polar:
+    (ADD -, ELI -X)
+    2 -169 -104
+    3 -185 -48
+    4 -185 -6.3
+    5 -165 36.1
+    6 -140 63
+    7 -119 93
+    8 -101 122
+    9 -58 101
+    10 -46 163
+    *Alkynes(≡) Alkynyle- -yne Non-polar:
+    *Alkylhalogenide(-X):
+    (SUB -NH2, SUB -OH)
+    *Alcohol(-OH) Hydroxi- -ol Polar:
+    (SUB -X, ELI =, CON -O-, OXI -HCO)
+    *Phenol(~OH):
+    *Ether(-O-) Alkoxy- -ether:
+    *Thiol(-SH) Sulfhydryl- -thiol:
+    *Dissulfide(-2S-) - -dissulfide:
+    *Amine(-NH2) Amino- -amine:
+    *Aldehyde(-HCO) Oxo- -al:
+    (RED -OH, OXI -COOH)
+    *Ketone(-CO) Keto-/Oxo- -on:
+    (OXI -OH)
+    *Carboxylic acid(-COOH) Karboxy-, -acid:
+    (RED -HCO, CON -COO-)
+    *Ester(-COO-) - -oat:
+    (HYD -COOH+=)
+
