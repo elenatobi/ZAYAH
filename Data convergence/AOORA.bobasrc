@@ -431,7 +431,6 @@
     2*1 69 256 TRA - C - . 
 
     *Haloalkanes/alkyl halogenides/Haloalkaner (nX):
-    _ MLt BLt COL SML STR REA TOX 
     Cl+1 -97.7 -24.2 TRA S - - DTORB 
     Cl+2 -138.3 12.3 TRA - - - B(block_signal) 
     Cl+3 -122.8 46.7 TRA - - - BI 
@@ -548,7 +547,6 @@
     4+4 -95 141 - - - - - 
     
     *Ether perioxides/Eter perioxider (-2O-):
-    _ MLt BLt COL SML STR REA TOX 
     2+2 - - - - - - - 
     
     *Amine(-NH2) Amino- -amine:
