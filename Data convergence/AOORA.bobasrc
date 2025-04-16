@@ -288,71 +288,71 @@
 - Chemistry/Kemi:
   - $SYMBOLS:
     *Color/Färg
-    TRA[Transparent/Genomskinlig]
-    GRA[Grey/Grå]
-    BLA[Black/Svart]
-    BRO[Brown/Brun]
-    SIL[Silver/Silver]
-    YEL[Yellow/Gul]
-    LYE[Light_yellow/Ljusgul]
-    GRE[Green/Grön]
-    WHI[White/Vit]
-    RED[Red_Red/Röd]
-    ORA[Orange_color/Orange]
-    BLU[Blue_color/Blå]
+    TRA Transparent/Genomskinlig 
+    GRA Grey/Grå 
+    BLA Black/Svart 
+    BRO Brown/Brun 
+    SIL Silver/Silver 
+    YEL Yellow/Gul 
+    LYE Light_yellow/Ljusgul 
+    GRE Green/Grön 
+    WHI White/Vit 
+    RED Red_Red/Röd 
+    ORA Orange_color/Orange 
+    BLU Blue_color/Blå 
 
     *Odor/Lukt
-    .[Odorless/Luktlös]
-    F[Faint_odor/Svag_lukt]
-    M[Mild_odor/Mild_lukt]
-    P[Penetrating_odor/Genomträngade_lukt]
-    U[Pungent_odor/Stickande_lukt]
-    S[Sweet/Sackarossmak]
-    B[Burning_taste/Brännande_smak]
+    . Odorless/Luktlös 
+    F Faint_odor/Svag_lukt 
+    M Mild_odor/Mild_lukt 
+    P Penetrating_odor/Genomträngade_lukt 
+    U Pungent_odor/Stickande_lukt 
+    S Sweet/Sackarossmak 
+    B Burning_taste/Brännande_smak 
 
     *Structure/Struktur
-    L[Lightest/Lättast]
-    H[Heavy/Tung]
-    V[Viscous/Viskös]
-    O[Oily/Oljig]
-    W[Heavy_vapors/Tunga_ånger]
-    N[Shiny/Glänsande]
-    S[Solid/Fast]
-    C[Crystal_form/Kristallform]
-    A[Highly_volatile/Lättflyktig]
-    I[Viscous/Trögflytande]
-    F[Fumigant/Rykande]
+    L Lightest/Lättast 
+    H Heavy/Tung 
+    V Viscous/Viskös 
+    O Oily/Oljig 
+    W Heavy_vapors/Tunga_ånger 
+    N Shiny/Glänsande 
+    S Solid/Fast 
+    C Crystal_form/Kristallform 
+    A Highly_volatile/Lättflyktig 
+    I Viscous/Trögflytande 
+    F Fumigant/Rykande 
 
     *Reactivity/Reaktivitet
-    .[Most_common/Vanligast]
-    F[Flammable/Brandfarlig]
-    H[Highly_flammable/Lättbrinnande]
-    E[Explosive/Explosiv]
-    S[Stable/Stabil]
-    C[Corrosive/Frätande]
-    R[Reactive/Reaktiv]
-    O[Combustible/Brännbar]
-    L[Light-sensitive/Ljuskänslig]
-    U[Unstable/Instabil]
+    . Most_common/Vanligast 
+    F Flammable/Brandfarlig 
+    H Highly_flammable/Lättbrinnande 
+    E Explosive/Explosiv 
+    S Stable/Stabil 
+    C Corrosive/Frätande 
+    R Reactive/Reaktiv 
+    O Combustible/Brännbar 
+    L Light-sensitive/Ljuskänslig 
+    U Unstable/Instabil 
 
     *Toxicity/Toxicitet
-    .[Toxic/Giftig]
-    C[Carcinogenic/Cancerframkallande]
-    D[Dizziness/Yrsel]
-    N[Dullness/Dåsighet]
-    T[Tiredness/Trötthet]
-    V[Vomiting/Kräkningar]
-    N[Nauseating/Illamående]
-    O[Confusing/Förvirring]
-    A[Arrhythmias/Arytmier]
-    U[Unconsciousness/Medvetlöshet]
-    L[Lung_inflamation/Lunginflammation]
-    R[Respiration_system_damages/Andningsskada]
-    E[Liver_damages/Leverskada]
-    K[Kidney_damages/Njurskada]
-    B[Celebral~Neural_damages/Neurala_skador]
-    I[Irritating/Irriterande]
-    G[Allergy/Allergi]
+    . Toxic/Giftig 
+    C Carcinogenic/Cancerframkallande 
+    D Dizziness/Yrsel 
+    N Dullness/Dåsighet 
+    T Tiredness/Trötthet 
+    V Vomiting/Kräkningar 
+    N Nauseating/Illamående 
+    O Confusing/Förvirring 
+    A Arrhythmias/Arytmier 
+    U Unconsciousness/Medvetlöshet 
+    L Lung_inflamation/Lunginflammation 
+    R Respiration_system_damages/Andningsskada 
+    E Liver_damages/Leverskada 
+    K Kidney_damages/Njurskada 
+    B Celebral~Neural_damages/Neurala_skador 
+    I Irritating/Irriterande 
+    G Allergy/Allergi
   - Organic chemistry/Organisk kemi:
     ...
     Functional group amount: Monovalent, divalent, trivalent, polyvalent groups
@@ -362,236 +362,235 @@
     Nomenclature/Nomenklatur (IUPAC): ...
 
     *Isomeres/Isomerer:
-    Chain isomerism/Kedjeisomerer: (n) ([2-1]n), Molekyler har olika kolkedjor
-    Position isomerism/Ställningsisomeri: (n)OH, []
+    Chain isomerism/Kedjeisomerer: (n) ( 2-1 n), Molekyler har olika kolkedjor
+    Position isomerism/Ställningsisomeri: (n)OH,   
     Functional isomerism/Funktionsisomeri
     Cis-trans isomerism(Geometrical isomerism)/Cis-transisomeri
     Enantiomerism(Optical isomerism)/Spegelbildsisomeri(Optiska isomerer)
 
     *Class Prefix Suffix Electrodensity
-    _[MLt BLt COL SML STR REA TOX A...]
+    _ MLt BLt COL SML STR REA TOX A... 
     
-    *Alkanes/Alkaner(-) Alkyle- -ane Non-polar:
+    *Alkanes/Alkaner(n-) Alkyle- -ane Non-polar:
     (SUB -X)
-    1[-183 -162 TRA . F - . Vehicle fuel/Fordonsbränsle]
-    2[-183 -89 TRA . - - -]
-    3[-188 -44 - - - - -]
-    4[-138 0 - - - - -]
-    5[-129 36 - - - - -]
-    6[-95 69 - - - - -]
-    7[-91 98 - - - - -]
-    8[-57 126 - - - - -]
-    9[-51 151 - - - - -]
-    10[-30 174 - - - - -]
-    (1)3[-160 -12 - - - - - Köldmedel]
-    (2-1)4[-160 28 - - - - -]
-    (2,2-1)3[-16 10 - - - - -]
+    1 -183 -162 TRA . F - .
+    2 -183 -89 TRA . - - - 
+    3 -188 -44 - - - - - 
+    4 -138 0 - - - - - 
+    5 -129 36 - - - - - 
+    6 -95 69 - - - - - 
+    7 -91 98 - - - - - 
+    8 -57 126 - - - - - 
+    9 -51 151 - - - - - 
+    10 -30 174 - - - - - 
+    (1)3 -160 -12 - - - - -
+    (2-1)4 -160 28 - - - - - 
+    (2,2-1)3 -16 10 - - - - - 
 
-    *Cycloalkanes/Cykloalkaner(~):
-    ~3[-128 -33 TRA - - FU .]
-    ~4[-91 13 - - - U .]
-    ~5[-94 50 - - - - -]
-    ~6[6 81 - - - - -]
+    *Cycloalkanes/Cykloalkaner(n~):
+    3 -128 -33 TRA - - FU . 
+    4 -91 13 - - - U . 
+    5 -94 50 - - - - - 
+    6 6 81 - - - - - 
 
-    *Alkenes/Alkener(=) Alkenyle- -ene Non-polar:
+    *Alkenes/Alkener(n=) Alkenyle- -ene Non-polar:
     (ADD -, ELI -X)
-    2=[-169.2 -103.7 - - - H .]
-    3=[-185.2 -47.6 - - - - -]
-    4=[-185.3 -6.3 - - - - -]
-    5=[-165.2 36.1 - - - - -]
-    6=[-140 62.8 - - - - -]
-    7=[-119 93 - - - - -]
-    8=[-101 122 - - - - -]
-    9=[-57.5 101 - - - - -]
-    10=[-45.5 163 - - - - -]
-    (2-1)3[-140.4 -6.9 - - - - -]
-    T4.2[106 0.3 - - - - -]
+    2 -169.2 -103.7 - - - H . 
+    3 -185.2 -47.6 - - - - - 
+    4 -185.3 -6.3 - - - - - 
+    5 -165.2 36.1 - - - - - 
+    6 -140 62.8 - - - - - 
+    7 -119 93 - - - - - 
+    8 -101 122 - - - - - 
+    9 -57.5 101 - - - - - 
+    10 -45.5 163 - - - - - 
+    (2-1)3 -140.4 -6.9 - - - - - 
+    T4.2 106 0.3 - - - - - 
 
-    *Alkynes/Alkynes(≡) Alkynyle- -yne Non-polar:
-    2≡[-84 -80.8 TRA Garlic E - .]
-    3≡[-103 -23.2 - - - - -]
-    4≡[-125.7 8.1 TRA Garlic - - -]
-    5≡[-106 40 - - - - -]
-    6≡[-131 70 - - - - -]
-    7≡[-81 100 - - - - -]
-    8≡[-42.6 128 - - - - -]
-    9≡[-50 150 - - - - -]
-    10≡[-44 174 - - - - -]
+    *Alkynes/Alkynes(n≡) Alkynyle- -yne Non-polar:
+    2 -84 -80.8 TRA Garlic E - . 
+    3 -103 -23.2 - - - - - 
+    4 -125.7 8.1 TRA Garlic - - - 
+    5 -106 40 - - - - - 
+    6 -131 70 - - - - - 
+    7 -81 100 - - - - - 
+    8 -42.6 128 - - - - - 
+    9 -50 150 - - - - - 
+    10 -44 174 - - - - - 
     
-    *Arenes/Arener(~~):
-    ~~1[5.5 80.1 - - - R C]
-    (1)~~1[-95 110.6 TRA Petroleum - F B]
-    (1,2-1)~~1[-25 135 - - - - DNVUL]
-    (1,3-1)~~1[-48 140 - - - - -]
-    (1,4-1)~~1[13 145 - - - - -]
-    ~~2[80.3 218 WHI P C - -]
-    ~~3[217.5 340 TRA - - - .]
-    ~~5[179 495 - - - - .]
-    2~~1[155 251 WHI Medical S - .]
-    2*1[69 256 TRA - C - .]
+    *Arenes/Arener(~~n):
+    1 5.5 80.1 - - - R C 
+    (1)1 -95 110.6 TRA Petroleum - F B 
+    (1,2-1)1 -25 135 - - - - DNVUL 
+    (1,3-1)1 -48 140 - - - - - 
+    (1,4-1)1 13 145 - - - - - 
+    2 80.3 218 WHI P C - - 
+    3 217.5 340 TRA - - - . 
+    5 179 495 - - - - . 
+    2~~1 155 251 WHI Medical S - . 
+    2*1 69 256 TRA - C - . 
 
-    *Haloalkanes/alkyl halogenides/Haloalkaner (-X):
-    _[MLt BLt COL SML STR REA TOX]
-    Cl+1[-97.7 -24.2 TRA S - - DTORB]
-    Cl+2[-138.3 12.3 TRA - - - B(block_signal)]
-    Cl+3[-122.8 46.7 TRA - - - BI]
-    Cl+4[-123 77 TRA - - F .]
-    Cl+5[-99 107 TRA - - F -]
-    2Cl+1[-97 40 - S - HA - N]
-    3Cl+1[-63 62 TRA - - - EA]
-    4Cl+1[-23 76 - S - H - EKB]
-    2Cl+2[-35.7 83.5 TRA - O - -]
-    3Cl+2[-35.5 113.6 TRA - LD+KD+CED]
-    3Cl+2[-35.5 113.6 TRA - - - EKB]
-    (1Cl,1-2)4[- - - - - - -]
-    (1Cl-2*2-2)3[- - - - - - -]
-    F+1[- - - - - - -]
-    F+2[- - - - - - -]
-    F+3[- - - - - - -]
-    F+4[- - - - - - -]
-    F+5[- - - - - - -]
-    (F,3Cl)1[-110.5 23.7 TRA - - - -]
-    (2F,2Cl)1[-157.8 -29.8 TRA - - - -]
-    (3F,Cl)1[-181 -81.5 TRA S - - -]
-    (Br,2F,Cl)1[-159.5 -3.7 TRA - - - -]
-    (Br,3F)1[-108.9 7 TRA - - - -]
-    (2Br,2Cl,3F-1)2[-76 73 - - - - -]
+    *Haloalkanes/alkyl halogenides/Haloalkaner (nX):
+    _ MLt BLt COL SML STR REA TOX 
+    Cl+1 -97.7 -24.2 TRA S - - DTORB 
+    Cl+2 -138.3 12.3 TRA - - - B(block_signal) 
+    Cl+3 -122.8 46.7 TRA - - - BI 
+    Cl+4 -123 77 TRA - - F . 
+    Cl+5 -99 107 TRA - - F - 
+    2Cl+1 -97 40 - S - HA - N 
+    3Cl+1 -63 62 TRA - - - EA 
+    4Cl+1 -23 76 - S - H - EKB 
+    2Cl+2 -35.7 83.5 TRA - O - - 
+    3Cl+2 -35.5 113.6 TRA - LD+KD+CED 
+    3Cl+2 -35.5 113.6 TRA - - - EKB 
+    (1Cl,1-2)4 - - - - - - - 
+    (1Cl-2*2-2)3 - - - - - - - 
+    F+1 - - - - - - - 
+    F+2 - - - - - - - 
+    F+3 - - - - - - - 
+    F+4 - - - - - - - 
+    F+5 - - - - - - - 
+    (F,3Cl)1 -110.5 23.7 TRA - - - - 
+    (2F,2Cl)1 -157.8 -29.8 TRA - - - - 
+    (3F,Cl)1 -181 -81.5 TRA S - - - 
+    (Br,2F,Cl)1 -159.5 -3.7 TRA - - - - 
+    (Br,3F)1 -108.9 7 TRA - - - - 
+    (2Br,2Cl,3F-1)2 -76 73 - - - - - 
     
     *Alcohol(-OH) Hydroxi- -ol Polar:
     (SUB -X, ELI =, CON -O-, OXI -HCO)
-    1OH[-98 64.7 TRA F - - Blind]
-    2OH[-114.3 78.4 TRA - - - B(Intoxication)]
-    3OH[-126 97 TRA M - - -]
-    4OH[-89 117 TRA - - - -]
-    5OH[-77.6 138 TRA - - F -]
-    6OH[-45 157 TRA Perfume/cut_grass - - .]
-    7OH[-34.6 175.8 - Pleasant - - -]
-    8OH[-14 200 TRA Citrus - - -]
-    9OH[-6 214 BLA~YEL Citronella_oil/Orange - - I(Skin/Eyes)]
-    10OH[6.4 233 TRA - V - -]
-    2(12OH)[-13 198 TRA - - - KB]
-    3(1~3OH)[18 290 TRA S I - _]
-    6(1~6OH)[95 296 - S - - -]
-    ~~1+1[-16 204 - _ hygroskopisk - -]
+    1 -98 64.7 TRA F - - Blind 
+    2 -114.3 78.4 TRA - - - B(Intoxication) 
+    3 -126 97 TRA M - - - 
+    4 -89 117 TRA - - - - 
+    5 -77.6 138 TRA - - F - 
+    6 -45 157 TRA Perfume/cut_grass - - . 
+    7 -34.6 175.8 - Pleasant - - - 
+    8 -14 200 TRA Citrus - - - 
+    9 -6 214 BLA~YEL Citronella_oil/Orange - - I(Skin/Eyes) 
+    10 6.4 233 TRA - V - - 
+    2(12) -13 198 TRA - - - KB 
+    3(1~3) 18 290 TRA S I - _ 
+    6(1~6) 95 296 - S - - - 
+    ~~1+1 -16 204 - _ hygroskopisk - - 
     
     *Phenol(~OH):
-    1[40.5 181.7 - U - C .]
-    1(12)[29.8 191 - - C F .]
-    1(1~3)[11.8 203 - - I F .]
-    1(1~4)[35.5 202 - - C F .]
-    2[123 285 TRA B CN - ]
-    3[121 363 - - - - -]
-    2+2*4.3+2(Bisfenol A)[157 250 WHI~BRO - C - Endocrine_disruptor]
+    1 40.5 181.7 - U - C . 
+    1(12) 29.8 191 - - C F . 
+    1(1~3) 11.8 203 - - I F . 
+    1(1~4) 35.5 202 - - C F . 
+    2 123 285 TRA B CN -  
+    3 121 363 - - - - - 
+    2+2*4.3+2(Bisfenol A) 157 250 WHI~BRO - C - Endocrine_disruptor 
     
     *Aldehyde(-HCO) Oxo- -al:
     (RED -OH, OXI -COOH)
-    1CHO[- - - - - - GI(Mucous)]
-    2CHO[- - - - - - -]
-    3CHO[- - - - - - -]
-    4CHO[- - - - - - -]
-    5CHO[- - - - - - -]
-    6CHO[- - - - - - -]
-    7CHO[- - - - - - -]
-    8CHO[- - - - - - -]
-    9CHO[- - - - - - -]
-    10CHO[- - - - - - -]
+    1 - - - - - - GI(Mucous) 
+    2 - - - - - - - 
+    3 - - - - - - - 
+    4 - - - - - - - 
+    5 - - - - - - - 
+    6 - - - - - - - 
+    7 - - - - - - - 
+    8 - - - - - - - 
+    9 - - - - - - - 
+    10 - - - - - - - 
     
     *Ketone(-CO) Keto-/Oxo- -on:
     (OXI -OH)
-    3CO[- - - - V F -]
-    2-4CO[- - - - - - -]
-    3-4CO[- - - - - - -]
-    2-5CO[- - - - - - -]
-    3-5CO[- - - - - - -]
-    4-5CO[- - - - - - -]
-    2-6CO[- - - - - - -]
-    3-6CO[- - - - - - -]
-    4-6CO[- - - - - - -]
-    5-6CO[- - - - - - -]
+    3 - - - - V F - 
+    2-4 - - - - - - - 
+    3-4 - - - - - - - 
+    2-5 - - - - - - - 
+    3-5 - - - - - - - 
+    4-5 - - - - - - - 
+    2-6 - - - - - - - 
+    3-6 - - - - - - - 
+    4-6 - - - - - - - 
+    5-6 - - - - - - - 
     
     *Carboxylic acid(-COOH) Karboxy-, -acid:
     (RED -HCO, CON -COO-)
-    1COOH[- - - - - - -]
-    2COOH[- - - - - - -]
-    3COOH[- - - - - - -]
-    4COOH[- - - - - - -]
-    5COOH[- - - - - - -]
-    6COOH[- - - - - - -]
-    7COOH[- - - - - - -]
-    8COOH[- - - - - - -]
-    9COOH[- - - - - - -]
-    10COOH[- - - - - - -]
-    17COOH[- - - - - - -]
-    18COOH[- - - - - - -]
-    Lactic[- - - - - - -]
-    Salicylic[- - - - - - -]
+    1 - - - - - - - 
+    2 - - - - - - - 
+    3 - - - - - - - 
+    4 - - - - - - - 
+    5 - - - - - - - 
+    6 - - - - - - - 
+    7 - - - - - - - 
+    8 - - - - - - - 
+    9 - - - - - - - 
+    10 - - - - - - - 
+    17 - - - - - - - 
+    18 - - - - - - - 
+    Lactic - - - - - - - 
+    Salicylic - - - - - - - 
     
     *Ester(-COO-) - -oat:
     (HYD -COOH+=)
-    2+2[- - - Peach - - -]
-    4+1[- - - Raspberry - - -]
-    4+4[- - - Pineapple - - -]
-    5+2[- - - Banana - - -]
-    5+5[- - - Apple - - -]
-    8+2[- - - Orange - - -]
+    2+2 - - - Peach - - - 
+    4+1 - - - Raspberry - - - 
+    4+4 - - - Pineapple - - - 
+    5+2 - - - Banana - - - 
+    5+5 - - - Apple - - - 
+    8+2 - - - Orange - - - 
     
     *Ether(-O-) Alkoxy- -ether:
-    1+1[-141 -24 TRA - - F -]
-    1+2[-113 7.4 - - - F -]
-    2+2[-141 35 - - W S -]
-    1+3[-101 39 TRA - - F -]
-    2+3[-127 63 TRA - - F I]
-    3+3[-122 90 TRA S - F -]
-    1+4[-116 70 - - - - -]
-    2+4[-124 92.3 TRA - - F I(skin/eyes)]
-    3+4[-62 120 - - - - -]
-    4+4[-95 141 - - - - -]
+    1+1 -141 -24 TRA - - F - 
+    1+2 -113 7.4 - - - F - 
+    2+2 -141 35 - - W S - 
+    1+3 -101 39 TRA - - F - 
+    2+3 -127 63 TRA - - F I 
+    3+3 -122 90 TRA S - F - 
+    1+4 -116 70 - - - - - 
+    2+4 -124 92.3 TRA - - F I(skin/eyes) 
+    3+4 -62 120 - - - - - 
+    4+4 -95 141 - - - - - 
     
     *Ether perioxides/Eter perioxider (-2O-):
-    _[MLt BLt COL SML STR REA TOX]
-    2+2[- - - - - - -]
+    _ MLt BLt COL SML STR REA TOX 
+    2+2 - - - - - - - 
     
     *Amine(-NH2) Amino- -amine:
-    1NH2[- - - - - - -]
-    2NH2[- - - - - - -]
-    3NH2[- - - - - - -]
-    4NH2[- - - - - - -]
-    5NH2[- - - - - - -]
-    6NH2[- - - - - - -]
-    7NH2[- - - - - - -]
-    8NH2[- - - - - - -]
-    9NH2[- - - - - - -]
-    10NH2[- - - - - - -]
+    1 - - - - - - - 
+    2 - - - - - - - 
+    3 - - - - - - - 
+    4 - - - - - - - 
+    5 - - - - - - - 
+    6 - - - - - - - 
+    7 - - - - - - - 
+    8 - - - - - - - 
+    9 - - - - - - - 
+    10- - - - - - - 
     
     *Thiol(-SH) Sulfhydryl- -thiol:
-    1SH[-123 6 TRA - - F .]
-    2SH[-148 35 TRA - - F .]
-    3SH[-113 67 TRA~LYE - - W - I]
-    4SH[-116 98 - - Clear C -]
-    5SH[-76 127 TRA~YEL - - - I(skin/eyes)]
-    6SH[-81 151 TRA Earth - - I(skin/eyes)]
-    7SH[-43 177 TRA Onion - - I(skin/eyes)]
-    8SH[-49 177 TRA Onion - - I(skin/eyes)]
-    9SH[-20 220 - - - - -]
-    10SH[-26 241 TRA - - - I]
+    1 -123 6 TRA - - F . 
+    2 -148 35 TRA - - F . 
+    3 -113 67 TRA~LYE - - W - I 
+    4 -116 98 - - Clear C - 
+    5 -76 127 TRA~YEL - - - I(skin/eyes) 
+    6 -81 151 TRA Earth - - I(skin/eyes) 
+    7 -43 177 TRA Onion - - I(skin/eyes) 
+    8 -49 177 TRA Onion - - I(skin/eyes) 
+    9 -20 220 - - - - - 
+    10 -26 241 TRA - - - I 
     
     *Dissulfide(-2S-) - -dissulfide:
-    1+1[-85 110 TRA Garlic - - -]
-    1+2[- - - - - - -]
-    2+2[- - - - - - -]
-    1+3[- - - - - - -]
-    2+3[- - - - - - -]
-    3+3[- - - - - - -]
+    1+1 -85 110 TRA Garlic - - - 
+    1+2 - - - - - - - 
+    2+2 - - - - - - - 
+    1+3 - - - - - - - 
+    2+3 - - - - - - - 
+    3+3 - - - - - - - 
     
      Nitro compounds/Nitroföreningar (-NO2):
-    _[MLt BLt COL SML STR REA TOX]
-    1NO2[- - - - - - -]
-    2NO2[- - - - - - -]
-    3NO2[- - - - - - -]
-    4NO2[- - - - - - -]
-    5NO2[- - - - - - -]
-    6NO2[- - - - - - -]
-    7NO2[- - - - - - -]
-    8NO2[- - - - - - -]
-    9NO2[- - - - - - -]
-    10NO2[- - - - - - -]
+    1 - - - - - - - 
+    2 - - - - - - - 
+    3 - - - - - - - 
+    4 - - - - - - - 
+    5 - - - - - - - 
+    6 - - - - - - - 
+    7 - - - - - - - 
+    8 - - - - - - - 
+    9 - - - - - - - 
+    10 - - - - - - - 
