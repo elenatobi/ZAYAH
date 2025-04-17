@@ -1,28 +1,35 @@
 - Mathematics/Matematik:
   - Algebra/Algebra:
-    *Factorization/Faktorisering -> Expansion/Utveckling
+    *Basic rules/Grundläggande regler
+    -> Expansion/Utveckling E[...], <- Factorization/Faktorisering F[...]
     (+, *) -> ASO, DIS
-    (x+y)z = xz+yz: 2(2x-3)=2*2x+2(-3)=4x-6
-    (x+y)(z+t) = xz+xt+yz+yt: (x+3)(2x+4)=2x^2+4x+6x+12=2x^2+10x+12
-    (x+y)/z = x/z+y/z: (2-3x)/5=2/5-3x/5
-    (x+y)^2 = x^2+2xy+y^2: (3x+4)^2=9x^2+24x+16
-    (x-y)^2 = x^2-2xy+y^2: (7x-2)^2=49x^2-28x+4
-    (x+y)(x-y) = x^2-y^2: (x+4)(x-4)=x^2-16
-    (x+y)^3 = x^3+3x^2*y+3xy^2+y^3: (7x+8)^3=343x^3+1176x^2+1344x+512
-    (x-y)^3 = x^3-3x^2*y+3xy^2-y^3: (9x-2)^3=729x^3-486x^2+108x-8
-    (x+y)(x^2-xy+y^2) = x^3+y^3: (7x+3)(49x^2-21x+9)=49x^3+27
-    (x-y)(x^2+xy+y^2) = x^3-y^3: (3x-5)(9x^2+15x+25)
-    (xy)^z = x^z*y^z: (9x)^6=531441x^6
-    (x/y)^z = x^z/y^z: (7/x)^2=49/x^2
-    z^(x+y) = z^x*z^y: 4^(5n/2+1)=4^(3n/2+n+1)=16^(3n/4)*4^(n+1)
-    z^(x-y) = z^x/z^y:
-    z^(xy) = (z^x)^y: 4^(3n/2)=4^(2*3n/4)=16^(3n/4)
-    log(xy) = log(x)+log(y): log(45)=log(4*5)=log(5)+log(9)
-    log(x/y) = log(x)-log(y): log(9)=log(27/3)=log(27)-log(3)
-    log(x^y) = ylog(x): log(5^2)=2log(5)
-    log_n(x) = log(x)/log(n): log_2(10)=log(10)/log(2)
+    (x+y)z=xz+yz: 2x -3 2
+    (x+y)(z+t)=xz+xt+yz+yt: x 3 2x -1: 2x^2 5x -3
+    (x+y)/z=x/z+y/z: 2 3x 5
+    (x+y)^2=x^2+2xy+y^2: 3x 4
+    (x-y)^2=x^2-2xy+y^2: 7x 2
+    (x+y)(x-y)=x^2-y^2: x 4
+    (x+y)^3=x^3+3x^2*y+3xy^2+y^3: 7x 8
+    (x-y)^3=x^3-3x^2*y+3xy^2-y^3: 9x 2
+    (x+y)(x^2-xy+y^2) = x^3+y^3: 7x 3
+    (x-y)(x^2+xy+y^2) = x^3-y^3: 3x 5
+    (xy)^z = x^z*y^z: 9 x 6
+    (x/y)^z = x^z/y^z: 7 x 2
+    z^(x+y) = z^x*z^y: 4 2*3n/4 n+1
+    z^(x-y) = z^x/z^y: 5 2*3n/2 n+1
+    z^(xy) = (z^x)^y: 4 2*3n/4
+    log(xy) = log(x)+log(y): 5 9
+    log(x/y) = log(x)-log(y): 27 3
+    log(x^y) = ylog(x): 5 2
+    log_n(x) = log(x)/log(n): 2 10
+    
+    *Equation solution/Ekvationslösning
+    ax^2+bx+c: Δ=b^2-4ac x=(-b+√Δ)/(2a)
+    x^2+px+q: x=-p/2+√((p/2)^2-q)
+    ax^3+bx^2+cx+d: ...
 
     *Simplification/Förenkling
+    A/B=F[A]/F[B]=
     (x^2-12x+36)/(x^2-36)=(x-6)^2/((x+6)(x-6))=(x-6)/(x+6)
     (9-a^2)/(a-3)=(3+a)(3-a)/(a-3)=-(a-3)(3+a)/(a-3)=-(3+a)=3-a
     x^2+2x-15=(x-3)(x+5)
@@ -33,10 +40,6 @@
     x/(x+2)=(x+2-2)/(x+2)=1-2/(x+2)
     3/(x(x-1))=(A/x+B/(x-1)=(A(x-1)+Bx)/(x(x-1))=((A+B)x-A)/(x(x-1))=>A=-3,B=3)=-3/x+3/x+1
 
-    *Equation solution/Ekvationslösning:
-    ax^2+bx+c=0 => Δ=b^2-4ac x=(-b+√Δ)/(2a)
-    x^2+px+q => x=-p/2+√((p/2)^2-q)
-    ax^3+bx^2+cx+d => ...
   - Verification/Bevis:
     (Bevis innebär verifierng av ett matematisk påstående för acceptans som sanning)
     (Axiom fungerar som en sann obevisbar matematikens grundregel)
