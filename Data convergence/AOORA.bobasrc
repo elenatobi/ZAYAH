@@ -3,6 +3,7 @@
     *Basic rules/Grundläggande regler
     -> Expansion/Utveckling E[...], <- Factorization/Faktorisering F[...]
     (+, *) -> ASO, DIS
+    {} Simplify fraction, {...} Expand fraction
     (x+y)z=xz+yz: 2x -3 2
     (x+y)(z+t)=xz+xt+yz+yt: x 3 2x -1: 2x^2 5x -3
     (x+y)/z=x/z+y/z: 2 3x 5
@@ -24,21 +25,21 @@
     log_n(x) = log(x)/log(n): 2 10
     
     *Equation solution/Ekvationslösning
-    ax^2+bx+c: Δ=b^2-4ac x=(-b+√Δ)/(2a)
-    x^2+px+q: x=-p/2+√((p/2)^2-q)
+    Σa_k*x^k = Π(x-r_k) (Σa_k*x^k=0 => r_k...): (1 2 -15) (3 -5)
+    ax^2+bx+c: Δ=b^2-4ac x=(-b±√Δ)/(2a)
+    x^2+px+q: x=-p/2±√((p/2)^2-q)
     ax^3+bx^2+cx+d: ...
 
     *Simplification/Förenkling
-    A/B=F[A]/F[B]=
-    (x^2-12x+36)/(x^2-36)=(x-6)^2/((x+6)(x-6))=(x-6)/(x+6)
-    (9-a^2)/(a-3)=(3+a)(3-a)/(a-3)=-(a-3)(3+a)/(a-3)=-(3+a)=3-a
-    x^2+2x-15=(x-3)(x+5)
-    √2/(√3+√5+√7)=√2(√3+√5-√7)/((√3+√5+√7)(√3+√5-√7))=√2(√3+√5-√7)/((√3+√5)^2-7)=√2(√3+√5-√7)/(2√15+1)=√2(√3+√5-√7)/(2√15+1)=
+    A/B=F[A]/F[B]{}: x^2-12x+36 x^2-36
+    A(B-C)/(C-B)=-A(C-B)/(C-B){}=A: 3+a 3 a
+    A/(B+C){B-C}=A(B-C)/(B^2-C^2): 2 √3 (√5, √5+√7)
 
     *Partial Fraction Decomposition/Partialbråksuppdelning
-    (x+2)/x=1+2/x
-    x/(x+2)=(x+2-2)/(x+2)=1-2/(x+2)
-    3/(x(x-1))=(A/x+B/(x-1)=(A(x-1)+Bx)/(x(x-1))=((A+B)x-A)/(x(x-1))=>A=-3,B=3)=-3/x+3/x+1
+    (Ax+B)/Cx=A/C+B/(Cx): 1 2 1
+    Ax/(Bx+C)=1-((B-A)x-C)/(Bx+C): 1 1 2
+    A/(x...)+B/(x...)=...: 
+    3/(x(x-1))=(A/x+B/(x-1)=((A+B)x-A)/(x(x-1)))=-3/x+3/(x-1)
 
   - Verification/Bevis:
     (Bevis innebär verifierng av ett matematisk påstående för acceptans som sanning)
@@ -78,14 +79,12 @@
     Polynomdivision
 
   - Limit/Gränsvärde:
-    *General
-    lim x->∞ 1/x = 0
-    lim x->∞ 1/x^n = 0
-    lim x->∞ a^(-x) = 0
-    lim x->0 sin(x)/x = 0
+    *General (lim x->A[B... = C]: A)
+    ∞ (1/x 1/x^n 1/a^x) 0
+    0 sin(x)/x 0
 
-    lim x->4 (x^2-3)=4^2-3=16-3=13
-    lim x->0[(x^2+4x)/x=x(x+4)/x=x+4]=4
+    4 f(x): (x^2-3)
+    0 (x^2+4x)/x=x(x+4)/x=x+4=4
     lim x->∞[(6x-10)/(20-x)[1/x]=(6-10/x)/(20/x-1)]=6/1=6
 
     *Asymptotes/Asymptoter
@@ -95,9 +94,9 @@
   - Geometry/Geometri:
     ...
   - Trigonometry/Trigonometri:
-    T(Aα b C⊥ a B) sin(α)=a/c cos(α)=b/c tan(α)=a/b inv:arc
-    C(O L )
-    0 π/6(30°) π/4(45°) π/3(60°) π/2(90°)
+    sin(α)=a/c cos(α)=b/c tan(α)=a/b inv:arc
+    rad: 0 π/6 π/4 π/3 π/2
+    deg: 0 30° 45° 60° 90°
     sin: 0 1/2 √2/2 √3/2 1
     cos: 1 √3/2 √2/2 1/2 0
     tan: 0 1/√3 1 √3 -
@@ -107,17 +106,21 @@
     s -s +c  ∓s  -c  ±s
     c +c ∓s  -c  ±s  +c
     t -t ∓r  ±t  ∓r  ±t
-    f(x)=Asin(x)+Bcos(x)=Csin(x+Φ) A=Ccos(Φ) B=Csin(Φ)
+
+    f(x)=%
+    Asin(x)+Bcos(x)=Csin(x+Φ) A=Ccos(Φ) B=Csin(Φ)
     f(x)=Asin(ωx+Φ)+B
     f(x)=Atan(ωx+Φ)+B
 
-    sin^2(x)+cos^2(x)=1, sin^2(12°)+cos(78°)=1, cos(x)=√(1-sin^2(x)), sin(x)=√(1-cos^2(x))
+    sin^2(x)+cos^2(x)=1: 12° 78°: -> sin(x), cos(x)
     sin(x+y)=sin(x)cos(y)+cos(x)sin(y)
     sin(x-y)=sin(x)cos(y)-cos(x)sin(y)
     cos(x+y)=cos(x)cos(y)-sin(x)sin(y)
     cos(x-y)=cos(x)cos(y)+sin(x)sin(y)
-    sin(2x)=2sin(x)cos(x): sin(2*60°)=2sin(60°)cos(60°)=√3/2, sin(4x)/sin(2x)=2sin(2x)cos(2x)/sin(2x)=2cos2x
-    cos(2x)=cos^2(x)-sin^2(x)=2cos^2(x)-1=1-2sin^2(x): cos(2*10°)=cos^2(10°)-sin^2(10°), cos^2(15°)-sin^2(15°)=cos(30°)=√3/2
+    sin(2x)=2sin(x)cos(x): 60° 2x [...]/sin(2x)
+    cos(2x)=cos^2(x)-sin^2(x): 10° /15°
+    cos(2x)=1-2sin^2(x)
+    cos(2x)=2cos^2(x)-1
 
     sin(x)(1/sin(x)-sin(x))=sinx*1/sin(x)-sin^2(x)=1-sin^2(x)=cos^2(x)
     1-cos^2(x)/(1+sin^2(x))=1-(1-sin^2(x))/(1+sin(x))=1-(1+sin(x))(1-sin(x))/(1+sin(x))=1-(1-sin(x))=sin(x)
@@ -126,45 +129,53 @@
 
 
   - Calculus/Kalkyl:
-    *Derivative/Derivata d/dx f(x)
+    *Derivative/Derivata (d/(dx) A = B: f(x) f'(x))
     Average/Medel->Secant/Sekant: Δf/Δx = (f(x+h)-f(x))/h
-    Instantaneous/Momentan->Tangent/Tangent: df/dx = lim(h->0)(f(x+h)-f(x))/h
-    d/dx n = 0
-    d/dx x = 1
-    d/dx kx^n = nkx^(n-1)
-    d/dx e^x = e^x
-    d/dx a^x = a^x*ln(a)
-    d/dx ln(x) = 1/x
-    d/dx sin(x) = cos(x)
-    d/dx cos(x) = -sin(x)
+    Instantaneous/Momentan->Tangent/Tangent: df/dx = f'(x) = lim(h->0)(f(x+h)-f(x))/h
+    n 0
+    x 1
+    kx^n nkx^(n-1)
+    e^x e^x
+    a^x a^x*ln(a)
+    ln(x) 1/x
+    sin(x) cos(x)
+    cos(x) -sin(x)
 
-    d/dx f+g = f'+g'
-    d/dx f-g = f'-g'
-    d/dx f*g = f'g+fg'
-    d/dx f/g = (f'g-fg')/g^2
-    d/dx f(g) = f'(g)g'
+    f+g f'+g'
+    f-g f'-g'
+    fg f'g+fg'
+    f/g (f'g-fg')/g^2
+    f(g) f'(g)g'
 
     *Max/Min Derivative
     ...
 
     *Integral: ∫f dx = Σ...
     Integral -> Area
-    Indefinite integral: ∫f dx
-    Definite integral: ∫(a,b) f dx
+    Indefinite/Obestämd: ∫f dx
+    Definite/Bestämd: ∫(a,b) f dx
   - Discrete mathematics/Diskret matematik:
+    *Prime factor/Primtalsfaktorisering PF[...]
+    2 3 5 7 11 13 17 19 23 29 31 37 ...
+    128 = 2^7, 152=2^3*19
+
     *gcd, lcd
-    128 = 2^7, 152=2^3*19, SGF(127, 152)=2^3=8, lcd(128, 152)=2^7*19=2432)
-    2p, 6q=2*3*q, gcd(2p, 6q)=2, lcd(2p, 6q)=6pq
-    gcd(a, b)=12, lcd(a, b)=360, a=12x, b=12y, 12xy=360=>xy=30, x=3, y=10
+    gcd(x, y)=min(PF[x]... PF[y]...)=A, lcd(x, y)=max(PF[x]... PF[y]...)=B
+    128 152 2^3 2^7*19
+    2p 6q=2*3q 2 6pq
+    a b 12 360 => (a, b)=12(x, y), 12xy=360, x=3, y=10
 
     *mod
     a\=b (mod c) => a-b = kc => a=k1*c+r, b=k2*c+r
     a\=b (mod n), c\=d (mod n)
-    a+c\=b+d (mod n), 22+31\=2+1=3 (mod 5)
-    ac\=bd (mod n), 45*353\=3*3=9\=2 (mod 7)
+    a+c\=b+d (mod n): 22 31 2 1 5
+    ac\=bd (mod n): 45 353 3 3 7
     ma\=mb (mod n)
-    a^c\=b^c (mod n) 27^16\=2^16=(2^4)^4=16^4\=1^4=1 (mod 5), 2^95=2^2*2^93=4*(2^3)^31=4*8^31\=4 (mod 7), 477^42\=7^42=(7^2)^21=49^21\=(-1)^21=-1\=9 (mod 10))
-    Σ(k=0, n)a_k*10^k\=Σ(k=0, n)a_k (mod 3)
+    a^c\=b^c (mod n): 27 16 2 5
+    A1: 2^16=16^4=... (mod 5)
+    A2: 2^95=4*8^31... (mod 7)
+    A3: 477^42\=7^42=49^21\=-1 (mod 10)
+    A4: Σa_k*10^k\=Σa_k (mod 3)
 
     *Number in different bases/Tal i olika baser:
     (Potenssystem inom bas b: A=Σ(k=0, n)a_k*b^k)
@@ -173,22 +184,21 @@
     (2^4=16) => 111110101_2 = 1f5_16
 
     *Number sequence/Talföljder:
-    a_n=a_1*k(n-1)=2+4(4-1)=14)
-    a_(n+1)=2a_n+4, a_1=3, a_2=2*3+4=10, a_3=2*10+4=24)
-    a_n<500 => a_n=a_1*k(n-1) => n=...)
-    a_n=a_1*k(n-1) => a_n = 3*7(n-1))
+    a_n=a_1*k(n-1): 2 4 4, >500 3 7 n
+    a_(n+1)=d*a_n+k: 2 a_n 4: 3, 10, 24
+    a_n=a_1*k(n-1): 3 7 5
 
   - Statistics/Statistik:
     *Regular combinations/Enkla kombinatorik:
     (Multiplikationsprincipen: Första val p sätt andra val q sätt => pq))
     (Additionsprincipen: Antingen ett val p sätt, annat val q sätt => p+q))
     (Träddiagram för kombination/permutation)
-    [1~2][1~3][1~2] -> 2*3*2 = 12)
-    [1~2][1~3]|[1~2][1~2] -> 2*3+2*2 = 10)
-    [1][3~6]|[2][3~6]|[1][2]=>1*4+1*4+1*1=9)
+    [1~2][1~3][1~2]
+    [1~2][1~3]|[1~2][1~2]
+    [1][3~6]|[2][3~6]|[1][2]
     [1~5][1~4]![2~5][2~4] -> [1][2~4]|[2~5][1]|[1][1] => 5*4-4*3=1*3+4*1+1*1=8)
     [1~4][1~4][1~4][1~3]![1~4][3][1~4][1]=>[1~4][1, 2, 4][1~4][1~3]|[1~4][3][1~4][2, 3]=>176)
-    ([1~4][1, 2, 4]|[3][3])([1~4][1, 2]|[3][3])=>117)
+    ([1~4][1, 2, 4]|[3][3])([1~4][1, 2]|[3][3])
 
     *Permutation and combination/Permutation och kombination:
     (Permutationer: urval med hänsyn till ordning utan upprepning -> P(n, k))
@@ -290,6 +300,10 @@
 
 - Chemistry/Kemi:
   - $SYMBOLS:
+    **Class Prefix Suffix Electrodensity
+    
+    *Melting point %d °C
+    *Boiling point %d °C
     *Color/Färg
     TRA Transparent/Genomskinlig 
     GRA Grey/Grå 
@@ -356,13 +370,15 @@
     B Celebral~Neural_damages/Neurala_skador 
     I Irritating/Irriterande 
     G Allergy/Allergi
+
   - Organic chemistry/Organisk kemi:
-    ...
-    Functional group amount: Monovalent, divalent, trivalent, polyvalent groups
-    Antal funktionella grupper: Envärd, tvåvärd, trevärd, flervärda grupper
-    Functional group position: Primary, secondary, tertiary, quaternary
-    Position av funktionella grupper: Primär, sekundär, tertiär, kvartär
-    Nomenclature/Nomenklatur (IUPAC): ...
+    *Nomenclature/Nomenklatur (IUPAC): ...
+
+    *Functional groups/Funktionella grupper
+    Amount: Mono/di/tri/polyvalent groups
+    Antal: En/två/tre/flervärda grupper
+    Position: Primary, secondary, tertiary, quaternary
+    Position: Primär, sekundär, tertiär, kvartär
 
     *Isomeres/Isomerer:
     Chain isomerism/Kedjeisomerer: (n) ( 2-1 n), Molekyler har olika kolkedjor
@@ -370,9 +386,6 @@
     Functional isomerism/Funktionsisomeri
     Cis-trans isomerism(Geometrical isomerism)/Cis-transisomeri
     Enantiomerism(Optical isomerism)/Spegelbildsisomeri(Optiska isomerer)
-
-    *Class Prefix Suffix Electrodensity
-    _ MLt BLt COL SML STR REA TOX A... 
     
     *Alkanes/Alkaner(n-) Alkyle- -ane Non-polar:
     (SUB -X)
@@ -384,8 +397,8 @@
     6 -95 69 - - - - - 
     7 -91 98 - - - - - 
     8 -57 126 - - - - - 
-    9 -51 151 - - - - - 
-    10 -30 174 - - - - - 
+    9 -51 151 - - - - -
+    10 -30 174 - - - - -
     (1)3 -160 -12 - - - - -
     (2-1)4 -160 28 - - - - - 
     (2,2-1)3 -16 10 - - - - - 
@@ -584,7 +597,7 @@
     2+3 - - - - - - - 
     3+3 - - - - - - - 
     
-     Nitro compounds/Nitroföreningar (-NO2):
+    *Nitro compounds/Nitroföreningar (-NO2):
     1 - - - - - - - 
     2 - - - - - - - 
     3 - - - - - - - 
@@ -595,3 +608,9 @@
     8 - - - - - - - 
     9 - - - - - - - 
     10 - - - - - - - 
+
+- $INBOX:
+    ...
+
+- $ROADMAP:
+    ...
