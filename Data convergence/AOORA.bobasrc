@@ -36,10 +36,10 @@
     A/(B+C){B-C}=A(B-C)/(B^2-C^2): 2 √3 (√5, √5+√7)
 
     *Partial Fraction Decomposition/Partialbråksuppdelning
+    F[A]/F[B]{}=C
     (Ax+B)/Cx=A/C+B/(Cx): 1 2 1
     Ax/(Bx+C)=1-((B-A)x-C)/(Bx+C): 1 1 2
-    A/(x...)+B/(x...)=...: 
-    3/(x(x-1))=(A/x+B/(x-1)=((A+B)x-A)/(x(x-1)))=-3/x+3/(x-1)
+    A/Σa_k*x^k+B/Σb_k*x^k=c/(ab)=>...: x x-1 3
 
   - Verification/Bevis:
     (Bevis innebär verifierng av ett matematisk påstående för acceptans som sanning)
@@ -84,7 +84,7 @@
     0 sin(x)/x 0
     4 A: (x^2-3)
     0 A[x]/x=F[A[x]]/x{}=A: (x+4)x
-    ∞ A[x^n]/B[x^m]{C=max(n m)}: 6x-10 20-x 1/x
+    ∞ Σ(n)a_k*x^k/Σ(m)b_k*x^k{C=max(n m)}: 6x-10 20-x 1/x
 
     *Asymptotes/Asymptoter
     Vertical/Vertikal: lim x->0 f(x)=±∞
