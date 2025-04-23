@@ -63,8 +63,10 @@
     (2 (Induktionsantagande) Antagande att likheten gäller vid n)
     (3 (Induktionssteg) Likheten gäller för n+1 baserat på antagande)
     (4 (Slutsats): Likheten gäller för första steget och för 2 på varandra följande heltal, gällande för alla n)
+    
 
-    Σ(k=1, n)(2k+1)=n(2+n), (2*1+1=3, 1(2+1)=3), (Σ(k=1, n+1)(2k+1)=Σ(k=1, n)(2k+1)+(2(n+1)+1)=n(2+n)+2n+3=n^2+4n+3, (n+1)(2+n+1)=(n+1)(n+3)=n^2+4n+3)
+    Σ(k=1), Σ(n)a_k=b_n, (Σ(1)a_k=a_1=...=b_1), Σ(n+1)a_k=Σ(n)a_k+a_(k+1)=b_n+a_(k+1)...=b_(n+1): 2n+1 n(2+n)
+    A^n-B^n=Ck, A^1-B^1=...=C*m, ...: 13 8 5
     13^n-8^n=5k, 13^1-8^1=5=5*1, 13^(n+1)-8^(n+1)=13*13^n-8*8^n=5*13^n+8*13^n-8*8^n=5*13^n+8*5k=5(13^n+8k)
     2^n>n^2 (n>4), (2^5=32, 5^2=25, 2^5>5^2), (2^(n+1)>(n+1)^2=>2^(n+1)-(n+1)^2>0, 2^(n+1)-(n+1)^2=n^2-2n-1=(n-1)^2-2>0)
     
