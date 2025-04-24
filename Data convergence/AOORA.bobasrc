@@ -4,8 +4,9 @@
     -> Expansion/Utveckling E[...], <- Factorization/Faktorisering F[...]
     (+, *) -> ASO, DIS
     {} Simplify fraction, {...} Expand fraction
+    $(x y z t n)
     (x+y)z=xz+yz: 2x -3 2
-    (x+y)(z+t)=xz+xt+yz+yt: x 3 2x -1: 2x^2 5x -3
+    (x+y)(z+t)=xz+xt+yz+yt: x 3 2x -1
     (x+y)/z=x/z+y/z: 2 3x 5
     (x+y)^2=x^2+2xy+y^2: 3x 4
     (x-y)^2=x^2-2xy+y^2: 7x 2
@@ -25,24 +26,27 @@
     log_n(x) = log(x)/log(n): 2 10
     
     *Equation solution/Ekvationslösning
-    Σa_k*x^k = Π(x-r_k) (Σa_k*x^k=0 => r_k...): (1 2 -15) (3 -5)
+    Σa_k*x^k=Π(x-r_k) (Σa_k*x^k=0 => r_k...)
+    +{$ax^$n}=A*{x-$r}: (1 2 -15) (3 -5)
     ax^2+bx+c: Δ=b^2-4ac x=(-b±√Δ)/(2a)
     x^2+px+q: x=-p/2±√((p/2)^2-q)
     ax^3+bx^2+cx+d: ...
 
     *Simplification/Förenkling
-    A/B=F[A]/F[B]{}: x^2-12x+36 x^2-36
-    A(B-C)/(C-B)=-A(C-B)/(C-B){}=A: 3+a 3 a
-    A/(B+C){B-C}=A(B-C)/(B^2-C^2): 2 √3 (√5, √5+√7)
+    $(a b c)
+    a/b=F[a]/F[b]{}: x^2-12x+36 x^2-36
+    a(b-c)/(c-b)=-a(c-b)/(c-b){}=A: 3+a 3 a
+    a/(b+c){b-c}=a(b-c)/(b^2-c^2): 2 √3 (√5, √5+√7)
 
     *Partial Fraction Decomposition/Partialbråksuppdelning
-    F[A]/F[B]{}=C
-    (Ax+B)/Cx=A/C+B/(Cx): 1 2 1
-    Ax/(Bx+C)=1-((B-A)x-C)/(Bx+C): 1 1 2
-    A/Σa_k*x^k+B/Σb_k*x^k=c/(ab)=>...: x x-1 3
+    $(a b c)
+    F[a]/F[b]{}=c
+    (ax+b)/cx=a/c+b/(cx): 1 2 1
+    ax/(bx+c)=1-((b-a)x-c)/(bx+c): 1 1 2
+    +{A/a}=+{A*{a!}}/*{a}=>B/*{a}: (x x-1) 3
 
   - Verification/Bevis:
-    (Bevis innebär verifierng av ett matematisk påstående för acceptans som sanning)
+    (Verifierng av ett matematisk påstående för acceptans som sanning)
     (Axiom fungerar som en sann obevisbar matematikens grundregel)
     (Påståenden kan motbevisas med enbart ett motexempel)
     (Debarhet: n delbart med m => n=km)
@@ -50,21 +54,16 @@
     Direkta bevis: P=>Q, indirekta bevis: !P=>!Q (P: a^2=2k+1, Q: a=2m+1, !P: a=2k, a^2=(2k)^2=2*2k^2=>!Q)
     Motsägelsebevis: Antar motsatsen till bevis och visar till en motsägelse (Bevis av oändlig många primtal, q=\Pi{k=1}{n}{P_k}+1 primtal, inkluderar inte i P_(1~n))
 
-    a^2-2a+7=(2n+1)^2-2(2n+1)+7=4n^2+6=2(2n^2+3)
-    a^2+a+6, (2n)^2+2n+6=4n^2+2n+6=2(2n^2+n+3), (2n+1)^2+2n+1+6=4n^2+6n+8=2(2n^2+3n+4)
+    $t_a={a=2n,2n+1}: a^2-2a+7
 
-    *Mathematical induction/Induktionsbevis:
-    (1 (Base Step): Proof that the equality holds for the first step)
-    (2 (Induction Hypothesis): Assumption that the equality holds for n)
-    (3 (Induction Step): The equality holds for n+1 based on the assumption)
-    (4 (Conclusion): The equality holds for the first step and for 2 consecutive integers, therefore it holds for all n)
-
-    (1 (Bassteg): Bevis att likheten gäller för första steget)
-    (2 (Induktionsantagande) Antagande att likheten gäller vid n)
-    (3 (Induktionssteg) Likheten gäller för n+1 baserat på antagande)
-    (4 (Slutsats): Likheten gäller för första steget och för 2 på varandra följande heltal, gällande för alla n)
+    *Mathematical induction/Induktionsbevis
+    Proof that equality holds for/Bevis gäller för
+    (...$1/vid n=$n) (1)_$n=(2)_$n
+    1 Base step/Bassteg (1st, n=b)
+    2 Induction hypothesis/Antagande (n=n)
+    3 Induction step/steg (n=n+1) baserad på 2
+    4 Conclusion/Slutsats (1st step/steg, 2 consecutive integer/påföljande heltal) => all/alla n
     
-
     Σ(k=1), Σ(n)a_k=b_n, (Σ(1)a_k=a_1=...=b_1), Σ(n+1)a_k=Σ(n)a_k+a_(k+1)=b_n+a_(k+1)...=b_(n+1): 2n+1 n(2+n)
     A^n-B^n=Ck, A^1-B^1=...=C*m, ...: 13 8 5
     13^n-8^n=5k, 13^1-8^1=5=5*1, 13^(n+1)-8^(n+1)=13*13^n-8*8^n=5*13^n+8*13^n-8*8^n=5*13^n+8*5k=5(13^n+8k)
@@ -81,12 +80,12 @@
     Polynomdivision
 
   - Limit/Gränsvärde:
-    *General (lim x->A[B... = C])
+    $*General (lim $x->$A[$B... = $C])
     ∞ (1/x 1/x^n 1/a^x) 0
     0 sin(x)/x 0
     4 A: (x^2-3)
     0 A[x]/x=F[A[x]]/x{}=A: (x+4)x
-    ∞ Σ(n)a_k*x^k/Σ(m)b_k*x^k{C=max(n m)}: 6x-10 20-x 1/x
+    ∞ A/B{C}: 6x-10 20-x 1/x
 
     *Asymptotes/Asymptoter
     Vertical/Vertikal: lim x->0 f(x)=±∞
