@@ -64,9 +64,11 @@
     3 Induction step/steg (n=n+1) baserad på 2
     4 Conclusion/Slutsats (1st step/steg, 2 consecutive integer/påföljande heltal) => all/alla n
     
+    
     Σ(k=1), Σ(n)a_k=b_n, (Σ(1)a_k=a_1=...=b_1), Σ(n+1)a_k=Σ(n)a_k+a_(k+1)=b_n+a_(k+1)...=b_(n+1): 2n+1 n(2+n)
     A^n-B^n=Ck, A^1-B^1=...=C*m, ...: 13 8 5
-    13^n-8^n=5k, 13^1-8^1=5=5*1, 13^(n+1)-8^(n+1)=13*13^n-8*8^n=5*13^n+8*13^n-8*8^n=5*13^n+8*5k=5(13^n+8k)
+
+    13^n-8^n=5k 13*13^n-8*8^n=5*13^n+8(13^n-8^n)
     2^n>n^2 (n>4), (2^5=32, 5^2=25, 2^5>5^2), (2^(n+1)>(n+1)^2=>2^(n+1)-(n+1)^2>0, 2^(n+1)-(n+1)^2=n^2-2n-1=(n-1)^2-2>0)
     
   - Function/Funktion:
@@ -112,7 +114,6 @@
     f(x)=Asin(ωx+Φ)+B
     f(x)=Atan(ωx+Φ)+B
 
-    s: sin, c:cos, t: tan
     sin^2(x)+cos^2(x)=1: 12° 78°: ->sin(x), cos(x)
     sin(x+y)=sin(x)cos(y)+cos(x)sin(y)
     sin(x-y)=sin(x)cos(y)-cos(x)sin(y)
@@ -123,10 +124,11 @@
     cos(2x)=1-2sin^2(x)
     cos(2x)=2cos^2(x)-1
 
-    sin(x)(1/sin(x)-sin(x))=sinx*1/sin(x)-sin^2(x)=1-sin^2(x)=cos^2(x)
-    1-cos^2(x)/(1+sin^2(x))=1-(1-sin^2(x))/(1+sin(x))=1-(1+sin(x))(1-sin(x))/(1+sin(x))=1-(1-sin(x))=sin(x)
-    (1-sin(x))/cos(x)=(1-sin(x))(1+sin(x))/(cos(x)(1+sin(x)))=(1-sin^2(x))/(cos(x)(1+sin(x)))=cos^2(x)/(cos(x)(1+sin(x)))=cos(x)/(1+sin(x))
-    1/sin(x)-1/tan(x)=1/sin(x)-cos(x)/sin(x)=(1-cos(x))/sin(x)=(1-cos(x))(1+cos(x))/(sin(x)(1+cos(x)))=sin(x)/(1+sin(x))
+    s: sin(x), c:cos(x), t: tan(x)
+    s(1/s-s)=1-s^2=c^2
+    1-c^2/(1+s)=1-F[(1-s^2)]/(1+s)
+    (1-s)/c={1+s}=c^2/(c(1+s))
+    1/s-1/t=1/s-c/s=(1-c)/s={1+c}=s^2/(s(1+s))
 
 
   - Calculus/Kalkyl:
@@ -175,15 +177,42 @@
     Ay"=B=>y=∫∫B/Adx: 1 Acos(x)-Bsin(x)
     Ay^(n)=B=>∫^(n)B/Adx
 
+    y(x_p)=y_p=>...C1 C2, y(x)=...
+    y'+12y=0 (Tangent->(1, 0.5)) y'+12*0.5=0=>...
     **Separable/Separabla
-    g(y)y'=f(x)=>∫g(y)dy=∫f(x)dx=>G(y)+C1=F(x)+C2: 3y^2 4x
+    g(y)y'=f(x)=>∫g(y)dy=∫f(x)dx=>G(y)+C1=F(x)+C2
+    ~: 3y^2 4x
     y'=f(x)g(y)=>1/g(y)y'=f(x): sin(x) y^2, x 1/y
     y'=kf(x)g(y)=>1/g(y)y'=kf(x):k (120-3x)(60-2x/5)
     y'=F[f(x)g(y)]:1/(xy-y)
     f(x)y'+g(y)=0=>1/g(y)y'=-1/f(x): x^2 y
-    **Integrating factor/Integrersnde faktor
-    y'+g(x)y=f(x)=[*e^G(x)]>(e^G(x)y)'=f(x)e^G(x): 2x 4x, 3x^2 5x^2
+    **Integrating factor/Integrerande faktor
+    y'+g(x)y=f(x)=[*e^G(x)]>(e^G(x)y)'=f(x)e^G(x)
+    ~: 2x 2x^3
+    y'+Ay=BA=>...: (2 4)x, (3 5)x^2, √x, (1 4)sin(x)
     y'+A/xy=B=>(x^A)'=Bx^A: 2 x
+    Ay'+By=C=>y'+B/Ay=C/A: x^2 x 3/x^2, s+1 3 s+1
+    **First order/Första ordning
+    y'+ay=0=>y'=-ay=>ln(y)+C1=-ax+C2=>y=Ce^(-ax)
+    ~: 1 e, 
+    ay'+by=0=>y'+b/ay=0: 2 1
+    **Inhomogeneous/Inhomogen
+    Homogen, Partikulär lösning
+    y'+ay=f(x), y=y_h+y_p
+    y_p=A: B
+    a y'+ay
+    ax+b
+    ax^2+bx+c
+    ae^(kx)
+    asin(kx)+bcos(kx)
+    **Förändringsmodeller
+    y'=y'_(in)-y'(out)+k_(in)y-k_(out)y
+    y'=Q_(in)-y/VQ(out), V=V, V=V0+t(Q_(in)-Q_(out))
+    T'=-k(T-T_a): 95 20
+    y'=ky(1-y/M)=>∫(1/y+1/(M(1-y/M))dy=∫k*dx=>y/(M-y)=Ce^(kt)=>y=MCe^(kt)/(Ce^(kt)+1)
+    mv'=mg-kv^2=>v'=g-k/mv^2
+    
+    
     
     
   - Discrete mathematics/Diskret matematik:
@@ -348,8 +377,8 @@
     GRE Green/Grön 
     WHI White/Vit 
     RED Red_Red/Röd 
-    ORA Orange_color/Orange 
-    BLU Blue_color/Blå 
+    ORA Orange_color/Orange
+    BLU Blue_color/Blå
 
     *Odor/Lukt
     . Odorless/Luktlös 
@@ -640,7 +669,28 @@
     7 - - - - - - - 
     8 - - - - - - - 
     9 - - - - - - - 
-    10 - - - - - - - 
+    10 - - - - - - -
+
+
+- History/Historia:
+  - /Antiken
+  - Medieval ages/Medeltiden
+  - /Tidigmoderna tiden
+  - /Revolutionernas tidevarv
+  - 19th centry/1800-talet
+  - 20th centry/1900-talet:
+    *Second world war/Andra världskriget
+    410622: Sovjetunionen(Barbarossa): 3M man, 350 mil front
+    4112: Vitryssland, Ukraina, Leningrad belägring
+    4109-04: Moskva
+    420717-0202: Stalingrad(Vändpunkt)
+    421023-1111: El-Alamein: Brittiska pansarsoldater
+    430704-0823: Kursk: Sovietarme
+    430709-0817: Sicilien: Landstigning
+    440606: Normandie D-dagen: västerifrån
+    45 vår: Inträngning väst,öst
+    450430: Hitler självmord
+    450507/8 Kapitulation
 
 - $INBOX:
     ...
