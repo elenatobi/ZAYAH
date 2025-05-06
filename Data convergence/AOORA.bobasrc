@@ -285,7 +285,7 @@
     *Choises
     (Urval från urna: Pool(kulor med färg, hand: beroende..., ordning beror på återläggning))
     2 färg, med återläggning: P(8**4 10**3)=*C(7, 4)
-    2 färg, utan återläggning: P[C4(8) C3(10)]=>C(8, 4)C(10, 3)7!=42336000
+    2 färg, utan återläggning: P(C(8, 4)C(10, 3))
     (Poker: Pool(52 kort, 4 färger, 13 valörer), hand: 5 kort, ingen ordning
     Antal hand: C(52, 5)=
     Ett par: C2(4).(13) ((4)(4)(4)).C3(12) => C(13, 1)C(4, 2)C(12, 3)C(4, 1)^3=...
