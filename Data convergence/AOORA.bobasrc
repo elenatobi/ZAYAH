@@ -176,26 +176,28 @@
     Ay'=B=>y=∫B/Adx: √x 7-1/x
     Ay"=B=>y=∫∫B/Adx: 1 Acos(x)-Bsin(x)
     Ay^(n)=B=>∫^(n)B/Adx
-
     y(x_p)=y_p=>...C1 C2, y(x)=...
     y'+12y=0 (Tangent->(1, 0.5)) y'+12*0.5=0=>...
+
     **Separable/Separabla
-    g(y)y'=f(x)=>∫g(y)dy=∫f(x)dx=>G(y)+C1=F(x)+C2
-    ~: 3y^2 4x
+    g(y)y'=f(x)=>∫g(y)dy=∫f(x)dx=>G(y)+C1=F(x)+C2: 3y^2 4x
     y'=f(x)g(y)=>1/g(y)y'=f(x): sin(x) y^2, x 1/y
     y'=kf(x)g(y)=>1/g(y)y'=kf(x):k (120-3x)(60-2x/5)
     y'=F[f(x)g(y)]:1/(xy-y)
     f(x)y'+g(y)=0=>1/g(y)y'=-1/f(x): x^2 y
+
     **Integrating factor/Integrerande faktor
     y'+g(x)y=f(x)=[*e^G(x)]>(e^G(x)y)'=f(x)e^G(x)
     ~: 2x 2x^3
     y'+Ay=BA=>...: (2 4)x, (3 5)x^2, √x, (1 4)sin(x)
     y'+A/xy=B=>(x^A)'=Bx^A: 2 x
     Ay'+By=C=>y'+B/Ay=C/A: x^2 x 3/x^2, s+1 3 s+1
+
     **First order/Första ordning
     y'+ay=0=>y'=-ay=>ln(y)+C1=-ax+C2=>y=Ce^(-ax)
     ~: 1 e, 
     ay'+by=0=>y'+b/ay=0: 2 1
+    
     **Inhomogeneous/Inhomogen
     Homogen, Partikulär lösning
     y'+ay=f(x), y=y_h+y_p
@@ -205,14 +207,15 @@
     ax^2+bx+c
     ae^(kx)
     asin(kx)+bcos(kx)
+
     **Förändringsmodeller
     y'=y'_(in)-y'(out)+k_(in)y-k_(out)y
     y'=Q_(in)-y/VQ(out), V=V, V=V0+t(Q_(in)-Q_(out))
+    y'=Q_(in)-y/VQ(out)
+    y'=A-y/f(t)B
     T'=-k(T-T_a): 95 20
     y'=ky(1-y/M)=>∫(1/y+1/(M(1-y/M))dy=∫k*dx=>y/(M-y)=Ce^(kt)=>y=MCe^(kt)/(Ce^(kt)+1)
     mv'=mg-kv^2=>v'=g-k/mv^2
-    
-    
     
     
   - Discrete mathematics/Diskret matematik:
