@@ -1,0 +1,63 @@
+html,
+body,
+button {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    /* background: linear-gradient(135deg, #eef1f8, #f5f7fa); */
+}
+
+.page-section {
+    margin: 7px auto;
+    background: #fdfdfd;
+    border: 1px solid #dcdcdc;
+    padding: 1px;
+    width: 900px;
+}
+
+.toolbar {
+    margin: auto;
+    background: #ffffff;
+    border-bottom: 1px solid #dcdcdc;
+    box-shadow: 1px 1px 4px 0 #ccc;
+    width: 99%;
+    height: 42px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.toolbar-button {
+    display: inline-block;
+    white-space: nowrap;
+    align-items: center;
+    margin: 3px 1px;
+    padding: 3px 9px;
+    background: #f8f8f8;
+    color: #6ea8d8;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #c8dcea;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toolbar-button:hover {
+    background: #eaf4fc;
+    border-color: #6ea8d8;
+    box-shadow: 0 2px 4px rgba(0, 120, 212, 0.1);
+}
+
+.toolbar-button:active {
+    background: #dceffd;
+    transform: translateY(1px);
+}
+
+@media (max-width: 900px) {
+    /*
+    .page-section {
+        width: 99%;
+    }
+    */
+}

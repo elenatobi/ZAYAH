@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BobaSystem UI Design</title>
+        <link
+            rel="stylesheet"
+            href="assets/fonts/SangBleuSunrise-light/SangBleuSunrise-light.css"
+        />
+        <link
+            rel="stylesheet"
+            href="assets/fonts/SangBleuEmpire/SangBleuEmpire.css"
+        />
+        <link rel="stylesheet" href="css/plugins/native-math.css" />
+        <link rel="stylesheet" href="css/plugins/layout.css" />
+        <link rel="stylesheet" href="css/core/page-display.css" />
+        <link rel="stylesheet" href="css/core/styles.css" />
+        <script src="script.js" type="module"></script>
+    </head>
+    <body spellcheck="false" contenteditable="false">
+        <table class="app theme-lavender" width="100%" height="100%">
+            <tr>
+                <td width="256"></td>
+                <td class="toolbar" height="55">
+                    <button class="toolbar-button" id="row-before">
+                        Insert Row Before
+                    </button>
+                    <button class="toolbar-button" id="row-after">
+                        Insert Row After
+                    </button>
+                    <button class="toolbar-button" id="column-before">
+                        Insert Column Before
+                    </button>
+                    <button class="toolbar-button" id="column-after">
+                        Insert Column After
+                    </button>
+                    <button class="toolbar-button" id="delete-row">
+                        Delete Row
+                    </button>
+                    <button class="toolbar-button" id="delete-column">
+                        Delete Column
+                    </button>
+                    <button class="toolbar-button" id="move-row-up">
+                        Move row up
+                    </button>
+                    <button class="toolbar-button" id="move-row-down">
+                        Move row down
+                    </button>
+                    <button class="toolbar-button" id="move-column-left">
+                        Move row left
+                    </button>
+                    <button class="toolbar-button" id="move-column-right">
+                        Move row right
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="left-sidebar">Left sidebar</td>
+                <td>
+                    <div class="layout-scroll">
+                        <div class="page-section">
+                            <div class="segment">
+                                <p
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Empty segment (Abstract base segment),
+                                    (Latin font test: SangBleu Sunrise, Cyrillic
+                                    font test: SangBleu Санрайз)
+                                </p>
+                                <p
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <div class="segment">
+                                <p
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Relational segment (Base segment)
+                                </p>
+                                <p
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+
+                                <table class="table-view">
+                                    <tbody>
+                                        <tr>
+                                            <th contenteditable="true">
+                                                Property 1
+                                            </th>
+                                            <th contenteditable="true">
+                                                Property 2
+                                            </th>
+                                            <th contenteditable="true">
+                                                Property 3
+                                            </th>
+                                            <th contenteditable="true">
+                                                Property 4
+                                            </th>
+                                            <th contenteditable="true">
+                                                Property 5
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1.1</td>
+                                            <td contenteditable="true">1.2</td>
+                                            <td contenteditable="true">1.3</td>
+                                            <td contenteditable="true">1.4</td>
+                                            <td contenteditable="true">1.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">2.1</td>
+                                            <td contenteditable="true">2.2</td>
+                                            <td contenteditable="true">2.3</td>
+                                            <td contenteditable="true">2.4</td>
+                                            <td contenteditable="true">2.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">3.1</td>
+                                            <td contenteditable="true">3.2</td>
+                                            <td contenteditable="true">3.3</td>
+                                            <td contenteditable="true">3.4</td>
+                                            <td contenteditable="true">3.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">4.1</td>
+                                            <td contenteditable="true">4.2</td>
+                                            <td contenteditable="true">4.3</td>
+                                            <td contenteditable="true">4.4</td>
+                                            <td contenteditable="true">4.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">1</td>
+                                            <td contenteditable="true">2</td>
+                                            <td contenteditable="true">3</td>
+                                            <td contenteditable="true">4</td>
+                                            <td contenteditable="true">5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="segment">
+                                <div
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Relative segment (Base segment)
+                                </div>
+                                <div
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Description of a relative segment
+                                </div>
+                                <table class="table-view">
+                                    <tbody>
+                                        <tr>
+                                            <th contenteditable="true">
+                                                Field 1
+                                            </th>
+                                            <th contenteditable="true">
+                                                Field 2
+                                            </th>
+                                            <th contenteditable="true">
+                                                Field 3
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="false">
+                                                <span
+                                                    contenteditable="false"
+                                                    class="native-math"
+                                                    >ax<sup>2</sup>+bx+c</span
+                                                >
+                                            </td>
+                                            <td contenteditable="true">
+                                                <span class="native-math"
+                                                    >3x<sup>2</sup>+8x+1</span
+                                                >
+                                            </td>
+                                            <td contenteditable="true">=...</td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">
+                                                <span class="native-math">
+                                                    <span class="fraction">
+                                                        <span class="top"
+                                                            >3x<sup
+                                                                >2</sup
+                                                            ></span
+                                                        >
+                                                        <span class="bottom"
+                                                            >e<sup
+                                                                >x<sup
+                                                                    >2</sup
+                                                                ></sup
+                                                            ></span
+                                                        > </span
+                                                    >+sin(x)
+                                                </span>
+                                            </td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                            <td contenteditable="true"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="segment">
+                                <div
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Compound segment (Base segment)
+                                </div>
+                                <div
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Description
+                                </div>
+                                <table class="table-view">
+                                    <tbody>
+                                        <tr>
+                                            <th contenteditable="true">
+                                                Comparasion 1
+                                            </th>
+                                            <th contenteditable="true">
+                                                Comparasion 2
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipiscing, elit
+                                                pharetra habitant curae platea,
+                                                nunc porttitor vehicula tortor
+                                                integer.
+                                            </td>
+                                            <td contenteditable="true">
+                                                Eros vulputate fermentum
+                                                facilisis hac hendrerit,
+                                                suspendisse dictumst ad
+                                                aliquam.<br />
+                                                Eget ornare penatibus
+                                                condimentum orci in malesuada
+                                                torquent magnis ullamcorper
+                                                laoreet, velit tempor ultrices
+                                                arcu parturient sem nec lacinia
+                                                venenatis fames cras, commodo
+                                                libero vestibulum non a montes
+                                                duis luctus fermentum.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">
+                                                Primis nibh curabitur fringilla
+                                                ullamcorper tristique tempor
+                                                integer augue sagittis, dui nisl
+                                                donec sed duis malesuada per
+                                                habitant nullam, varius
+                                                habitasse nam auctor nisi
+                                                feugiat justo aliquet.
+                                            </td>
+                                            <td contenteditable="true">
+                                                Curabitur fermentum urna iaculis
+                                                et varius eget parturient
+                                                habitant, orci ut montes purus
+                                                semper malesuada aptent.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td contenteditable="true">
+                                                Faucibus dictumst eu curae
+                                                natoque a venenatis felis nibh
+                                                penatibus, rhoncus pretium
+                                                scelerisque tempus class
+                                                facilisis odio duis, ante ligula
+                                                est dictum eros leo porttitor
+                                                taciti.
+                                            </td>
+                                            <td contenteditable="true">
+                                                Hendrerit posuere in nascetur
+                                                aliquet imperdiet eu etiam,
+                                                vestibulum sagittis mattis
+                                                scelerisque senectus mollis mi,
+                                                dapibus leo dictumst mus
+                                                pharetra nunc.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="segment">
+                                <div
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Pathway segment (Base segment)
+                                </div>
+                                <div
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Description
+                                </div>
+                                <pre class="mermaid">
+graph BT
+A[Alkane Alkan] -->|Br₂ / UV HalogenationHalogenering| B[HalogenoalkaneHalogenoalkan]
+B -->|OH⁻ aq Nucleophilic Substitution Nukleofil substitution| C[Alcohol Alkohol]
+C -->|O / Cr₂O₇²⁻ / H⁺ Oxidation Oxidation| D[Carboxylic Acid Karboxylsyra]
+C -->|H⁺ / Heat Dehydration Dehydrering| E[Alkene Alken]
+E -->|H₂ / Ni Addition Addition| A
+E -->|Br₂ Electrophilic Addition Elektrofil addition| F[Dibromoalkane Dibromalkan]
+D -->|LiAlH₄ Reduction Reduktion| C
+</pre
+                                >
+                            </div>
+                            <div class="segment">
+                                <p
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Corresponding segment (Modifier segment)
+                                </p>
+                                <p
+                                    class="segment-description"
+                                    contenteditable="true"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <div style="display: table; width: 100%">
+                                    <svg
+                                        style="
+                                            display: table-cell;
+                                            vertical-align: middle;
+                                        "
+                                        width="400"
+                                        viewBox="0 0 500 400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <!-- Cell Membrane -->
+                                        <ellipse
+                                            cx="250"
+                                            cy="200"
+                                            rx="200"
+                                            ry="140"
+                                            fill="#e0f7fa"
+                                            stroke="#00838f"
+                                            stroke-width="3"
+                                        />
+                                        <text
+                                            x="250"
+                                            y="370"
+                                            font-size="16"
+                                            text-anchor="middle"
+                                        >
+                                            Cell Membrane
+                                        </text>
+
+                                        <!-- Nucleus -->
+                                        <circle
+                                            cx="250"
+                                            cy="200"
+                                            r="50"
+                                            fill="#fff9c4"
+                                            stroke="#fbc02d"
+                                            stroke-width="3"
+                                        />
+                                        <text
+                                            x="250"
+                                            y="205"
+                                            font-size="14"
+                                            text-anchor="middle"
+                                            fill="#000"
+                                        >
+                                            Nucleus
+                                        </text>
+
+                                        <!-- Nucleolus -->
+                                        <circle
+                                            cx="250"
+                                            cy="200"
+                                            r="15"
+                                            fill="#fbc02d"
+                                        />
+
+                                        <!-- Mitochondria -->
+                                        <ellipse
+                                            cx="160"
+                                            cy="130"
+                                            rx="30"
+                                            ry="15"
+                                            fill="#ffccbc"
+                                            stroke="#e64a19"
+                                            stroke-width="2"
+                                        />
+                                        <text
+                                            x="160"
+                                            y="125"
+                                            font-size="12"
+                                            text-anchor="middle"
+                                            fill="#000"
+                                        >
+                                            Mitochondrion
+                                        </text>
+
+                                        <ellipse
+                                            cx="330"
+                                            cy="270"
+                                            rx="30"
+                                            ry="15"
+                                            fill="#ffccbc"
+                                            stroke="#e64a19"
+                                            stroke-width="2"
+                                        />
+
+                                        <!-- Endoplasmic Reticulum -->
+                                        <rect
+                                            x="190"
+                                            y="130"
+                                            width="100"
+                                            height="15"
+                                            fill="#d1c4e9"
+                                            stroke="#7e57c2"
+                                            stroke-width="2"
+                                        />
+                                        <text
+                                            x="240"
+                                            y="125"
+                                            font-size="12"
+                                            text-anchor="middle"
+                                        >
+                                            ER
+                                        </text>
+
+                                        <!-- Golgi Apparatus -->
+                                        <path
+                                            d="M300,160 q20,10 0,20 q20,10 0,20"
+                                            fill="none"
+                                            stroke="#ff7043"
+                                            stroke-width="6"
+                                        />
+                                        <text
+                                            x="310"
+                                            y="215"
+                                            font-size="12"
+                                            fill="#000"
+                                        >
+                                            Golgi
+                                        </text>
+
+                                        <!-- Cytoplasm (label only, already implied by background) -->
+                                        <text
+                                            x="250"
+                                            y="60"
+                                            font-size="14"
+                                            text-anchor="middle"
+                                            fill="#555"
+                                        >
+                                            Cytoplasm
+                                        </text>
+                                    </svg>
+                                    <table
+                                        style="
+                                            display: table-cell;
+                                            vertical-align: middle;
+                                        "
+                                        class="table-view"
+                                    >
+                                        <tbody>
+                                            <tr>
+                                                <td contenteditable="true">
+                                                    Cytoplasm
+                                                </td>
+                                                <td contenteditable="true">
+                                                    Description about Cytoplasm
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td contenteditable="true">
+                                                    Mitochondrion
+                                                </td>
+                                                <td contenteditable="true">
+                                                    Description about
+                                                    Mitochondrion
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td contenteditable="true">
+                                                    ER
+                                                </td>
+                                                <td contenteditable="true">
+                                                    Description about ER
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td contenteditable="true">
+                                                    Nucleus
+                                                </td>
+                                                <td contenteditable="true">
+                                                    Description about Nucleus
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td contenteditable="true">
+                                                    Golgi
+                                                </td>
+                                                <td contenteditable="true">
+                                                    Description about Golgi
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="segment">
+                                <p
+                                    class="segment-header"
+                                    contenteditable="true"
+                                >
+                                    Calendar segment
+                                </p>
+                                <table class="calendar-view">
+                                    <tr>
+                                        <th>Sun</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="date">1</div>
+                                            <div class="event">Call mom</div>
+                                            <div class="event">
+                                                Buy groceries
+                                            </div>
+                                        </td>
+                                        <td><div class="date">2</div></td>
+                                        <td>
+                                            <div class="date">3</div>
+                                            <div class="event">Team sync</div>
+                                        </td>
+                                        <td><div class="date">4</div></td>
+                                        <td>
+                                            <div class="date">5</div>
+                                            <div class="event">Project due</div>
+                                        </td>
+                                        <td><div class="date">6</div></td>
+                                        <td><div class="date">7</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="date">8</div></td>
+                                        <td>
+                                            <div class="date">9</div>
+                                            <div class="event">Yoga class</div>
+                                        </td>
+                                        <td><div class="date">10</div></td>
+                                        <td>
+                                            <div class="date">11</div>
+                                            <div class="event">Dentist 3PM</div>
+                                        </td>
+                                        <td><div class="date">12</div></td>
+                                        <td><div class="date">13</div></td>
+                                        <td>
+                                            <div class="date">14</div>
+                                            <div class="event">Picnic day</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="date">15</div></td>
+                                        <td>
+                                            <div class="date">16</div>
+                                            <div class="event">
+                                                Budget review
+                                            </div>
+                                        </td>
+                                        <td><div class="date">17</div></td>
+                                        <td><div class="date">18</div></td>
+                                        <td><div class="date">19</div></td>
+                                        <td><div class="date">20</div></td>
+                                        <td>
+                                            <div class="date">21</div>
+                                            <div class="event">
+                                                Summer begins
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="date">22</div>
+                                            <div class="event">
+                                                Submit report
+                                            </div>
+                                        </td>
+                                        <td><div class="date">23</div></td>
+                                        <td><div class="date">24</div></td>
+                                        <td>
+                                            <div class="date">25</div>
+                                            <div class="event">
+                                                Mom's birthday
+                                            </div>
+                                        </td>
+                                        <td><div class="date">26</div></td>
+                                        <td><div class="date">27</div></td>
+                                        <td><div class="date">28</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="date">29</div></td>
+                                        <td>
+                                            <div class="date">30</div>
+                                            <div class="event">
+                                                Zoom call 4PM
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

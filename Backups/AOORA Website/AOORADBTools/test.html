@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<div id = "box" style = "border:1px solid silver;">
+    <div style = "min-height:17px;border:1px solid silver;" contenteditable></div>
+    <div style = "min-height:17px;border:1px solid silver;" contenteditable></div>
+    <div style = "min-height:17px;border:1px solid silver;" contenteditable></div>
+    <div style = "min-height:17px;border:1px solid silver;" contenteditable></div>
+</div>
+
+<script>
+class Editor{
+    constructor(HTMLElement){
+        this.HTMLElement = HTMLElement;
+        this.subNodes = [];
+        this.start();
+    }
+    
+    inject(){
+        for (let e of box.children){
+            this.subNodes.push(new Line(e));
+        }
+    }
+    
+    start(){
+        this.inject();
+        this.HTMLElement.addEventListener("keydown", function(event){
+            if (event.key === "s" && event.ctrlKey){
+                event.preventDefault();
+                console.log("SAVE YOUR WORK HERE!");
+            }
+        });
+    }
+}
+
+class Line{
+    constructor(HTMLElement){
+        this.HTMLElement = HTMLElement;
+        this.start();
+    }
+    
+    start(){
+        let active = this;
+        this.HTMLElement.addEventListener("keydown", function(event){
+            if (event.key === "Enter"){
+                event.preventDefault();
+            }
+            console.log(active.HTMLElement);
+        });
+    }
+}
+
+let box = document.getElementById("box");
+let e = new Editor(box);
+
+/*
+  let box = document.getElementById("box");
+  box.addEventListener("keydown", function(event){
+    if (event.key === "s" && event.ctrlKey){
+      event.preventDefault();
+      console.log("SAVE YOUR WORK HERE!");
+    }
+  });
+  for (let e of box.children){
+    e.addEventListener("keydown", function(event){
+      //console.log(e, event);
+      if (event.key === "Enter"){
+        event.preventDefault();
+      }
+    });
+  }
+  box.style.border = "1px solid silver";
+  */
+  
+  /*
+  for (let i = 0; i < 10; i++){
+      let newNode = document.createElement("div");
+      newNode.contenteditable = "true";
+      newNode.style.border = "1px solid silver";
+      newNode.style.height = "17px";
+      newNode.addEventListener("input", function(event){
+          console.log(event);
+      });
+      box.appendChild(newNode);
+  }
+  */
+</script>
+
+</body>
+</html>

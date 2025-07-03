@@ -1,0 +1,63 @@
+/* Black */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-Black-WebXL.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Black Italic */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-BlackItalic-WebXL.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-Bold-WebXL.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-BoldItalic-WebXL.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-Medium-WebXL.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-MediumItalic-WebXL.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-Regular-WebXL.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('SangBleuEmpire-RegularItalic-WebXL.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}

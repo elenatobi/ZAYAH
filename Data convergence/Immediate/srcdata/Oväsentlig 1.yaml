@@ -1,0 +1,995 @@
+- Oväsentlig 1:
+    - La familia:
+      - Descripción:
+        - Es mi familia
+      - Padre:
+        - Ellos son mis padres.
+        - Es mi padre/madre
+        - Mi padre se llama Juan.
+      - Hijo:
+        - Él es mi hijo.
+        - ¿Tienes hijos?
+        - Tienen un hijo., Tengo una hija.
+        - Ella es mi hermana.
+      - Primos, Sobrinos:
+        - Tenemos cuatro sobrinos.
+        - Tienen dos primos.
+        - Tiene un sobrino joven
+      - Nietos:
+        - Tengo cinco nietos.
+      - Otros:
+        - Ellas son mis tías.
+      - Abuelo:
+        - Tiene dos abuelas.
+        - ¿Es usted abuela?
+    - Viajar:
+      - Viajar:
+        - ¿Qué día viajas?, Viajo el miércoles.
+        - ¿Viajan el sábado?, No. Viajamos el lunes.
+        - ¡Buen viaje!
+        - Necesito un hotel. Busco un hotel en el campo.
+      - Planificar:
+        - Empacar:
+          - ¿Empacan hoy? Sí, empacamos hoy.
+          - ¿Empacamos las maletas?
+          - Solo necesito una maleta.
+          - Empaco mis lentes de sol.
+        - Viajar en:
+          - Puedo viajar en coche/avión
+          - Podemos ir por carretera.
+          - Viajamos en taxi.
+          - ¿Rentamos un coche?
+          - Podemos rentar una moto.
+          - ¿Adónde van? Van a México
+          - ¿A qué país podemos ir? Podemos ir a México.
+        - Local:
+          - Somos turistas.
+          - ¿España es barata?
+          - Son países agradables.
+          - ¿Qué idioma hablan? Hablan español.
+        - Oficina:
+          - Buscan la oficina de turismo.
+          - ¿Buscas información?
+          - Buscamos lugares turísticos/alojamiento.
+          - Busco un barrio barato.
+          - Necesito una agencia de viajes.
+          - ¿Podemos preguntar en la oficina de turismo?
+        - Haciendos:
+          - España tiene monumentos.
+          - ¿Qué podemos comer en México? Podemos comer platos tipicos
+          - Vamos a la montaña
+          - Viajan en barco. Vamos al mar.
+        - Alojamiento:
+          - Hay que buscar alojamiento
+      - Otros:
+        - Efectivo:
+          - Puedes pagar con efectivo
+          - Puedo pagar con tarjeta
+          - Qué moneda tiene México?
+          - Estoy pagando los boletos.
+        - Seguridad:
+          - ¿Es un país seguro?
+          - La ciudad tiene puerto.
+          - Tienes vacaciones en abril.
+    - Aficiones:
+      - Deportes:
+        - Descripción:
+          - ¿Haces deporte?, Sí. Hago deporte.
+          - ¿Qué deportes juegas?
+          - ¿Qué deportes hacen Mau y Fer?
+          - ¿Cuál es tu deporte favorito?, Mi deporte favorito es el béisbol.
+          - Los niños juegan un partido
+        - Béisbol:
+          - Juego béisbol.
+          - ¿Dónde juegas fútbol?, Juego fútbol en el parque.
+          - Jugamos en un equipo de fútbol.
+        - Fútbol
+        - Básquetbol:
+          - Jugamos básquetbol.
+        - Tenis:
+          - Juego tenis
+          - ¿Quién tiene las pelotas de tenis? ,Yo tengo las pelotas de tenis.
+        - Gimnasio:
+          - Hago gimnasia.
+          - ¿Dónde nadan?, Nadamos en el gimnasio
+          - Corro en el parque.
+          - Voy al gimnasio.
+      - Description:
+        - ¿Qué haces en tu tiempo libre?
+        - ¿Qué hacen los estudiantes en su tiempo libre?
+        - ¿Tienes pasatiempos?
+      - Diversión:
+        - Va a la playa.
+        - Van al cine.
+        - Bailo en el gimnasio., Bailamos en el parque.
+        - Escucho música.
+        - ¿Vas de compras?
+      - Aprender:
+        - ¿Aprendes español?, Aprendo español.
+      - '1':
+        - Leo libros. Lees libros, leen libros
+        - Dibujo en mi cuarto.
+        - Nuestras hermanas están leyendo.
+        - Estoy escuchando música.
+        - Mis hijas están yendo al cine.
+    - Haciendo:
+      - Preguntas:
+        - Qué estás preguntando?
+        - ¿Qué estás haciendo?
+      - Haciendo díarios:
+        - Comiendo:
+          - Estoy comiendo tacos.
+          - Estás cenando?
+          - Nosostros estamos desayunando.
+        - Dormir:
+          - Dormir:
+            - Dormir:
+              - Estoy durmiendo.
+              - Me duermo a las diez
+            - Acostarse:
+              - Nos acostamos a las diez (Acostarse)
+              - ¿A qué hora te acuestas?
+              - Me acuesto a las once
+          - Despertar:
+            - ¿A qué hora te levantas?
+            - Me despierto a las ocho., Nos despertamos a las seis.
+        - Lavarse:
+          - Me peino en la mañana
+          - Se afeitan a las cuatro.
+          - Me baño a las ocho
+          - Lavar:
+            - Se lavan el pelo en la mañana.
+            - Me lavo los dientes en la noche.
+        - Vestir:
+          - Me visto en la tarde
+        - Descripción:
+          - ¿A qué hora?
+          - ¿Estás listo?, Casi estoy lista.
+      - Estudiando:
+        - Estamos estudiando.
+        - Estoy aprendiendo español.
+        - ¿Estás escribiendo?
+    - Movimientos:
+      - Transporte:
+        - Llegar y salir:
+          - Salir:
+            - Cuándo sales?, Salgo hoy. (Salir)
+            - Nosotros salimos hoy.
+            - Cúando salen tus padres? Mis padres salen el martes.
+            - Cúando sale el autobús? El autobús sale mañana.
+          - Llegar:
+            - ¿Qué día llegas?, Llego el lunes.
+            - ¿Qué día llega el tren?, El tren llega el martes.
+            - El avión sale el sábado.
+          - Siguiente:
+            - ¿Cuándo es el siguiente tren?
+            - Cuando dura el viaje
+            - ¿Cuál es la hora de llegada/salida?
+            - ¿Llega a tiempo el tren?
+            - Tengo prisa.
+          - Boletos:
+            - ¿Necesitas un boleto de ida (y vuelta)?
+            - Puedes pagar los boletos.
+          - Durante viaje:
+            - ¿Quién es el conductor? Ramón es el conductor.
+            - ¿Para el tren en Madrid?
+        - Formas:
+          - Regular:
+            - Necesitamos cuatro asientos (de pasillo/ventana).
+            - ¿Hay asientos disponibles?
+          - Coche:
+            - Vamos en coche.
+            - hay que buscar estacionamiento.
+          - Tren:
+            - Voy a la estación., estación de tren
+            - Voy al andén.
+            - ¿Es mejor/peor ir en tren?
+          - Metro:
+            - Voy en metro.
+            - Vamos a la parada de metro.
+      - Posición:
+        - Está cerca/lejos.
+        - Está a la izquierda/derecha.
+        - Está al norte/sur/este/oeste.
+        - Está al final de la calle.
+        - Hay una plaza en la esquina.
+        - El mercado está en frente del cine.
+        - El edificio está entre el parque y el hospital.
+      - A ir:
+        - Vas todo recto. Sigues todo recto.
+        - Tienes que ir derecho.
+        - ¿Caminamos hasta la estación?
+        - ¿Cruzo la calle? Cruzas la calle.
+        - Sigues todo recto
+        - Seguimos derecho.
+        - ¿Sigo adelante?
+        - ¿Tengo que caminar al parque?
+        - Vas desde la casa hasta el parque.
+        - El edificio está delante/al lado del parque.
+      - Dirección:
+        - ¿Cuál es tu dirección?
+    - Fiesta:
+      - Hacer una fiesta:
+        - ¿Quieres hacer una fiesta?
+        - La fiesta es el fin de semana.
+        - Queremos hacer una actividad.
+      - Actividades:
+        - ¿Qué actividad quieres hacer?
+        - Quiero bailar.
+        - ¿Qué bailes quieres hacer?
+        - Quiere cocinar tacos.
+        - Antes de bailar, quiero comer.
+        - Despues de cocinar, queremos comer.
+        - Queremos escuchar música.
+        - Podemos jugar juegos.
+      - Necesarios:
+        - Además, necesitamos bebidas.
+        - ¿Qué llevo yo?
+        - Mario quiere llevar comida.
+        - ¿Qué compro yo?
+        - Necesito comprar algunas bebidas.
+        - Necesitamos canciones divertidas.
+      - Invitados:
+        - ¿Cuántos invitados hay? Hay dieciséis invitados.
+        - ¿Cuántos invitados tenemos? Tenemos diecisiete invitados.
+    - Vestirse:
+      - Regulares:
+        - ¿Qué me pongo?
+        - ¿Qué ropa me pongo?
+        - Nos ponemos ropa negra.
+        - Tengo mi cartera
+      - Description:
+        - ¿De qué color es la camiseta?
+        - Los suéteres son azules
+      - La ropa:
+        - Camiseta:
+          - Tengo tres camisetas.
+          - ¿Tienes una camiseta roja?
+          - Te pones la camiseta blanca?
+        - Abrigos
+        - Chaqueta:
+          - Esta chaqueta tiene bolsillos.
+        - Suéter:
+          - Me pongo el suéter blanco.
+        - Zapatos:
+          - Me pongo los zapatos amarillos.
+        - Calcetín:
+          - Me pongo los calcetines blancos.
+          - Se pone los calcetines verdes.
+        - Gorra:
+          - Me pongo la gorra roja.
+        - Otros:
+          - Las blusas son blancas.
+          - ¿Te pones la falda verde?
+    - Cumpleaños:
+      - Cumpleaños:
+        - ¿Cuántos años tienes?, Tengo dieciocho años.
+        - Feliz cumpleaños!
+        - ¡Felicidades!
+        - Celebro con mi familia.
+      - Regalos:
+        - Es un regalo
+        - Tengo un regalo para ti., ¿Abro tu regalo?
+        - Eres muy generosa.
+      - Pastel:
+        - Es un pastel.
+        - El pastel está rico.
+        - Es un pastel de chocolate.
+        - Es un pastel dulce.
+      - Haciendos:
+        - Primero, comemos pastel.
+        - Después, abrimos los regalos.
+        - Luego, bailamos.
+    - Habilidades regular:
+      - Saber:
+        - Hablo inglés
+        - Sé hablar inglés.
+        - Sabemos hablar español.
+        - Sé contar en español.
+      - Regular:
+        - Sabes bailar
+        - Sabe jugar tenis
+        - ¿Saben jugar béisbol?
+        - Sí, mi primo sabe cantar.
+        - No sabemos jugar fútbol.
+      - Instrumentos musicales:
+        - ¿Tocas la guitarra?
+        - Saben tocar la guitarra.
+        - ¿Sabes tocar el piano?
+      - Diarios:
+        - ¿Qué sabes preparar?
+      - Comida:
+        - Sabemos preparar flan.
+        - Sabemos preparar tacos.
+        - Sé preparar ceviche.
+      - Habilidades regular:
+        - Sé montar en bicicleta.
+    - Tiempo:
+      - Tiempo:
+        - ¿Qué tiempo hace?
+        - Hace calor.
+        - Hace frío.
+        - Está nublado.
+        - Hace sol.
+        - Hace viento.
+        - Llueve mucho., Ahora está lloviendo.
+        - A veces nieva., Ahora está nevando.
+      - Positión:
+        - Está nevando afuera
+        - Adentro hace calor
+      - Estado de tiempo:
+        - Hace buen tiempo.
+        - Hace mal tiempo.
+      - Temperatura:
+        - ¿Qué temperatura hace?
+        - Hace veinte grados.
+        - Hace treinta grados.
+      - Estaciones:
+        - En invierno, nieva mucho.
+        - En primavera, hace buen tiempo.
+        - En verano, hace calor.
+        - En otoño, hace viento
+    - Limpiar:
+      - Limpiar:
+        - ¿Cuándo limpias?
+        - ¿Qué día de la semana limpias?
+        - Limpio los sábados.
+        - Limpio cada día.
+        - Debemos limpiar.
+      - Recoger:
+        - ¿Recoges los juguetes?
+        - Yo recojo los juguetes.
+      - Lavar platos:
+        - Tú lavas los platos hoy.
+        - Lavaplatos
+        - Lleno el lavaplatos.
+      - Lavadora:
+        - Saco la ropa de la lavadora.
+        - Pongo la ropa en el armario.
+      - Sacar la basura:
+        - Sí, saco la basura.
+      - Su cuarto:
+        - Ordeno mi cuarto cada día.
+      - Otros:
+        - Mientras tú limpias, yo cocino.
+        - Cocinamos los domingos.
+      - Perezoso:
+        - No, tengo pereza.
+    - Hacer comprar:
+      - Descripción:
+        - Es una buena compra
+      - Cliente:
+        - Hay un cliente
+        - ¿Dónde está el vendedor?
+      - Necesito y quiero:
+        - Necesito un pantalón.
+        - Quiero la camisa gris.
+        - Quiero el vestido naranja.
+        - Lo quiero
+        - Me lo llevo.
+      - Cuesta:
+        - Cuánto cuesta?
+        - Cuesta diez pesos.
+        - Cuestan veinte pesos.
+        - La camisa cuesta sesenta pesos.
+      - Propriedades de ropa:
+        - ¿Qué color quiere?
+        - ¿Qué talla necesita?
+        - ¿Tiene una talla mediana?
+      - Probar ropa:
+        - ¿Me lo puedo probar?
+        - Sí, me lo pruebo.
+        - ¿Te pruebas la camisa?
+        - Sí, se las prueba.
+    - Descripción cosas:
+      - Arquitectura:
+        - Apartamento:
+          - Descripción:
+            - ¿Cómo es tu apartamento?
+            - ¿Cómo es tu casa?
+            - Mi apartamento es pequeño.
+            - Mi casa es grande
+          - Estructura:
+            - Tu apartamento tiene una puerta.
+            - Tiene un garaje
+          - Cuarto:
+            - Tiene dos cuartos
+            - Tiene tres armarios.
+            - Tiene una mesa.
+          - Cocina:
+            - Tiene una cocina.
+            - La casa tiene un comedor.
+          - Baño:
+            - Tu casa tiene cuatro baños.
+            - Tiene cuatro sillas.
+            - Tiene un lavabo.
+          - Sala:
+            - Tiene una sala
+            - ¿Cuántos sofás tiene la sala?, Tiene un sofá.
+            - ¿Cómo es la sala?, La sala es cómoda.
+          - Dormitorio:
+            - Tiene cinco dormitorios.
+            - Tiene dos camas.
+            - ¿Cuántas camas tiene tu casa?
+        - Ciudad:
+          - Descripción:
+            - ¿Cómo es tu ciudad?
+            - Mi ciudad es grande
+            - Mi pueblo es pequeño.
+            - Tienes un mapa?
+            - Tiene muchos habitantes
+          - Lugares:
+            - Tiene cinco plazas.
+            - ¿Cuántas calles tiene el pueblo?, Tiene cuatro calles.
+            - ¿Dónde está el parque?
+            - La estación
+          - District:
+            - ¿Cómo es tu barrio?
+            - ¿Qué tan grande es el barrio?
+            - Hay edificios altos.
+            - ¿Hay un mercado en el barrio?
+            - Hay algunos parques en el barrio.
+            - Tiene muchos habitantes.
+            - Hay un hospital/centro comercial/piscina.
+      - Descripción humana:
+        - Apariencia:
+          - Tamaño:
+            - El hombre es alto., Los hombres son altos.
+            - Los niños son bajos.
+            - Las gatas son gordas.
+            - La niña es delgada.
+            - La mujer es alta
+          - Pelo:
+            - Nosotras somos rubias.
+            - Ellos son morenos.
+            - Tiene cabello oscuro.
+          - Joven/viejo:
+            - Mi tía es joven.
+            - Mis abuelas son viejas.
+          - Apariencia:
+            - Mi primo es guapo.
+            - Tenemos cinco nietos guapos
+          - Barba:
+            - Yo tengo bigote.
+            - Mi hermano tiene barba.
+          - Ojos:
+            - Tengo ojos claros.
+        - Personalidad:
+          - Mis perros son tímidos.
+        - Sentidos:
+          - Es serio.
+          - Son alegres.
+          - Estoy contento.
+          - Estamos tranquilos.
+          - ¿Estás bien/mal?
+        - Descripción:
+          - ¿Quiénes son ellas?
+          - ¿Cómo es la mujer?
+          - ¿Cómo es tu tía?
+          - ¿Cómo es tu personalidad?
+          - ¿Quién es ella?
+          - ¿Qué es?
+          - ¿Quién es él?
+        - Estados:
+          - Estamos aburridos.
+          - Estoy cansado.
+      - Fecha y hora:
+        - Cumpleaños:
+          - ¿Cuándo es tu cumpleaños?
+          - ¿Cuál es tu fecha de nacimiento?
+        - Fecha:
+          - ¿Qué mes es?
+          - Es enero/febrero/marzo.
+          - en abril
+          - ¿Cuál es la fecha de hoy?
+          - Es el seis de enero.
+          - Es el primero de noviembre.
+        - Meses:
+          - Enero
+          - Febrero
+          - Marzo
+          - Abril
+          - Mayo
+          - Junio
+          - Julio
+          - Agosto
+          - Septiembre
+          - Octubre
+          - Noviembre
+          - Diciembre
+        - Tarejas:
+          - ¿Cuándo vas a México?
+        - Día:
+          - Preguntas:
+            - ¿Qué día es hoy?
+            - ¿Qué día de la semana es?
+          - Día:
+            - Domingo
+            - Lunes
+            - Martes
+            - Miércoles
+            - Juéves
+            - Viernes
+            - Sábado
+          - Respuestas:
+            - Hoy es Lunes
+            - Juegan tenis el sábado.
+            - El tren sale el jueves.
+            - Juego fútbol el domingo.
+        - Regular:
+          - ¿Cuándo haces ejercicio? Hago ejercicio en la tarde.
+          - Hacen la tarea en la noche.
+          - Desayunamos a las ocho.
+          - ¿Cuándo cenan? Cenamos a las siete.
+          - Duermo en la noche.
+          - Trabajo en la mañana.
+          - Hace la cama en la mañana.
+        - Frecuencia:
+          - Palabras:
+            - Todo el día
+            - Todos los días
+            - A menudo
+            - A veces
+          - Otros:
+            - ¿Con qué frecuencia cocinas? Cocino todo el día.
+            - ¿Cuándo estudias? Estudio todos los días.
+            - Vas en metro a menudo.
+        - La hora:
+          - Preguntas:
+            - Qué hora es?
+            - Tienes reloj?
+          - Hora del reloj:
+            - Es la una
+            - Son las dos.
+            - Es la una en punto.
+            - Son las cinco y cuarto.
+            - Son las tres y media.
+            - Son las seis menos cuarto.
+          - Tiempo del frase:
+            - Llego a la una.
+            - Llego en veinte minutos.
+            - ¿Llegas a mediodía?
+            - Llego a medianoche.
+            - Ahora son las tres.
+            - Llego a las once de la noche.
+    - Básicos:
+      - Básico:
+        - Básico:
+          - Hola!
+          - Mucho gusto.
+          - Y tú?, Yo también, yo tampóco.
+          - Buenos días. Buenas tardes/noches.
+          - ¿Cómo estás? Estoy bien/mal. Muy bien/mal.
+        - Se llamar:
+          - Cómo te llamas?, Me llamo Gloria, Te llamas Marco?
+          - Cómo se llama?, Se llama Laura., Nos llamamos Fer y Daniel.
+          - ¿Cuál es su apellido?
+          - ¿Cuál es su nombre? Mi nombre es Marta.
+        - De dónde eres:
+          - De dondé eres? (Soy de México/España)
+          - ¿De dónde es?, Es español.
+        - Haciendos:
+          - A qué te dedicas?
+          - ¿A qué se dedica Juan?, Es doctor., Es ingeniero
+          - Soy estudiante., Soy profesor., También es profesora.
+      - Preguntas:
+        - Preguntas:
+          - ¿Qué quieres preguntar?
+          - ¿Cuál es el problema?
+        - Problemas:
+          - Tengo una pregunta
+          - Perdón. No comprendo.
+        - Traducir:
+          - ¿Qué significa esta palabra?
+          - ¿Cuál es la traducción de ...?
+          - Necesito un traductor.
+          - Puede buscar un traductor
+        - Repetir:
+          - ¿Puede repetir?
+          - Qué quiere decir?
+          - Más alto. Más despacio, por favor.
+        - Como decir:
+          - ¿Puedo comprobar la hora de salida?
+          - ¿Cómo se pronuncia esta palabra?
+          - ¿Cómo se escribe esta palabra?
+          - ¿Cómo se dice esta palabra?
+    - Comiendos:
+      - Mércado de comida:
+        - Quiero:
+          - ¿Qué desea?
+          - Quiero fruta.
+          - Quiero verduras.
+          - Quiero este melón.
+          - Esto es un huevo.
+        - Pagar:
+          - ¿Cuánto es?, Son cinco pesos.
+          - ¿Algo más?, Nada más, gracias.
+        - Comida:
+          - Quiero tomates
+          - ¿Venden pepinos?
+      - Comiendos:
+        - Frutas:
+          - Melón
+          - Límon
+          - Manzanas
+          - Uvas
+        - Verduras:
+          - Lechuga
+          - Tomates
+          - Pepinos
+          - Zanahoria
+        - Carne:
+          - Jamón
+          - Bistec y pollo
+          - Queso
+          - Huevo
+        - Comida regulare:
+          - Tortillas
+          - Pan
+          - Arroz
+      - Restaurante:
+        - Déscription:
+          - Vamos a un restaurante.
+          - Sirven tacos aquí
+        - La gente:
+          - ¿Dónde está el mesero?
+        - Recomendar:
+          - ¿Qué recomienda?
+          - ¿Cuál es el plato del día? (Plato del día)
+        - Entrar en restaurante:
+          - Una mesa para dos.
+          - La carta, por favor.
+        - Pedir la comida:
+          - Normalmente pido tacos.
+          - ¿Pides ceviche?
+          - Pedimos tacos
+          - Piden flan
+          - Siempre pido pescado.
+        - Comida:
+          - El desayuno
+          - Piden la cena.
+          - Quiero la sopa.
+          - ¿Quiere azúcar con el café?
+          - No bebo café en el desayuno.
+          - La ensalada
+          - ¿Pedimos postre?
+        - Salud!:
+          - ¡Salud, Ana!
+        - La cuenta:
+          - La cuenta, por favor.
+          - ¿Está incluida la propina?
+          - Son ochenta pesos.
+      - Barbacoa:
+        - Descripción:
+          - Hoy tenemos una barbacoa.
+        - Comida:
+          - Tenemos carne.
+          - Quiero jamón.
+          - Hay bistec y pollo en la barbacoa.
+          - ¿Qué quieren comer los niños?, Quieren queso.
+          - ¿Hay tortillas?
+          - Quiero arroz.
+          - Sí, hay pan.
+          - Quiere uvas.
+          - Queremos helado., Quiero un poco de helado.
+        - Descripción comida:
+          - Está muy caliente.
+          - Está delicioso.
+          - Están muy picantes.
+          - Está muy salado.
+          - La carne no necesita sal.
+        - Botellas:
+          - Hay cinco botellas.
+          - Quiere jugo.
+        - Cucharas:
+          - Tenemos cucharas.
+          - No tenemos cuchillos.
+          - Sí, hay platos.
+          - Necesito un tenedor.
+    - Make small talk:
+      - Regular:
+        - ¿Qué tal?
+        - ¿Cuál es tu nombre?
+        - ¿Cuál es tu apellido?
+      - Conocer:
+        - Conozco a tu hermana.
+        - Conozco a su madre.
+        - ¿Conoces a mi primo?
+        - ¿Conoce a mi sobrino?
+        - ¿Conoces a aquel hombre?
+        - Conozco a aquella mujer.
+        - Conoce a aquellas mujeres.
+        - Conocemos a ambas mujeres.
+        - No conozco ni a tu hermano ni a tu hermana.
+      - Visit:
+        - Conozco México.
+        - No conozco España.
+        - Conozco ambos países.
+      - Dondé:
+        - ¿Dónde está tu hermano?
+        - Mi hermana está aquí.
+        - Mi padre está ahí.
+        - Mi sobrino está allí.
+      
+    - Talks about future plans:
+      - Descripción:
+        - ¿Qué vas a hacer?
+        - Pues no sé.
+      - Haciendos:
+        - Con amigos:
+          - Vamos a quedar con nuestros amigos.
+          - Vas a quedar con alguien?
+        - Tomar un refresco:
+          - Van a tomar un refresco.
+        - A ir:
+          - Lugares:
+            - Voy a ir al supermercado.
+            - ¿Vienes conmigo al supermercado?
+            - Va a ir a la tienda.
+          - Transportes:
+            - ¿Compartimos un taxi?
+            - Preferimos ir en taxi.
+            - Prefiero ir en metro.
+            - Preferimos ir en taxi.
+            - El metro está cerrado.
+            - No, el metro está abierto.
+          - A ir:
+            - ¿Vienes conmigo?
+            - Sí, voy contigo.
+            - ¿Vas con alguien?
+        - Viajar:
+          - Descripción:
+            - Voy a hacer un viaje.
+            - Voy a ir de excursión.
+            - Cuando hago un viaje, voy solo.
+          - Tomar fotos:
+            - ¿Vas a tomar fotos?
+            - Sí, quiero tomar unas fotos.
+            - Cuando hago un viaje, tomo fotos
+        - Cuidar:
+          - ¿Vas a cuidar a tus hijos?
+          - Vas a cuidar a ambos niños?
+          - Voy a cuidar aquel jardín.
+          - Voy a cuidar mi jardín.
+        - Practicar:
+          - Va a practicar el piano.
+        - Película:
+          - ¿Vas a ver la tele?
+          - Voy a ver la tele contigo.
+          - Van a ver una película.
+          - Yo voy a ver la misma película.
+        - Misma idea:
+          - Tengo la misma idea.
+          - Compartimos las misma ideas.
+          - ¡Qué divertido!
+        - Tiempo:
+          - No, hace demasiado calor.
+        
+    - Talk about school:
+      - Descripción:
+        - Voy a la universidad.
+        - Voy a la escuela.
+        - Voy a la escuela de Arte.
+      - Clases:
+        - Esta es mi clase.
+        - Las clases están en aquellos horarios.
+      - Sistema de escuela:
+        - Tengo una prueba de Español.
+        - No quiero malas notas.
+        - Tengo cuatro clases en mi horario.
+      - Estudiar:
+        - Estudio en la biblioteca.
+        - ¿Cuál es la respuesta?
+      - La gente (maestro):
+        - Mi maestro se llama Luis.
+        - Tengo cita con mi profesor.
+        - Está en su oficina.
+        - Necesito algunos consejos.
+      - Cursos:
+        - Estudio Arte.
+        - Quiero ser artista.
+        - Tengo clase de Historia.
+        - ¿Tienes clase de Matemáticas?
+        - Tengo clase de Física.
+        - Tenemos clase de Estadística.
+        - ¿Dónde está el aula de Arte?
+      - Cosas:
+        - En la librería.
+        - Compro lápices.
+        - Compro papel.
+        - En mi mochila.
+        - Están en aquellas mochilas.
+        - Es un diccionario.
+        - Está en el escritorio.
+        
+    - Do a job interview:
+      - Ocupado:
+        - ¿Estás ocupado?
+        - Tengo una agenda muy ocupada.
+      - Trabajo:
+        - ¿Cuál es su profesión?
+        - ¿Tiene trabajo ahora?
+        - Tengo demasiado trabajo en esta empresa.
+      - Entrevistas:
+        - Tengo tres entrevistas.
+        - Tienes consejos para mi entrevista?
+      - Informaciónes:
+        - Preguntas:
+          - Cuál es su lugar de nacimiento?
+          - ¿Cuál es su lugar de trabajo?
+          - ¿Cuál es el lugar de trabajo de la actriz?
+          - ¿Cuál es su nacionalidad?
+          - ¿Tiene experiencia laboral?
+        - Repuestas:
+          - Trabajo en el extranjero.
+          - Tengo experiencia laboral como cocinero.
+      - Jefe:
+        - Tengo una empresa.
+        - Soy empresaria.
+        - Soy el jefe de la empresa.
+      - Empresa:
+        - El empresario tiene buenas respuestas.
+      - Oficina:
+        - ¿Quiere firmar el contrato?
+      - Ocupaciones:
+        - Soy abogado.
+        - Soy actor.
+        - ¿Es actriz?
+        - Es cocinero.
+        - ¿Es comerciante?
+        - Soy bombero.
+        - Soy periodista.
+        
+    - Proverbs:
+      - Más sabe el diablo por viejo que por diablo (Age comes before wisdom)
+      - Perro que ladra no muerde (Its bark is worse than its bite)
+      - Camarón que se duerme se lo lleva la corriente (You snooze, you lose)
+      - Mucho ruido y pocas nueces (All talk and no action)
+      - El hábito no hace al monje (Clothes don't make the man)
+      - A palabras necias, oídos sordos. (Sticks and stones may break my bones, but words will never hurt me)
+      - Aprendiz de mucho, maestro de nada. (Jack-of-all-trades, master of none)
+      - El que mucho abarca poco aprieta. (Don't bite off more than you can chew)
+      - Las palabras se las lleva el viento. (Talk is cheap)
+      - En tierra de ciegos, el tuerto es rey. (In the land of the blind, the one-eyed man is king)
+      
+    - Give your opinion:
+      - Parece:
+        - ¿Qué te parece?
+        - ¿Te parece bien?, Me parece bien.
+        - Me parece importante.
+        - ¿Qué te parece?, Es muy triste.
+      - Estar de acuerdo:
+        - Tienes razón.
+        - ¿Es verdad?, Es cierto.
+        - ¿Estás de acuerdo conmigo?
+        - Estoy de acuerdo contigo.
+      - Pensar:
+        - Topic:
+          - ¿Qué piensas del pantalón?, Creo que es barato.
+          - Creo que es raro.
+          - ¿Crees que es peligrosa?, Pienso que es peligroso.
+          - ¿Qué opinas de la cocina?, Pienso que es moderna.
+          - ¿Qué piensas de la casa?, Pienso que es bonita.
+        - Non-topic:
+          - ¿Por qué crees eso?, Porque es muy raro.
+          - ¿Qué piensan?, Pensamos que es caro.
+      - Opinar:
+        - Opino que es agradable.
+        - Opino que está delicioso.
+        - ¿Qué opinas?, Por mí, está bien.
+        - ¿Qué te parece el vestido?, Es bonito. Sin embargo, es caro.
+      - Por mí:
+        - Por mí, está bien.
+      - Según:
+        - Según tú, ¿es peligroso?
+        - Según ella, es grande.
+        
+    - Say what you like:
+      - Me gusta:
+        - Cosa:
+          - Me gusta el café.
+          - Me gustan los perros.
+          - Me gusta la comida.
+          - Les gusta la historia.
+          - No me gusta el té.
+          - No me gustan los gatos.
+        - Haciendos:
+          - Me gusta correr.
+          - Me gusta llegar temprano.
+        - Cosas en ciudad:
+          - ¿Te gustan los museos?
+          - Me gusta el teatro.
+        - A mí:
+          - A mí me gusta caminar.
+          - A ti te gusta el café.
+          - A ella le gustan los libros.
+          - A ellos les gustan los animales.
+        - Preguntas:
+          - ¿Te gustan?
+      - Encantar:
+        - Me encanta el teatro.
+        - Me encantan los perros.
+        - No me gusta el ruido.
+        - Me encanta traducir.
+        - Me encanta traducir.
+      - A mí sí.Me encantan los animales.
+      - A mí no.
+      - A mí también.
+      - A mí tampoco.
+      - Claro que sí.
+      - Claro que no.
+      
+    - Say why you study Spanish:
+      - Descripción:
+        - Útil y fácil:
+          - ¿El español es útil?, ¡El español es tan útil!
+          - ¿El español es fácil para ti?
+        - Quiero hablar la lengua española.
+        - Disfruto cuando estudio español.
+        - Me gusta la literatura mexicana.
+        - Entiendes todo en español?, No, todavía no.
+      - En aprender:
+        - Las palabras:
+          - Es una palabra corta.
+          - Es una palabra frecuente.
+          - Entiendo algunas palabras.
+          - ¿Conoces muchas palabras?, Ya conozco muchas palabras.
+          - Entendemos muchas palabras.
+        - Practicar:
+          - Quiero mejorar mi español.
+          - Todavía tengo que practicar más.
+          - Cada vez que practico, mejoro mi español.
+          - Cada vez que practicas, entiendes más.
+          - Como el español es difícil, necesito practicarlo.
+        - Empenzar:
+          - Empiezo a practicar en casa.
+          - ¿Empiezas a practicar solo?
+          - Empieza a hablar con su profesor.
+          - Empiezo a entender la lengua.
+      - Razones:
+        - Lenguas:
+          - Quiero aprender más lenguas. 
+          - Es una lengua interesante.
+          - Me gustan las lenguas nuevas.
+        - Escuela:
+          - Necesito preparar mi examen.
+          - Para tener buenas notas.
+          - Porque tengo que hacer mi tarea.
+        - Vivir:
+          - Para vivir en México.
+        - Logros:
+          - Quiero lograr mis metas.
+      
+    - Finding a rent:
+      - Precios:
+        - ¿Cuánto es la renta?, La renta son mil euros.
+        - ¿Cuál es el precio?, Un millón de euros.
+        - ¿Se requiere un depósito?, Sí, son cien euros.
+        - Necesito ahorrar.
+      - Encontrar:
+        - No encuentran un apartamento barato.
+        - No encontramos el apartamento perfecto.
+      - Yo digo que sí., ¿Tú qué dices?
+      - ¿Hay un anuncio del apartamento?
+      - Hay un anuncio en el periódico.
+      - ¿Cuándo enseñan el apartamento?
+      - Propriedades casa:
+        - Me gusta el tamaño.
+        - No tiene mucha luz.
+      - Posición:
+        - ¿Qué hay arriba?
+        - Sí, está cerca del banco.
+        - Sí, está cerca de la farmacia.
+        - ¿Cómo entro?, Entras con un código.
+        - El apartamento está en el centro.
+        - Hay un cajero automático cerca.
+        - El apartamento es el número 10.
+      - Cosas:
+        - ¿Funciona la lavadora?
+        - La secadora está aquí.
+        - Está encima de la lavadora.
+        - ¿Dices que está encima de la secadora?
+      - Quejar de:
+        - Me quejo del ruido.
+        - Se queja del barrio.
+  

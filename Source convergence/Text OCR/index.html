@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OCR with Tesseract.js</title>
+</head>
+<body>
+  <h1>OCR Demo</h1>
+  <img id="input-image" src="https://tesseract.projectnaptha.com/img/eng_bw.png" alt="Sample Text" />
+
+  <button id="btn-ocr">Recognize Text</button>
+  <pre id="output-text"></pre>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+  <script>
+    const btn = document.getElementById('btn-ocr');
+    const output = document.getElementById('output-text');
+    const img = document.getElementById('input-image');
+
+    btn.addEventListener('click', () => {
+      output.textContent = 'Recognizing... please wait';
+
+      Tesseract.recognize(
+        img.src,
+        'eng',  // language code
+        { logger: m => console.log(m) }
+      ).then(({ data: { text } }) => {
+        output.textContent = text;
+      }).catch(err => {
+        output.textContent = 'Error: ' + err.message;
+      });
+    });
+  </script>
+</body>
+</html>

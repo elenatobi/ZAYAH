@@ -1,0 +1,423 @@
+- Texttyper:
+      - Vanligt text:
+        - ...<Vanlig text>...
+      - Artikel:
+        - Början
+        - Mitten (Flera pelare)
+        - Slutet
+      - Resonerande text:
+        - ...<Resonerande text>...
+      - Dikter:
+        - ...<Dikter>...
+      - '#ref:Roman:2144'
+      - '#ref:Novell:2145'
+      - Krönika:
+        - ...<Krönika>...
+      - Argumentationer:
+        - Egenskaper (Avsikter):
+          - Övertyga en annan med sina åsikter
+          - Framföra sin åsikt
+          - Bevisa genom sin åsikt
+        - Tes:
+          - Egenskaper:
+            - Åsikt
+            - Påstående
+            - Tydlig åsikt
+            - Ingen frågeställning
+            - Avslutar ofta med punkt/utropstecken
+          - Exempel på teser:
+            - Obligatorisk skoluniform
+            - Lägga ner pengar på sjukvård
+            - Billigare el -> Sänk priset på elen
+            - Förbättra skolmaten
+        - Argument:
+          - Egenskaper:
+            - En argument är en bevis för sin åsikt
+            - Man bevisar genom argumentation
+          - Logos-argument:
+            - Logik och statistik underbygger argument
+            - Kallas för faktaargument med källa
+          - Ethos-argument:
+            - Man använder tillitningar för förtroende
+            - Använder även auktoriteter
+          - Pathos-argument:
+            - Kallas även som en känsloargument
+            - En känslomässig form av argument
+          - Motargument:
+            - Bevis mot tesen
+          - Bemötande:
+            - Bevis mot motargument
+        - Exempel:
+          - 'Exempel1: Det är bra att ha pengar!':
+            - 'Tes: Det är bra med pengar! (ospecifik) -> Det är bra att ha pengar!'
+            - 'Argument1: Det är lättare än byteshandel'
+            - 'Argument2: Att ha pengar ger frihet'
+            - 'Motargument: Pengar skapar klyftor mellan fattiga och rika -> Pengar skapar fattigdom och rikedom'
+            - 'Bemötande: Rikedom ligger ofta i ägande, inte rena pengar'
+          - 'Exempel2: Skolan ger gratis kollektivtrafik biljetter':
+            - 'Tes: Skolan borde ge gratis busskort till alla elever'
+            - 'Argument1: Många elever har inte råd med långa skolresor'
+            - 'Argument2: Vissa elever har gångsvårigheter, även vid korta sträckor'
+            - 'Motargument: Mer ungdomar åker buss på natten och beter sig dåligt'
+            - 'Bemötande: Skolans busskort är inte giltig efter klockan sju på kvällen till klockan fem på morgonen.'
+        - Viktiga meningar:
+          - För det första/andra/tredje
+          - Dessutom ...
+          - Vidare ...
+          - Vissa menar dock ... (motargument)
+          - Däremot
+      - Noveller:
+        - Novellanalys:
+          - Novellanalys egenskaper:
+            - 4 steg av analys:
+              - 1. Man ska läsa noggrann (mikronivå)
+              - 2. Diskutera vilken bild man får av personen/miljö/stämning
+              - 3. Hitta stöd i texten för tankar och iakttagelser (detalj, ord, uttryck och sitaution)
+              - 4. Berätta om läsning för andra
+            - Noveller begrepp:
+              - 'Tema: Huvudhandling'
+              - 'Motiv: (Situationer skapar temat)'
+              - Liknelser (e.g. Ni beter er som svin)
+              - Metafor (e.g. Era svin)
+              - 'Kronologi: Tid och ordning'
+              - 'Peripeti: Vändpunkt':
+                - VAnligt i teaterpjäser och noveller
+                - En bra författare skriver planteringar viktiga
+                - Nämna ett gevär -> avfyras
+              - 'Planteringar: Ledtrådar'
+              - 'Karaktärer: Personer'
+              - Miljö
+        - Egenskaper:
+          - '#ref:Egenskaper:9702'
+          - 3 enheterna:
+            - Tid, rum och handling (begränsad)
+          - Roman är en tårta, med varje tårtdel som kapitel, och novell är tårtdelen
+        - Exempel på noveller:
+          - Pälsen av Hjalmar Söderberg:
+            - Fattig doktor
+            - Fick en päls av sin kompis
+            - Behandlad med respekt av sin fru efteråt
+            - En otrogen fru med en annan rik
+            - Päls -> symbol som status
+          - En hjältes död av Pär Lagerkvist:
+            - Vinst vid klättring av kyrka och kyrktorn och senare död
+            - En vill utmana och bli belönad och självklart dör
+            - Åskådare ser händelsen, och ingen minns honom
+    - Konversation:
+      - Börjar konversation
+      - Ändra prattema
+      - Början
+      - Slutet
+      - Flytighet
+      - Mellanledning
+      - ineffektiv konversation:
+        - Kanal
+        - Olika omfattning
+        - Generationsklyfta
+      - Byter prattema
+    - Presentationer
+    - Åsikter och tankar
+    - Intervju
+    - Retorik:
+      - 3-talet (3 exempel):
+        - (kort, glad tacksam)
+        - Sverige ska bli renare, gladare, bättre
+      - Metafor:
+        - Era svin = Ni beter er dåligt
+      - Liknelse:
+        - Vår kärlek är som en solros
+      - Retorisk fråga:
+        - Vem vill inte vara bäst?
+      - Direkt tilltal:
+        - Vi vill att du ska få mer pengar i plånboken
+      - Alliteration:
+        - Vemodiga Vera värkar vilja vara väldigt vågad.
+      - Anafor:
+        - Jag vill inte mer. Jag kan inte mer. Jag orkar inte mera
+      - Epifor:
+        - Alla hatar måndagar. Jag lider av måndagar. Ångesten slår rekord på måndagar.
+      - Antites:
+        - Motsatsen läggs ihop
+      - Underdrift/Överdrift (Hyperbol):
+        - Jag har betalat miljoner för den här cykeln.
+        - Alla i hela Sverige lider och är fattiga.
+      - Paralelism:
+        - Lyssna på mig. Hör vad jag säger.
+      - Euphemism:
+        - Han har dött -> Han går bort
+      - Vi-känsla:
+        - Alla vi som bor i Sverige.
+    - Arbetsprocesser:
+      - Intellectio (uppgiftförståelse)
+      - Inventio (material och uppslag)
+      - Dispositio (Innehållsordning)
+      - Elocutio (välja sitt språk)
+      - Memoria
+      - Actio
+    - Litteraturhistoria:
+      - Antikens litteratur:
+        - Beskrivning:
+          - Starten på västerländsk litteratur
+        - 3 viktiga former:
+          - Epos -> Skönlitteratur
+          - Lyrik -> Dikter
+          - Dramatik -> Teater och filmer
+        - Kännetecken:
+          - Gudar:
+            - Gudar var centrala i berättelserna
+            - Gudar var ideal (förebild) för människor
+          - Myter:
+            - Myter (gudebok liknar en guidebok) berättar hur man ska vara ideal
+          - Muntlig berättad:
+            - Berättade historier
+          - Rapsoder:
+            - Berättare
+          - Hexometer:
+            - Rytmen med diktverserna
+        - Sapfo:
+          - Berättades mer som sånger (lyra)
+          - Längtan, livsöden och skönhet (tydlig språk)
+        - Homeros:
+          - Beskrivning:
+            - Verksam 700 f.kr
+            - 'Homeriska frågan: (forskan om funnits, kan skrivas)'
+            - Muntlig kommunikation, rapsoderna (turnerande artist) vandrade meelan byar, Homeros var en av dem
+            - Iliaden troligt skrevs eposet innan Odyséen
+            - Starten av västerländsk litteratur
+            - Trojanska kriget:
+              - Akilles när han krigade mot Hector
+              - Akilles vrede
+          - Iliaden (krigsskildring)
+          - Odyséen (skepparhistoria)
+        - Jämförelse idag:
+          - Koppling till dagens samtid:
+            - Influensers
+            - Kända människor
+          - Homeros som idag:
+            - Regissörer
+            - Författare bland annat Astrid Lindgren
+            - Människor med makt (ekonomisk eller social)
+          - Rapsoder som idag:
+            - Får berättelser berättade
+            - Sociala medier, podcast
+            - Filmer, serier, skönlitteratur
+          - Kännetecken till idag:
+            - Epos => Skönlitteratur
+            - Lyrik => Dikter
+            - Dramatik => Teater film och serier
+            - Hexameter => Rap
+            - Muntlig tradition => Sociala medier konstigskrivna texter
+    - Språklig variation:
+      - Dialekter:
+        - Sydsvenska:
+          - Skånska
+        - Götamål:
+          - Värmländska
+          - Göteborgska
+          - Norsk inflytande
+        - Sveamål
+        - Dalmål
+        - Norrländsk mål:
+          - Lugn och avhugget
+          - Frys du, vill du att jag ska stäng
+          - obra=bra, out=in
+        - Östsvenska mål/Finlandssvenska:
+          - Mumintrollen
+        - Åländska
+        - Gotländska
+        - Dialektutjämning:
+          - 70~80-talet dialekten försvinner eftersom urbanisering
+      - Språklig variation
+      - Språkväxling
+      - Sociolekter
+      - Standardsvenska
+      - Dialekter
+      - Kronolekter
+      - Fackspråk
+      - Attituder till olika varianter av språket
+      - Språkanvändning och makt, koppling mellan språk och makt/respekt
+      - Språk och identitet
+      - Gruppspråk
+      - Skillnader på språk
+    - Språkriktighet:
+      - Texter:
+        - Stycke:
+          - 'Kärnmening: Sammanfattning av innehållet i en mening'
+          - Beskrivning av kärnmening fyller hela stycket
+          - Det ska innehålla endast det som ryms inom kärnmenings innehåll
+          - Avsluta med en sammanfattande mening
+          - 1 Stycke -> 1 tanke/idé/perspektiv
+        - Mellan stycke:
+          - Blankrad, radmatning, mellanrum
+          - Indrag
+          - Vid växling av olika tankar/idéer/perspektiv
+        - Text diagram:
+          - Texten som cirkel i mitten
+          - Stycken som cirklar med linje från stycken till mittencirkeln
+      - Syftningar:
+        - 'Jag slår honom (Jag: subjekt, honom: objekt)'
+        - Jag går hem till honom, de går hem till dem
+        - 'Hans fru gillar sin hund (sin: reflexiv)'
+        - Hennes hund åt upp sin mat (hundens mat)
+        - Hennes hund åt upp hennes mat (fruns mat)
+      - Onödiga ord:
+        - Tvätta din text så att det finns inga talspråksmarkörer
+        - Överdriven användning av "så", "då" och "som" ska tas bort
+      - Skriv ihop och skriv isär:
+        - Skriv ihop:
+          - Sammansatt:
+            - Alltigenom
+            - Alltihop
+            - Alltmer
+            - Förutom
+            - Ihop
+            - Isär
+            - Itu
+            - Såväl ... som ...
+          - Tidsord:
+            - Alltsedan
+            - Dessförinnan
+            - Dessvärre
+            - Härförleden
+            - Häromdagen
+            - Häromkvällen
+            - Häromsistens
+            - Häromåret
+            - Ibland
+            - Understundom
+          - Platsord:
+            - Någonstans
+            - Tillbaka
+            - Tvärtom
+            - Tvärtemot
+            - Varstans
+            - Överallt
+          - Andra ord:
+            - Ifall
+            - Ihjäl
+            - Ihåg
+            - Likväl
+            - Ånyo
+            - Överens
+        - Skriv isär:
+          - Framför allt
+          - För all del
+          - För den skull
+          - I gång
+          - I ordning
+          - I stället
+          - I så fall
+          - Lika väl
+          - Något så när
+          - Till godo
+          - Till rätta
+          - Till synes
+          - Till väga
+          - Tills vidare
+          - Över lag
+          - Allt som oftast
+          - Före detta
+          - Rent ut
+          - Så pass
+          - Sammansatt:
+            - Allt fler
+            - Allt färre
+            - Allt mindre
+          - Tidsord:
+            - För sent
+            - God afton
+            - I alla fall
+            - Till slut
+            - Under tiden
+      - Talspråk och skriftspråk:
+        - Utav - Av
+        - Våran - Vår/Vårt
+        - Dom - De/dem
+        - Mej/dej/sej - Mig/dig/sig
+        - Medans - Medan
+        - Tillbaks - Tillbaka
+        - Kolla - Kontrollera, undersöka, observera, se
+        - Nåt - Något
+        - Sen - Sedan
+        - Även fast - Även om, fastän
+      - Förkortningar:
+        - t.ex., bl.a., m.m., m.fl.
+        - t ex, bl a, m m, m fl
+      - Uppräkningar:
+        - Han köpte mjölk, bröd, apelsiner och bananer
+        - Ta med dig smör och bröd samt pålägg
+        - Vill du ha kaffe, te eller vatten?
+      - Andra ord för berätta:
+        - Redogöra för
+        - Utreda
+        - Redovisa
+        - Diskutera
+        - Resonera kring
+        - Undersöka
+      - Liknande talande ord:
+        - En (antal) och än:
+          - Det är många men du är bara en
+          - Är vi framme än?
+        - Enda (antal) och ända:
+          - Du är den enda
+          - Du måste köra ända fram
+        - Sett (att se) och sätt (hur):
+          - Har du sett Pelle?
+          - På vilket sätt vill du att vi gör?
+      - Meningsundvikelser:
+        - Undvik att börja meningar med "men" eller "och"
+        - Prova att ta bort "men" eller "och"
+        - (Och) samtidigt åkte Maria till affären
+        - (Men) ibland vill jag stanna hemma.
+        - (Och/Men) oftast går jag hem.
+      - Ord
+      - Meningar
+    - Språkhistoria:
+      - Urnordiska
+      - Rusvenska
+      - Fornsvenska
+      - Äldre nysvenska
+      - Yngre nysvenska
+      - Nusvenska
+    - Svensk grammatik:
+      - ...
+    - Svenska i skolan:
+      - Argumentation Ett anspråkslöst förslag:
+        - ...
+      - Svindlande höjder:
+        - Boksamtal 1 (...):
+          - 1. Tror du att spöket är äkta eller inte?
+          - Spöket är riktigt med kopplingar till idéer (Inte ett riktigt kristet liv -> ) Romantiken (Känslomässig, flummiga, bort i andra saker)
+          - 2. Varför gifte Catherine med Edgar? ...
+          - 3. Hur var föräldrar mot sina barn i 1800-talet?
+          - Tough but fair? Vad fick barn göra? De såg mer som arbetsarbetskraft? 1800-talet började allmän skolgång
+          - 4. Varför blev Heathcliff väldigt bra behandlad av Earnshaw? 
+          - Andra barnen behandlar Earnshaw dålig och Earnshaw får starkare bindning till Heathcliff.
+          - (Speglande) Under Romantiken var man intresserad av exotiska (ideal) e.g. Quasimodo (missbildad) med vackra Esmeralda
+          - 5. Sker det någon förändring efter att Frances dör?
+          - Hindley tappar kontrollen och blir förkrossad. Hindley mår sämre Heathcliff blir kaxigare (Modern var symbol för kärlek)
+          - 6. Vart har Heathcliff tagit vägen?
+          - (gissning) Han gav sig iväg för att bli rik och värdig att gifta Catherine.
+          - 7. Hur fick Heathcliff pengar?
+          - 8. Fanns det något rätt eller fel val när Catherine skulle välja mellab Edgar och Heathcliff
+          - ...
+        - Boksamtal 2:
+          - (...) -> Möjliga svar [Ingen]
+          - Hur har Heatchfliff förändrats genom boken? Vad beror det på?
+          - Han hade varit en oskyldig pojke som hela tiden blivit mobbad av Hindley. Efter den gamle Earnshaws död hindrade Hindley Heathcliff att bli utbildad genom att låta honom att arbeta. Den livsmiljön skapade psykologiska trauma vilket gjorde honom ond, paranoid, pervers och så vidare.
+          - Hur tjänade Heathcliff sina pengar som gjorde honom så rik?
+          - Är Heathcliff bra/dålig person? Han är en dålig karaktär ... (Hans onda karaktärsdrag)
+          - Utveckling av Heathcliff (en utböling/konkurrent mot andra barnen för Earnshaw -> Bortskämd av gamle Earnshaw -> ...)
+          - \*Var det vanligt att folk dog så tidigt på den tiden? Alla av karaktärer dog på grund av alla möjliga problem karaktärerna hade.
+          - Kärna (Centrerad kring Heathcliff) [Förlust av status och människor, kärlek, uppfostran, hämnd, avundsjuka]
+          - Hur kom det sig ... (Emile Brontes liv (Skapad av sin ensamhet hela tiden sjuk hemma, Man tar det vad man får, Desperat, Om någon ger mig en hand ...))
+          - Varför ger Heathcliff upp sina tankar på hämnd? Han har förlorat glädjen att skada andra. Han har ärvt alla egedom, han hade Edgars och Hindleys egendom. Han ville förstöra allt men han orkar inte. Hatkänslor vs känslolös?
+          - Vem var den karaktär med den svåraste livet? Edgar Linton eftersom /Heathcliff
+          - Varför tvingar Heathcliff Linton att gifta sig med Catherine? Hämnd mot Edgar eftersom Edgar har tagit allt ifrån honom (stora Catherine). Han ville ta unga Cathy. Han ville ta allt Edgar hade eftersom Catherine var hans allt. (Hämndbegäret)
+          - Vad ville Heathcliff göra med sina egendomar efter ...
+          - Vad gjorde att Nelly kunde komma till Svindlande höjder?
+          - Varför höll Edgar Catherine borta från Svindlande höjder?
+          - Var Heathcliffs handlingar rättfärdigade?
+          - Varför hämtar Edgar Linton och inte Heathcliff?
+          - Varför ger Heathcliff upp sina tankar på hämnd?
+          - Varför ljuger Nelly för Edgar och säger att hans dotter är lycklig?

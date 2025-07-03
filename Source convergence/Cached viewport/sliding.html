@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Todo List (Sliding Window)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #list-container {
+            height: 500px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .todo-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .spacer {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Virtual Todo List (Sliding Window)</h2>
+<div id="list-container"></div>
+
+<script>
+    const totalItems = 2000000;
+    const viewportSize = 30;
+    const bufferSize = 30;
+    const itemHeight = 30;
+
+    let logicalList = Array.from({ length: totalItems }, (_, i) => ({ id: i, text: `Todo item #${i}` }));
+    let dirtyIndices = new Set();
+
+    const container = document.getElementById('list-container');
+    container.innerHTML = '<div id="top-spacer" class="spacer"></div><div id="items"></div><div id="bottom-spacer" class="spacer"></div>';
+
+    const topSpacer = document.getElementById('top-spacer');
+    const itemsContainer = document.getElementById('items');
+    const bottomSpacer = document.getElementById('bottom-spacer');
+
+    let bufferRange = { start: 0, end: 0 };
+
+    function renderView(scrollTop) {
+        const firstVisibleIndex = Math.floor(scrollTop / itemHeight);
+        const lastVisibleIndex = Math.min(totalItems, firstVisibleIndex + viewportSize);
+
+        const newBufferStart = Math.max(0, firstVisibleIndex - bufferSize);
+        const newBufferEnd = Math.min(totalItems, lastVisibleIndex + bufferSize);
+
+        // Free items no longer in the buffer
+        for (let i = bufferRange.start; i < newBufferStart; i++) freeElement(i);
+        for (let i = bufferRange.end; i > newBufferEnd; i--) freeElement(i - 1);
+
+        bufferRange = { start: newBufferStart, end: newBufferEnd };
+
+        topSpacer.style.height = `${newBufferStart * itemHeight}px`;
+        bottomSpacer.style.height = `${(totalItems - newBufferEnd) * itemHeight}px`;
+
+        itemsContainer.innerHTML = '';
+        for (let i = newBufferStart; i < newBufferEnd; i++) {
+            const el = document.createElement('div');
+            el.className = 'todo-item';
+            el.dataset.index = i;
+            el.textContent = logicalList[i].text;
+
+            el.onclick = () => {
+                logicalList[i].text += ' (edited)';
+                dirtyIndices.add(i);
+                el.textContent = logicalList[i].text;
+            };
+
+            itemsContainer.appendChild(el);
+        }
+    }
+
+    function freeElement(index) {
+        if (dirtyIndices.has(index)) {
+            // In this demo, we're already updating the logical list directly on click
+            dirtyIndices.delete(index);
+        }
+    }
+
+    container.addEventListener('scroll', () => {
+        renderView(container.scrollTop);
+    });
+
+    // Initial render
+    renderView(0);
+</script>
+
+</body>
+</html>

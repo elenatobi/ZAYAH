@@ -1,0 +1,30 @@
+- Stel mekanik modeller:
+  - 2 objekt sträcka:
+    - ...
+  - Nedfall:
+    - E_K0+E_P0=E_K1+E_P1
+    - mgh = ½mv_1²
+    - v_1 = √(2gh)
+    - h = v_0²/2g
+  - Lutande plan(Nedfall):
+    - F_G + F_f + F_N = 0
+    - F_Gx = F_f = F_G*sin(α)
+    - F_Gy = F_N = F_G*cos(α)
+    - F_f = F_G*sin(α) = μ*F_N = μ*F_G*cos(α)
+    - μ*F_G*cos(α) = F_G*sin(α) => μ = tan(α)
+  - Fri fall(Nedfall):
+    - h = ½at² + v_0t = ½gt² => t = √(2h/g)
+    - v1 = at + v_0 = gt = g*√(2h/g) = √(2gh)
+  - Kaströrelser(Nedfall):
+    - h = ½at² + v_0t = -½gt² + v_0t
+    - a = (v_1-v_0)/t => gt = v_0 => t = v_0/g
+    - h = v_0(v_0/g) - ½g(v_0/g)² = v_0²/2g
+  - Pendelrörelse(Nedfall):
+    - ΔF_D = ∫mg*sin(α) Δx
+  - Flertal objekt [Cirkulära]:
+    - E_KA0 + E_PA0 + E_PB0 + E_PB1 = E_KA1 + E_PA1 + E_KB1 + E_PB1
+    - m1gh = ½m_A*v² + ½m_Bv² + m_A*gl
+    - v = √(2gh(m_B - m_A)/(m_A + m_B))
+  - Infinitesimalkalkyl:
+    - Fjäder W_PT = ∫F*s Δx = ∫kxs Δx = ½kx²
+    - Kedja (E_P0 = mg(½l) => E_P1 = 0)

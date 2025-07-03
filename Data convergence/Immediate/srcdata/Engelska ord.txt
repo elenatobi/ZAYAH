@@ -1,0 +1,5340 @@
+- Words:
+      - Basics:
+        - General words:
+          - Good or bad:
+            - Good:
+              - Good:
+                - Good
+              - Improve:
+                - Improve
+                - Recuperate
+            - Bad:
+              - Gruesome:
+                - Guresome
+                - Horrendous
+              - Condemned:
+                - Condemned
+                - Denounced
+          - Mentioned words:
+            - Last mentioned:
+              - Last mentioned
+              - The latter
+          - Reason and result:
+            - Effects collection:
+              - In sequence:
+                - In sequence
+                - Consecutive
+              - Aftermath:
+                - Aftermath
+                - In the situation following
+        - General:
+          - Ask how it is:
+            - Questions:
+              - How are you?
+              - How's it going? (quite informal)
+              - How are you doing? (quite informal)
+            - Answers:
+              - I'm fine, thanks
+              - I'm OK, thanks
+              - Not too bad, thanks
+              - Alright, thanks
+              - Not so well
+            - Other:
+              - How about you?
+              - And you?
+              - And yourself?
+          - Asking what someone is/has been doing:
+            - Questions:
+              - What are you up to?
+              - What have you been up to?
+            - Answers:
+              - Working a lot
+              - Studying a lot
+              - I've been very busy
+              - Same as usual
+              - Not much or not a lot
+              - I've just come back from … Portugal
+          - Asking where someone is:
+            - Where are you?
+            - I'm …
+            - At home
+            - At work
+            - In town
+            - In the countryside
+            - At the shops
+            - On a train
+            - At Peter's
+          - Asking about someone s plans:
+            - Do you have any plans for the summer?
+            - What are you doing for …?
+            - Christmas
+            - New Year
+            - Easter
+        - Making friends (Basic):
+          - ...
+      
+      - Object descriptions:
+        - General objects:
+          - Basic:
+            - Number:
+              - Number:
+                - 0~9:
+                  - zero
+                  - one
+                  - two
+                  - three
+                  - four
+                  - five
+                  - six
+                  - seven
+                  - eight
+                  - nine
+                - 10~19:
+                  - ten
+                  - eleven
+                  - twelve
+                  - thirteen
+                  - fourteen
+                  - fifteen
+                  - sixteen
+                  - seventeen
+                  - eighteen
+                  - nineteen
+                - 20~99:
+                  - twenty
+                  - twenty-one
+                  - twenty-two
+                  - thirty
+                  - thirty-two
+                  - forty
+                  - fifty
+                  - sixty
+                  - seventy
+                  - eighty
+                  - ninety
+                - 100~999:
+                  - one hundred
+                  - one hundred and one
+                  - one hundred and two
+                  - two hundred
+                  - three hundred
+                  - four hundred
+                  - five hundred
+                  - six hundred
+                  - seven hundred
+                  - eight hundred
+                  - nine hundred
+                - 1e3 ~ 1e6:
+                  - one thousand
+                  - one thousand and twenty-three
+                  - one thousand two hundred and thirty-four
+                  - one thousand and five hundred
+                  - two thousand
+                  - three thousand
+                  - four thousand
+                  - five thousand
+                  - five thousand five hundred and fifty-five
+                - 1e6 ~ ...:
+                  - one million
+                  - five million
+                  - ten million
+                  - one hundred million
+                  - one billion
+                  - one trillion
+              - Count:
+                - 1st ~ 9th:
+                  - first
+                  - second
+                  - third
+                  - fourth
+                  - fifth
+                  - sixth
+                  - seventh
+                  - eighth
+                  - ninth
+                - 10th ~ 19th:
+                  - tenth
+                  - eleventh
+                  - twelfth
+                  - thirteenth
+                  - fourteenth
+                  - fifteenth
+                  - sixteenth
+                  - seventeenth
+                  - eighteenth
+                  - nineteenth
+                - 20th ~ 99th:
+                  - twentieth
+                  - thirtieth
+                  - fortieth
+                  - fiftieth
+                - 100th ~ ...:
+                  - one hundredth
+                  - one thousandth
+                  - one millionth
+              - Number addition:
+                - Increase:
+                  - Increase
+                  - Ramp up
+            - Datetime:
+              - Datetime:
+                - Datetime Units:
+                  - Second
+                  - Minute
+                  - Hour
+                  - Day
+                  - Week
+                  - Month
+                  - Quarter
+                  - Year
+                  - Decade
+                  - Century
+                  - Millennium
+                - Parts of the Day:
+                  - Morning
+                  - Day
+                  - Noon
+                  - Evening
+                  - Night
+                  - Midnight
+                  - Sunrise
+                  - Sunset
+                - Weekdays:
+                  - Monday
+                  - Tuesday
+                  - Wednesday
+                  - Thursday
+                  - Friday
+                  - Saturday
+                  - Sunday
+                - Months:
+                  - January
+                  - February
+                  - March
+                  - April
+                  - May
+                  - June
+                  - July
+                  - August
+                  - September
+                  - October
+                  - November
+                  - December
+                - Seasons:
+                  - Winter
+                  - Spring
+                  - Summer
+                  - Autumn
+              - Special days:
+                - Special Occasions:
+                  - Birthday
+                  - New Year
+                  - Christmas
+                  - Carnival
+                  - Easter
+                  - Ramadan
+                  - Diwali
+                - Gift-related Items:
+                  - Present
+                  - Tape
+                  - Bow
+                  - Giftwrap
+                  - Card
+                - Celebratory Items:
+                  - Salvo
+                  - Fireworks
+                  - Firecracker
+                  - Sparkler
+                - Decorative Items:
+                  - Bouquet
+                  - Wreath
+                  - Snowball
+                  - Snowflake
+                  - Snowman
+              - Season styles:
+                - Springy:
+                  - Springy
+                  - Vernal
+              - Frequency:
+                - Common:
+                  - Common
+                  - Relevant
+                - Strange:
+                  - Strange
+                  - Mysterius
+                  - Uncanny
+                - Imminent:
+                  - At hand
+                  - Imminent
+            - Colors/Colours:
+              - Yellow:
+                - Yellow
+                - Gold
+              - Red:
+                - Red
+                - Crimson
+                - Scarlet
+                - Violet
+              - Green:
+                - Green
+              - Blue:
+                - Blue
+                - Light blue
+                - Turquoise
+                - Aquamarine
+              - Grey:
+                - Grey
+              - Black:
+                - Black
+              - White:
+                - White
+                - Ivory
+                - Cream
+                - Silver
+              - Brown:
+                - Brown
+                - Beige
+                - Bronze
+                - Khaki
+              - Orange:
+                - Orange
+          - Basic objects:
+            - Solid:
+              - Solid object attributes:
+                - Hidden:
+                  - Transparent:
+                    - See-through
+                    - Sheer
+                  - Hidden:
+                    - Hidden
+                    - Disguised
+                    - Veiled
+                - Durability:
+                  - Durable:
+                    - Durable
+                    - Heavy duty
+                    - Heavy-duty pants
+                  - Resilience:
+                    - Resilience
+                    - Durability
+                - 5 senses:
+                  - To see:
+                    - To see
+                    - To check
+                    - (Hon kollar)
+            - Compound:
+              - Compound attributes:
+                - Clean:
+                  - Clean:
+                    - Clean
+                  - Dirty:
+                    - Dirty
+              - Compound:
+                - Mixture:
+                  - Mixture:
+                    - Mixture
+                    - Hodgepodge
+                - Structure:
+                  - Network:
+                    - Network
+                    - Grid
+                - Packages:
+                  - Box:
+                    - cardboard box
+                    - paper bag
+                    - box
+                  - Bottle:
+                    - bottle
+                  - Package:
+                    - package
+                    - tin
+                    - plastic container
+                    - tube
+                    - roll
+              - Variety:
+                - To vary:
+                  - Variety
+                  - Variant
+                  - Variable
+                  - To vary
+                - Diversity:
+                  - Diversity
+                  - Variety
+              - Content:
+                - Full of:
+                  - Full of
+                  - Fraught
+          - Motion:
+            - Fast motion:
+              - Rampage
+              - Spree
+            - Compound motion:
+              - To catch
+              - Aquire
+              - Contract
+          - Deformation:
+            - Damage:
+              - Damage
+              - Destroy
+              - Mar
+            - Bursting:
+              - Bursting
+              - Erupting
+            - Scattered pieces:
+              - Scattered pieces
+              - Remains
+              - Debris
+              - Rubble
+          - Positional:
+            - In position:
+              - In position
+              - Aligned
+        - Math and science:
+          - Mathematics:
+            - Mathematical Operations:
+              - Basic Operations:
+                - Addition
+                - Subtraction
+                - Division
+                - Multiplication
+            - Equations and Symbols:
+              - Geometric Shapes:
+                - Square
+                - Triangle
+                - Circle
+                - Oval
+                - Rectangle
+              - Algebraic Symbols:
+                - Equation
+                - Section
+                - Ray
+                - Plus
+                - Minus
+                - Equal
+                - Total
+                - Percent
+                - Fraction
+              - Mathematical Functions:
+                - Square root
+                - Degree
+                - Diagram
+                - Infinity
+                - Diagonal
+                - Logarithm
+            - Trigonometric Functions:
+              - Trigonometric Ratios:
+                - Sine
+                - Cosine
+                - Tangent
+                - Cotangent
+            - Geometric Shapes:
+              - Lines and Angles:
+                - Straight line
+                - Curve
+                - Polygonal line
+                - Parallels
+                - Acute angle
+                - Right angle
+                - Straight angle
+              - Circles and Curves:
+                - Circle
+                - Oval
+                - Semicircle
+                - Ellipsoid
+              - Polygons:
+                - Triangle
+                - Rectangle
+                - Rhombus
+                - Trapezoid
+                - Pentagon
+                - Hexagon
+                - Polygon
+              - 3D Shapes:
+                - Cube
+                - Parallelepiped
+                - Cone
+                - Cylinder
+                - Tetrahedron
+                - Octahedron
+                - Dodecahedron
+                - Icosahedron
+            - Mathematical Concepts:
+              - Comparison and Equality:
+                - Comparison
+                - Approximate equality
+                - Equal
+              - Greek Letters:
+                - Alpha
+                - Beta
+                - Gamma
+                - Delta
+                - Epsilon
+                - Omega
+                - Pi
+              - Mathematical Notations:
+                - Matrix
+                - Sigma
+                - Integral
+                - Factorial
+              - Quantifiers and Logic:
+                - Universal quantifier
+                - Existential quantifier
+              - Number Systems:
+                - Natural numbers
+                - Whole numbers
+                - Rational numbers
+              - Absolute Value and Limit:
+                - Absolute value
+                - Limit
+          - Science:
+            - Laboratory Tools and Equipment:
+              - Chemistry tools:
+                - Flask
+                - Test tube
+                - Vial
+                - Funnel
+                - Forceps
+                - Alcohol lamp
+                - Lab spoon-spatula
+                - Bowl
+                - Clamp
+                - Screw clamp
+              - Biological tools:
+                - Microscope
+              - Physics tools:
+                - Scales
+                - Pendulum
+                - Water circulation
+                - Magnet
+                - Stand
+                - Screw clamp
+                - Matches
+                - Glass
+                - Batteries
+                - Centrifuge
+              - Research tools:
+                - Scientists
+                - Experiment
+                - Samples
+            - Concepts:
+              - Scientific Concepts and Theories:
+                - DNA
+                - Periodic table
+                - Atom
+                - Theory of relativity
+                - Big bang theory
+                - Evolution
+                - Chemical reaction
+          - Astronomy:
+            - Celestial Bodies:
+              - Celestial Bodies:
+                - Sun
+                - Earth
+                - Moon
+              - Universe:
+                - Universe
+                - Sky
+              - Constellation:
+                - Polar star
+                - Great Bear
+                - Little Bear
+              - Stars and Galaxies:
+                - Stars
+                - Galaxy
+                - Black hole
+                - Nebula
+                - Quasar
+                - Milky Way
+              - Planets:
+                - Mercury
+                - Venus
+                - Mars
+                - Jupiter
+                - Saturn
+                - Uranus
+                - Neptune
+                - Pluto
+              - Astronomical Objects:
+                - Asteroid
+                - Comet
+                - Meteorite
+                - Rings
+                - Crater
+            - Space Exploration:
+              - Celestial Events and Phenomena:
+                - Shooting star
+                - Solar eclipse
+                - Meteor shower
+                - Auroral storm
+              - Space Exploration:
+                - Space
+                - Spacecraft
+                - Space station
+                - Cosmonauts
+                - Probe
+                - Spacesuit
+              - Observation and Instruments:
+                - Observatory
+                - Telescope
+                - Spectroscope
+                - Hubble Telescope
+                - Lens
+                - Star atlas
+              - Astronomical Terminology and Phenomena:
+                - Unidentified flying object
+            - Celestial mechanics:
+              - Astronomical Concepts and Phenomena
+                - Orbit
+                - Planetary alignment
+                - Radiation
+              - Astronomical Observations and References:
+                - Star atlas
+                - Zodiac
+        - Applications:
+          - Descriptions:
+            - Assets:
+              - Assets
+              - Supply (supplies)
+              - (Tillgångar)
+          - Regular objects:
+            - Regular objects:
+              - Ring
+              - Spectacles
+              - Sunglasses
+              - Wristwatch, pocket watch
+              - Wallet
+              - Handkerchief
+              - Bag, suitcase
+              - Chain
+              - Buckle
+            - Writing and Stationery:
+              - Writing Instruments:
+                - Pens:
+                  - Pens
+                  - Pencils
+                  - Brush
+                - Marker:
+                  - Felt-tip pens
+                  - Felt-tip pen
+                - Colored:
+                  - Coloured pencils
+                  - Charcoal crayon
+                - Correction Tools:
+                  - Rubber
+                  - Sharpener
+                  - Correction pencil
+                  - Correction fluid
+                  - Correction tape
+              - Drawing and Measuring Tools:
+                - Ruler:
+                  - Set square
+                  - Drawing ruler
+                - Angle tools:
+                  - Protractor
+                  - Stencil
+                  - Compasses
+                  - Thickness gauge
+              - Stationery:
+                - Notepads and notebooks:
+                  - Notepads
+                  - Exercise books
+                  - Note paper
+                  - Exercise book
+                  - Notebook
+                - Papers:
+                  - Files
+                  - Paper
+                  - Printed sheet
+                  - Paper trays
+                  - File
+                  - Tracing paper
+                  - Paper tray
+                  - Vertical storage
+                - Sticky notes:
+                  - Sticky notes
+                  - Post-it notes
+                  - Adhesive tape
+                  - Bulldog clip
+                - Folder and covers:
+                  - Envelope
+                  - Folder
+                  - Card index
+                  - Bookmark
+                  - Cover
+              - Art Supplies:
+                - Plasticine:
+                  - Plasticine
+                - Paints:
+                  - Gouache
+                  - Palette
+                - Drawing set:
+                  - Drawing set
+                  - Drawing board
+                  - Tube
+                  - Colour paper
+              - Organizational Tools:
+                - Calendar
+                - Day planner
+              - Miscellaneous:
+                - Correction fluid
+                - Scissors
+            - Mail and Postage:
+              - Mail and Postage:
+                - Seal
+                - Stamp
+                - Numerator
+                - Stamp pad
+            - Handcraft:
+              - Sewing:
+                - Tools and Equipment:
+                  - Needle
+                  - Thread
+                  - Sewing machine
+                  - Knitting needles
+                  - Thimble
+                - Notions and Accessories:
+                  - Button
+                  - Elastic thread
+                  - Ribbon
+                  - Zip
+                  - Knot
+                - Techniques and Crafts:
+                  - Sewing
+                  - Embroidery
+                  - Stitch
+                  - Patchwork
+                  - Lace
+                  - Netting
+                  - Seam
+                  - Reel
+              - Art and Crafts:
+                - Beading and Jewelry Making:
+                  - Beads
+                  - Seed beads
+                  - Bead weaving
+                - Painting and Drawing:
+                  - Painting
+                  - Glass painting
+                - Textile Crafts:
+                  - Embroidery hoop
+                  - Macramé
+                  - Batik
+                - Paper Crafts:
+                  - Decoupage
+                  - Scrapbooking
+                - Sculpture and Modeling:
+                  - Modelling
+                  - Artistic wood carving
+                  - Mosaic
+                - Other Crafts:
+                  - Burning
+                  - Soap making
+              - Yarn and Fiber:
+                - Types of Yarn:
+                  - Wool
+                  - Cotton
+                  - Silk
+                  - Linen
+                  - Mohair
+                  - Synthetics
+                - Fiber Crafts:
+                  - Knitting
+                  - Crochet
+                  - Weaving
+          - Construction tools:
+            - Hand Tools:
+              - Combining tools:
+                - Hammer:
+                  - Hammer
+                  - Mallet
+                  - Nail puller
+                  - Pick
+                  - Trowel
+                - Screwdrivers:
+                  - Philips screwdriver
+                  - Slot head screwdriver
+                  - Spark plug spanner
+                - Compresser:
+                  - Jack
+                  - Compressor
+                  - Extension
+                  - Adapter
+                - Spanners:
+                  - Nut spanner
+                  - Screw spanner
+                  - Hex key
+                  - Box wrench
+                  - Ratchet wrench
+                  - Nut runner
+                - Measuring Tools:
+                  - Tape measure
+                  - Spirit level
+                  - Voltmeter
+                  - Dosimeter
+                  - Water level
+                - Clamping Tools:
+                  - Clamp
+                  - Vice clamp
+                  - Clamping screw
+                - Finishing Tools:
+                  - Sandpaper
+                  - Roller
+                  - Paintbrush
+                  - File
+                  - Needle files
+                  - Brush
+                  - Chisel
+                - Pen tools:
+                  - Staple gun
+                  - Soldering iron
+              - Cutting Tools:
+                - Knife:
+                  - Utility knife
+                  - Pallet knife
+                - Saws:
+                  - Handsaw
+                  - Fretsaw
+                  - Circular saw
+                  - Hacksaw
+                - Glass cutter:
+                  - Glass cutter
+                - Scissors:
+                  - Pincers
+                  - Tinsnips
+                  - Boltcutter
+                  - Pliers
+            - Construction/Work Equipment:
+              - Power Tools:
+                - Drill:
+                  - Electric drill
+                  - Drill driver
+                  - Drill hammer
+                  - Jackhammer
+                - Saw:
+                  - Chainsaw
+                  - Electric saw
+                - Grinder:
+                  - Power planer
+                  - Grinding machine
+                - Welding Tools:
+                  - Welding apparatus
+                  - Welder's mask
+                  - Electric chisel
+                  - Electric fretsaw
+                  - Electric tile saw
+                  - Pipe welding apparatus
+              - Land Tools:
+                - Heavy Equipment:
+                  - Generator
+                  - Compressor
+                  - Concrete mixer
+                  - Wheelbarrow
+                - Landscaping Tools:
+                  - Lawnmower
+                  - Trimmer
+                  - Blower
+                  - Snow blower
+                  - Scythe
+            - Garden tools:
+              - Garden Tools:
+                - Hand Tools:
+                  - Rake
+                  - Pitchfork
+                  - Square-point shovel
+                  - Round-pointed shovel
+                  - Sickle
+                  - Scythe
+                  - Hoe
+                  - Garden pruner
+                  - Lopping shears
+                  - Chopping knife
+                  - Bush cutter
+                - Powered Tools:
+                  - Scarifier
+                  - Aerator
+                  - Verticutter
+                  - Seeding machine
+              - Lawn Tools:
+                - Hose
+                - Lawnmower
+                - Sprayer
+              - Snow Tools:
+                - Snowblower
+              - Multi-purpose Tools:
+                - Garden tractor
+                - Garden grinder
+            - Equipments:
+              - Safety Equipment:
+                - Gloves
+                - Safety goggles
+                - Hard hat
+                - Welder's mask
+                - Respirator
+              - Ladder-related:
+                - Ladder
+                - Stepladder
+              - Construction tools/equipment:
+                - Winch
+                - Anvil
+                - Plate compactor
+                - Chain hoist
+              - Gardening tools/equipment:
+                - Cultivator
+                - Rototiller
+              - Miscellaneous items:
+                - Telpher
+                - Water dispenser
+                - Circular disk
+                - Diamond disk
+                - Voltage switch converter
+            - Construction materials:
+              - Fixtures and fasteners:
+                - Fixtures and Mounting Accessories:
+                  - Tip:
+                    - Screwdriver tip
+                    - Drill bit tip
+                    - Paintbrush tip
+                  - Tape:
+                    - Masking tape
+                    - Duct tape
+                    - Electrical tape
+                  - Bracket:
+                    - Shelf bracket
+                    - Curtain rod bracket
+                    - TV wall mount bracket
+                  - Hook:
+                    - Wall hook
+                    - Coat hook
+                    - Command hook
+                - Fasteners:
+                  - Nail:
+                    - Nail
+                    - Brad nail
+                    - Finish nail
+                    - Roofing nail          
+                  - Nut:
+                    - Nut
+                    - Hex nut
+                    - Wing nut
+                    - Lock nut
+                  - Bolt:
+                    - Bolt
+                    - Hex bolt
+                    - Carriage bolt
+                    - Eye bolt
+                  - Washer:
+                    - Washer
+                    - Flat washer
+                    - Lock washer
+                    - Fender washer
+                  - Screw:
+                    - Screw
+                    - Wood screw
+                    - Drywall screw
+                    - Machine screw
+                    - Self-driving screw
+                  - Rod:
+                    - Threaded rod
+                    - Curtain rod
+                    - Dowel rod
+                  - Cable:
+                    - Steel cable
+                    - Coaxial cable
+                    - Ethernet cable
+                  - Anchor:
+                    - Concrete anchor
+                    - Wall anchor
+                    - Toggle bolt anchor
+              - Building materials:
+                - Building Materials:
+                  - Brick:
+                    - Clay brick
+                    - Concrete brick
+                    - Fire brick
+                  - Cement:
+                    - Portland cement
+                    - Masonry cement
+                    - Mortar cement
+                  - Board:
+                    - Plywood
+                    - Fiberboard
+                    - Particle board
+                  - Tile:
+                    - Ceramic tile
+                    - Porcelain tile
+                    - Mosaic tile
+                  - Asphalt:
+                    - Asphalt shingle
+                    - Asphalt pavement
+                  - Fittings:
+                    - Pipe fittings
+                    - Hose fittings
+                    - Conduit fittings
+                - Architecture materials:
+                  - Beam:
+                    - Steel beam
+                    - Wood beam
+                    - Laminated beam
+                  - Paneling:
+                    - Wood paneling
+                    - MDF paneling
+                    - Wainscoting
+                  - Roofing Materials:
+                    - Roof tiles
+                    - Slate
+                  - Flooring Materials:
+                    - Tiles
+                    - Asphalt
+                    - Hardwood flooring
+                    - Vinyl flooring
+                    - Cork flooring
+                  - Wall Materials:
+                    - Boards
+                    - Wallpaper
+                - Construction surface components:
+                  - Construction Components:
+                    - Foundation block
+                    - Foamblock
+                    - Foam rubber
+                    - Styrofoam
+                    - Uncut stone
+                    - Gravel
+                    - Marble chips
+                  - Mesh:
+                    - Wire mesh
+                    - Mesh screen
+                    - Mesh fencing
+                  - Film:
+                    - Plastic film
+                    - Protective film
+                    - Reflective film
+                    - Wallpaper
+                - Building construction materials:
+                  - Architecture materials:
+                    - Wall Materials:
+                      - Plastic panel
+                      - Gypsum plasterboard
+                      - Wall panelling
+                    - Siding Materials:
+                      - Vinyl siding
+                    - Flooring Materials:
+                      - Plywood
+                      - Parquet board
+                      - Floorboard
+                      - Laminate
+                      - Linoleum
+                      - Carpeting
+                    - Construction Materials:
+                      - Concrete
+                      - Crushed stone
+                  - Flooring and Insulation:
+                    - Underlayment:
+                      - Cork underlayment
+                      - Foam underlayment
+                      - Moisture barrier underlayment
+                    - Hose:
+                      - Garden hose
+                      - Sump pump hose
+                      - Vacuum hose
+                    - Insulation:
+                      - Foam rubber
+                      - Styrofoam
+                      - Fiberglass insulation
+                      - Glass wool
+                      - Spray foam insulation
+                      - Reflective insulation
+                      - Foil insulation
+                      - Cork underlay
+                    - Flooring:
+                      - Hardwood flooring
+                      - Vinyl flooring
+                      - Laminate flooring
+                - Construction Accessories:            
+                  - Finishing materials:
+                    - Finishing Materials:
+                      - Sand
+                      - Play sand
+                      - Construction sand
+                      - Silica sand
+                      - Putty
+                    - Trim:
+                      - Trim
+                      - Baseboard trim
+                      - Crown molding
+                      - Chair rail
+                  - Painting and Adhesive Supplies:
+                    - Paint:
+                      - Latex paint
+                      - Oil-based paint
+                      - Spray paint
+                    - Solvent:
+                      - Paint thinner
+                      - Mineral spirits
+                      - Acetone
+                    - Glue:
+                      - Wood glue
+                      - Super glue
+                      - Epoxy adhesive
+                    - Caulk:
+                      - Silicone caulk
+                      - Acrylic caulk
+                      - Latex caulk
+                    - Adhesives and Paint:
+                      - Paint
+                      - Solvent
+                      - Glue
+                      - Sealing foam
+              - Building structures:
+                - Building Components:
+                  - Dog anchor
+                  - Steel cable
+                  - Metal gauze
+                  - Angle iron
+                  - Fittings
+                  - Pipe
+                  - Door closer
+                  - T-joint
+                  - Extension
+                  - Beam
+                  - Plinth
+                  - Threshold
+          - Weapons:
+            - Mechanical weapons:
+              - Bladed Weapons:
+                - Knives:
+                  - Knife
+                - Swords:
+                  - Sword
+                  - Rapier
+                  - Smallsword
+                  - Backsword
+                  - Kris
+                - Polearms:
+                  - Spear
+                  - Halberd
+                - Axes and Hatchets:
+                  - Axe
+                  - Axe-adze
+                  - Tomahawk
+              - Blunt Weapons:
+                - Hammers and Maces:
+                  - Hammer
+                  - Mace
+                  - Morningstar
+                - Clubs and Batons:
+                  - Club
+                  - Baton
+                  - Flail
+              - Ranged Weapons:
+                - Bows and Crossbows:
+                  - Bow
+                  - Crossbow
+                - Projectile:
+                  - Projectile
+                  - Ballistic
+                - Projectile Types:
+                  - Arrow
+                  - Bolt
+                - Slings and Catapults:
+                  - Slingshot
+                  - Sling
+                  - Ballista
+                  - Catapult
+                  - Trebuchet
+            - Firearms:
+              - Firearms:
+                - Handguns:
+                  - Gun
+                  - Revolver
+                - Rifles:
+                  - Submachine gun
+                  - Assault rifle
+                  - Carbine
+                  - Winchester rifle
+                  - Small-bore rifle
+                  - Sporting gun
+                  - Alarm gun
+                - Shotguns:
+                  - Shotgun
+              - Ammunition and Explosives:
+                - Ammunition Types:
+                  - Cartridge
+                  - Shell
+                  - Bullet
+                - Explosives:
+                  - Gunpowder
+                  - Grenade
+                  - Bomb
+                  - Dynamite
+                  - Nuclear bomb
+              - Firearm Components:
+                - Barrels and Muzzle Devices:
+                  - Barrel
+                  - Suppressor
+                  - Muzzle-sight
+                - Actions and Mechanisms:
+                  - Breech block
+                  - Receiver
+                - Sights and Optics:
+                  - Sight
+                  - Optical sight
+                  - Laser sight
+                - Trigger and Safety Mechanisms:
+                  - Trigger
+                  - Safety
+                  - Trigger guard
+                - Accessories:
+                  - Ammunition
+                  - Magazine
+            - Large Weapons:
+              - Vehicles:
+                - Land Vehicles:
+                  - Tank
+                  - Armoured personnel carrier
+                  - Armoured car
+                - Aircraft:
+                  - Helicopter
+                  - Fighter jet
+                  - Transport aircraft
+                  - Bomber
+                  - Drone
+                  - Amphibious aircraft
+                - Naval Vessels:
+                  - Submarine
+                  - Aircraft carrier
+                  - Missile cruiser
+              - Missiles and Rocket Systems:
+                - Missiles:
+                  - Ballistic missile
+                  - Missile system
+                - Rocket Systems:
+                  - Multiple-launch rocket system
+          - Regular:
+            - Light:
+              - Candle:
+                - Candle
+                - Candlestick
+          - World (Earth globe):
+            - Position and directions:
+              - Directions:
+                - North
+                - South
+                - West
+                - East
+            - Globe:
+              - Tools:
+                - Map
+                - Globe
+              - Continents:
+                - Africa
+                - America
+                - Antarctica
+                - Asia
+                - Australia
+                - Europe
+                - Eurasia
+            - City:
+              - Road Signs:
+                - Regulatory Signs:
+                  - Speed Limit
+                  - No Entry
+                  - No Stopping
+                  - No Turning
+                  - No Standing
+                  - One-Way Road
+                  - Yield
+                  - Stop Sign
+                  - No Overtaking
+                - Warning Signs:
+                  - Forward Only
+                  - No U-Turn
+                  - Pedestrian Crossing
+                  - Dead End
+              - Locations/Places:
+                - Commercial Buildings:
+                  - Warehouse
+                  - Hangar
+                  - Reception
+                  - Tyre Shop
+                  - Doctor's Surgery
+                  - Medical Centre
+                - Entertainment Venues:
+                  - Sauna
+                  - Disco
+                  - Amusement Park
+                  - Labyrinth
+                  - Oceanarium
+                - Parking Facilities:
+                  - Underground Parking
+                  - Petrol Station
+                - Transit Structures:
+                  - Garage
+                  - Tunnel
+                  - Gate
+          - Vehicles:
+            - Land Vehicles:
+              - Cars:
+                - Car description:
+                  - Car types:
+                    - Saloon
+                    - Estate
+                    - Hatchback
+                    - Coupe
+                    - Compact car
+                    - Convertible
+                    - Pick-up
+                    - Roadster
+                    - Minivan
+                    - Van
+                    - Off-road vehicle
+                  - Car brands:
+                    - Jeep
+                    - Limousine
+                    - Classic car
+                    - Race car
+                    - Dragster
+                    - Buggy
+                    - Hot rod
+                    - Hearse
+                  - Car fuel mode:
+                    - Electric car
+                    - Hybrid car
+                    - Armored car
+                    - Production car
+                    - Four-wheel drive
+                  - Land Vehicle Parts:
+                    - Chock
+                    - Carriage
+                    - Oar
+                    - Rowlocks
+                    - Foot pump
+                    - Manual pump
+                - Exterior Components:
+                  - Front End Components:
+                    - Bonnet
+                    - Front bumper
+                    - Front wing
+                    - Headlights
+                    - Indicator lights
+                  - Rear End Components:
+                    - Boot lid
+                    - Rear bumper
+                    - Rear wing
+                    - Taillights
+                    - Indicator lights
+                  - Side Components:
+                    - Front door
+                    - Rear door
+                    - Side mirror
+                    - Moulding
+                  - Roof Components:
+                    - Roof rack
+                    - Antenna
+                    - Canopy
+                  - Glass Components:
+                    - Windscreen
+                    - Rear window
+                    - Windscreen wiper
+                  - Other Exterior Components:
+                    - Number plate
+                    - Handle
+                    - Spoiler
+                    - Antiwing
+                - Interior Components:
+                  - Dashboard Components:
+                    - Ignition
+                    - Speedometer
+                    - Tachometer
+                    - Odometer
+                    - Fuel gauge
+                    - Coolant temperature
+                    - Satellite navigation
+                  - Controls and Switches:
+                    - Ignition key
+                    - Ignition lock
+                    - Light switch
+                    - Window regulator
+                    - Hazard lights
+                    - Air conditioning
+                    - Cigarette lighter
+                    - Heating control
+                    - Climate control
+                  - Pedals and Controls:
+                    - Accelerator pedal
+                    - Brake pedal
+                    - Clutch pedal
+                    - Handbrake
+                    - Indicator switch
+                  - Seating Components:
+                    - Seat
+                    - Headrest
+                    - Armrest
+                    - Seat belt
+                    - Child seat
+                  - Visibility Components:
+                    - Rear-view mirror
+                    - Sun visor
+                  - Storage Components:
+                    - Glove compartment
+                    - Cup holder
+                    - Console
+                  - Other Interior Components:
+                    - Audio system
+                    - Speaker
+                    - Subwoofer
+                    - Amplifier
+              - Applied land vehicles:
+                - Cars types:
+                  - Buses:
+                    - Trolleybuses
+                  - Lorries:
+                    - Articulated lorry
+                    - Delivery truck
+                    - Dustcart
+                    - Container truck
+                    - Milk truck
+                    - Tow truck
+                    - Breakdown truck
+                    - Cement mixer
+                    - Dumper truck
+                  - Tractors:
+                    - Tractors
+                    - Combine harvester
+                  - Emergency cars:
+                    - Fire engine
+                    - Police car
+                    - Ambulance
+                  - Other:
+                    - Steam roller
+                    - Crane truck
+                    - Snowmobiles
+                    - Combine harvester
+                    - Tanker
+                - Rail Vehicles:
+                  - Train
+                  - Commuter train
+                  - Monorail
+                  - Tram
+                  - Steam engine
+                - Bicycles:
+                  - Bicycle parts:
+                    - Frame
+                    - Wheel
+                    - Seat
+                    - Pedals
+                    - Chain
+                    - Headset
+                    - Connecting rod
+                    - Freehub mechanism
+                  - Motorcycles:
+                    - Scooters
+                    - Quad bikes
+                  - Bearings:
+                    - Rim
+                    - Spoke
+                    - Handholds
+                  - Tyre:
+                    - Inner tube
+                    - Tyre valve
+                  - Brake:
+                    - Brake disc
+                    - Brake blocks
+            - Air Vehicles:
+              - Aircraft:
+                - Aeroplane:
+                  - Aeroplane
+                - Helicopters:
+                  - Helicopter
+                - Fighter Aircraft:
+                  - Fighter Jet
+                  - Bomber
+                - Other types:
+                  - Transport Aircraft
+                  - Amphibious Aircraft
+                  - Acrobatic Aircraft
+                  - Supersonic Aircraft
+                  - Dirigible
+                  - Air Balloon
+                  - Hang Glider
+                  - Hydroplane
+                  - Drone
+                - Parts:
+                  - Fuselage
+                  - Wing
+                  - Screw
+                  - Chassis
+                  - Tail
+                  - Jet Engine
+              - Other:
+                - Loop-the-loop
+                - Passenger Loading Bridge
+            - Rocket:
+              - Rocket
+              - Shuttle
+            - Water Vehicles:
+              - Types of Vessels:
+                - Boats:
+                  - Motorboats
+                  - Motor yacht
+                  - Sailing yachts
+                  - Jet ski
+                  - Rowboats
+                - Recreational:
+                  - Motor:
+                  - Sailboat:
+                    - Catamaran
+                    - Fishing boat
+                    - Sailing yachts
+                  - Pontoon:
+                    - Pontoon
+                  - Pirate ship:
+                    - Pirate ship
+                - Commercial:
+                  - Ships:
+                    - Ferry
+                    - Tanker
+                    - Hovercraft
+                    - Barge
+                    - Tug
+                  - Large ships:
+                    - Steamboats
+                    - Liner
+                    - Bulk cargo ship
+                    - Refrigerator ship
+                    - Container ship
+                    - Nuclear-powered ship
+                    - Dry cargo ship
+              - Maritime Structures:
+                - Infrastructure:
+                  - Lighthouse
+                  - Shipyard
+                  - Port
+                  - Pier
+                  - Captain's bridge
+                  - Gangway
+                - Mooring and Anchoring:
+                  - Trailers:
+                    - Boat trailers
+                    - Buoy
+                    - Cleat
+                    - Bulwark chock
+                    - Bollard
+                  - Anchor:
+                    - Roller
+                    - Chain
+                    - Hawse
+                    - Windlass
+              
+              - Navigation and Equipment:
+                - Navigational Instruments:
+                  - Binoculars:
+                    - Binoculars
+                    - Spyglass
+                  - Navigator tools:
+                    - Compass
+                    - Chart plotter
+                    - Navigator
+                  - Radar:
+                    - Radar
+                    - Echo sounder
+                    - Echo sounder's transducer
+                - Communication and Signaling:
+                  - Radio station:
+                    - Megaphone:
+                      - Megaphone
+                      - Projector
+                    - Light:
+                      - Navigation light
+                      - Navigation light
+                - Miscellaneous Equipment:
+                  - Boathook
+                  - Ladder
+                  - Transom platform
+              - Parts and Components:
+                - Boat parts:
+                  - Parts:
+                    - Deck
+                    - Handrail
+                    - Mast
+                    - Flag
+                    - Flagpole
+                    - Life vest
+                    - Life ring
+                    - Fender
+                    - Cabin
+                    - Porthole
+                    - Deck hatch
+                  - Propulsion:
+                    - Propeller
+                    - Boat engine
+                    - Inboard engine
+                    - Saildrive
+                    - Steering propeller
+                  - Structure and maintenance:
+                    - Keel
+                    - Anode
+                    - Drainage plug
+                - Steering and Control:
+                  - Steering wheel
+                  - Engine controls:
+                    - Throttle
+                    - Gearshift
+                    - Ignition
+                    - Trim control
+                  - Onboard power panel
+                - Safety and Security:
+                  - Fuse
+                  - Switch
+                  - Battery terminals
+                  - Battery switch
+                  - Safety lanyard:
+                    - Kill switch
+                  - Swivel
+                  - Turnbuckle
+                  - Rigging shackle
+                  - Carabiner
+                  - Pawl
+                - Measurement and Monitoring:
+                  - Fuel gauge
+                  - Inclinometer
+                  - Anemometer
+                  - Engine telegraph
+          - Architecture:
+            - Architecture:
+              - Home fixtures:
+                - Doors:
+                  - Door Structure:
+                    - Door
+                    - Door handle
+                    - Door lock
+                  - Door Types:
+                    - Interior door
+                    - Exterior door
+                    - Sliding door
+                  - Door handle:
+                    - Lever handle
+                    - Knob handle
+                    - Push/pull handle
+                  - Door lock:
+                    - Deadbolt lock
+                    - Mortise lock
+                    - Cylinder lock
+                  - Door closer:
+                    - Surface-mounted closer
+                    - Concealed closer
+                    - Overhead closer
+                - Window:
+                  - Window Structure:
+                    - Window
+                    - Windowsill
+                    - Tray
+                  - Window Types:
+                    - Casement window
+                    - Double-hung window
+                    - Picture window
+              - Electrical fixtures:
+                - Electrical fixtures:
+                  - Electrical Fixtures:
+                    - Knife switch
+                    - Heated floor
+                    - Column
+                  - Electrical Components:
+                    - Terminal block
+                    - Tip
+                    - Punched tape
+                    - Holding angle
+                    - Fixing plate
+                    - Spike-grid connector
+                  - Socket:
+                    - Electrical outlet
+                    - Socket adapter
+                    - USB socket
+                  - Plug:
+                    - Standard plug
+                    - Grounded plug
+                    - Twist-lock plug
+                  - Switch:
+                    - Light switch
+                    - Dimmer switch
+                    - Toggle switch
+                  - Light fixture:
+                    - Chandelier
+                    - Pendant light
+                    - Ceiling fan with light
+                    - Halogen lamp
+                    - Energy saving lamp
+                    - LED lamp
+                  - Electrical wire:
+                    - Romex cable
+                    - Extension cord
+                    - Speaker wire
+                - Cooling and heating:
+                  - Cooling:
+                    - Fan
+                    - Split system
+                  - Cooling & heating:
+                    - Air conditioner
+                  - Heating:
+                    - (Oil) heater
+                    - Electric fireplace
+                    - Electric water heater
+                - Air controller:
+                  - Air controller:
+                    - Air ionizer
+                    - Humidifier
+                    - Steam inhaler
+                    - Sterilizer
+                    - Steamer
+                    - Convector
+                  - Ventilation and Ducts:
+                    - Hatch
+                    - Air duct
+                    - Diffuser
+                    - Ventilation grille
+              - Architecture types:
+                - Building:
+                  - Building
+                - Labyrinth:
+                  - Labyrinth
+                  - Maze
+            - Entrance:
+              - Security system:
+                - Electric doorbell
+                - Intercom
+                - Security system
+                - Video surveillance system
+                - Garage door
+              - Hallways:
+                - Hallway
+            - Room:
+              - Room types:
+                - Residential Spaces:
+                  - Study
+                  - Nursery
+                - Work/Study Spaces:
+                  - Office
+                  - Classroom
+              - Furnitures:
+                - General furniture:
+                  - Furniture set
+                - Table:
+                  - Table
+                - Chair:
+                  - Bench
+                  - Highchair
+                  - Bar stool
+              - Office furnitures and objects:
+                - Desk:
+                  - Desk chair
+                  - Desk lamp
+                  - Basket
+                  - Strong box
+                - Paper trays:
+                  - Paper trays
+                  - Noticeboard
+                  - Bulletin board
+                - Clip board:
+                  - Clips
+                  - Pins
+                - Envelope and letters:
+                  - Envelope
+                  - Letter
+                  - Parcel
+                  - Postage stamp
+                  - Postage stamps
+                - Pins and holders:
+                  - Drawing pin
+                  - Bulldog clip
+                  - Badge
+                  - Key holder
+                  - Business card holder
+              - Storage:
+                - Shelf:
+                  - Shelf
+                  - Drawers
+                  - Whatnot stand
+                  - Bookcase
+                - Cabinet:
+                  - Cabinet
+                  - Containers
+                  - Cupboard (freestanding)
+                  - Sideboard
+                - Hanger:
+                  - Hanger
+                  - Stand
+                  - Hook
+              - Decorations:
+                - Carpet:
+                  - Carpet
+                  - Rug
+                  - Carpet runner
+                - Window:
+                  - Window blinds
+                  - Curtains
+                  - Curtain rod
+                  - Roller blind
+                - Light:
+                  - Wall-mounted
+                  - Pendant
+                  - Floor
+                  - Ceiling
+                  - Nightlight
+                  - Backlighting
+                  - Night lamp
+            - Living room:
+              - Sofa
+              - Pouf
+              - Chessboard
+              - Tabletop
+            - Bathroom/restroom:
+              - Bathroom:
+                - Bathroom Fixtures:
+                  - Sink:
+                    - Tray
+                    - Sink
+                    - Pedestal sink
+                    - Vessel sink
+                    - Undermount sink
+                  - Bath:
+                    - Bath
+                    - Shower
+                  - Bathtub:
+                    - Bathtub
+                    - Freestanding bathtub
+                    - Alcove bathtub
+                    - Clawfoot bathtub
+                  - Toilet:
+                    - One-piece toilet
+                    - Two-piece toilet
+                    - Wall-mounted toilet
+                    - Toilet tank
+                  - Tap:
+                    - Tap
+                    - Bidet
+                - Bathroom machines:
+                  - Tooth brush:
+                    - Toothbrush
+                    - Irrigator
+                  - Clipper:
+                    - Electric razor
+                    - Clipper
+                    - Hair trimmer
+                  - Hair:
+                    - Hair dryer
+                    - Epilator
+                    - Curling iron
+                    - Electric curlers
+                    - Hair straightener
+                  - Washing clothes:
+                    - Washing machine
+                    - Tumble dryer
+                  - Drying:
+                    - Iron
+                    - Ironing machine
+                  - Fabric:
+                    - Sewing machine
+                  - Other:
+                    - Massager
+                - Cleaning machines:
+                  - Cleaning:
+                    - Hoover
+                    - Robot vacuum cleaner
+              - Plumbing:
+                - Plumbing Pipes:
+                  - Pipe:
+                    - PVC pipe
+                    - Copper pipe
+                    - PEX pipe
+                  - Pipes and Fittings:
+                    - Offset pipe
+                    - Cross joint
+                    - Connector
+                    - Pipe plug
+                    - Corrugated pipe
+                  - Fitting:
+                    - Elbow fitting
+                    - Tee fitting
+                    - Coupling fitting
+                  - Valve:
+                    - Ball valve
+                    - Gate valve
+                    - Check valve
+                    - Butterfly valve
+                  - Trap:
+                    - P-trap
+                    - S-trap
+                    - Bottle trap
+                  - Pump:
+                    - Submersible pump
+                    - Sump pump
+                    - Well pump
+                  - Sealing and Gaskets:
+                    - Rubber gasket
+                    - Sealing ring
+                - Water and Drainage Systems:
+                  - Drain:
+                    - Floor drain
+                    - Shower drain
+                    - Sink drain
+                  - Drainage system:
+                    - French drain
+                    - Stormwater drainage
+                    - Surface drainage system
+                  - Drainage Components:
+                    - Collector
+                    - Meter
+                    - Heating radiator
+                    - Drainpipe
+                    - Drain shaft
+                    - Waste trap
+                  - Filtration:
+                    - Water filter
+                    - Reverse osmosis system
+                    - Whole house filter
+            - Kitchen:
+              - Furnitures:
+                - Furniture:
+                  - furnitures:
+                    - table
+                    - chair
+                    - stool
+                    - bench
+                    - furniture knob
+                  - furniture properties:
+                    - folding chair
+                    - furniture leg
+                  - Sink:
+                    - sink
+                    - mixer tap
+                    - filter
+                  - cabinet:
+                    - wall cabinet
+                    - floor cabinet
+                - Compound furniture:
+                  - Organizer:
+                    - dish organiser
+                    - cutlery organiser
+                - Architectural:
+                  - Architecutre furniture:
+                    - freestanding
+                    - built-in appliance
+              - Kitchen material:
+                - Tableware:
+                  - Plates:
+                    - plate
+                    - bowl
+                    - mug
+                    - cup
+                    - glass
+                  - Eat:
+                    - fork
+                    - spoon
+                    - knife
+                    - chopsticks
+                  - sets:
+                    - tea set
+                    - dinner set
+                    - saucer
+                    - salad bowl
+                    - dessert plate
+                    - cake mould
+                  - glass:
+                    - shot glass
+                    - brandy glass
+                    - beer glass
+                    - wine glasses
+                    - white wine glass
+                    - red wine glass
+                    - martini glass
+                    - champagne glass
+                    - cocktail glass
+                  - Spoon:
+                    - draining spoon
+                    - spaghetti spoon
+                    - potato masher
+                    - cooking tongs   
+                    - ice cream spoon
+                - Food storage:
+                  - Dispencer:
+                    - juice squeezer
+                    - shaker
+                    - sugar dispenser
+                  - Food storager:
+                    - Jar:
+                      - jar
+                      - bread bin
+                      - steam cooker
+                    - Lids:
+                      - splash-proof lid
+                      - egg cup
+                - Tools:
+                  - Tools:
+                    - Measuring tools:
+                      - measuring cup
+                      - siphon
+                      - spring balance
+                      - spice mill
+                      - timer
+                      - kitchen scales
+                    - Tools:
+                      - brush
+                      - sponge
+                      - kitchen rails
+                      - hook
+                      - hinge
+                      - drawer stopper
+                  - Cutters:
+                    - Opener:
+                      - scissors
+                      - corkscrew
+                      - bottle opener
+                    - Knife set:
+                      - knife set
+                      - knife-sharpener
+                      - can opener
+                      - peeling knife
+                      - meat mallet
+                      - Cutting board
+                    - Types of knife:
+                      - bread knife
+                      - carving knife
+                      - fillet knife
+                      - peeling knife
+                    - Grater and cutters:
+                      - grater
+                      - wire whisk
+                      - strainer
+                      - rolling pin
+                      - egg slicer
+                      - garlic press
+                  - Ladles:
+                    - Ladle:
+                      - spatula
+                      - ladle
+                    - Strainer:
+                      - colander
+                - Fabric:
+                  - Fabric:
+                    - apron
+                    - kitchen towel
+                    - napkins
+                  - quilt:
+                    - oven mitt
+                  - pad and bag:
+                    - hot pad
+                    - fridge bag
+              - Machine devices:
+                - Food cooking machines:
+                  - Regular:
+                    - Microwave oven
+                    - Electric kettle
+                    - Electric samovar
+                    - Toaster
+                  - Baking:
+                    - electric grill
+                    - table base
+                    - pastry brush
+                    - baking tray
+                  - Stove:
+                    - Stove
+                    - Cooker hood
+                    - Induction cooktop
+                    - Gas stove
+                    - Oven
+                  - Cooker:
+                    - Slow cooker
+                    - Grill
+                    - Steam cooker
+                    - Deep fryer
+                    - Boiler
+                  - Regular food:
+                    - Aerogrill
+                    - Brazier
+                    - Roaster
+                  - Pans:
+                    - frying pan
+                    - saucepan
+                    - lid
+                    - wok
+                    - grill pan
+                    - ceramic pot
+                  - Kettles:
+                    - electric kettle
+                    - coffee machine
+                    - toaster
+                - Processors and makers:
+                  - Processor:
+                    - blender
+                    - food processor
+                    - mixer
+                    - mincer
+                  - Dish maker:
+                    - Crêpe maker
+                    - Ice cream machine
+                    - Egg cooker
+                    - Yogurt maker
+                    - Waffle iron
+                    - bread maker
+                    - yogurt maker
+                  - Kitchentop:
+                    - deep fryer
+                    - stove top
+                    - kitchen extractor
+                    - dishwasher
+                  - Coffee:
+                    - Coffee machine
+                    - Coffee grinder
+                    - Coffee machine
+                  - Beverages and fluids:
+                    - Blender
+                    - Mixer
+                    - Juicer
+                  - Food tools:
+                    - Mincer
+                    - Food processor
+                    - Slicer
+                  - Bread:
+                    - Bread slicer
+                    - Bread maker
+                - Washers:
+                  - Dishwasher
+                  - Steam cleaner
+            - Bedroom:
+              - Bedtypes:
+                - Sofa-bed
+                - Chair-bed
+              - Bed:
+                - Pillow
+                - Blanket
+                - Linen
+                - Plaid throw
+                - Mattress
+                - Duvet
+              - Wardrobe:
+                - Wardrobe
+            - Outdoor:
+              - Outdoor:
+                - Parasol
+                - Hammock
+                - Awning
+              - Outdoor Structures:
+                - Arch
+                - Fence
+                - Paving slab
+                - Border
+                - Concrete well
+                - Lamppost
+                - Roll out lawn
+          - Gadgets and Electronics:
+            - Electicity and cables:
+              - Cables:
+                - Socket:
+                  - Socket
+                  - (Jack) plug
+                  - Connector
+                - Converters:
+                  - (Plug) adapter
+                  - Controller
+                  - Light emitting diodes
+                - Circuit wire:
+                  - Extension lead
+                  - Power splitter
+                  - Cable
+                - Components:
+                  - Switch
+                - Waves:
+                  - Radio aerial
+                - Receiver:
+                  - Network cable
+                  - TV cable
+                  - Satellite dish
+                  - TV aerial
+                  - Digital cable
+            - Computers:
+              - Computers:
+                - Tablet PC
+                - Ultrabook
+                - Laptops
+                - Robot
+                - Server
+              - Computer hardware:
+                - Screen:
+                  - Screen
+                  - Monitor
+                - Acoustic system:
+                  - Speakers
+                  - Headphones
+                  - Microphone
+                - Computer input hardware:
+                  - Desktop
+                  - Keyboard
+                  - Mouse (Mice)
+                  - Webcam
+                  - Joystick
+                - Hardware:
+                  - Processor
+                  - Power Supply Unit
+                  - Video Card
+                  - Motherboard
+                  - RAM
+                  - Sound Card
+                  - Fan
+                - Storage:
+                  - Flash storage drive
+                  - Laser disks
+                  - Floppy disk
+                  - Memory card
+                  - Card reader
+                  - Flash drive
+                  - External drive
+                  - CD-ROM
+                  - Drive
+                  - Hard Drive
+                - Charger:
+                  - Charger
+                  - Chargeable battery
+                - Computer stand:
+                  - Docking station
+                  - Laptop stand
+              - Computer hardware actions:
+                - Click:
+                  - She clicks on
+              - Computer interface:
+                - Storage:
+                  - Folder
+                  - File
+                  - Label
+                  - Icon
+                - Scrolling and sidebars:
+                  - Loading
+                  - Scrolling
+                  - Toolbar
+                  - Cursor
+                  - Stub
+                - Display:
+                  - Screen Resolution
+                  - Fonts
+              - Internet:
+                - Network:
+                  - Modem
+                  - (Wi-Fi) router
+                - Search engine:
+                  - Search phrases
+                  - Search results
+                - Webpage:
+                  - Webpage
+                  - Website
+                  - Webapp
+            - Subcomputers:
+              - Regular sub-computers:
+                - Clock
+                - E-book
+                - Pager
+              - Smartphone:
+                - Smartphone
+                - Telephone
+                - Cordless phone
+                - Walkie-talkie
+                - Videophone
+                - SIM card
+                - Tablet
+              - Smartwatch:
+                - Smart watch/wristband
+                - Fitness tracker
+              - Communication Tools:
+                - Telephones
+                - Mobile phones
+                - Fax machine
+                - E-mail
+                - Internet
+                - Hotline
+              - Printer:
+                - (Photo)printer
+                - Scanner
+              - Simple sub-computers:
+                - Scales
+                - Calculator
+                - Meter
+                - Timer
+                - Alarm clock
+                - Clock radio
+                - Thermometer
+                - Barometer
+                - Manometer
+                - Tachometer
+            - Large-scale:
+              - Car:
+                - Car stereo
+                - Car sound systems
+                - Dashboard camera
+              - National:
+                - Radar detector
+                - Sat-nav
+            - Visual electronics:
+              - Camera and Photos:
+                - Camera:
+                  - Reflex camera
+                  - Motion picture camera
+                  - Digital photoframe
+                  - Camera shutter
+                - Studio equipment:
+                  - Stroboscope
+                  - Lens
+                  - Flash
+                - Photography Techniques:
+                  - Photo finish
+              - Monitor gadget/Electronics:
+                - Main:
+                  - TV
+                  - Cassette tape recorder
+                  - Radio
+                  - CD/DVD/blu ray player
+                  - Projector, home theatre
+                  - Remote control
+                  - Record player
+                  - CD player
+                  - Juke box
+                - Parts:
+                  - Speakers
+                - Acoustic system:
+                  - Sound panel
+                  - Subwoofer
+                  - Amplifier
+                  - Equalizer
+                - Video tools:
+                  - Video tuner
+                  - 3-D glasses
+          - Human body:
+            - Human body:
+              - Body Parts:
+                - Head-related:
+                  - Head:
+                    - Forehead
+                    - Skull
+                    - Back of the head
+                  - Face:
+                    - Jaw
+                    - Chin
+                    - Temple
+                  - Hair and Scalp:
+                    - Hair
+                    - Scalp
+                - Facial features:
+                  - Eye:
+                    - Eyelid
+                    - Eyebrows
+                    - Eyelashes
+                    - Pupil
+                  - Ear:
+                    - Ear
+                  - Nose:
+                    - Nose
+                  - Mouth:
+                    - Tongue
+                    - Teeth
+                    - Cheek
+                    - Adam's apple
+                  - Facial Hair:
+                    - Moustache
+                    - Beard
+                    - Sideburns
+                - Upper body:
+                  - Upper:
+                    - Neck
+                    - Shoulders
+                  - Arms:
+                    - Arms
+                    - Armpit
+                    - Fingers
+                  - Chest:
+                    - Breast
+                    - Nipple
+                  - Joints:
+                    - Collarbone
+                    - Shoulder blade
+                - Torso and Organs:
+                  - Torso:
+                    - Belly
+                    - Chest
+                  - Digestive tract:
+                    - Small intestine
+                    - Large intestine
+                    - Rectum
+                  - Organs:
+                    - Gall bladder
+                    - Intestine
+                    - Spleen
+                    - Pancreas
+                - Lower body:
+                  - Legs:
+                    - Thigh
+                    - Knee
+                    - Calf
+                    - Shin
+                    - Ankle
+                  - Foot:
+                    - Heels
+                    - Toes
+              - Systems:
+                - Nervous system:
+                  - Brain
+                  - Spinal cord
+                  - Nerves
+                - Skeletal and Muscular System:
+                  - Skeleton:
+                    - Backbone
+                  - Muscles
+                - Cardiovascular system:
+                  - Heart
+                  - Blood
+                - Digestive system:
+                  - Stomach
+                  - Liver
+                  - Kidney
+                  - Digestive tract:
+                    - Small intestine
+                    - Large intestine
+                    - Rectum
+                    - Gall bladder
+                    - Intestine
+                    - Pancreas
+                - Respiratory system:
+                  - Lungs
+                  - Inhalation
+                  - Exhalation
+                - Lymphatic system:
+                  - Lymphatic system
+                - Muscular system:
+                  - Muscles
+                - Urinary system:
+                  - Kidneys
+                  - Bladder
+                  - Ureters
+                - Endocrine system:
+                  - Thyroid gland
+                  - Pancreas
+                  - Adrenal glands
+              - Sickness:
+                - Diseases:
+                  - Diseases
+                  - (Sjukdomar)
+                  - Germs
+                - Body failure:
+                  - Heart failure:
+                    - Heart failure
+                    - Cardic arrest
+                  - Overweight:
+                    - Overweight
+                    - Obesity
+                - Infections:
+                  - Viral infections:
+                    - Common cold
+                    - Influenza
+                    - COVID-19
+                  - Fungal infections:
+                    - Athlete's foot
+                    - Yeast infections
+                  - Urinary tract infections:
+                    - ...
+                  - Respiratory infections:
+                    - Pneumonia
+                    - Bronchitis
+              - Life and death:
+                - Lifespan:
+                  - Rebirth:
+                    - Rebirth
+                    - Renaissance
+                  - Revived:
+                    - Revived
+                    - Resuscitated
+                  - Native:
+                    - Native
+                    - Indigenous
+                - Life:
+                  - Life
+                - Death:
+                  - Casualty:
+                    - Casualty
+                    - Death and wounded
+            - Medical Professionals and Facilities:
+              - Medical Professionals:
+                - Doctors:
+                  - Doctors
+                - Nurse:
+                  - Operating room staff
+                  - Emergency room staff
+              - Facilities:
+                - Hospital:
+                  - Surgeons
+                  - Nurses
+                  - Orderlies
+                - Ambulance crew
+                - Ophthalmologist:
+                  - Optometrist
+                  - Ophthalmic surgeon
+                - Gynaecologist:
+                  - Gynaecologist
+                - Dentist:
+                  - Orthodontist
+                  - Periodontist
+              - Medical Instruments and Supplies:
+                - Diagnosis tools:
+                  - Stethoscope
+                  - Blood pressure meter
+                  - Thermometer
+                - Wound care supplies:
+                  - Bandage
+                  - Plaster
+                  - Antiseptic solution
+                - First Aid:
+                  - First-aid kit
+                  - Fire extinguisher
+                  - Rescuer
+                  - Life jackets
+                - Medications:
+                  - Pills
+                  - Capsules
+                  - Syrup
+                  - Drops
+                  - Gel
+                - Surgical tools:
+                  - Scalpel
+                  - Forceps
+                  - Scissors
+                  - Retractor
+                - Diagnostic imaging:
+                  - X-ray machine
+                  - Ultrasound machine
+                  - Magnetic resonance scanner
+              - Medical Conditions and Treatments:
+                - Pregnancy-related:
+                  - Pregnancy test
+                  - Obstetrics care
+                - Dental care:
+                  - Tooth extraction
+                  - Dental filling
+                  - Root canal treatment
+                - Respiratory conditions:
+                  - Cough
+                  - Flu
+                - Bone fractures:
+                  - Fracture casting
+                  - Orthopedic surgery
+                - Skin conditions:
+                  - Psoriasis treatment
+                  - Topical ointments
+            - Health products:
+              - Personal Hygiene:
+                - Oral Care:
+                  - Toothbrushes
+                  - Toothpastes
+                  - Dental floss
+                  - Mouthwash
+                - Cotton Products:
+                  - Cotton buds
+                  - Cotton pads
+                - Cleansing Products:
+                  - Wet wipes
+                - Shower Essentials:
+                  - Shower gel
+                  - Shampoo
+            - Genetics terms:
+              - Genetics DNA-combinations:
+                - Contraceptives (pills)
+                - Condoms
+                - '...'
+          - Natural elements, Nature:
+            - Animals:
+              - Animal parts:
+                - whiskers
+                - paw
+                - mane
+                - tail
+                - hoof
+                - tusks
+                - trunk
+                - claws
+                - horn
+                - hump
+                - flippers
+                - spiracle
+                - pouch
+              - Tame Animals:
+                - Dog breeds:
+                  - Terriers and Small Breeds:
+                    - Terriers:
+                      - Cocker Spaniel
+                      - Yorkshire Terrier
+                      - Fox Terrier
+                      - Scottish Terrier
+                      - Airedale Terrier
+                      - Hunt Terrier
+                    - Companion and Toy Breeds:
+                      - Dalmatian
+                      - Pinscher
+                      - Beagle
+                      - Briar
+                      - Griffon
+                      - Japanese Chin
+                      - Lhasa Apso
+                      - Welsh Corgi
+                  - Large Guardian Breeds:
+                    - Mastiffs:
+                      - German Mastiff
+                      - Caucasian Shepherd
+                      - Bullmastiff
+                      - Mastiff
+                    - Working and Mountain Dogs:
+                      - Alsatian
+                      - Bernese Mountain Dog
+                      - St Bernard
+                      - Leonberger
+                  - Bulldogs and Boxers:
+                    - Bulldogs:
+                      - English Bulldog
+                      - American Bulldog
+                    - Boxers:
+                      - Boxer
+                  - Huskies and Arctic Breeds:
+                    - Huskies:
+                      - Husky
+                      - Alaskan Malamute
+                      - Siberian Husky
+                  - Toy and Companion Breeds:
+                    - Toy Breeds:
+                      - Poodle
+                      - Pug
+                      - Chihuahua
+                      - Shih Tzu
+                      - Chinese Crested Dog
+                      - Pekinese
+                    - Companion Breeds:
+                      - French Bulldog
+                      - Shar Pei
+                      - Chow-Chow
+                      - Miniature Schnauzer
+                      - Peruvian Hairless Dog
+                  - Giant and Working Breeds:
+                    - Giant Breeds:
+                      - Great Dane
+                      - Saint Bernard
+                      - Newfoundland Dog
+                    - Working Breeds:
+                      - German Shepherd
+                      - Rottweiler
+                      - Samoyed
+                      - Cane Corso
+                      - Boerboel
+                  - Retrievers and Sporting Breeds:
+                    - Retrievers:
+                      - Golden Retriever
+                      - Labrador Retriever
+                    - Sporting Breeds:
+                      - Irish Setter
+                      - Pointer
+                      - Saluki
+                - Cat breeds:
+                  - Diverse Domestic Breeds:
+                    - Persian Cat
+                    - Siamese Cat
+                    - British Longhair Cat
+                    - Russian Blue Cat
+                    - British Shorthair Cat
+                    - Bengal cat
+                    - Siberian Cat
+                    - European Wild Cat
+                  - Unique and Hairless Breeds:
+                    - Sphinx
+                    - Savanna
+                    - Maine Coon
+                    - Norwegian Forest Cat
+                    - Balinese Cat
+                    - Neva Masquerade
+                    - Peterbald
+                  - Fluffy and Elegant Breeds:
+                    - Ragdoll
+                    - Nibelung
+                    - Sacred Birman
+                    - Bombay Cat
+                    - Burmese Cat
+                    - Burmilla
+                  - Distinctive Ear Breeds:
+                    - Scottish Fold
+                    - Scottish Straight
+                    - American Curl
+                    - Cymric Cat
+                    - Manx
+                  - Graceful and Spotted Breeds:
+                    - Egyptian Mau
+                    - Turkish Angora
+                    - Ocicat
+                    - Toyger
+                    - Asian Tabby
+                  - Regionally Named Breeds:
+                    - Thai Cat
+                    - Havana
+                    - Brazilian Shorthair Cat
+                  - Playful and Diverse Breeds:
+                    - Somali Cat
+                    - Snowshoe
+                    - Exotic Shorthair
+                    - Turkish Van
+                    - Cornish Rex
+                - Domestic animals:
+                  - Canines:
+                    - Dog
+                    - Puppy
+                  - Felines:
+                    - Cat
+                    - Kitten
+                  - Rodents:
+                    - Guinea pig
+                    - Ferret
+                    - Rat
+                    - Hamster
+                    - Squirrel
+                    - Mouse
+                    - Chipmunk
+                - Farm animals:
+                  - Equines:
+                    - Horse
+                    - Donkey
+                    - Pony
+                  - Bovines:
+                    - Cow
+                    - Bull
+                    - Buffalo
+                    - Calf
+                  - Ovines:
+                    - Sheep
+                    - Lamb
+              - Land animals:
+                - Big animals:
+                  - Bears:
+                    - Brown bear
+                    - Polar bear
+                    - Grizzly bear
+                    - Sloth bear
+                  - Big tropic animals:
+                    - Elephants
+                    - Rhinoceroses
+                    - Hippopotamus
+                  - Large predators:
+                    - Lion
+                    - Leopard
+                    - Cheetah
+                    - Jaguar
+                    - Cougar
+                    - Panther
+                    - Leopard cat
+                    - Hyena
+                    - Jackal
+                  - Big animals:
+                    - Wild boar
+                    - Porcupine
+                    - Musk ox
+                    - Wolf
+                    - Fox
+                    - Arctic fox
+                    - Bison
+                    - Lynx
+                    - Coyote
+                - Small Wildlife animals:
+                  - Tropic animals:
+                    - Antelopes
+                    - Camels
+                    - Gnu
+                    - Zebras
+                    - Giraffes
+                    - lemur
+                    - Kiang
+                    - Caracal
+                  - Deer family:
+                    - Elk
+                    - Deer
+                    - Fallow deer
+                  - Monkeys:
+                    - Monkeys
+                    - Gorilla
+                    - Orangutan
+                    - Chimpanzee
+                    - Yellow baboon
+                    - Capuchin monkey
+                    - Macaque
+                    - Gibbon
+                    - surili
+                    - howler monkey
+                    - saki monkey
+                - Narrow habitat animals:
+                  - kangaroo
+                  - koala
+                  - Tasmanian devil
+                  - panda
+                  - Small panda
+                  - Sloth
+                - Common animals:
+                  - Ground animals:
+                    - Hedgehog
+                    - Badger
+                    - Mole
+                    - Raccoon
+                    - Wolverine
+                    - Armadillo
+                    - Wart hog
+                    - Boar
+                    - Skunk
+                  - Land/Water animals:
+                    - Beaver
+                    - Otter
+                    - Duckbill platypus
+                  - Climbing animals:
+                    - Phalanger
+                    - Bush baby
+                    - Opossum
+                    - Loris
+                    - Sifaka
+              - Water Animals:
+                - Sharks and Large Predatory Fish:
+                  - Sharks:
+                    - Great White Shark
+                    - Hammerhead Shark
+                  - Dolphins:
+                    - Dolphin
+                  - Whales:
+                    - Blue whale
+                    - Grey whale
+                    - Humpback whale
+                    - Sperm whale
+                    - Beluga whale
+                    - Killer whale
+                  - Manatee
+                    - Manatee
+                  - Billfish:
+                    - Swordfish
+                    - Sailfish
+                  - Barracuda:
+                    - Barracuda
+                  - Sturgeon:
+                    - Great Sturgeon
+                  - Other Large Predatory Fish:
+                    - Mackerel
+                    - Tunny
+                - Salmon and Related Fish:
+                  - Atlantic Salmon:
+                    - Atlantic Salmon
+                  - Pacific Salmon:
+                    - Chinook Salmon
+                    - Coho Salmon
+                  - Trout:
+                    - Trout
+                - Freshwater Fish:
+                  - Pike Family:
+                    - Pike
+                    - Pike Perch
+                  - Carp Family:
+                    - Carp
+                    - Caspian Roach
+                  - Perch Family:
+                    - Perch
+                    - Ruff
+                  - Bream Family:
+                    - Bream
+                    - Gilt-head Bream
+                  - Other Freshwater Fish:
+                    - Tench
+                    - Gudgeon
+                - Small Fish:
+                  - Herring Family:
+                    - Herring
+                    - Pilchard
+                  - Flatfish Family:
+                    - Sole
+                    - Flounder
+                  - Mackerel Family:
+                    - Mackerel
+                    - Saury
+                  - Other Small Fish:
+                    - Anchovy
+                    - Chum
+                    - Guppy
+                  - Tropical Fish:
+                    - Clownfish
+                    - Cardinal Tetra
+                - Shellfish and Mollusks:
+                  - Crustaceans:
+                    - Crayfish
+                    - Crab
+                    - Lobster
+                  - Mollusks:
+                    - Mussel
+                    - Oyster
+                  - Prawns and Shrimp:
+                    - Prawn
+                - Non-form Aquatic Creatures:
+                  - Cephalopods:
+                    - Octopus
+                    - Squid
+                  - Snails and Sea Slugs:
+                    - Snail
+                  - Sea Horse:
+                    - Sea house
+                  - Jellyfish:
+                    - Jellyfish
+                - Coast animals:
+                  - Pinnipeds:
+                    - Walruses
+                    - Seal
+                    - Sea lion
+              - Birds:
+                - Birds of Prey:
+                  - Eagles:
+                    - Eagle
+                    - Golden eagle
+                    - Harpy eagle
+                    - Eastern imperial eagle
+                    - Sea eagle
+                  - Owls:
+                    - Owl
+                    - Eagle owl
+                    - Tawny owl
+                    - Horned owl
+                  - Falcons and Hawks:
+                    - Hawk
+                    - Falcon
+                    - Gyrfalcon
+                    - Kite
+                - Ground birds:
+                  - Small Birds:
+                    - Hummingbird
+                    - Swift
+                    - Tern
+                    - Hoopoe
+                    - Doves
+                  - Game birds, Landfowl:
+                    - Pheasant
+                    - Quail
+                    - Black grouse
+                - Water Birds:
+                  - Herons and Storks:
+                    - Crane
+                    - Heron
+                    - Stork
+                  - Waterfowl:
+                    - Pelican
+                    - Swan
+                    - Duck
+                    - Flamingo
+                    - Gull
+                    - Albatross
+                    - Penguin
+                  - Wading Birds:
+                    - Bittern
+                    - Ibis
+                    - Spotted redshank
+                    - Skua
+                    - Loon
+                - Parrots:
+                  - Parakeets and Macaws:
+                    - Parakeet
+                    - Macaw
+                  - Cockatoos and Lovebirds:
+                    - Cockatoo
+                    - Lovebirds
+                  - Other Parrots:
+                    - Parrot
+                    - Parrot species
+                    - African grey parrot
+                    - Amazon parrot
+                - Songbirds and Passerines:
+                  - Passerines:
+                    - Woodpecker
+                    - Cuckoo
+                    - Crossbill
+                    - Swallow
+                    - Lark
+                  - Sparrows and Finches:
+                    - Sparrow
+                    - Chaffinch
+                    - Finch
+                  - Orioles and Cardinals:
+                    - Oriole
+                    - Cardinal
+                  - Warblers:
+                    - Yellow warbler
+                    - Black-throated warbler
+                  - Starlings and Blackbirds:
+                    - Raven
+                    - Crow
+                    - Jackdaw
+                    - Rook
+                  - Buntings:
+                    - Snow bunting
+                    - Yellowhammer
+                  - Waxwings:
+                    - Cedar waxwing
+                    - Bohemian waxwing
+                - Flightless Birds:
+                  - Warm region:
+                    - Ostrich
+                    - Kiwi
+                  - Cold regions:
+                    - Penguin
+              - Reptiles:
+                - Crocodiles:
+                  - Crocodile
+                - Turtles:
+                  - Turtle
+                  - Sea turtle
+                  - Freshwater turtle
+                  - Typical tortoise
+                - Lizards:
+                  - Lizard
+                  - Monitor lizard
+                  - Iguana
+                  - Gecko
+                - Snakes:
+                  - Snake
+                  - Alligator
+                  - Cobra
+                  - Viper
+                  - Anaconda
+                  - Boa
+                  - Python
+                  - Water snake
+                  - Smooth snake
+                  - Mamba
+                - Chameleons:
+                  - Chameleon
+                - Cayman:
+                  - Cayman
+              - Insects:
+                - Flying insects:
+                  - Flies:
+                    - Houseflies
+                    - Fruit flies
+                  - Mosquitoes:
+                    - Anopheles mosquitoes
+                    - Aedes mosquitoes
+                  - Bees:
+                    - Bumblebees
+                    - Honeybees
+                  - Dragonflies:
+                    - Damselflies
+                    - Skimmers
+                - Butterflies:
+                  - Butterflies:
+                    - Peacock butterflies
+                    - Swallowtails
+                  - Moths:
+                    - Hawk moths
+                    - Silk moths
+                    - Luna moths
+                    - Tiger moths
+                - Bugs:
+                  - Bugs:
+                    - Assassin bugs
+                    - Shield bugs
+                  - Beetles:
+                    - Ladybirds
+                    - Rhinoceros beetles
+                    - Stag beetles
+                  - Termites:
+                    - Subterranean termites
+                    - Drywood termites
+                  - Cockroaches:
+                    - German cockroaches
+                    - American cockroaches
+                - Grass insects:
+                  - Grasshoppers:
+                    - Locusts
+                    - Katydids
+                  - Crickets:
+                    - Field crickets
+                    - House crickets
+                
+                
+                - Mantises:
+                  - Praying mantises
+                  - Stick mantises
+                - Dung beetles:
+                  - Rainbow dung beetles
+                  - Scarab beetles
+                - Water striders:
+                  - Pond skaters
+                  - Water spiders
+                - Centipedes:
+                  - House centipedes
+                  - Giant centipedes
+                - Cicadas:
+                  - Periodical cicadas
+                  - Annual cicadas
+                - Aphids:
+                  - Greenfly
+                  - Blackfly
+                - Lice:
+                  - Head lice
+                  - Body lice
+                - Fleas:
+                  - Cat fleas
+                  - Dog fleas
+                - Mites:
+                  - Dust mites
+                  - Spider mites
+                - Ants:
+                  - Fire ants
+                  - Carpenter ants
+              - Spiders:
+                - Orb-weaving spiders:
+                  - Garden spiders
+                  - Cross spiders
+                - Tarantulas:
+                  - Mexican redknee tarantula
+                  - Chilean rose tarantula
+                - Bird spiders:
+                  - Goliath bird-eating spider
+                  - Pinkfoot goliath tarantula
+              - Beetles:
+                - Ladybirds:
+                  - Seven-spotted ladybird
+                  - Asian lady beetle
+                - Rhinoceros beetles:
+                  - Hercules beetles
+                  - Atlas beetles
+                - Stag beetles:
+                  - Lesser stag beetles
+                  - Giant stag beetles
+              - Moths:
+                - Hawk moths:
+                  - Hummingbird hawk-moth
+                  - Sphinx moths
+                - Silk moths:
+                  - Atlas moths
+                  - Emperor moths
+            - Mushrooms and fungus:
+              - Edible Mushrooms:
+                - Gourmet Edible Mushrooms:
+                  - Cep
+                  - Chanterelle
+                  - Morel
+                  - Truffle
+                - Culinary Edible Mushrooms:
+                  - Shiitake
+                  - Honey fungus
+                  - Parasol mushroom
+                  - Bay bolete
+              - Poisonous Mushrooms:
+                - Highly Toxic Mushrooms:
+                  - Fly agaric
+                  - Death cap
+                - Potentially Harmful Mushrooms:
+                  - Lurid boletus
+                  - Stinking russula
+              - Boletus Mushrooms:
+                - Birch Boletus Group:
+                  - Birch boletus
+                - Orange-Cap Boletus Group:
+                  - Orange-cap boletus
+                  - Xerocomus
+                  - Boletus
+                  - Bay bolete
+              - Other Types of Mushrooms:
+                - Common Mushrooms:
+                  - Champignon
+                  - Russule
+                  - Tree mushroom
+                - Unique Mushrooms:
+                  - Slippery jack
+                  - Stinkhorn
+                  - Bracket fungus
+                  - Ganoderma
+                  - Cordyceps
+                - Milk Mushrooms:
+                  - Orange milk mushroom
+                  - Milk mushroom
+                  - Lycoperdon
+                - Miscellaneous Mushrooms:
+                  - Paxillus
+            - Plants:
+              - Plants:
+                - Plant Structures:
+                  - Stem
+                  - Buds
+                  - Root
+                  - Tubers
+              - Aquatic Plants:
+                - Algae
+                - Laminaria
+              - Bushes:
+                - Fragrant Bushes:
+                  - Heather
+                  - Marjoram
+                  - Patchouli
+                  - Coriander
+                - Decorative Bushes:
+                  - Juniper
+                  - Bindweed
+                  - Bottle tree
+                  - Sea buckthorn
+              - Grass and Moss:
+                - Grass and Moss:
+                  - Grass
+                  - Moss
+              - Flowers:
+                - Flowers:
+                  - Blooming Flowers:
+                    - Flowers
+                    - Flower bud
+                    - Petal
+                    - Stamens
+                - Roses and Flowers with Petals:
+                  - Traditional Flowers:
+                    - Rose
+                    - Lily
+                    - Tulip
+                    - Poppy
+                    - Carnation
+                    - Aster
+                    - Daisy
+                    - Buttercup
+                  - Delicate and Fragrant Flowers:
+                    - Camomile
+                    - Bell-flower
+                    - Jasmine
+                    - Camellia
+                    - Saffron
+                    - Narcissus
+                    - Gladiolus
+                    - Iris
+                    - Violets
+                    - Lavender
+                    - Lilac
+                    - Pansies
+                    - Snowdrop
+                  - Exotic and Unique Flowers:
+                    - Cornflower
+                    - Dahlia
+                    - Orchid
+                    - Peony
+                - Unique Flowers:
+                  - Elegant and Fragrant Flowers:
+                    - Lily-of-the-valley
+                    - Magnolia
+                  - Aquatic Flowers:
+                    - Water lily
+                  - Golden Flowers:
+                    - Golden daisy
+                - Other Plants and Flowers:
+                  - Wild and Free Flowers:
+                    - Dandelion
+                    - Sunflower
+                    - Clover
+                    - Mimosa
+                    - Mistletoe
+                  - Fragrant and Colorful Flowers:
+                    - Hyacinth
+                    - Forget-me-not
+              - Trees:
+                - Trees:
+                  - Tree Parts:
+                    - Leaves
+                    - Trunk
+                    - Bark
+                    - Branch
+                    - Bough
+                    - Stub
+                - Deciduous tree:
+                  - Large-leaved:
+                    - Elm
+                    - Beech
+                  - Polar family:
+                    - Poplar tree
+                    - Cottonwood
+                  - Birch family:
+                    - Birch
+                  - Willow family:
+                    - Willow
+                  - Classic decidous trees:
+                    - Oak
+                    - Sugar maple
+                    - Mountain ash
+                - Coniferous trees:
+                  - Gaint:
+                    - Redwood
+                    - Eastern white pine
+                  - Common:
+                    - Spruce
+                    - Pine tree
+                - Trees with fruits:
+                  - Sweet fruit trees:
+                    - Kaki tree
+                    - Plum tree
+                  - Decidous:
+                    - Cherry blossom
+                    - Apple tree
+                    - Plum tree
+                    - Lime tree
+                    - Olive tree
+                    - Chestnut tree
+                    - Ash tree
+                  - Oil-producing fruit trees:
+                    - Tallow tree
+                    - Coca tree
+                  - Ornamental fruit trees:
+                    - Banchu tree
+                    - Sandbox tree
+                - Unique trees:
+                  - Unique trees:
+                    - Cactus
+                    - Olive tree
+                    - Tea tree
+                  - Evergreen Trees:
+                    - Palm
+                    - Fir tree
+                    - Pine tree
+                    - Baobab
+                    - Myrtle tree
+                    - Eucalyptus
+                    - Acacia
+                  - Distictive leaves:
+                    - Aspen
+                    - Ecalyptus
+                  - Unique form:
+                    - Bonsai
+                    - Palmtree
+                  - Valuable wood:
+                    - Acacia
+                    - Oak
+            - Landscapes:
+              - Weather:
+                - Regular weather:
+                  - Sun
+                  - Cloud
+                  - Fog
+                  - Rainbow
+                - Precipitation:
+                  - Rain
+                  - Snow
+                  - Rainfall
+                - Thunderstorm:
+                  - Lightning
+                  - Hail
+                  - Wind
+                - Strong weather:
+                  - Tsunami
+                  - Hurricane
+                  - Whirlwind
+                  - Tornado
+                - Natural disasters:
+                  - Flood
+                  - Earthquake
+              - Landforms:
+                - Water:
+                  - Water
+                  - Lake
+                  - River
+                  - Waterfall
+                - Waterlands:
+                  - Peninsula:
+                    - Peninsula
+                    - Land projected into water
+                  - Island:
+                    - Island
+                - Mountain:
+                  - Cliff
+                  - Valley
+                  - Hill
+                - Plains:
+                  - Desert
+                  - Plain
+                - Canyon:
+                  - Precipice
+                  - Cape
+                  - Bottom
+              - Natural Phenomena:
+                - Volcano:
+                  - Lava
+                  - Eruption
+                - Lightning:
+                  - Smoke
+                  - Ball lightning
+                - Cold weather:
+                  - Hoarfrost
+                  - Frost
+                  - Icicles
+                - Spring:
+                  - Glade
+                  - Meadow
+              - Natural Materials:
+                - Stone:
+                  - Stones
+                  - Cave
+                - Ravine:
+                  - Ravine
+                  - Gluch
+      - Util:
+        - Food:
+          - Food source:
+            - Grain:
+              - Grain
+              - Seeds
+          - Food components:
+            - Vegetables:
+              - Light vegetables:
+                - Salad vegetable:
+                  - Tomatoes
+                  - Cherry tomatoes
+                  - Cucumbers
+                  - Bell pepper
+                  - Olives
+                  - Ground cherry
+                - Leafy Greens:
+                  - Lettuce
+                  - Spinach
+                  - Sorrel
+                - Saladmix:
+                  - Saladmix
+                  - Spinach
+              - Root Vegetables:
+                - Root:
+                  - Carrot
+                  - Parsnip
+                  - Potato
+                  - Yam
+                  - Beetroot
+                - Radish:
+                  - Radish
+                  - Black radish
+                  - Horseradish
+                - Turnip:
+                  - Turnip
+                  - Rutabaga
+                - Spice root vegetable:
+                  - Onion
+                  - Garlic
+                  - Shallot
+              - Coarse Vegetables:
+                - Coarse Vegetable:
+                  - Mushrooms
+                  - Asparagus
+                  - Peas
+                - Beans:
+                  - Beans
+                  - Lentil
+                  - Haricot bean
+                  - Kidney bean
+              - Cruciferous Vegetables:
+                - Cruciferous Vegetables:
+                  - Cabbage
+                  - Chinese cabbage
+                  - Artichoke
+                  - Fennel
+                  - Brussels sprouts
+                  - Cauliflower
+                  - Broccoli
+                - Squash:
+                  - Squash
+                  - Marrow
+                  - Zucchini
+                  - Courgettes
+                  - Aubergines
+              - Fiber Vegetables:
+                - Fiber Vegetables:
+                  - Celery
+                  - Asparagus
+                  - Okra
+                - Bushes:
+                  - Parsley
+                  - Dill
+                  - Leek
+                  - Japanese leek
+            - Regular:
+              - Lower-level:
+                - Buckwheat
+                - Wheat
+                - Barley
+                - Maize
+                - Oats
+                - Millet
+              - Regular:
+                - Rice
+                - Pasta
+                - Spaghetti
+                - Potato (mashed)
+                - Pie
+                - Porridge
+                - Corn flakes
+              - Bread:
+                - Bread, toast, biscuit
+                - Crispbreads
+                - Flour
+                - Yeast
+                - Breadcrumbs
+                - Loaf
+                - Bun
+                - Croûtons
+                - Lavash
+                - Flatbread
+              - Outer layer:
+                - Skin
+                - Segment
+                - Seeds
+                - Stone
+                - Husks
+            - Meat:
+              - Meat:
+                - Pork
+                - Beef
+                - Lamb
+                - Venison
+              - Poultry:
+                - Chicken
+                - Turkey
+                - Duck
+                - Poultry
+              - Cooked meat:
+                - Sausage
+                - Beefsteak
+                - Schnitzel
+                - Ribs
+                - Tenderised steak
+                - Roast beef
+                - Cutlets
+                - Meatballs
+                - Bacon
+                - Minced meat
+              - Seafood:
+                - Fish
+                - Seafood
+                - Deli products
+                - Oysters
+                - Prawns
+                - Crayfish
+                - Cuttlefish
+                - Pâté
+                - Lobster
+                - Calamari
+                - Mussel
+                - Caviar
+              - Egg:
+                - Egg (yolk, shell)
+                - Omelet
+                - Boiled
+                - Fried
+            - Dairy products:
+              - Yogurt
+              - Cheese (mozzarella)
+              - Milk
+              - Butter (oil)
+              - Cottage cheese
+              - Cream
+            - Sweets:
+              - Small sweets:
+                - Lollipop
+                - Fruit drop
+                - Toffee
+                - Jelly
+                - Caramel
+              - Pastries:
+                - Doughnut
+                - Muffin
+                - Wafer
+                - Pastries
+                - Jelly
+                 - Macaroon
+              - Flavours:
+                - Sorbet
+                - Strudel
+                - Licorice
+                - Meringue
+                - Marshmallow
+              - Bakery products:
+                - Chocolate
+                - Cake
+                - Ice cream
+                - Jam
+                - Pudding
+                - Honey
+                - Peanut butter
+            - Seasoning:
+              - Seasoning:
+                - Table Seasoning:
+                  - Sugar
+                  - Salt
+                  - Pepper
+              - Spices:
+                - Spices:
+                  - Chili pepper
+                  - Herbs
+                  - Black pepper
+                  - Allspice
+                - Flavorful Spices:
+                  - Ginger
+                  - Cinnamon
+                  - Cardamom
+                  - Vanilla
+                  - Star anise
+                  - Nutmeg
+                - Tree spices:
+                  - Kumquat
+                  - Quince
+                  - Anise
+                  - Cacao
+              - Herbs and Spices:
+                - Aromatic Herbs:
+                  - Basil
+                  - Mint
+                  - Tarragon
+                - Savory Herbs:
+                  - Bay leaf
+                  - Rosemary
+                  - Lemongrass
+            - Sauce:
+              - Mayonnaise
+              - Ketchup
+            - Nuts and Seeds:
+              - Tree Nuts:
+                - Pistachios
+                - Almond
+                - Hazelnut
+                - Walnut
+                - Cashew
+                - Brazil nut
+                - Peanut
+              - Seeds:
+                - Pine nuts
+                - Sunflower seed
+                - Pumpkin seed
+                - Caraway
+                - Mustard seed
+                - Sesame
+            - Fruits:
+              - Common fruits:
+                - Fruits:
+                  - Apple
+                  - Pear
+                  - Banana
+                  - Kiwi
+                  - Persimmon
+                  - Clementine
+                  - Wild strawberry
+                  - Tomato
+                - Dried fruits:
+                  - Raisin
+                  - Prune
+                  - Currant
+                  - Date
+                - Citrus Fruits:
+                  - Orange
+                  - Lemon
+                  - Lime
+                  - Grapefruit
+                  - Tangerine
+                - Berries:
+                  - Cherry
+                  - Blackberry
+                  - Raspberry
+                  - Strawberry
+                  - Blueberry
+                  - Lingonberry
+                  - Bilberry
+                  - Cranberry
+                  - Redcurrant
+                  - Blackcurrant
+                  - White currant
+                  - Gooseberry
+                - Stone Fruits:
+                  - Peach
+                  - Apricot
+                  - Plum
+                  - Cherry plum
+                  - Sweet cherry
+                  - Lychee
+                  - Mangosteen
+              - Tropical Fruits:
+                - Large tropical fruits:
+                  - Pineapple
+                  - Papaya
+                  - Guava
+                - Mango~coconuts:
+                  - Mango
+                  - Coconut
+                  - Avocado
+                - Seeds fruits:
+                  - Pomegranate
+                  - Passion fruit
+                  - Granadilla
+                  - Fig
+                - Melons:
+                  - Melon
+                  - Watermelon
+          - Dishes:
+            - General meals:
+              - Simple meals:
+                - Hot dog
+                - Sandwich
+                - Hamburger
+                - Pancakes
+                - Casserole
+                - Ragout
+              - Soup:
+                - Soup
+            - International food:
+              - German food:
+                - Pretzel
+              - French food:
+                - Croissant
+              - Italian food:
+                - Lasagne
+                - Risotto
+                - Ravioli
+                - Mozzarella sticks
+              - Spanish food:
+                - Paella
+                - Gazpacho
+                - Taco
+                - Tortilla
+              - Russian food:
+                - Blinis
+              - Asian food:
+                - Noodles
+                - Sushi rolls
+                - Meat dumplings
+          - Beverages:
+            - Soft drinks
+            - Fruit juices
+            - Water
+            - Lemonade
+            - Cola
+            - Tonic water
+            - Herbal, chamomile, peppermint tea
+            - Coffee
+            - Hot chocolate
+        - 1:
+          - Regular:
+            - T-shirt
+            - Shirt
+          - Trousers:
+            - Trousers
+            - Shorts
+            - Jeans
+            - Pants
+          - Coat:
+            - Singlet
+            - Outdoor jacket
+            - Waistcoat, raincoat, coat
+          - Footwear:
+            - Footwear
+            - Shoes
+            - Boots
+            - Trainers
+            - Slippers
+            - Flip-flops
+            - Sandals
+            - Socks
+            - Shoelace
+            - Heel
+            - Insole
+          - Suit:
+            - Tracksuit
+            - Suit
+            - Nightgown
+            - Pyjamas
+            - Overalls
+        - Accesories:
+          - Regular:
+            - Scarf
+          - Hats:
+            - Hat
+            - Cap
+            - Crown
+            - Beret
+            - Toque
+            - Yarmulke
+            - Top hat
+          - Head:
+            - Turban
+            - Headscarf
+            - Headband
+            - Peaked cap
+          - Formal:
+            - Tie
+            - Collar
+            - Cuff
+            - Bracelet
+        - Beauty:
+          - Beauty products:
+            - Beauty/Cosmetics:
+              - Makeup:
+                - Lipstick
+                - Mascara
+                - Powder
+              - Fragrances:
+                - Perfume
+                - Cologne
+              - Personal Care:
+                - Deodorant
+                - Cream
+                - Nail polish
+            - Hair Care:
+              - Hair Styling Tools:
+                - Comb
+                - Hairbrush
+                - Hairdryer
+                - Curling tongs
+                - Hair curlers
+              - Hair Accessories:
+                - Hairpin
+                - Headband
+              - Hair Products:
+                - Hair spray
+            - Nail Care:
+              - Nail Tools:
+                - Nail scissors
+                - Forceps
+                - Clippers
+                - Nail file
+              - Nail Polish:
+                - Nail polish
+            - Miscellaneous:
+              - Pins
+          - Jewelry:
+            - Jewelry:
+              - Jewelry
+              - Treasure
+            - Metal bars:
+              - Gold bar
+              - Silver bar
+              - Platinum bar
+              - Palladium bar
+            - Metal coins:
+              - Gold coins
+              - Silver coins
+            - Gemstones:
+              - Diamond
+              - Emerald
+              - Sapphire
+              - Topaz
+              - Ruby
+        - Music instruments:
+          - String Instruments:
+            - Guitar:
+              - Electric guitar
+              - Bass guitar
+            - Violin family:
+              - Violin
+              - Viola
+              - Violoncello
+            - Plucked string instruments:
+              - Balalaika
+              - Banjo
+              - Gusli
+              - Domra
+              - Lute
+            - Contrabass family:
+              - Contrabass
+          - Keyboard Instruments:
+            - Acoustic keyboard instruments:
+              - Piano
+              - Grand piano
+            - Electronic keyboard instruments:
+              - Synthesizer
+              - Harpsichord
+            - Organ:
+              - Organ
+          - Percussion Instruments:
+            - Membrane percussion instruments:
+              - Drum
+              - Drum set
+            - Keyboard percussion instruments:
+              - Xylophone
+              - Vibraphone
+            - Hand percussion instruments:
+              - Tambourine
+              - Maracas
+              - Bongo
+            - Other percussion instruments:
+              - Triangle
+              - Cymbals
+              - Gong
+              - Finger cymbals
+          - Woodwind Instruments:
+            - Single-reed woodwinds:
+              - Clarinet
+            - Double-reed woodwinds:
+              - Bassoon
+            - Free-reed aerophones:
+              - Harmonica
+              - Jaw's harp
+            - Flutes:
+              - Flute
+              - Heckelphone
+            - Saxophone
+          - Brass Instruments:
+            - Valved brass instruments:
+              - Cornet
+              - Bugle
+            - Slide brass instruments:
+              - Trombone
+              - Horn
+            - Tubas:
+              - Tuba
+              - Sousaphone
+              - Helicon
+            - Other brass instruments:
+              - Bass horn
+          - Other Instruments:
+            - Accordion family:
+              - Accordion
+              - Chromatic accordion
+            - Harmonica family:
+              - Blues harp
+            - Note-related terms:
+              - Note
+              - Musical notation
+              - Musical staff
+              - Treble clef
+              - Bass clef
+      
+      
+      - Leisure:
+        - Home entertainment:
+          - Games:
+            - Gaming:
+              - Games:
+                - Computer games
+                - Board games
+              - Puzzles:
+                - Puzzles
+                - Crossword
+                - Noughts and crosses
+                - Brain teaser
+            - Gamble:
+              - Playing Cards:
+                - Cards:
+                  - Cards
+                  - Deck
+                - Card characters:
+                  - Joker
+                  - Ace
+                  - King
+                  - Queen
+                  - Jack
+                - Card symbols:
+                  - Hearts
+                  - Clubs
+                  - Diamonds
+                  - Spades
+              - Gambling and Games of Chance:
+                - Game machines:
+                  - Slot Machine
+                  - Lotto
+                - Tickets:
+                  - Chips
+                  - Lottery Ticket
+          - Internet and Technology:
+            - Online Activities:
+              - Internet
+              - Internet cafe
+            - Photography:
+              - Photo studio
+              - Photography
+              - Frame
+              - Album
+              - Tripod
+              - Filters
+            - Visual Entertainment:
+              - Cinema
+              - Music
+              - Photography
+              - Photo studio
+              - Frame
+              - Album
+              - Tripod
+              - Photographs
+        - Physical activities:
+          - Outdoor activities:
+            - Outdoor activities:
+              - Outdoor activities:
+                - Hunting
+                - Fishing
+                - Car racing
+                - Motorcycle racing
+                - Urban caving
+                - Camping
+              - Equipment:
+                - Penknife
+            - Beach and Pool:
+              - Beach Accessories:
+                - Parasol
+                - Lifeguards' tower
+                - Inflatable ring
+                - Beachball
+                - Towel
+                - Air mattress
+              - Swimwear:
+                - Swimming trunks
+                - Swimming suit
+              - Sun Protection:
+                - Suntan
+                - Sunglasses
+          - Indoor activites:
+            - Table tennis:
+              - Table tennis paddle
+              - Table tennis ball
+            - Billiards:
+              - Cue
+              - Billiard balls
+              - Talc
+            - Darts:
+              - Darts
+            - Bowling:
+              - Bowling ball
+              - Bowling pin
+              - Bowling pins
+        - Nightlife:
+          - Eating and Dining:
+            - Dining Options:
+              - Café
+              - Restaurants
+              - Self-service buffet
+            - Cooking:
+              - Barbecue
+              - Skewers
+              - Fire
+              - Flask
+        - Sports:
+          - Sports:
+            - Sports Accessories and Equipment:
+              - Sports equipment:
+                - Sports equipment
+              - Shock absorbers:
+                - Shock absorbers
+              - Mask:
+                - Tube
+              - Ramp:
+                - Board:
+                  - Wheels
+                  - Suspension
+              - Fabric:
+                - Abrasive cloth
+                - Fork
+                - Balloon
+                - Buoys
+                - Torch
+                - Case
+                - Ice tools
+              - Framing:
+                - Rock shoes
+            - Victory:
+              - Podium:
+                - Victory podium
+              - Medals:
+                - Medal
+                - Gold medal
+                - Silver medal
+                - Bronze medal
+              - Cup:
+                - Cup
+              - Finish:
+                - Finish
+            - Gameplay:
+              - Goal
+              - Defensive wall
+              - Yellow card
+              - Red card
+              - Scoreboard
+          - Team sports:
+            - Football:
+              - Equipment:
+                - Sports Equipment:
+                  - Football boots
+                  - Shin pads
+                  - Football socks
+                  - Goalkeeper gloves
+                - Field Equipment:
+                  - Goalpost
+                  - Net
+                  - Corner flag
+                - Accessories:
+                  - Football vest
+                  - Referees
+                  - Whistle
+                  - Stopwatch
+              - Playing Field:
+                - Football Field:
+                  - Stadium
+                  - Stands
+            - Rugby:
+              - Rugby ball
+              - Rugby field
+              - Rugby goal
+            - American football:
+              - Football field
+              - Goalpost
+            - Volleyball:
+              - Volleyball ball
+              - Volleyball court
+              - Knee pads
+              - Sunglasses
+            - Handball:
+              - Handball
+            - Basketball:
+              - Group 1:
+                - Basketball
+                - Basketball court
+              - Group 2:
+                - Stand
+              - Group 3:
+                - Basket
+                - Backboard
+                - Net
+            - Cricket:
+              - Cricket bat
+              - Cricket ball
+              - Cricket field
+              - Wicket
+              - Cricket pads
+              - Umpire
+            - Baseball:
+              - Baseball bat
+              - Baseball ball
+              - Baseball glove
+              - Baseball field
+              - Baseball mask
+              - Baseball helmet
+            - Field hockey:
+              - Field hockey
+            - Ice hockey:
+              - Protective Gear:
+                - Head Protection: 
+                  - Helmet
+                  - Mask
+                  - Helmet with mask
+                - Body Protection:
+                  - Pads
+                  - Jacket
+                  - Elbow pads
+                  - Jockstrap
+                - Hand Protection:
+                  - Hockey gloves
+                - Neck Protection:
+                  - Throat protector
+              - Playing Equipment:
+                - Footwear:
+                  - Skates
+                - Stick:
+                  - Hockey stick
+                - Game Object:
+                  - Puck
+              - Miscellaneous:
+                - Venue:
+                  - Arena
+                - Boundaries:
+                  - Gates
+                - Clothing:
+                  - Shorts
+          - Individual sports:
+            - Tennis:
+              - Tennis Equipment:
+                - Tennis racket:
+                  - String
+                  - Handle
+                  - Grip
+                  - Vibration absorber
+                - Tennis court:
+                  - Net
+                  - Tennis ball
+              - Accessories:
+                - Wristband
+                - Headband
+            - Badminton:
+              - Rackets
+              - Shuttlecock
+            - Golf:
+              - Golf Equipment:
+                - Golf ball
+                - Golf glove
+                - Golf umbrella
+              - Golf Course Features:
+                - Golf course
+                - Hole
+                - Bunker
+                - Flag
+              - Golf Transportation:
+                - Golf buggy
+                - Golf cart
+          - Individual:
+            - Walking:
+              - Walking
+            - Running:
+              - Marathon:
+                - Marathon
+            - Water sports:
+              - Equipments:
+                - Poles
+                - Boots
+                - Flippers
+                - Wetsuit
+                - Gloves
+                - Life jacket
+                - Ice pick
+                - Carabiners
+                - Helmet
+                - Inflatable boat
+              - Swimming:
+                - Swimwear:
+                  - Swim trunks
+                  - Swim shorts
+                  - Swimsuit
+                  - Swim cap
+                - Swimming Accessories:
+                  - Goggles
+                  - Swim mask
+                  - Flip-flops
+                  - Flippers
+                  - Towel
+                  - Nose clip
+                  - Ear plugs
+                  - Kick board
+                  - Water wings
+                - Swimming Facilities/Equipment:
+                  - Swimming pool
+                  - Starting platform
+                  - Swim lane
+                - Water polo:
+                  - Water polo
+                - Synchronised swimming:
+                  - Synchronised swimming
+              - Sailing with boats:
+                - Sailing:
+                  - Sailing
+                - Kayak:
+                  - Paddles
+                  - Kayaking
+                - Canoe:
+                  - Canoe
+                - Rowing:
+                  - Rowing
+              - Beach activities:
+                - Diving:
+                  - Diving
+                - Wakeboarding:
+                  - Kite
+                  - Kiteboard
+                - Surfing:
+                  - Kite surfing
+                  - Wind surfing
+                - Rafting:
+                  - Rafting
+            - Climbing:
+              - Climbing and Mountaineering Gear:
+                - Spear:
+                  - Spear
+                  - Rock piton
+                - Descender:
+                  - Descender
+                - Sling:
+                  - Roller
+                  - Rope
+                - Spring-loaded camming device:
+                  - Rigging plate
+                  - Swivel
+                  - Clamp
+                  - Stopper
+                  - Eccentric disc
+                  - Sling cutter
+              - Rock climbing:
+                - Rock climbing
+              - Other:
+                - Skateboarding
+                - Parkour
+                - Rollerblades
+          - Combative sport:
+            - Combat sport:
+              - Combat gear:
+                - Combat gloves
+                - Combat helmet
+                - Bandage
+                - Mouthpiece
+                - Black belt
+              - Training equipment:
+                - Punching bag
+                - Makiwara
+                - Jump rope
+              - Fighting-related items:
+                - Ring
+                - Fist
+            - Fencing:
+              - Fencing
+            - Boxing:
+              - Boxing
+            - Archery:
+              - Archery
+          - Winter sport:
+            - Skiing:
+              - Skiing:
+                - Snowboarding (Snowboard)
+                - Alpine skiing
+                - Snow kiting
+              - Ski equipment:
+                - Skis
+                - Ski poles
+                - Ski boots
+                - Ski bindings
+                - Ski mask
+              - Skiing infrastructure:
+                - Ski slope
+                - Ski tow
+                - Funicular
+                - Ski track
+                - Ski gates
+              - Winter recreational items:
+                - Snow saucer
+                - Sled
+                - Scooter
+            - Skating:
+              - Figure skating:
+                - Figure skating
+              - Speed skating:
+                - Speed skating
+            - Tobogganing:
+              - Tobogganing
+            - Curling:
+              - Curling
+            - Biathlon:
+              - Biathlon
+            - Snowmobiling:
+              - Snowmobiling
+          - Track and field:
+            - Athletics:
+              - Athletics:
+                - Equipment:
+                  - Trainers
+                  - Kit
+                  - Starting blocks
+                  - Relay baton
+                - Events:
+                  - Stadium
+                  - Track
+                  - Shot
+                  - Javelin
+                  - Discus
+                  - Steeplechase
+                  - Relay race
+                  - High jump
+                  - Long jump
+                - Other:
+                  - Bar
+              - Gymnastics:
+                - Apparatus:
+                  - Pommel horse
+                  - Vaulting board
+                  - Gymnastics ring
+                  - Uneven bars
+                  - Parallel bars
+                - Other:
+                  - Boom
+                  - Trampoline
+            - Shot put:
+              - Shot put
+          - Equestrian sports:
+            - Equestrian sports:
+              - Horse riding
+            - Horse Equipment and Accessories:
+              - Horseshoe
+              - Side-saddle
+              - Stirrup
+              - Horsewhip
+              - Halter
+              - Riding hat
+            - Horse-related Locations and Activities:
+              - Hippodrome
+              - Obstacle
+              - Stable
+          - Fitness:
+            - Cardio Equipment:
+              - Treadmill
+              - Fitness cycle
+              - Tread climber
+              - Rowing machine
+              - Stepper
+            - Strength Training Equipment:
+              - Upper Body:
+                - Chin-up bar
+              - Free Weights:
+                - Barbell
+                - Dumbbells
+                - Kettlebell
+              - Weightlifting Accessories:
+                - Barbell shaft
+                - Barbell lock
+                - Barbell stand
+                - Lifting belt
+                - Pad
+              - Other Equipment:
+                - Bench
+                - Rope
+                - Javelins
+            - Other:
+              - Yoga
+          - Extreme sports:
+            - Extreme sports:
+              - Wakeboarding
+              - Powerbocking
+              - Pogo stick jumping
+            - Equipments:
+              - Parachute backpack
+            - Skydiving:
+              - Parachute jumping
+              - Wingsuiting
+              - BASE jumping
+            - Gliding:
+              - Paragliding
+              - Hang gliding
+            - Miscellaneous:
+              - Car modeling
+              - Caving
+              - Strongman contests
+              - Zorbing
+        - Art and Creativity:
+          - Performing Arts:
+            - Circus
+            - Theatre
+            - Dancing
+            - Singing
+          - Visual Arts:
+            - Painting
+            - Graffiti
+            - Sculpture
+            - Aerography
+            - Origami
+            - Map making
+          - Textile Arts:
+            - Embroidery
+            - Knitting
+          - Floral Arts:
+            - Floristics
+          - Handicrafts:
+            - Model aircraft
+            - Keeping an aquarium
+        - Travel:
+          - Accommodation:
+            - Hotel
+            - Room
+          - Transportation:
+            - Tickets
+            - Aircraft
+            - Airport
+            - Station
+            - Railway
+            - Port
+            - Trains
+            - Ship
+            - Yacht
+            - Motor boat
+          - Documentation:
+            - Passports
+            - Visa
+          - Currency and Money:
+            - Exchange rate
+          - Tourist Activities:
+            - Islands
+            - Lake
+            - Waterfall
+            - Mountains
+            - Water park
+            - Hiking
+            - Safari
+          - Travel Essentials:
+            - Tent
+            - Backpack
+            - Reservation
+            - Trolley
+            - Map
+            - Globe
+      
+      - Actions:
+        - Actions general:
+          - Actions:
+            - Actions
+          - Usage:
+            - Usage
+            - To use
+            - Utilize
+          - Progress:
+            - Rising:
+              - Rising
+              - Surging
+            - Canceled:
+              - Canceled
+              - Rescinded
+          - Efforts:
+            - Exhausting:
+              - Exhausting
+              - Ardous
+          - Control:
+            - Control
+            - Curb
+          - Importance:
+            - Important:
+              - Important
+              - Crucial
+        - Activity:
+          - School:
+            - Academic Subjects and Concepts:
+              - Formula
+              - Equation
+              - Mathematics
+              - Geometry
+              - Algebra
+              - Physics
+              - Chemistry
+              - Biology
+              - History
+              - Literature
+              - Music
+              - Physical education
+              - Astronomy
+            - Schoolbags:
+              - Schoolbag
+              - Diary
+              - Dictionaries
+              - Umbrella
+              - Magnifying lens
+              - Case
+          - Working:
+            - Professions:
+              - (1st and 2nd):
+                - (1st) First production:
+                  - Farmer
+                  - Fisherman
+                  - Butcher
+                - (2nd) Worker:
+                  - Sailor
+                  - Tailor, carpenter, welder
+                  - Mechanic, plumber, electrician
+                  - Seamstress
+                  - Designer
+                  - Illusionist
+                  - Blacksmith, locksmith
+                  - Tyre fitter
+              - (3rd) Service:
+                - Regular worker:
+                  - Caretaker:
+                    - Librarian
+                    - Maid
+                    - Waiter
+                    - Street cleaner
+                    - Babysitter
+                    - Caretaker
+                  - Lower service provider:
+                    - Cook
+                    - Confectioner
+                    - Postman
+                    - Taxi driver
+                    - Jeweller
+                    - Bartender
+                - Skilled worker:
+                  - Doctor:
+                    - Doctor
+                    - Obstetrician
+                    - Dentist
+                    - Pharmacist
+                  - Veterinarian:
+                    - Veterinarian
+                  - Psychiatrist:
+                    - Psychiatrist
+                  - Teacher:
+                    - Teacher
+                  - Scientist:
+                    - Scientist
+                    - Mathematician
+                    - physicist
+                    - chemist
+                    - biologist
+                    - land surveyor
+                    - software engineer (programmer)
+                  - Astronaut:
+                    - Pilot
+                    - Astronaut
+                    - Astronomer
+                    - Captain
+                  - Architector:
+                    - Dispatcher
+                    - Architect
+                - News and language worker:
+                  - Translator:
+                    - Translator
+                  - Reporter:
+                    - Journalist
+                    - TV anchor
+                  - Transport:
+                    - Cargo handler
+                    - Logistics specialist
+                - Emergency professions:
+                  - Public emergency service:
+                    - Policeman
+                    - Firefighter
+                    - Steward
+                    - Soldier
+                  - Private protector:
+                    - Agent
+                    - Detective
+                    - Judge, lawyer, solicitor
+                    - Bodyguard
+                - Popular culture:
+                  - Fasion:
+                    - Fashion designer
+                    - Hairdresser
+                    - Make-up artist
+                  - Celebrity:
+                    - Actor
+                    - Artist
+                    - Musician
+                    - Singer
+                  - Modern cultural production:
+                    - DJ
+                    - Photographer
+                    - Stylist
+                  - Cultural worker:
+                    - Painter
+                    - Pianist
+                    - Ballerina
+                    - Illustrator
+                    - Writer
+                    - Composer
+                    - Sculptor
+                    - Dancer
+                    - Choreographer
+                  - Cultural manager:
+                    - Director
+                - New works:
+                  - Bodybuilder
+                  - Acrobat
+                  - Croupier
+                  - Racing driver
+              - Rich people:
+                - Manager
+                - Businessman
+                - Accountant, cashier
+                - Politician
+                - Diplomat
+                - Priest
+            - Office:
+              - Office Technology:
+                - Copying machine
+                - Barcode
+                - Receipt tape
+                - Cash counter
+                - Payment terminal
+              - Business and Finance:
+                - Stock exchange
+                - Shares
+                - Quotations
+                - Money
+                - Bank
+                - Receipt
+                - PIN code
+                - Password
+                - Cash desk
+                - Application form
+                - Curriculum vitae
+                - Business card
+                - Business card holder
+              - Meeting and Presentation:
+                - Meeting room
+                - Lecture hall
+                - Presentation
+                - Diagrams
+                - Pointer
+                - Projector
+                - Whiteboard
+                - Flipchart
+              - Writing and Office Equipment:
+                - Personal computer
+                - Printer
+                - Computer desk
+                - Chairs
+                - Calculator
+                - Pen case
+                - Projector
+                - Chalkboard
+                - Laser pointer
+              - Office Organization:
+                - Inventory
+                - Pipeline
+                - Files
+                - Filing cabinet
+                - Shelves
+                - Cabinets
+                - Drawers
+              - Career and Work-related:
+                - Growth
+                - Fall
+                - Hierarchy
+                - Career ladder
+                - Handshake
+                - Promotion
+                - Resignation
+                - Interview
+                - Training
+                - Workload
+                - Responsibilities
+          - Costs and market:
+            - Earning:
+              - Earning
+              - Grossing
+          - Tree:
+            - Successor:
+              - Vocal advocate:
+                - Outspken defender of
+                - Vocal advocate for
+              - Hier:
+                - Hier
+                - Successor
+              - The former:
+                - The former
+                - The predecessor
+              - Ruling:
+                - Ruling
+                - Reigning
+            - Obeying:
+              - Obedience:
+                - Obedience
+                - Conformity
+        - Actions:
+          - Desired:
+            - Desired:
+              - Desired
+              - Coveted
+            - Splendid:
+              - Splendid
+              - Bountiful
+              - Lawish
+            - Beloved:
+              - Beloved
+              - Coveted
+          - Desire:
+            - Desire:
+              - Desire
+            - Strong desire:
+              - Insist
+              - Argue
+              - Assert
+            - Forcing:
+              - Forcing
+              - Compelling
+          - Stake:
+            - Stake
+            - Of the shares
+        - Problem actions:
+          - Cruel:
+            - Cruel:
+              - Cruel
+              - Outrageous cruelty
+              - Atrocities
+            - Persecution:
+              - Persecution
+              - Illtreatment
+          - Severe:
+            - Severe:
+              - An acute ... (serious)
+              - Severe
+              - Serious
+              - Dire
+            - Dangerous:
+              - Dangerous
+              - Perilous
+          - Misleading:
+            - Seducing:
+              - Seducing
+              - Luring someone
+        - Conflicts:
+          - Enemy:
+            - Enemy
+            - Competitor
+            - Rival
+            - Foe
+          - Killing:
+            - Executed:
+              - Executed
+              - Assassinated
+      
+      - Language:
+        - Truth:
+          - Truth:
+            - Truth
+            - Ceasefire
+          - Lies:
+            - Lies
+        - Recanting:
+          - Recant
+          - Take back what he has said
+        - Motivation:
+          - Motivated
+          - Adviced
+          - Prompted
+        - Scolding:
+          - Scolding
+          - To scold someone
+          - To berate
+          - Reproach
+        - Agreement:
+          - Former agreement (Contract):
+            - The agreement
+            - The treaty
+          - General agreement:
+            - General agreement
+            - Consensus
+        - Opinion:
+          - Agree:
+            - Agree
+          - Decline:
+            - Decline
+            - Politely refused to
+          - Confirm:
+            - Confirmed
+            - Validated
+      
+      - People:
+        - People:
+          - Family:
+            - Parents:
+              - Father
+              - Mother
+            - Children:
+              - Son
+              - Daughter
+              - Brother
+              - Sister
+              - Twins
+            - Grandparents:
+              - Grandfather
+              - Grandmother
+            - Grandchildren:
+              - Grandson
+              - Granddaughter
+          - Pawn:
+            - Pawn
+            - Marionnette
+        - Personality, Personalities:
+          - Sensitive and sentimental:
+            - Sensitive:
+              - Sensitive
+              - Easily upset, embarrased, angry by the things
+              - Full of emotions
+            - Rational:
+              - Rational
+              - Based on clear thoughts and reasons
+            - Sentimental:
+              - Sentimental
+              - Strongly influenced by emotional feelings rather than judgement on facts
+            - Indifference:
+              - Indifference
+              - Lack of intrest in sb/sth
+            - Emotionless:
+              - Emotionless
+              - Passionless
+              - Not showing emotional
+            - Hindsight:
+              - Hindsight
+              - The ability to understand an event after happening
+          - Certain:
+            - Certain
+            - Confident
+            - Poised
+          - Quarrelsome:
+            - Quarrelsome
+            - Contentious
+            - Repeatedly argues with other people
+          - Bravity:
+            - Brave:
+              - Brave
+            - Coward:
+              - Coward
+              - Cowers
+        - Attitude:
+          - Disrespectful:
+            - Disrespectful
+            - Blasphemous
+        - Feelings:
+          - Happy:
+            - Optimistic:
+              - Optimistic
+              - Inspired
+              - Open
+            - Intimate:
+              - Intimate
+              - Playful
+              - Sensitive
+            - Peaceful:
+              - Peaceful
+              - Hopeful
+              - Loving
+            - Powerful:
+              - Powerful
+              - Provocative
+              - Couregous
+            - Accepted:
+              - Accepted
+              - Respected
+              - Fulfilled
+            - Proud:
+              - Proud
+              - Important
+              - Confident
+            - Interested:
+              - Interested
+              - Amused
+              - Inquistitive
+            - Joyful:
+              - Joyful
+              - Liberated
+              - Estatic
+          - Surprised:
+            - Excieted:
+              - Excited
+              - Eager
+              - Energetic
+            - Amazed:
+              - Amazed
+              - Astonished
+              - Awe
+            - Confused:
+              - Confused
+              - Disillusoned
+              - Perplexed
+            - Startled:
+              - Startled
+              - Shocked
+              - Dismayed
+          - Fear:
+            - Scared:
+              - Scared
+              - Frightened
+              - Terrified
+            - Anxious:
+              - Anxious
+              - Worried
+              - Overwhelmed
+            - Insecure:
+              - Insequre
+              - Inadequate
+              - Inferiour
+          - Humiliated:
+            - Guilty:
+              - Guilty
+              - Remoresful
+              - Ashamed
+            - Hurt:
+              - Hurt
+              - Devastated
+              - Embarrassed
+            - Rejected:
+              - Rejected
+              - Alienated
+              - Inadequate
+            - Submissive:
+              - Submissive
+              - Insignificant
+              - Worthless
+            - Humiliated:
+              - Humiliated
+              - Riduculed
+              - Disrespected
+          - Anger:
+            - Mad:
+              - Mad
+              - Enraged
+              - Furious
+            - Aggressive:
+              - Aggressive
+              - Provoked
+              - Hostile
+            - Frustrated:
+              - Frustrated
+              - Infuriated
+              - Irritated
+            - Annoyed:
+              - Annoyed
+              - Vexed
+            - Irritated:
+              - Irritated
+              - Disgrunted
+            - Threatened:
+              - Threatened
+              - Jealous
+              - Insecure
+            - Hateful:
+              - Hateful
+              - Violated
+              - Resentful
+          - Skeptical:
+            - Distant:
+              - Distant
+              - Withdrawn
+              - Suspicious
+            - Critical:
+              - Critical
+              - Skeptical
+              - Sarcastic
+          - Disgust:
+            - Disapproval:
+              - Disapproval
+              - Judgemental
+              - Loathing
+            - Disappointed:
+              - Disappointed
+              - Repugnant
+              - Revolted
+            - Awful:
+              - Awful
+              - Revulsion
+              - Detestable
+            - Avoidance:
+              - Avoidance
+              - Aversion
+              - Hesitant
+          - Sad:
+            - Despair:
+              - Despair
+              - Powreless
+              - Vulnerable
+            - Depressed:
+              - Inferior
+              - Empty
+            - Lonely:
+              - Abandoned
+              - Isolated
+              - Ignored
+              - Victimized
+          - Bored:
+            - Bored
+            - Apathetic
+            - Indifferent
+      
+      - Society:
+        - Religion:
+          - One-deity:
+            - One-deity
+            - Monotheistic
+        - Economy:
+          - Touts:
+            - Touts
+            - Scalpers
+            - "Svarta börshajar"
+        - Politics:
+          - Elections:
+            - Election:
+              - Election
+            - Fruther election:
+              - A further election
+              - Run off
+      
+      - Stories:
+        - Signs of the zodiac:
+          - Aries
+          - Taurus
+          - Gemini
+          - Cancer
+          - Leo
+          - Virgo
+          - Libra
+          - Scorpio
+          - Sagittarius
+          - Capricorn
+          - Aquarius
+          - Pisces
+      - Ord:
+        - 'coward: a person who is not brave'
+        - 'timid: shy and nervous without confidence'
+        - 'reckless: doing something dangerous without considering risks'
+        - 'bold: not frightened of danger'
+        - 'impediment: hurdle, obstacle'
+        - 'amiable: pleasant and friendly'
+        - 'candid: honest and telling the truth'
+        - 'gullible: easily decieved'
+        - 'torture: to cause great pain to someone intentionally'
+        - 'stingy: unwilling to spend money'
+        - 'generous: willing to give money, help, kindness'
+        - 'traitor: person who is not loyal'
+        - 'cautious: careful, well-considered'
+        - 'decent: socially acceptable and good'
+        - 'dignity: the importance and value that a person has'
+        - 'abominable: very bad or unpleasant'
+        - 'apprehensive: feeling worried about something bad happening'
+        - 'arrogance: proud and having as you are the most important'
+        - 'trait: a particular characteristic'
+        - 'inferiority: being not good, or not as good as someone else'
+        - 'dwelling: a house or place to live in'
+        - 'perish: to die in an accident or being killed'
+        - 'grandstand: seats in stadium or huge buildings'
+        - 'emit: to send out a beam, noise or gas'
+        - 'ignite: to cause starting burning or exploding'
+        - 'dull: not interesting or exciting in any way'
+        - 'mock: to laugh at someone often copying funnily'
+        - 'compousure: calm and confident'
+        - 'diplomatic: controlling 2 opposing sides without upseting anyone'
+        - 'apparition: the spirit of a dead appearing visibly'
+        - 'petal: bright colored parts form a flower'
+        - 'bough: a large branch of a tree'
+        - 'brow: the forehead'
+        - 'parting: done while leaving or separating'
+        - 'thus: with this result'
+        - 'avow: to admit something or say something publicly'
+        - 'deem: to consider or judge something in a particular way'
+        - 'amid: middle surrounded by'
+        - 'torment: great mental suffering, unhappiness'
+        - 'pitiless: cruel, no pity'
+        - 'lively: full with energy and enthusiasm, interesting, exciting'
+        - 'imagery: using words describing ideas or situations'
+        - 'blur: something cannot see clearly'
+        - 'theme: the subject of a talk, book, film'
+        - 'mimic: to copy the way particular person speaks moves for fun'
+        - 'depiction: the way that something is represented or shown'
+        - 'homogeneous: consting of parts that are same typed'
+        - 'assess: to judge the amount, value, quality or importance'
+        - 'juxtapose: to put unsimilar things next to each other'
+        - 'prose: written language in its ordinary form rather than poetry'
+        - 'assonance: the similarity in sound between 2 syllables dose together'
+        - 'fixture: permanently fixed place of furniture in a house'
+        - 'denote: to represent something'
+        - 'oscillation: repeated movement from one position to another'
+        - 'superfluous: more than is needed or wanted'
+        - 'dorm: a large room with many beds maybe in campus'
+        - 'rely on: depend on'
+        - 'unreliable: cannot be trusted or believed'
+        - 'deteriorate: to become worse'
+        - 'amicable: friendly, harmonious, peaceful'
+        - 'foreshadowing: small description in beginning that will be meaningsful later'
+        - 'villain: a bad person who harms other people or breaks the law'
+        - 'regulate: to control something'
+        - 'ratify: to make an agreement official'
+        - 'stance: a way of thinking about something, especially'
+        - 'fiercely: in a frightening, violent, or powerful way'
+        - 'sue: to take legal action against someone'
+        - 'curb: to control or limit the unwanteds'
+        - 'in favor of: to support or approve sth'
+        - 'counter: to react to something with opposing opinion'
+        - 'charges: publicly accuse someone of doing something bad'
+        - 'contend: to complete in order to win something'
+        - 'grandee: an important person in a particular job'
+        - 'agitate: to make someone feel worried or angry'
+        - 'interpret: to decide what the intended meaning of something is'
+        - 'decree: official statement that something must happen'
+        - 'lodge: to make an official complaint'
+        - 'remedy: to do correct the mistake'
+        - 'fraught: causing or having extreme worry or anxiety'
+        - 'supersede: to replace something old'
+        - 'jolly: happy and smiling'
+        - 'provision: the act of providing something'
+        - 'strike down something: to decide that a law or rule is illegal'
+        - 'in jeopardy: in danger of being damaged or destroyed'
+        - 'scupper: to cause a plan or opportunity to fail'
+        - 'the vanguard: army or navy that leads an attack on an enemy'
+        - 'cap: to put a limit on expenses'
+        - 'controversial: causing disagreement or discussion'
+        - 'odour: an unpleasant smell'
+        - 'olfactory: connected with the ability to smell'
+        - 'thoroughly: completely'
+        - 'significantly: in a way that is easy to see or by a large amount'
+        - 'plausible: seeming likely to be true'
+        - 'hypothesis: an unproven idea or explanation based on facts'
+        - 'exclusively: only'
+        - 'magnitude: the size or importance of something'
+        - 'pun: a humorouse use of a word or phrase with several meanings that sounds like another word'
+        - 'conservative: not usually liking or trusting change'
+        - 'attend: to go to an event, place'
+        - 'facility: a place where a particular activity happens'
+        - 'faculty: the people who teach in a departement in a college'
+        - 'in operation: in working status'
+        - 'gutted: extremely disappointed and unhappy'
+        - 'committee: a samll group chosen to represent a larger organization for making decisions'
+        - 'distinguish: to difference between 2 things'
+        - 'specimen: something shown or examined as an example'
+        - 'sort out: put things in order or correct place'
+        - 'pneumonia: illness which lungs becomes red and swolled filled with liquid'
+        - 'rubble: the piles of broken stones and bricks'
+        - 'cope: to deal successful with a difficult situation'
+        - 'epicenter: the point on the earths surface'
+        - 'toll: suffering, death or damage'
+        - 'tremor: a slight shaking movement in a persons body of nervousness or excitement'
+        - 'demolish: to comletely destroy a building'
+        - 'erupt: explodes and flames and rocks come out of it'
+        - 'illumination: giving new information about a subject or making easier to understand'
+        - 'illuminate: brighten'
+        - 'hailstorm: sudden heavy fall of hail'
+        - 'creek: a narrow area of whater flowing into land'
+        - 'amid: in the middle, surrounded by'
+        - 'debris: broken or ton pieces of something larger'
+        - 'satisfactory: good enough for a particular need or purpose'
+        - 'undergraduate: student studying for the first degree at college or university'
+        - 'venue: the place where a public event or meeting happens'
+        - 'procedure: a set of action that is official or accepted'
+        - 'proficiency: having skill and experience for doing something'
+        - 'lounge: a room where people can relax and wait'
+        - 'executive: someone in a high position, makes decision and act'
+        - 'secretary: someone working in an office, writing letters, call on phone and arranging meetings for the boss'
+        - 'fare: the money paid for the journey in a vehicle'
+        - 'transition: change from one form to another'
+        - 'euphoria: extreme happiness'
+        - 'assignment: a piece of work given to someone'
+        - 'understimated: underestimated'
+        - 'forage: to go from place to place searching for things that you can eat or use'
+        - 'circadian: used to describe the process in living form during a day'
+        - 'undergo: to experience somethin that is unpleasant or a change'
+        - 'benign: pleasant and kind'
+        - 'durable: able to last and used without becoming damaged'
+        - 'breach: an act of breaking a law, promise, agreement or relationship'
+        - 'malleable: that can easily be changed into a new shape'
+        - 'pragmatic: solving problems in a sensible way'
+        - 'contemprorary: existing or happening now'
+        - 'subjugate: to defeat people or a country and rule them that allows them no freedom'
+        - 'deleterious: harmful'
+        - 'whittle: making something from wood cutting off small pieces'
+        - 'moodiness: easily changing moods'
+        - 'shed: to get rid of something unwanted'
+        - 'adamant: impossible to persuade'
+        - 'pronounced: very noticeable or certain, marked'
+        - 'deplete: to reduce something in size or amount'
+        - 'breakdown: failure to work or be successful'
+        - 'screen out: to prevent something or someone undesirable coming in'
+      - IELTS:
+        - General:
+          - Procedure for evacuation:
+            - 'campus: the buildings of a college or university'
+            - 'in case of: if something happens, or in preperation'
+            - 'siren: a device for making a loud warning noise'
+            - 'roll: an official list of names, turning over and over'
+            - 'premises: the land and buildings'
+            - 'premise: fundamental'
+            - 'brisk: quick, energetic and active'
+            - 'account for: to form the total of somethin'
+          - Community education
+        - Academy
+      - Progress gold B:
+        - Communicate:
+          - Speak:
+            - 'clichéd: often said, used, done, not interesting'
+            - 'bloke: a man'
+            - 'blokey: manly'
+            - 'anecdote: a short funny story'
+            - 'all in all: considering all the different parts of the situation together'
+            - 'plead: to make an urgent emotional statement or request for something'
+            - 'mean: 1. not willing to give/share things 2. unkind'
+          - The ambassadors dandruff:
+            - 'praised: to express admiration'
+            - 'notorious: infamous, famous for something bad'
+            - 'dandruff: small, white, pieces of dead skin from the head collet in the head or on the clothes'
+            - 'well groomed: heaving a neat and pleasant appearance produced by care'
+            - 'embrace: to accept something enthusiastically'
+          - I remember:
+            - 'husk: the outer dry covering of some seeds'
+            - 'lingering: lasting a long time'
+            - 'stark: empty, simple, obvious'
+            - 'accustomed: familiar with something'
+            - 'solemnly: serious and without any humour'
+            - 'cranky: easily annoyed or upset'
+            - 'shrub: a large plant with a rounded shape from many small branches'
+            - 'collective: of our shared by every member of a group of people'
+            - 'ritual: a way of doing in same actions'
+            - 'graditude: the feeling of being grateful'
+            - 'adrenaline: a hormone when sb is frightened, angry or excited making heart beat faster'
+            - 'sizzle: sound like food cooking in hot fat'
+            - 'hum: making a continous low sound'
+            - 'wagon: a vehicle with four wheels pulled by horses or oxen, transporting heavy goods'
+        - Empower:
+          - Symptoms of love:
+            - 'migraine: severe continous headache, often with vomiting and difficulty in seeing'
+            - 'blot sth out: to hide or block from something'
+            - 'lean: without waste'
+            - 'laggard: something that is very slow'
+            - 'omen: sign of future event (negative)'
+            - 'grief: very great sadness especially at someones death'
+          - Lover:
+            - 'recall: suddenly remember (återkalla)'
+            - 'distill: heating a liquid for stronger and purer and cooling'
+          - Deadly thoughts:
+            - 'trances: (trans, hänryckning)'
+            - 'whack: to hit someone/something noisily'
+            - 'slouch: shoulder hanging forward and head bent over'
+            - 'hunch: lean forward with shoulder raised or to bend your back and shoulders into a round shape'
+            - 'blister: painful swelling with liquid on skin'
+            - 'braid: a thin strip of cloth attachd to clothes'
+            - 'streak: a long thin mark'
+          - Come on! Complexity:
+            - 'novelty: the quality of being new and unusual'
+            - 'apparent: able to be seen/understood'
+            - 'quotation: a phrase of short piece of writing taken from a longer work'
+            - 'Tippex: correction liquid'
+        - Hot:
+          - Like every other American family?:
+            - 'chart: to record something in detail'
+            - 'beatific: happy and calm in a holy way'
+            - 'mezmerizing: very attractive'
+            - 'photogenic: having a face that looks attractive in photographs'
+            - 'mezmerizing: very attractive'
+            - 'sentimental: relating to feeling not reason'
+            - 'tender: gentle, loving or kind'
+            - 'unadulterated: pure'
+            - 'squire: godsägare'
+            - 'snore: kikna av skratt, frusta'
+            - 'doting: kärleksfull, avgudande'
+            - 'enthrall: to keep someone completely interested, trollbinda, förtrolla'
+            - 'exude: ge ifrån sig'
+            - 'basin: handfat'
+            - 'astonishing: förvånansvärd'
+            - 'solemnly: seriously'
+            - 'glee: happiness, joy, glädje'
+          - The Execution:
+            - 'coroner: official that examines reason of persons death'
+            - 'press: writer, journalist'
+            - 'padre: a Christian priest in armed faces'
+            - 'reverend: a title for a priest (pastor)'
+            - 'shove: push forcefully' 
+    - Essay sentences:
+      - Background/Introduction:
+        - People’s views on (...) vary from person to person.
+        - Some hold that (...). However, others believe that (...).
+      - Deterioration:
+        - That leads to deterioration of ...
+      - To mention the topic/opinion:
+        - It is high time that (...).:
+          - It is high time that we put an end to the trend.
+        - There is no doubt that enough concern must be paid to the problem of (...)
+      - To provide your reasons:
+        - I quite agree with the statement that (...).
+        - The reasons are chiefly as follows.
+        - The first reason can be seen is that the ...
+        - This phenomenon exists for a number of reasons. First, (...) Second, (...) Third, (...)
+      - Conclusion:
+        - All in all, ...
+        - In brief, ...
+      - Most important:
+        - One of the most <adj>:
+          - Lack of interpersonal skills is one of the most serious defects that we have ever known about today’s college students.
+        - Nothing is more important than ...:
+          - For parents, nothing is more important than to educate children in a proper way.
+        - Most important of all is ...
+      - For sure:
+        - There is no doubt that ...:
+          - There is no doubt that the Internet is far more convenient and efficient than the written word or other conventional means of conveying meaning.
+        - There is no denying that ...:
+          - There is no denying that the practicality of our higher education has gone from bad to worse.
+        - There is no one but longs to display the best self and impress others.
+        - Universally acknowledged:
+          - It is universally acknowledged that it is the doctor’s duty and obligation to heal the wounded and rescue the dying.
+      - Advantage:
+        - One of advantages of children’s participating ...:
+          - An advantage of children’s participating in some paid work is that this practice can cultivate their independence, self-determination and sense of responsibility.
+      - So + <adj> + be + <noun>:
+        - So pervasive are advertisements by which no one can avoid being influenced.
+        - Obviously, no one can avoid being influenced by advertisements.
+      - The more, the more:
+        - The <more adj (adj-er)> <subj> be ..., the <more adj (adj-er)> <subj> be ...:
+          - The hotter the weather is, the more tired (thirsty) we are.
+        - The more <noun> do ..., the more <noun> do ...:
+          - The more children are encouraged to get in touch with various aspects of society, the more comprehensive their knowledge will be.
+        - The <more adv (adv-er)> <subj> do ..., the <more adv (adv-er)> <subj> do ...:
+          - The harder we do, the more greatly we reach.
+    

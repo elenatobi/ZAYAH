@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<style>
+*{
+	color: #4d4d4d;
+	user-select: none;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Lato";
+}
+
+.toolbar{
+	display: flex;
+	padding: 3px 9px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.content{
+	display: flex;
+}
+
+div.tool{
+	margin: 0 1px;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+}
+
+div.tool:hover, div#filename{
+	background: #e1e1e1;
+}
+
+div#filename{
+	margin-left: auto;
+}
+
+div#account{
+	background: #b30000;
+	color: white;
+	border-radius: 50%;
+}
+
+div.imgtoolgroup{
+	display: flex;
+	margin-right: 1px;
+	padding: 0 7px;
+	border-right: 1px solid silver;
+}
+
+div.imgtool{
+	margin: 4.5px;
+	width: 18px;
+	height: 18px;
+	background-image: url("icons.png");
+	background-size: 150px 90px;
+}
+
+.overview-settings-head, .overview-item, .overview-item-active{
+	padding: 11px 5px;
+	font-size: 12px;
+}
+
+.overview-settings-head{
+	background: #f0efef;
+}
+
+.overview-item-active{
+	background: #e1e1e1;
+}
+
+</style>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>
+<script type="text/python">
+
+from browser import document, window
+from dataclasses import dataclass
+from abc import ABC, abstractmethod
+from typing import Optional
+from math import pi, sin, cos, sqrt
+
+class Editor:
+	def __init__(self):
+		#self.layout = TestElement([Len(220, 7), Len(230, 8), Len(70, 5), Len(-45, 9)], "green", (5, "silver"), pi/6, "https://www.online-image-editor.com/styles/2019/images/power_girl.png")
+		#self.layout = TestElement([Len(220, 7), Len(230, 8), Len(100, 5), Len(-19, 9)], "green", (1, "silver"), pi/6, "Hello world")
+		#self.layout = TestElement([Len(50, 9), Len(22, 8), Len(110, 3), Len(80, 7), Len(38, 11), Len(121, 9)], "orange", (3, "teal"), 0)
+		self.transform = Transform()
+		self.layout = SVGPaper([Len(190), Len(210), Len(220), Len(206)], "grey", (1, "gold"), 0, [
+			SVGRect([Len(10, 3), Len(10, 5), Len(100, 9), Len(50, 7)], "orange", rotation = pi/6),
+			SVGLine([Len(0, 2), Len(4, 8), Len(22, 3), Len(112, 5), Len(100, 7), Len(112, 3)], "transparent", (2, "blue"), pi/6),
+			SVGEllipse([Len(22, 3), Len(44), Len(12, 2), Len(2, 35)], "green", rotation = pi/3),
+			self.transform
+		])
+		self.layout.editor = self
+		self.win = GraphWin(self.layout, window.innerWidth - 250 - 250, window.innerHeight - 75)
+		self.__start()
+		
+	def __start(self):
+		window.addEventListener("resize", self.__resize)
+		document.getElementById("tool_cursor").addEventListener("click", self.__click_tool_cursor)
+		
+	def __resize(self, event):
+		self.win.set_size(window.innerWidth - 250 - 285, window.innerHeight - 75)
+		
+	def __click_tool_cursor(self, event):
+		print("tool cursor pressed", self, event)
+		
+	def run(self):
+		#self.transform.view()
+		print("running")
+		
+class GraphWin:
+	def __init__(self, layout, width = 800, height = 500):
+		self.__canvas = document.getElementById("my_canvas")
+		self.__ctx = self.__canvas.getContext("2d")
+		self.__layout = layout
+		self.__auto_refresh = True
+		self.__is_dragging = False
+		self.__touch_old = (0, 0)
+		self.set_size(width, height)
+		self.__start()
+		
+	def __start(self):
+		print("onboard start")
+		window.setInterval(self.__app_loop, 100)
+		self.__canvas.addEventListener("touchstart", self.__touchstart)
+		self.__canvas.addEventListener("touchmove", self.__touchmove)
+		self.__canvas.addEventListener("touchend", self.__touchend)
+		self.__canvas.addEventListener("mousemove", self.__mousemove)
+		self.__canvas.addEventListener("mousedown", self.__mousedown)
+		self.__canvas.addEventListener("mouseup", self.__mouseup)
+		
+	def __mousemove(self, event):
+		event.preventDefault()
+		x, y = event.offsetX, event.offsetY
+		if self.__is_dragging:
+			self.__layout.mouse_event("on_drag", x, y, event)
+		else:
+			self.__layout.mouse_event("on_mouse_move", x, y, event)
+			
+	def __mousedown(self, event):
+		event.preventDefault()
+		x, y = event.offsetX, event.offsetY
+		if not self.__is_dragging:
+			self.__layout.mouse_event("on_drag_start", x, y, event)
+			self.__is_dragging = True
+		self.__layout.mouse_event("on_mouse_down", x, y, event)
+			
+	def __mouseup(self, event):
+		event.preventDefault()
+		x, y = event.offsetX, event.offsetY
+		if self.__is_dragging:
+			self.__layout.mouse_event("on_drag_end", x, y, event)
+			self.__is_dragging = False
+		self.__layout.mouse_event("on_mouse_up", x, y, event)
+		
+	def __touchstart(self, event):
+		event.preventDefault()
+		touch = event.touches[0]
+		box = event.target.getBoundingClientRect()
+		x, y = touch.clientX - box.left, touch.clientY - box.top
+		self.__touch_old = (x, y)
+		self.__layout.mouse_event("on_touch_start", x, y, event)
+		
+	def __touchmove(self, event):
+		event.preventDefault()
+		touch = event.touches[0]
+		box = event.target.getBoundingClientRect()
+		x, y = touch.clientX - box.left, touch.clientY - box.top
+		self.__touch_old = (x, y)
+		self.__layout.mouse_event("on_touch_move", x, y, event)
+		
+	def __touchend(self, event):
+		event.preventDefault()
+		x, y = self.__touch_old
+		self.__layout.mouse_event("on_touch_end", x, y, event)
+		
+	def __app_loop(self):
+		if self.__auto_refresh:
+			print("auto refresh")
+			self.__ctx.clearRect(0, 0, self.__canvas.width, self.__canvas.height)
+			self.__layout.render(self.__ctx, (0, 0))
+			self.__auto_refresh = False
+		
+	def set_size(self, width, height):
+		dpr = window.devicePixelRatio
+		self.__canvas.style.width = f"{width}px"
+		self.__canvas.style.height = f"{height}px"
+		self.__canvas.attrs["width" ] = width  * dpr
+		self.__canvas.attrs["height"] = height * dpr
+		self.__ctx.scale(dpr, dpr)
+		self.require_refresh()
+		
+	def require_refresh(self):
+		self.__auto_refresh = True
+		
+@dataclass
+class Len:
+	px: float
+	perc: Optional[float] = 0
+	
+	def __check_type(self, other):
+		if type(other) != type(self):
+			raise TypeError(f"Cannot add Len with {type(other).__name__}")
+	
+	def explicit(self, upper):
+		return (self.perc * upper) / 100 + self.px
+		
+	def add(self, other):
+		self.__check_type(other)
+		return Len(self.px + other.px, self.perc + other.perc)
+		
+	def subtract(self, other):
+		self.__check_type(other)
+		return Len(self.px - other.px, self.perc - other.perc)
+		
+class TransTools:
+	@staticmethod
+	def rotate(x, y, xr, yr, rotation):
+		sin_rotation = sin(rotation)
+		cos_rotation = cos(rotation)
+		x_new = ((x-xr)*cos_rotation - (y-yr)*sin_rotation) + xr
+		y_new = ((x-xr)*sin_rotation + (y-yr)*cos_rotation) + yr
+		return x_new, y_new
+		
+@dataclass
+class GraphicsObject(ABC):
+	pos: list[Len]
+	color: Optional[str] = "black"
+	border: Optional[tuple] = (0, "transparent")
+	rotation: Optional[float] = 0
+	content: Optional[str] = ""
+	font: Optional[str] = "Arial"
+	
+	def get_pos(self, upper_dim):
+		result = []
+		width, height = upper_dim
+		for i in range(0, len(self.pos), 2):
+			result.append(self.pos[ i ].explicit(width ))
+			result.append(self.pos[i+1].explicit(height))
+		return result
+	
+	def render(self, ctx, upper_dim):
+		pos = self.get_pos(upper_dim)
+		ctx.save()
+		ctx.fillStyle = self.color
+		ctx.lineWidth = self.border[0]
+		ctx.strokeStyle = self.border[1]
+		self._rotate(ctx, pos)
+		self._render(ctx, pos)
+		ctx.restore()
+		
+	def mouse_event(self, event_type, x, y, event, upper_dim = (0, 0)):
+		#print("mouseevent", event_type, x, y, event)
+		if not self.is_inside(x, y, upper_dim):
+			event_type = event_type + "_out"
+		if hasattr(self, event_type):
+			getattr(self, event_type)(x, y, event)
+			
+	def to_rect_rotate(self, upper_dim):
+		x_min, y_min, x_max, y_max = self.to_rect(upper_dim)
+		x_center = (x_min + x_max)/2
+		y_center = (y_min + y_max)/2
+		x11, y11 = TransTools.rotate(x_min, y_min, x_center, y_center, self.rotation)
+		x21, y21 = TransTools.rotate(x_max, y_min, x_center, y_center, self.rotation)
+		x12, y12 = TransTools.rotate(x_min, y_max, x_center, y_center, self.rotation)
+		x22, y22 = TransTools.rotate(x_max, y_max, x_center, y_center, self.rotation)
+		new_x_min = min(x11, x21, x12, x22)
+		new_y_min = min(y11, y21, y12, y22)
+		new_x_max = max(x11, x21, x12, x22)
+		new_y_max = max(y11, y21, y12, y22)
+		return [new_x_min, new_y_min, new_x_max, new_y_max]
+		
+	@abstractmethod
+	def _render(self, ctx, pos):
+		pass
+		
+	@abstractmethod
+	def _rotate(self, ctx, pos):
+		pass
+		
+	@abstractmethod
+	def to_rect(self, upper_dim):
+		pass
+		
+	@abstractmethod
+	def move(self, delta_x, delta_y):
+		pass
+		
+	@abstractmethod
+	def is_inside(self, x, y):
+		pass
+		
+class Line(GraphicsObject):
+	def _rotate(self, ctx, pos):
+		x_min, y_min = min(pos[0::2]), min(pos[1::2])
+		x_max, y_max = max(pos[0::2]), max(pos[1::2])
+		ctx.translate((x_min + x_max)/2, (y_min + y_max)/2)
+		ctx.rotate(self.rotation)
+		ctx.translate((x_min - x_max)/2, (y_min - y_max)/2)
+		
+	def _render(self, ctx, pos):
+		x_min, y_min = min(pos[0::2]), min(pos[1::2])
+		ctx.beginPath()
+		ctx.moveTo(pos[0] - x_min, pos[1] - y_min)
+		for i in range(2, len(pos), 2):
+			ctx.lineTo(pos[i] - x_min, pos[i+1] - y_min)
+		ctx.stroke()
+		
+	def to_rect(self, upper_dim):
+		pos = self.get_pos(upper_dim)
+		x_pos = pos[0::2]
+		y_pos = pos[1::2]
+		return min(x_pos), min(y_pos), max(x_pos), max(y_pos)
+		
+	def move(self, delta_x, delta_y):
+		for i in range(0, len(self.pos), 2):
+			self.pos[ i ] = self.pos[ i ].add(delta_x)
+			self.pos[i+1] = self.pos[i+1].add(delta_y)
+		
+	def is_inside(self, x, y, upper_dim):
+		pos = self.get_pos(upper_dim)
+		center_x = (min(pos[0::2]) + max(pos[0::2])) / 2
+		center_y = (min(pos[1::2]) + max(pos[1::2])) / 2
+		x, y = TransTools.rotate(x, y, center_x, center_y, -self.rotation)
+		for i in range(0, len(pos) - 2, 2):
+			x1, y1, x2, y2 = pos[i:i+4]
+			d1 = sqrt((x1 - x )**2 + (y1 - y )**2)
+			d2 = sqrt((x2 - x )**2 + (y2 - y )**2)
+			d3 = sqrt((x2 - x1)**2 + (y2 - y1)**2)
+			if d1 + d2 >= d3 - 2 and d1 + d2 <= d3 + 2:
+				return True
+		return False
+		
+class Rect(GraphicsObject):
+	def fix(pos):
+		x, y, width, height = pos
+		if width < 0:
+			x = x + width
+			width = -width
+		if height < 0:
+			y = y + height
+			height = -height
+		return x, y, width, height
+		
+	def _rotate(self, ctx, pos):
+		x, y, width, height = Rect.fix(pos)
+		ctx.translate(x + width/2, y + height/2)
+		ctx.rotate(self.rotation)
+		ctx.translate(-width/2, -height/2)
+		
+	def _render(self, ctx, pos):
+		_, _, width, height = Rect.fix(pos)
+		ctx.beginPath()
+		ctx.fillRect(0, 0, width, height)
+		ctx.strokeRect(0, 0, width, height)
+		ctx.closePath()
+		
+	def to_rect(self, upper_dim):
+		x, y, width, height = Rect.fix(self.get_pos(upper_dim))
+		return x, y, x + width, y + height
+		
+	def move(self, delta_x, delta_y):
+		self.pos[0] = self.pos[0].add(delta_x)
+		self.pos[1] = self.pos[1].add(delta_y)
+		
+	def is_inside(self, x, y, upper_dim):
+		xr, yr, width, height = Rect.fix(self.get_pos(upper_dim))
+		x, y = TransTools.rotate(x, y, xr + width/2, yr + height/2, -self.rotation)
+		return xr < x < xr + width and yr < y < yr + height
+		
+class Ellipse(Rect):
+	def _rotate(self, ctx, pos):
+		x, y, _, _ = Rect.fix(pos)
+		ctx.translate(x, y)
+		ctx.rotate(self.rotation)
+		
+	def _render(self, ctx, pos):
+		_, _, width, height = Rect.fix(pos)
+		ctx.beginPath()
+		ctx.ellipse(0, 0, width, height, 0, 0, 2*pi)
+		ctx.closePath()
+		ctx.fill()
+		ctx.stroke()
+		
+	def to_rect(self, upper_dim):
+		x, y, width, height = Rect.fix(self.get_pos(upper_dim))
+		return x - width, y - height, x + width, y + height
+		
+	def is_inside(self, x, y, upper_dim):
+		xr, yr, width, height = Rect.fix(self.get_pos(upper_dim))
+		x, y = TransTools.rotate(x, y, xr, yr, -self.rotation)
+		#print("value", (x - xr)**2/width**2 + (y - yr)**2/height**2)
+		return (x - xr)**2/width**2 + (y - yr)**2/height**2 <= 1
+		
+class Text(Rect):
+	def _render(self, ctx, pos):
+		_, _, width, height = Rect.fix(pos)
+		ctx.font = f"{height}px {self.font}"
+		ctx.textBaseline = "top"
+		ctx.fillText(self.content, 0, 0)
+		ctx.strokeRect(0, 0, width, height)
+		
+class Image(Rect):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.image = document.createElement("img")
+		self.image.attrs["src"] = self.content
+		
+	def _render(self, ctx, pos):
+		_, _, width, height = Rect.fix(pos)
+		ctx.drawImage(self.image, 0, 0, width, height)
+		ctx.strokeRect(0, 0, width, height)
+		
+class LayoutBase(Rect):
+	def __init__(self, pos, color, border, rotation, lower_widgets):
+		super().__init__(pos, color, border, rotation)
+		self.lower_widgets = lower_widgets
+		self.scale = (1, 1)
+		
+	def _render(self, ctx, pos):
+		super()._render(ctx, pos)
+		x, y, width, height = Rect.fix(pos)
+		ctx.save()
+		ctx.scale(self.scale[0], self.scale[1])
+		for lower_widget in self.lower_widgets:
+			lower_widget.render(ctx, (width, height))
+		ctx.restore()
+		
+	def mouse_event(self, event_type, x, y, event, upper_dim = (0, 0)):
+		super().mouse_event(event_type, x, y, event, upper_dim)
+		xr, yr, width, height = Rect.fix(self.get_pos(upper_dim))
+		x = (x - xr) / self.scale[0]
+		y = (y - yr) / self.scale[1]
+		x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+		for lower_widget in self.lower_widgets:
+			lower_widget.mouse_event(event_type, x, y, event, (width, height))
+			
+class Transform(LayoutBase):
+	def __init__(self):
+		super().__init__([Len(0), Len(0), Len(0), Len(0)], "transparent", (0, "transparent"), 0, [
+			ResizeWidget([Len(0     ), Len(0     ), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0, 100), Len(0     ), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0     ), Len(0, 100), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0     ), Len(0,  50), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0,  50), Len(0     ), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0,  50), Len(0, 100), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0, 100), Len(0,  50), Len(5), Len(5)], "transparent"),
+			ResizeWidget([Len(0, 100), Len(0, 100), Len(5), Len(5)], "transparent"),
+		])
+		self.selected_nodes = []
+		self.active = False
+		self.lower_widgets[-1].changable = True
+		
+	def select_node(self, node, upper_dim):
+		if len(self.selected_nodes) == 0:
+			t_x_min, t_y_min, t_x_max, t_y_max = node.to_rect(upper_dim)
+			self.pos = [Len(t_x_min), Len(t_y_min), Len(t_x_max - t_x_min), Len(t_y_max - t_y_min)]
+			self.rotation = node.rotation
+		else:
+			print("multiselect")
+			t_x1, t_y1, t_x2, t_y2 = self.to_rect_rotate(upper_dim)
+			n_x1, n_y1, n_x2, n_y2 = node.to_rect_rotate(upper_dim)
+			self.rotation = 0
+			total_x_min = min(t_x1, t_x2, n_x1, n_x2)
+			total_y_min = min(t_y1, t_y2, n_y1, n_y2)
+			total_x_max = max(t_x1, t_x2, n_x1, n_x2)
+			total_y_max = max(t_y1, t_y2, n_y1, n_y2)
+			
+			#print(new_x_min, new_y_min)
+			self.pos = [Len(total_x_min), Len(total_y_min), Len(total_x_max - total_x_min), Len(total_y_max - total_y_min)]
+
+		self.selected_nodes.append(node)
+		
+	def unselect_all(self):
+		self.selected_nodes.clear()
+		self.hide()
+		
+	def has(self, widget):
+		for selected_node in self.selected_nodes:
+			if widget is selected_node:
+				return True
+		return False
+		
+	def view(self):
+		self.border = (1, "red")
+		for lower_widget in self.lower_widgets:
+			lower_widget.color = "red"
+		self.active = True
+		
+	def hide(self):
+		self.border = (0, "transparent")
+		for lower_widget in self.lower_widgets:
+			lower_widget.color = "transparent"
+		self.pos = [Len(0), Len(0), Len(0), Len(0)]
+		self.active = False
+		
+	def is_inside_resize_widgets(self, x, y, upper_dim):
+		xr, yr, width, height = Rect.fix(self.get_pos(upper_dim))
+		x = (x - xr) / self.scale[0]
+		y = (y - yr) / self.scale[1]
+		x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+		for resize_widget in self.lower_widgets:
+			if resize_widget.is_inside(x, y, (width, height)):
+				return True
+		return False
+		
+class ResizeWidget(Ellipse):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.changable = False
+		self.old_pos = (0, 0)
+	
+	def on_drag_start(self, x, y, event):
+		if self.changable:
+			print("on drag start", x, y)
+		
+class TestElement:
+	def on_touch_start(self, x, y, event):
+		print("on touch start", type(self), x, y)
+		
+	def on_touch_start_out(self, x, y, event):
+		print("on touch start out", type(self), x, y)
+		
+	def on_touch_end(self, x, y, event):	
+		print("on touch end", type(self), x, y)
+		
+	def on_touch_end_out(self, x, y, event):	
+		print("on touch end out", type(self), x, y)
+		
+	def on_touch_move(self, x, y, event):	
+		print("on touch move", type(self), x, y)
+		
+	def on_touch_move_out(self, x, y, event):	
+		print("on touch move out", type(self), x, y)
+		
+	def on_mouse_move(self, x, y, event):	
+		print("hover", type(self), x, y)
+		
+	def on_mouse_move_out(self, x, y, event):	
+		print("hover out", type(self), x, y)
+		
+	def on_mouse_down(self, x, y, event):	
+		print("mouse down", type(self), x, y)
+		
+	def on_mouse_down_out(self, x, y, event):	
+		print("mouse down out", type(self), x, y)
+		
+	def on_mouse_up(self, x, y, event):	
+		print("mouse up", type(self), x, y)
+		
+	def on_mouse_up_out(self, x, y, event):	
+		print("mouse up out", type(self), x, y)
+		
+	def on_drag_start(self, x, y, event):	
+		print("drag start", type(self), x, y)
+		
+	def on_drag_start_out(self, x, y, event):	
+		print("drag start out", type(self), x, y)
+		
+	def on_drag(self, x, y, event):	
+		print("drag", type(self), x, y)
+		
+	def on_drag_out(self, x, y, event):	
+		print("drag out", type(self), x, y)
+		
+	def on_drag_end(self, x, y, event):	
+		print("drag end", type(self), x, y)
+		
+	def on_drag_end_out(self, x, y, event):	
+		print("drag end out", type(self), x, y)
+		
+class TestLine(Line, TestElement):
+	pass
+	
+class TestRect(Rect, TestElement):
+	pass
+	
+class TestLayout(LayoutBase, TestElement):
+	pass
+	
+class SVGPaper(LayoutBase):
+	"""
+	def mouse_event(self, event_type, x, y, event, upper_dim = (0, 0)):
+		xr, yr, width, height = Rect.fix(self.get_pos(upper_dim))
+		x = (x - xr) / self.scale[0]
+		y = (y - yr) / self.scale[1]
+		x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+		for i in range(len(self.lower_widgets)-1, -1, -1):
+			lower_widget = self.lower_widgets[i]
+			lower_widget.mouse_event(event_type, x, y, event, (width, height))
+			if lower_widget.is_inside(x, y, (width, height)):
+				break
+	"""
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.old_pos = (0, 0)
+	
+	def on_mouse_down(self, x, y, event):
+		xr, yr, width, height = Rect.fix(self.get_pos((0, 0)))
+		x = (x - xr) / self.scale[0]
+		y = (y - yr) / self.scale[1]
+		x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+		selected = False
+		transform = self.lower_widgets[-1]
+		for i in range(len(self.lower_widgets)-2, -1, -1):
+			lower_widget = self.lower_widgets[i]
+			if lower_widget.is_inside(x, y, (width, height)):
+				if not event.ctrlKey and not transform.has(lower_widget):
+					transform.unselect_all()
+				if not transform.has(lower_widget):
+					transform.select_node(lower_widget, (width, height))
+					transform.view()
+					self.editor.win.require_refresh()
+				selected = True
+				break
+			else:
+				if not transform.has(lower_widget):
+					selected = False
+		if transform.is_inside_resize_widgets(x, y, (width, height)):
+			selected = True
+			transform.active = False
+		if not selected:
+			transform.unselect_all()
+			self.editor.win.require_refresh()
+			
+	def on_drag_start(self, x, y, event):
+		transform = self.lower_widgets[-1]
+		xr, yr, width, height = Rect.fix(self.get_pos((0, 0)))
+		x = (x - xr) / self.scale[0]
+		y = (y - yr) / self.scale[1]
+		x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+		self.old_pos = (x, y)
+	
+	def on_drag(self, x, y, event):
+		transform = self.lower_widgets[-1]
+		if transform.active:
+			xr, yr, width, height = Rect.fix(self.get_pos((0, 0)))
+			x = (x - xr) / self.scale[0]
+			y = (y - yr) / self.scale[1]
+			x, y = TransTools.rotate(x, y, width/2, height/2, -self.rotation)
+			old_x, old_y = self.old_pos
+			delta_x = x - old_x
+			delta_y = y - old_y
+			transform.move(Len(delta_x), Len(delta_y))
+			for selected_node in transform.selected_nodes:
+				selected_node.move(Len(delta_x), Len(delta_y))
+			self.editor.win.require_refresh()
+		self.old_pos = (x, y)
+	
+class SVGHandlers:
+	"""
+	def on_mouse_down(self, x, y, event):
+		print("on mouse down on svg handler", self)
+	"""
+	pass
+		
+class SVGLine(Line, SVGHandlers):
+	pass
+	
+class SVGRect(Rect, SVGHandlers):
+	pass
+	
+class SVGEllipse(Ellipse, SVGHandlers):
+	pass
+	
+class SVGText(Text, SVGHandlers):
+	pass
+	
+class SVGImage(Image, SVGHandlers):
+	pass
+	
+class SVGGroup(LayoutBase, SVGHandlers):
+	pass
+	
+		
+if __name__ == "__main__":
+	window.addEventListener("load", Editor().run())
+
+</script>
+</head>
+<body onload="brython(1)">
+	<div class = "toolbar">
+		<div class = "tool">File</div>
+		<div class = "tool">Edit</div>
+		<div class = "tool">Modify</div>
+		<div class = "tool">View</div>
+		<div class = "tool">Help</div>
+		<div class = "tool" id = "filename">untitled.svg</div>
+		<div class = "tool" id = "account">WT</div>
+	</div>
+	<div class = "toolbar" style = "overflow: hidden">
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position:   0px   0px"></div>
+			<div class = "imgtool" style = "background-position:   0px -19px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position:   0px -36px"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position:   0px -54px"></div>
+			<div class = "imgtool" style = "background-position:   0px -72px"></div>
+			<div class = "imgtool" style = "background-position: -18px   0px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -18px -18px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position: -18px -36px" id = "tool_cursor"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -18px -54px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -18px -72px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -36px   0px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -36px -18px"></div>
+			<div class = "imgtool" style = "background-position: -36px -36px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position: -36px -54px"></div>
+			<div class = "imgtool" style = "background-position: -36px -72px"></div>
+			<div class = "imgtool" style = "background-position: -54px   0px"></div>
+			<div class = "imgtool" style = "background-position: -54px -18px"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position: -54px -36px"></div>
+			<div class = "imgtool" style = "background-position: -54px -54px"></div>
+			<div class = "imgtool" style = "background-position: -54px -72px"></div>
+			<div class = "imgtool" style = "background-position: -72px -72px; width: 10px;"></div>
+			<div class = "imgtool" style = "background-position: -72px   0px"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position: -72px -18px"></div>
+			<div class = "imgtool" style = "background-position: -72px -36px"></div>
+		</div>
+		<div class = "imgtoolgroup">
+			<div class = "imgtool" style = "background-position: -72px -54px"></div>
+		</div>
+	</div>
+	<div class = "content">
+		<div style = "width: 250px;">
+			<div style = "height: 50%">
+				<div class = "overview-settings-head">Pages</div>
+				<div>
+					<div class = "overview-item-active">Page 1</div>
+				</div>
+			</div>
+			<div style = "height: 50%">
+				<div class = "overview-settings-head">Layers</div>
+				<div>
+					<div class = "overview-item">Layer 1</div>
+				</div>
+			</div>
+		</div>
+		<canvas id="my_canvas" style="border:1px solid silver"></canvas>
+		<div style = "width: 285px;"></div>
+	</div>
+</body>
+</html>

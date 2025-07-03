@@ -1,0 +1,305 @@
+- Objektiv:
+  - Vetenskap:
+    - Matematik/Matte:
+      - Foundation:
+        - Tal och siffror:
+          - S[1 2 3 4 5 6 7 8 9 10 n]
+          - t[1:00 2:00 ...]
+          - P[$.01 $.5 $.1 $.25 $1 ...]
+          - Δ(x=x1+Δx x1=x2-Δx Δx=x2-x1)
+        - Addition (+):
+          - AG(52+39=91)
+          - A1(xy-9=x″y′)
+        - Subtraction (-):
+          - SG(723-589=134)
+          - SA(++=+ +-=- --=+)
+        - Multiplication (*):
+          - MG(32*21=672)
+          - M0(600[2]*70[1]=42000[3])
+          - M1(1x*1y=(1x+y)+xy)
+          - M5(x5²=(xx′)25)
+        - Division (/):
+          - DG(...)
+          - D0(4200[2]/70[1]=420/7=60[1])
+        - Advancerad räknesätt:
+          - ^(...)
+          - √(...)
+          - log(x) ...
+          - (|x|)(√(x²))
+          - (x<y x>y)
+        - Andel:
+          - ANDEL [10 20 25 33 50 67 n%]
+          - FÖRLÄNG (5/3 = (5*2)/(3*2))
+          - FÖRKORT (12/24 = 1/2)
+          - JÄMFÖRA (1/3<2/3, 1/6<1/5)
+          - ÄNDRING (x*(1+p%)^n, x/(1+p%)^n)
+        - Kombinatorik:
+          - n!=n*(n-1)!=Πi
+          - nPr=n!/(n-r)!
+          - nCr=nPr/r
+        - Logik:
+          - IMPLIKATION(A=>B B=/>A)
+          - EKVIVALENS(A=>B B=>A A<=>B)
+        - Set:
+          - SET{1 2 3 4 5 6}
+          - ...
+        - Talsystem:
+          - N Naturlig
+          - Z Hel
+          - Q Rationell
+          - R Reel
+          - C Komplex
+          - N-N=Z Z/Z=Q
+      - Algebra:
+        - Algebra symboler:
+          - SIM(Förenkling =>)
+          - FAC(Faktorisera <=)
+          - ANU(x~n=m)
+          - IDE(x~y=x)
+          - ASO(x~y=y~x)
+          - COM(x~(y~z)=(x~y)~z)
+          - DIS((x.y)~z=x.z~y.z)
+          - PAS(1 121 1331 14641 ...)
+          - CON(a.~b.=(a~b)(a~~b).)
+          - OLS(± -> */ -> ^√)
+        - Algebra regler:
+          - x+y(IDE0 ASO COM)
+          - x*y(IDE1 ASO COM  ±DIS)
+          - x/y(IDE1 ±DIS COM')
+          - x^n(IDE1 *DIS ±PAS -CON-1)
+          - n^x(ANU0.1 OLS+ a^(-b)=1/(a^b))
+          - log(OLS- ly(x)=lx/ly)
+        - Komplexa tal (√(-1) a+ib):
+          - r(cos(α)+i*sin(α) +CON2)
+          - i^(-1 ... i -1 -i 1)
+        - Funktioner (av x) (f(x)):
+          - Funktion (ΣAn*x+ΣBn*y+C)
+          - Definition(x)/Värdemängd(y)
+          - Asymptot
+          - Rot (Dubbelrot(Vertex))
+          - Polynom(Σan*x^n Π(ax+b))
+          - Rationell(r(x)=p(x)/q(x) q(x)≠0)
+          - P1(∥k1=k2 ⊥k1k2=-1)
+          - P2(Δ=b²-4ac -b/(2a) -Δ/(4a) x=(-b±√Δ)/(2a)[COS])
+          - P3(...)
+          - E^(y=ab^x N0*½^(t/T½))
+          - RT(x+√(2x-1)=2 (√(2x-1))²=(2-x)²)
+        - Ekvationer:
+          - EQA(2x+3=5x 3=5x-2x x=1)
+          - NEQ(-3(x+1)<-9 x+1>3 x>-4)
+          - EQS(y+x=13&y-x=3 x=8&y=5)
+          - SUT(y=x+3 (x+3)+x)
+          - ADD((y+x=13)+(y-x=3)=(2y=16))
+          - SUB((y+x=13)-(y-x=3)=(2x=10))
+        - Algebra modeller:
+          - SUT(x^4-13x²+36=0(t=x²) t²-13t+36=0)
+          - ZRP(x²-5x=0 x(x-5)=0 x=3=-1)
+          - RZP(x²-2x-3=0 x=3=-1 (x-3)(x+1))
+          - IDN(ax+by=cx+dy -> a=c b=d)
+          - COS(x²+ax[+(½a)²-(½2)²]+b=(x+½a)²+b-(½a)²)
+          - FRA((x+1)/(x-1)=9 x+1=9(x-1))
+          - AFR((1/x+x/2=9/x 2+x²=18 x=±4)
+          - PFR(3/x+x/2=9x/2 (6+x²=9x²)/(2x))
+          - TES(...)
+      - Geometri:
+        - Geometri symboler:
+          - PA[Punkt]
+          - L1(Linje)
+          - LT(Tangent)
+          - LS(Sekant)
+          - B1[B1(Plan L+P)L+P]
+          - ^A(=^BAC) Vinkel(Spets/ben)
+          - ~^(Motsatt)
+          - 1α[Spetsig Rät90 Trubbig Rak180]
+          - Σα[Inre(180(n-2)) Yttre(360)]
+        - Plangeometri linjer och vinklar:
+          - ⊥(...)
+          - L1∥L2 (1∥2&1∥3=2∥3)
+          - Sido(α+β=180°)
+          - Vertikal(α=β)
+          - Transversal(α=β=γ)
+          - Likbelägna(α=β)
+          - Alternat(α=γ)
+          - Bisektris(α/2)
+        - Plangeometri:
+          - n(Area(A) Omkrets(P))
+          - 3(½bh=√3/4s² AB+AC+BC)
+          - 4(A=bh 360)
+          - +(Konvex/kav)
+          - C(πr² dπ LT⊥d)
+          - E(πab)
+          - 3I Likben(^B=^C AB=AC)
+          - 3E Liksid(3I+^60 3^=60 3/=)
+          - 3R Rät(a²+b²=c²)
+          - 3S (Spets/Trubbelvinklig)
+          - 4T Trapets(A=½h(a+b))
+          - 4P Gram()
+          - 4D Diamant(AC⊥BD)
+          - 4R Rect(^=90)
+          - 4S Kvadrat(^=90 AC⊥BD)
+          - CR (^m=2^r(2*3I) ab=cd 4(^`=360))
+        - Rymdgeometri:
+          - P[P(L1(α)) L+P>α α(L1~L2)]
+          - L∥L[L∥α(Ln) (L1⊥)∥(L2⊥) L1((α)∥β)∥L2(α/β)]
+          - B∥L[α(L1)∥L L(α)∥β]
+          - B⊥L[(α∥β)⊥L α(m/n)⊥L (l1⊥α)⊥α]
+          - B∥B[α(L1/L2)∥β]
+          - B⊥B[β(L)⊥α]
+          - 3(Bh/3)
+          - 4(Bh)
+          - C(4/3πr²)
+        - Tesserakt geometri:
+          - ...
+        - Geometrisk transformering:
+          - D Translation
+          - S Skala(S=l/l0 (A=S², V=S³))
+          - α Rotation
+          - R Reflektion
+          - D Dilation
+          - 3≅(SSS SAS ASA RHS/HL överensstämmer i)
+          - 3~(AA SAS ASA (i skala))
+      - Analytisk geometri:
+        - Analytisk geometri [AGI(f g h)]:
+          - f(x)[(x1, y1) (x, 0)]
+          - g(x)[(x1, y1) (x, 0)]
+          - h(x)[(x1, y1)]
+        - Plangeometri:
+          - d(√((xA-xB)²+(yA-yB)²))
+          - M(xM=(xA+xB)/2 yM=(yA+yB)/2)
+          - L(y=kx+b)
+          - C((x-x0)²+(y-y0)²=r²)
+          - E((x-x0)²/a²-(y-y0)²/b²=1)
+        - Rymdgeometri:
+          - C(x²+y²+z²=r²)
+      - Statistik:
+        - Diagram/Visualisering:
+          - S(Stolp Stapel Histo)
+          - L(Linje)
+          - C(Cirkel)
+        - Lägesmått:
+          - Ax̄=Σx_i/n Ax̄=n^√(Πx)
+          - σ=√(Σ(x-x̄)²/n)(Standardavvikels)
+          - σ²=√(Σ(x-x̄)²/n)(Varians)
+          - Pop.[][...]=[...]±Z_c*s/√n
+        - Spridningsmått:
+          - Percentil(Pn)
+          - Median(P50) Kvartil(P25/75)
+          - Variationsbredd(x_max-x_min)
+          - Typvärde
+        - Sannolikhet (P(...)):
+          - Förväntning E(...)
+        - Fördelning:
+          - (P(x) x̄ σ²)z=(x-µ)/σ
+          - G[2.3 13.6 34.1 34.1 13.6 2.3]%
+          - Normal 1/√(2π)exp[-½(z)²]
+          - Binomal np^x(1-p)^(n-x)/x!
+          - Poisson(npe^(-np)/x! np np(n-1))
+          - Continous(1/(σ√(2π))exp[½((x-µ)/σ)²] np np)
+      - Trigonometri:
+        - Trigonometriska funktioner:
+          - Sα(0 30 45 60 90)
+          - sin(s)[0 1/2 √2/2 √3/2 1 a/c]
+          - cos(c)[1 √3/3 √2/2 1/2 0 b/c]
+          - tan(t)[0 √3/3 1 √3 . a/b]
+          - cot(z)[. √3 1 √3/3 0 b/a]
+          - csc(v)[. 2 √2 2√3/3 1 c/a]
+          - sec(l)[1 2√3/3 √2 2 0 c/b]
+        - Enhetscirkeln:
+          - x² + y² = 1 (r=1)
+          - P(cos(α), sin(α))
+          - Δα(sin cos tan cot)
+          - (   -α)(-sin cos -tan -cot)
+          - ( 90±α)(cos ±'sin ±'cot ±'tan)
+          - (180±α)(±'sin -cos ±tan ±cot)
+          - (270±α)(-cos ±sin ±'cot ±'tan)
+          - (360±α)(±sin cos ±tan ±cot)
+          - (2α)(2sc c²-s² 2t/(1-t²))
+          - (½α)(√((1~c)/2)(- - +/-))
+        - Förenkling/Faktorisering:
+          - TS+(~(α±β)=~α~β±~α~β)
+          - TR^(~(α±β)=(~α±~β)/(1±'~α*~β))
+          - TH+(~a±~b=.2~(½(α+β))*~(½(α-β)))
+          - TZ+(~a±~b=~(α±β)/(~α*~β))
+          - TP1(~a*~b=½(~(α-β).~(α+β)))
+          - sin(TS+(sccs) TH+(sc) TP1(c-c))
+          - cos(TS-(ccss) TH±(cc|ss) TP1(c+c))
+          - tan(TR TZ+(scc))
+          - cot(TR^-1 TZ+(sss))
+          - s|c(TP1(s+s))
+          - c|s(TP1(s-s))
+        - Trigonometriska satser:
+          - A = ab*sin(C)/2
+          - a/sin(A)=b/sin(B)=c/sin(C)
+          - c²=a²+b²-2abcos(C)
+          - a² + b² = c²
+          - (sin(α))² + (cos(α))² = 1
+          - 1 + (tan(α))² = (sec(α))²
+          - 1 + (cot(α))² = (csc(α))²
+      - Infinitesimalkalkyl:
+        - Limited (lim x->n) [LIM]:
+          - lim (x->4) (x²-3) = 4²-3 = 13
+          - lim (x->1) 3x(x-1)/(x-1) = 3x = 3*1 = 3
+          - lim (x->0) (x²+4x)/x = x(x+4)/x = x+4 = 4
+          - lim (x->∞) (3x-5)/(x+1) = x(3-5/x)/x(1+1/x) = (3-5/x)/(1+1/x) = 3/1 = 3
+          - lim (x->3) (2x+a) = 10 => 2*3+a=10 => 6+a=10 => a=4
+        - Summa (Σf(x)):
+          - Σx = ½x²+½x
+          - Σa^x = (b^n-1)/(b-1)[TES]
+        - Derivatans definition:
+          - k = Δy/Δx (Medel)
+          - = (f(x2)-f(x1))/(x2-x1)
+          - f'(x) = dy/dx (Momentan)
+          - = lim h->0(f(x+h)-f(x))/h
+          - = lim h->0(f(x)-f(x-h))/h
+          - = lim h->0(f(x+h)-f(x-h))/2h
+        - Derivatans egenskaper:
+          - x [.  x  .  y  .  z  .]
+          - f [/ MAX \ MIN / TER /]
+          - f'[+  0  -  0  +  0  +]
+          - f"[  <0    >0     0   ]
+          - f'(x)=0 -> x1=x x2=y x3=z
+          - f"(x) < 0 => MAX
+          - f"(y) > 0 => MIN
+          - f"(z) = 0 => TER
+        - Derivatans sammanställning:
+          - f(a)=T(a)->f(a)=f'(a)a+m
+          - k=f'(x1)->(y1-y)/(x1-x)=f'(x1)
+          - ...
+        - Derivbarhet:
+          - Kontinuerlig
+          - Inga vassa spetsar f'(x) = g'(x)
+          - Inga hopp
+        - Serier:
+          - e^x = 1+x+x²/2!+x³/3!+...
+          - sin(x) = x-x³/3!+x^5/5!-x^7/7!+...
+        - Integralens definition:
+          - ∫f(x)*dx = lim Δx->0 Σf(xi)Δx
+          - ∫f(x)*dx = [F(x)] = F(b) - F(a)
+          - A = ∫(f(x)-g(x))*dx
+        - Infinitesimalkalkyl lagar:
+          - \[F(x) f(x) f'(x)]
+          - \[kx^(n+1)/(n+1) kx^n nkx^(n-1)]
+          - \[e^kx/k e^kx ke^kx]
+          - \[a^x/ln(a) a^x a^x*ln(a)]
+        - Infinitesimalkalkyl räknesätt:
+          - (f+g)' = f'+g'
+          - (f*g)' = f'g+fg'
+          - (f/g)' = (f'g-fg')/g²
+          - f(g(x))' = f'(g(x))g'(x)
+        - Nabla (∇):
+          - grad F(x)
+          - div F(x)
+          - curl F(x)
+      - Linjär algebra:
+        - Matriser:
+          - T[[1 2 3][4 5 6]]
+          - +[[[a b][c d]]]
+          - det [...]
+        - Vektorer:
+          - V[[x][y]] (l α)
+          - Komposant(x=l*cos(α) y=l*sin(α))
+      - Spelteori:
+        - Nash equilibrium:
+          - Fångarnas dilemma
+          - Chicken race
+          - Boxed Pig Game

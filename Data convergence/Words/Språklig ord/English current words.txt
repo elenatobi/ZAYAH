@@ -1,0 +1,125 @@
+Predominant: Most important
+Amass: Accumulate, Gather
+Summits: Peaks
+Rectified: Altered
+Gestation period: Pregnancy
+Acolyte: Assistant
+Swathe: Long strip
+Skits: Acts, Sketches
+Extortion, Racketeering: Fraud, Bribery
+Under lock and key, Landlocked: Shut-in
+Relience: Dependence
+Dystopia: Apocalypse
+Outright: Absolute
+Prone to: Predisposed to
+Gust, Ravaged: Rush, Blast
+Tentative, Evidence indicates: ~Trial (indefinite)
+Initiated: Introduced
+Wreaked havoc: Created chaos
+Crops: Harvest
+Sustained: ~Suffered
+Equate: Equalize
+Prominent: Outstanding
+Legendary, Brilliant, Unprecedented: Exceptional
+To make ends meet: Economize
+Acrued: Acquired
+Excelled: Skilfully
+Moniker: Nickname
+Electorates: Constituents
+Elusive: ~Slippery
+Derive from: Originate
+Cut corners: ~Economize, Save money
+Convoluted: Intricate (Complicated)
+Eligible: Qualified
+Reluctantly: Hesitantly
+Clandestine: Secret (Illicit)
+Vigorous: Energetic
+Pre-emptive: Preventive
+Vital: ~Fundamental
+Sublime: Magnificent
+Prestigious: Distinguished, Famous
+Marred: Damaged
+Husk: Pod, Rind
+Running mate: Vice president
+Thruster: Spacecraft, Small rocket
+Endorsed, Backed: Supported
+Unveil: Reveal, Tell
+Autocratic: Dictatorial
+Lesions: Wounds
+Ousted: Thrown out
+Gruesome: Horrific
+Disarray: Mess
+Repercussions: Consequences
+Clinched: Settled, assured
+Presumptive: Probable
+Decline: Drop
+Contaminated: Polluted
+
+Flourishes: Thrives (Develops)
+Submerging: Drowning
+Fell out: Became enemies
+Taking a toll: ~Causing harm
+Feral: Untamed, Wild
+Sever: Cut
+Fortnight: Two weeks
+Culprit: Offender
+In anger/wrath: Ire
+Stuanch: Loyal
+Ballot: Vote
+Ally: Partner
+Exceeds: Surpasses
+Consecutive: Successive
+Thwarted: Prevented, Blocked
+Disasterous predicaments: Starving
+Fissures: Crevices, Openings
+Coercing: Forcing
+Ballot: The vote
+Impair: Damaged
+Bipartisan: Neutral
+Permeated: Filled with
+Incumbent: The officeholder
+Besieged: Blockade, Isolated
+Estranged: Alienated
+Contend: Argue that
+Massacred, Eradicated: Wiped out
+Ratified: Approved
+Promped: Generated
+Inception: Beginning
+Resurgence: ~Revival
+Amphibious: Both land and water
+Implications: Outcomes
+Potable: ~Drinkable
+Prolific: ~Creative
+Fiery: Passionate
+Conveyor: Transportation belt
+Vociferous: Loud and insistent
+Implemented: Put into effect
+Lucid: Luminous
+Refrain: Avoid it
+Notorious: Unfavorably famous
+Crucial: Essential
+Slick: Deceptive
+Soliloquy: Monologue
+Diverted: Redirected
+Endemic: Native
+Deeply entrenched: Deep-rooted
+Secretery of state: Foreign minister
+Debauch: Corrupt
+Sovereignity: Independence
+Shunning: ~Dodgning
+Cauldron: ~Kettle
+Ample: Sufficient
+A slew of: Plenty of
+
+Make us tick: Get angry
+Idiosyncratic: Peculiar (unique)
+Unpresedented: Exceptional
+Renowned: Distinguished
+Cutting-edge: Avant-garde (unconventional)
+Affluent, High powered: Wealthy
+Off the grid: No social network
+Autonomous: Independent
+Reiterates: Says again
+
+
+How do I implement a tree structure for words that covers words both tree structures that sorts accordingly to word structure (root word(s), prefixes, affixes) and words with same meaning with word levels. High level words are general words while lower level words are specified words. e.g. truck is a lower level word and car is its higher level Word. This is hard because it is seemingly impossible to fuse together two different categoriations to one

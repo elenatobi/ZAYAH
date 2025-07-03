@@ -1,0 +1,32 @@
+Headers:
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Date: Sat, 11 Jan 2025 10:28:16 GMT
+server: Apache-Coyote/1.1
+set-cookie: JSESSIONID=834C2CECB6A4C926602FD41719CB5086; Domain=study.com; Expires=Tue, 09-Jan-2035 10:28:15 GMT; Path=/; Secure; HttpOnly
+set-cookie: ariel=01ca53f1f6e65f5b9e5ae9bdc5851bad; Domain=study.com; Expires=Thu, 29-Jan-2093 13:42:22 GMT; Path=/
+set-cookie: requestGuid=f0c6e517f8b2bdf7f351c5b1e951782d; Domain=study.com; Path=/
+set-cookie: aens=enp; Domain=study.com; Path=/
+set-cookie: _sv=D; Domain=study.com; Expires=Fri, 06-Jan-2045 10:28:15 GMT; Path=/
+set-cookie: _idsv=D; Domain=study.com; Expires=Fri, 06-Jan-2045 10:28:15 GMT; Path=/
+vary: User-Agent
+set-cookie: ssoe_debug=alwaysOnCtaLanguage-startNow.customCourseModuleReact-react.eagerlyRenderPartialRegModal-x.emphasizeCoupon-x.feedbackCarouselReact-x.highIntentSinglePageCheckout-progressive.jsPaywall-x.lessonRebrand2025-control.lessonTableOfContentsPosition-control.printQuizReactPage-v1.reactSchoolCredit-x.testPrepYoutubeVideoSection-x; Domain=study.com; Expires=Sun, 12-Jan-2025 10:28:15 GMT; Path=/
+x-frame-options: DENY
+x-remilon-mdc-log: 801a0b3e-58c0-4f9d-b4fc-d2c14b40169a
+set-cookie: paidTrialEligible=true; Domain=study.com; Expires=Fri, 06-Jan-2045 10:28:15 GMT; Path=/
+set-cookie: virtualAA=-1; Domain=study.com; Expires=Mon, 13-Jan-2025 10:28:16 GMT; Path=/learn/lesson/what-is-physical-health.html
+set-cookie: cocoon=""; Domain=study.com; Expires=Sat, 18-Jan-2025 10:28:16 GMT; Path=/
+set-cookie: requestGuid=5714023669a518b4d83a8ca02c36d139; Domain=study.com; Path=/
+set-cookie: _sv=D; Domain=study.com; Expires=Fri, 06-Jan-2045 10:28:16 GMT; Path=/
+set-cookie: _idsv=D; Domain=study.com; Expires=Fri, 06-Jan-2045 10:28:16 GMT; Path=/
+vary: User-Agent
+content-language: en-US
+strict-transport-security: max-age=16000000; preload;
+set-cookie: NODEID=622369d4; path=/
+X-Cache: Miss from cloudfront
+Via: 1.1 41fc52a84466debf784d2dbdb0b64b36.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: ARN53-P2
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: 2UFnZt8iV281iwsm4BaKG_bcoj7MStSE2FrLXJoU6u0qZz0kHpJNvg==

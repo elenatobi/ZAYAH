@@ -1,0 +1,296 @@
+Djur:
+          - en snigel
+          - en groda
+          - en mula
+          - en jak
+          - en lama
+          - en alpacka
+          - en vaktel
+          - en grå jako
+          - en kameleont
+          - en silkesspinnare
+        Avskyvärd:
+          - en spindel
+          - kackerlackor
+        Husdjur:
+          - en hund:
+            - en valp
+          - en katt:
+            - en kattunge
+          - en råtta
+          - en kanin
+          - hamstrar
+          - en undulat
+          - en guldfisk
+          - akvariefiskar
+          - ett marsvin
+        Boskap:
+          - en häst
+          - en ko
+          - ett får
+          - en get
+          - en gris:
+            - en griskulting
+          - en höna
+          - en gås
+          - en anka:
+            - en ankunge
+          - en åsna
+          - en get
+          - en bock
+          - ett lamm
+          - en buffel
+          - en tjur
+          - ett föl
+          - en kalv
+          - en ponny
+          - en kamel
+          - en ren
+          - en iller
+          - en tupp
+          - en kyckling
+          - en kalkon
+          - en påfågel
+        Fåglar:
+          - Vanliga:
+            - en duva
+            - en svala
+            - en gök
+            - en trast
+            - en bofink
+            - en korsnäbb
+            - en järpe
+            - en härfågel
+          Små fåglar:
+            - en undulat
+            - en sparv, stork
+            - en lärka
+            - en kanariefågel
+          - Hackande fåglar:
+            - en hackspett
+            - en trana
+            - en kolibri
+          - Färgglada:
+            - en ara
+            - en påfågel
+          - Gående:
+            - en ripa
+            - en vaktel
+            - en orre
+            - en fasan
+          - Flygande:
+            - en tornseglare
+          - Stora fåglar:
+            - en korp, kråka, kaja, råka
+            - en uggla, berguv, slaguggla, hornuggla
+            - en örn, hök, falk, kungsörn, jaktfalk, kejsarörn, havsörn
+            - en harpyja
+            - en gam
+          - Vattenfåglar:
+            - en pelikan, krävstork
+            - en mås, albatross
+            - skarv
+            - en häger, svan, anka
+            - en grågås, gräsand, mandarinand, dykand
+            - en lom, svartsnäppa, vadare, fisktärna
+            - en rördrom
+          Kall:
+            - en pingvin
+          Sällsynta:
+            - en struts
+            - en emu
+            - en flamingo
+            - en tukan
+            - en stortrapp
+            - papegojor
+            - en kondor
+            - en sekreterarfågel
+            - en kohäger
+            - en tjäder
+            - en kiwi
+            - en tordmule
+            
+        Kräldjur:
+          - krokodiler:
+            - en kajman
+          - sköldpaddor:
+            - en havssköldpadda
+            - en vattensköldpadda
+            - en landsköldpadda
+          - ödlor:
+            - en grön leguan
+            - kameleont
+            - en varan
+            - en geckoödla
+          - ormar:
+            - en kobra
+            - en huggorm
+            - en anakonda
+            - en kungsboa
+            - en pytonorm
+            - en snok, hasselsnok
+            - en mamba
+            - en basilisk
+            
+        Insekter:
+          - spindlar, spindelnät
+          - en geting, humla
+          - en fluga
+          - fjärilar
+          - en nyckelpiga
+          - en skalbagge
+          - en gräshoppa
+          - en syrsa
+          - kackerlackor
+          - en skalbagge
+          - en myra
+          - en mygga
+          - ett bi
+          - en dagslända
+          - en bönsyrsa
+          - en termit
+          - en pillerbagge
+          - en noshornsbagge
+          - en kastanjeborre
+          - en ekoxehane
+          - en skräddare
+          - en mångfoting
+          - en cikada
+          - ett påfågelöga
+          - caterpillar
+          - en makaonfjäril
+          - svärmare
+          - en bålgeting
+          - en vandringsgräshoppor
+          - en bladlöss
+          - en lus
+          - en loppa
+          - en mal
+          - en fästing
+          - en tarantella
+          - en fågelspindel
+          - en coloradobagge
+          - en herkulesbagge
+          - en silkesspinnare
+          - en tvestjärt
+        
+       
+        - Hundraser:
+          - en pudel
+          - Tysk schäferhund
+          - Collie
+          - Engelsk bulldogg
+          - Grand danois
+          - Dalmatiner
+          - Terrier
+          - Cocker Spaniel
+          - Lajka
+          - Mops
+          - Sankt bernhardshund
+          - Tax
+          - Kaukasisk herdehund
+          - Amerikansk bulldogg Bulldog
+          - Dogo Argentino
+          - Yorkshireterrier
+          - Bullmastiff
+          - Irländsk röd setter
+          - Boxer
+          - Mastiff
+          - Golden Retriever
+          - Amerikansk pitbullterrier
+          - Bullterrier
+          - Afghanhund
+          - Borzoi
+          - Labrador retriever
+          - Italiensk vinthund
+          - Newfoundlandshund
+          - Spetshund
+          - Rottweiler
+          - Polarhund
+          - Foxterrier
+          - Shar Pei
+          - Chihuahua
+          - Chow-Chow
+          - Skotsk terrier
+          - Pinscher
+          - Bichon
+          - Scent hound
+          - Beagle
+          - Briard
+          - Varghund
+          - Griffon bruxellois
+          - Malamute
+          - Alabai
+          - Basset Hound
+          - Chinese Crested Dog
+          - Komondor
+          - Korthårig vorsteh
+          - Pekingese
+          - Riesenschnauzer
+          - Pointer
+          - Saluki
+          - Samojedhund
+          - Dvärgschnauzer
+          - Sheltie
+          - Airedaleterrier
+          - Japanese Chin
+          - Shih Tzu
+          - Wolfhond
+          - Peruvian Hairless Dog
+          - Jaktterrier
+          - Lhasa Apso
+          - Leonberger
+          - Schnauzer
+          - Cane Corso
+          - Greyhound
+          - Boerboel
+          - Welsh Corgi
+          - Tysk spets
+          - Akita Inu
+          - Berner sennenhund
+        
+        - Kattraser:
+          - Perserkatt
+          - Siames
+          - Brittiskt långhår
+          - Russian Blue
+          - Brittiskt korthår
+          - Leopardkatt
+          - Sibirisk katt
+          - Europeiskt korthår
+          - Sphynx
+          - Savanna
+          - Ragdoll
+          - Scottish Fold
+          - Scottish Straight
+          - Bobtail
+          - Maine Coon
+          - Egyptisk Mau
+          - Munchkin
+          - Turkisk Angora
+          - Amerikansk korthår
+          - Nibelung
+          - Thai katt
+          - Abessinier
+          - Norsk Skogkatt
+          - Balines
+          - Helig Birma
+          - Bombay
+          - Burma
+          - American Curl
+          - Korat
+          - Neva Masquerade
+          - Ocicat
+          - Snowshoe
+          - Somali Cat
+          - Toyger
+          - Exotic Shorthair
+          - Turkisk Van
+          - Cornish Rex
+          - Asiatisk Tabby
+          - Havana
+          - Cymric Cat
+          - Peterbald
+          - Brasiliansk korthår
+          - Burmilla
+          - Manx

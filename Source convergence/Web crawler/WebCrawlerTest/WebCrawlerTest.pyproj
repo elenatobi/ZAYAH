@@ -1,0 +1,59 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a0b16983-6d9f-4722-bf5c-b3ad1d9ab52e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>start.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>WebCrawlerTest</Name>
+    <RootNamespace>WebCrawlerTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Parser tests\AbstractLexer.py" />
+    <Compile Include="Parser tests\HTML2.py" />
+    <Compile Include="Parser tests\HTMLParser.py" />
+    <Compile Include="Parser tests\Lexer2.py" />
+    <Compile Include="PyCalendar\calendar.py" />
+    <Compile Include="PyCalendar\__init__.py" />
+    <Compile Include="retrievetimetable.py" />
+    <Compile Include="SockFetch\temp.py" />
+    <Compile Include="start.py" />
+    <Compile Include="Temporary files\seleniumtest.py" />
+    <Compile Include="SockFetch\SockFetch.py" />
+    <Compile Include="SockFetch\__init__.py" />
+    <Compile Include="testHTML.py" />
+    <Compile Include="Temporary files\thrownaway.py" />
+    <Compile Include="WebCrawlerTest.py" />
+    <Compile Include="FetchTraffic.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PyCalendar\" />
+    <Folder Include="Parser tests\" />
+    <Folder Include="Temporary files\" />
+    <Folder Include="SockFetch\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Links.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

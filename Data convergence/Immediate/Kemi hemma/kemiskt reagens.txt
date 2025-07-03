@@ -1,0 +1,334 @@
+Syra:
+=====
+HCl
+HAc
+Propansyra Kemisk formel: CH3CH2COOH
+Bärnstenssyra Kemisk formel: C4H6O4
+Oxalsyra??? Kemisk formel: C2H2O4
+
+Bas:
+====
+KOH
+Ba(OH)2
+NaOH
+
+Salt:
+=====
+
+Na+ jon:
+========
+NaOH
+NaBr
+NaAc
+CH3COONa
+Natriumbensoat Kemisk formel: C7H5NaO2
+NaI
+NaF
+NaPO4
+trisodium phosphate (anhydrous, hexagonal)	Na3PO4
+Na2CO3 Natriumkarbonat
+NaHCO3
+Na2Cr2O7
+NaCrO4
+Natriumtiosulfat Kemisk formel: Na2S2O3
+Natriumditionit Kemisk formel: Na2S2O4
+Na2SO4
+Na2S
+NaNO3
+
+
+Mg2+ jon:
+=========
+Mg(NO3)2
+MgCl2
+MgSO4
+
+
+Al3+ jon:
+=========
+AlCl3
+Al(NO3)3
+
+
+K+ jon:
+=======
+KCl
+KBr
+KOH
+KBr
+KNaC4H4O6
+KNO3
+KF
+KIO3
+Kaliumjodid Kemisk formel: KI
+
+Ca2+ jon:
+=========
+CaCl2
+Ca(NO3)2
+
+Cr jon:
+=======
+Na2Cr2O7
+NaCrO4
+
+
+Mn jon:
+=======
+MnSO4
+
+
+Fe jon:
+=======
+FeCl3
+Fe2(SO4)3
+
+
+
+Co jon:
+=======
+Co(NO3)2
+CoCo3
+CoCl2
+
+
+Ni jon:
+=======
+NiCl
+NiSO4
+
+
+Cu2+ jon:
+=======
+CuSO4
+CuCl2
+CuSO4
+
+Zn2+ jon:
+=========
+ZnSO4
+
+
+
+Ag+ jon:
+========
+AgNO3
+
+
+
+Ba2+ jon:
+=========
+Ba(OH)2
+Ba(NO3)2
+BaCl2
+
+
+Pb jon:
+=======
+Pb(NO3)2
+
+
+
+N and NH4+ jon:
+===============
+NH3
+
+NH4Ac
+NH4Cl
+NH4NO3
+(NH4)2SO4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+钠
+https://www.youtube.com/watch?v=fXIG4lRHwhU&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=45
+Natriumkarbonat Na2CO3, soda, kristallsoda, Na2CO3·10H2O
+
+4 Na + O2 = 2 Na2O white
+Na2O + H2O = 2NaOH
+2NaOH + CO2 = Na2CO3 + H2O
+
+
+Na2CO3:
+1)
+2NaOH + CO2 = Na2CO3 (aq) + H2O
+
+2)
+NH3 + CO2 + H2O → NH4HCO3
+NH4HCO3 + NaCl → NaHCO3 + NH4Cl
+2NaHCO3 → Na2CO3 + CO2 + H2O
+
+https://www.youtube.com/watch?v=K5afe0QsQ1g&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=46
+氧化钠也能直接借由燃烧钠而得，但是这样会产生20%的过氧化钠：
+
+Nature:
+4 Na + O2 = 2 Na2O white
+Heating:
+2 Na + O2 = Na2O2 light yellow
+Natriumperoxid Na2O2 light yellow
+
+
+6 Na + 2O2 = 2 Na2O + Na2O2 
+
+
+铁的氧化物
+Fe2O3, Fe3O4, FeO
+氧化膜不严密
+
+致密氧化膜Al2O3，熔点2050
+Al熔点 660
+
+https://www.youtube.com/watch?v=VG259WLXilA&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=47
+
+03钠和水的反应
+2 Na + 2H2O = H2 + 2 NaOH + heat (energi)
+反应放出大量的热，与氧气反应，容易爆照
+2 H2 + O2 = 2 H2O + energi
+Fenolftalein base -> red
+
+
+水是氧化剂，钠是氧化剂，2个电子转移
+
+钠浮在水面上，钠的密度比水小
+很快改变形状，熔化成小球，钠与水反应放热，使钠熔化，因为表面张力形成球状，钠熔点比较低
+小球四处游动，反应产生的气体H2，推动小球快速移动，可能有火光
+听到滋滋声音，反应发出大量的热，使水气化的声音
+向溶液里加酚酞，变红色NaOH
+
+
+
+
+
+Kopparsulfat CuSO4 white
+[Cu(H2O)4]SO4·H2O => CuSO4·5H2O blue
+
+
+
+2 Na + CuSO4 = Cu + Na2SO4? xxx
+
+2 Na + 2H2O = 2 NaOH + H2 (g) + energi (heat)
+2 NaOH + CuSO4 = Cu(OH)2 (s) + Na2SO4
+
+
+2 H2 + O2 =heat= 2 H2O + energi(heat)
+Cu(OH)2 =heat= CuO + H2O
+
+(Na+ + OH- + Cu+ + (SO4)2- + H3O+ OH- + (CO3)2-)
+(CO2 + H2O = H2CO3 = 2 H+ + (CO3)2-)
+=>(CO2 + 3 H2O = 2 H3O+ + (CO3)2-)
+(CuCO3 + H2O == Cu(OH)2↓ + CO2 )
+2 Na + 2 H2O + CuSO4 = Cu(OH)2 (s) + H2 (g) + Na2SO4
+
+Kopparhydroxid Cu(OH)2 light blue, green (CuCO3, Kopparkarbonat)
+
+氢氧化铜（化学式：Cu(OH)2）是金属铜的氢氧化物。 它是一种淡蓝色固体，某些市售的氢氧化铜中混有一些碳酸铜，颜色偏绿。
+
+少量黑色物质 CuO black fälning
+Cu(OH)2 =heat= CuO + H2O
+
+
+https://www.youtube.com/watch?v=AtLMFeY2iVM&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=48
+
+铝锅不能长期存放酸性或碱性的食物
+铝
+颜色，银白色
+状态，固态
+密度，较小
+延展性，良好
+导热性，良好
+导电性，良好
+熔点，660，4
+
+常温下
+4 Al + 3 O2 = 2 Al2O3
+形成致密而坚固的氧化物薄膜，而且熔点很高
+
+化学性
+既能与酸反应，也能与碱反应，产生H2
+2 Al + 6 HCl = 2 AlCl3 + 3 H2 (g)
+HCl 氧化剂，Al 还原剂
+Aluminiumklorid AlCl3
+Aluminiumklorid, AlCl3, är en kemisk förening av aluminium och klor. Den betraktades tidigare som ett salt, men det görs oftast inte idag eftersom atomerna hålls ihop av kovalenta bindningar. I fast tillstånd bildar bindningarna ett nätverk, utan avgränsade molekyler.
+
+2 Al + 2 NaOH + 6 H2O = 2 NaAlO2 + 3 H2 + 4 H2O
+6 H2O 氧化剂，得到6电子，生成3 H2
+Al 还原剂，失去6电子，生成2 NaAlOH
+2 Al + 2 NaOH + 2 H2O = 2 NaAlO2 + 3 H2
+
+Natriumaluminat NaAlO2
+
+在充满CO2气体的可口可乐罐子呢注入足量的NaOH溶液，立刻用胶布封住灌口，一段时间后，易拉罐的罐壁内凹变瘪，再过一段时间，罐壁又重新鼓起
+
+NaOH溶液会吸收CO2，2 NaOH + CO2 = Na2CO3 + H2O
+罐子内气压减小，外界气压将易拉罐压瘪了
+
+铝表面的氧化膜溶解后，发生反应
+2 Al + 2 NaOH + 2 H2O = 2 NaAlO2 + 3 H2
+氢气使得罐子鼓起来了
+
+
+
+https://www.youtube.com/watch?v=TKoup9z1ops&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=50
+
+2 Na + 2 H2O (cold water) = 2 NaOH + H2
+Mg + 2 H2O (hot water) =heater= Mg(OH)2 + H2
+2 Al + 6 H2O (boiled water) =heater= 2 Al(OH)3 + 3 H2
+
+Fe + H2O (水蒸汽) =高温= H2
+
+
+
+
+
+
+https://zh.m.wikipedia.org/zh-hans/%E6%B0%A7%E5%8C%96%E9%92%A0
+氧化钠可由钠和氧反应制得：
+4 Na + O2 = 2 Na2O
+
+氧化钠也能直接借由燃烧钠而得，但是这样会产生20%的过氧化钠：
+6 Na + 2O2 = 2 Na2O + Na2O2
+
+将熔融状态的钠金属与硝酸钠反应，也能制取氧化钠：
+10 Na + 2 NaNO3 = 6 Na2O + N2
+
+与水反应：
+Na2O + H2O = 2NaOH
+
+与二氧化碳反应：
+Na2O + CO2 = Na2CO3
+
+与酸反应：
+Na2O + 2 HCl = 2 NaCl + H2O
+
+与氧反应：
+2 Na2O + O2 = 2 Na2O2
+
+https://zh.wikipedia.org/wiki/%E9%92%A0
+钠化合物具有巨大的商业重要性，对于生产玻璃、纸、肥皂和纺织品的行业尤其重要。[14]最重要的钠化合物包括氯化钠（NaCl）、碳酸钠（Na2CO3）、碳酸氢钠（NaHCO3）、氢氧化钠（NaOH）、硝酸钠（NaNO3）、磷酸钠、硫代硫酸钠（Na2S2O3·5H2O）、氟化鈉、醋酸鈉和硼砂（Na2B4O7·10H2O）。[15]在这些化合物中，钠通常形成离子键，是一种硬的路易斯酸。[16]
+
+
+
+
+
+
+
+
+
+
+
+
+

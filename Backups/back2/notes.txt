@@ -1,0 +1,13 @@
+Level 1: Notebook
+Level 2: Page
+Level 3: Segment (Relative, Relational, Compound, Corresponding image, Corresponding compound, Pathway, ...) 
+View (Table view, grapical view, image view, ...)
+
+Map segment to view
+Relative, relational, compound -> Table view (different functionalities)
+Corresponding image -> Image view + Table view + indicator arrows
+Corresponding compound -> Image view + Table view (Compound functionality)
+Pathway -> Graphical view (Certain composition)
+...
+
+Level 4: Entry (Plain text, Number, Alphanumerical, Coded letters, Math, Chemical structure, )

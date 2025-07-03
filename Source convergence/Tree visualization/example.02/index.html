@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>This is index page!</h1>
+    <script type="text/javascript" src="table.json"></script>
+    <script src="script.js"></script>
+    
+    <input type="button" onclick="createTableFromJSON(JSON.parse(data))" value="Create Table From JSON" />
+    
+    <input type="button" onclick="deleteTable()" value="Delete Table" />
+    <p id="showData"></p>
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+.native-math {
+    font-family: "Cambria Math";
+    font-size: 1em;
+}
+.native-math .fraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0px 3px;
+}
+.native-math .fraction > span {
+    display: block;
+}
+.native-math .fraction .top,
+.native-math .fraction .bottom {
+    font-size: 0.93em;
+    padding: 0px 5px;
+}
+.native-math .fraction .top {
+    border-bottom: 1px solid #000;
+}
+.native-math .fraction .bottom {
+    margin-top: 0.1em;
+}
+.native-math .large-operator {
+    font-size: 1.5em;
+    vertical-align: middle;
+    text-align: center;
+}
+.native-math .opstack {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.2;
+}
+.native-math .opstack .top,
+.native-math .opstack .op,
+.native-math .opstack .bottom {
+    display: block;
+}
+.native-math .opstack .top {
+    font-size: 0.7em;
+}
+.native-math .opstack .op {
+    font-size: 1.5em;
+}
+.native-math .opstack .bottom {
+    font-size: 0.7em;
+}
+.native-math .sqrt {
+    display: inline-block;
+    border-top: 1px solid black;
+    margin-top: 3px;
+    margin-left: 0.7em;
+    padding: 0 5px;
+    position: relative;
+}
+.native-math .sqrt::before {
+    content: "√";
+    position: absolute;
+    left: -0.7em;
+}
+.native-math .matrix {
+    display: inline-table;
+    border-spacing: 5px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.native-math .matrix-row {
+    display: table-row;
+}
+.native-math .matrix-cell {
+    display: table-cell;
+    text-align: center;
+    min-width: 1em;
+    min-height: 1em;
+}
+
+.native-math .piecewise {
+    display: inline-table;
+    border-left: 2px solid black;
+    margin-left: 0.3em;
+}
+.native-math .piecewise-row {
+    display: table-row;
+}
+.native-math .piecewise-cell {
+    display: table-cell;
+    padding: 2px 6px;
+}

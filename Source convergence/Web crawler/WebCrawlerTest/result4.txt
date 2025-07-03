@@ -1,0 +1,110 @@
+<!doctype html>
+<html ng-app='studi'>
+    <head>
+        <base href='/'>
+        <title ng-bind='ngMeta.title'></title>
+        <meta name="description" content="{{ ngMeta.description }}" ng-if='ngMeta.description'>
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ ngMeta.title }}" ng-if='ngMeta.title'>
+        <meta property="og:image" content="{{ ngMeta.image }}" ng-if='ngMeta.image'>
+        <meta property="og:description" content="{{ ngMeta.description }}" ng-if='ngMeta.description'>
+        <meta name="google-site-verification" content="jAzcL8iJ1DP8dttRW0QJTyQ928G5YuqrcyI6aKt30wM" />
+        <meta name="google-signin-client_id" content="991323023347-pn1tnt098b7ubecuqfl7s1dsn6sh30h2.apps.googleusercontent.com">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="{{ ngMeta.twitterAccount }}" ng-if='ngMeta.twitterAccount'>
+        <meta name="twitter:title" content="{{ ngMeta.title }}" ng-if='ngMeta.title'>
+        <meta name="twitter:image" content="{{ ngMeta.image }}" ng-if='ngMeta.image'>
+        <meta name="twitter:description" content="{{ ngMeta.description }}" ng-if='ngMeta.description'>
+
+        <meta charset="UTF-8">
+        <meta name="fragment" content="!">
+        <meta name="google" value="notranslate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" type="image/png" href="{{ ngMeta.favicon_large }}" sizes="96x96">
+        <link rel="icon" type="image/png" href="{{ ngMeta.favicon_medium }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ ngMeta.favicon_small }}" sizes="16x16">
+
+        <link href="/fonts/NotoSans.css" rel="stylesheet">
+        <link href="/fonts/Signika.css" rel='stylesheet' type='text/css' property="stylesheet">
+        <link href="/fonts/Kalam.css" rel="stylesheet" type='text/css' property="stylesheet"> 
+
+        <link rel="canonical" href="{{ ngMeta.canonical_link }}" ng-if='ngMeta.canonical_link'>
+    <link href="studi.css" rel="stylesheet"></head>
+    <body>
+        <div id='all-content' class='main-page-wrapper'>
+            <layout></layout>
+        </div>
+        <div class='print-wrapper' style='display: none;'>
+            <img class='title' ng-src='{{ ngMeta.platform_logo }}' style="max-width: 100px;" />
+            <div id='content'></div>
+        </div>
+        <div class='maintenance-mode' id='maintenance-content' style='display: none; position: fixed; top: 35%; left: 50%; margin-left: -300px;'>
+            <div style='text-align: center; margin-bottom: 20px;'><img class='title' ng-src='{{ ngMeta.maintenance_image }}' style="max-width: 150px;" /></div>
+            <h3>Sorry, we're currently doing technical maintenance on Binogi, please come back in an hour</h3>
+        </div>
+        <script>
+            /**
+             * Error message script for IE browsers 
+             */
+            (function() {
+                function isInternetExplorer() {
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf("MSIE ");
+                    return msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)
+                }
+
+                if (isInternetExplorer()) {
+                    let oldBrowserText = document.createElement('div');
+                    oldBrowserText.innerHTML = `
+                        <article class='info-box'>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <i class='fa fa-4x fa-info-circle'></i>
+                                    </td>
+                                    <td>
+                                        <h1>
+                                            <p>We no longer support Internet Explorer, please use another browser!</p>
+                                            <p>You can use one of the following links to download a modern browser we support:</p>
+                                        </h1>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">Google Chrome</button>
+                            <button href="https://www.mozilla.org/firefox" target="_blank" rel="noopener noreferrer">Mozilla Firefox</button>
+                            <button href="https://www.microsoft.com/edge" target="_blank" rel="noopener noreferrer">Microsoft Edge</button>
+                            <button href="https://www.opera.com/download" target="_blank" rel="noopener noreferrer">Opera</button>
+                            <span class='clear'></span>
+                        </article>
+                    `;
+                    document.body.prepend(oldBrowserText)
+                }
+            })()
+        </script>
+        <script>
+            
+            (function() {
+                var isMaintenance = false
+                var maintenanceModeConfig
+                var contentContainer
+                var maintenanceMessageContainer
+                if (location && location.hostname) {
+                    var maintenanceEnabled = []
+                    maintenanceModeConfig = maintenanceEnabled.find(domain => location.hostname.endsWith(domain))
+                    try {
+                        if (maintenanceModeConfig) {
+                            contentContainer = document.getElementById('all-content')
+                            maintenanceMessageContainer = document.getElementById('maintenance-content')
+                            contentContainer.style.display = 'none'
+                            maintenanceMessageContainer.style.display = 'block'
+                        }
+                    } catch (e) {
+                        throw new Error(`No platform config found for ${maintenanceModeConfig} on ${location.hostname}`)
+                    }
+                }
+            })()
+        </script>
+    <script type="text/javascript" src="studi.bundle.js"></script></body>
+</html>

@@ -1,0 +1,55 @@
+关于溶液稀释和混合计算
+
+n溶液前 = n溶液后   （n 摩尔数）
+
+n1 = n2
+c1 * V1 = c2 * V2
+
+
+m溶液前 = m溶液后
+
+n1 * M = n2 * M
+c1 * V1 * M = c2 * V2 * M
+
+
+300mL某浓度的NaOH溶液中含有60g溶质（löst ämne），现在要配置成1mol/L NaOH溶液，应该取原来溶液与蒸馏水的体积比约是多少
+
+60g/40g/mol = 1,5 mol
+CNaOH = 1,5 mol / 0,3L = 5 mol / L
+
+c1 * V1 = c2 * V2
+1,5 mol = 1 mol * (0,3L + V)
+V = 1,2 L = 1200ml
+
+
+
+
+溶液混合
+同种溶质的不同浓度的溶液混合
+100 mL 0,3mol/L Na2SO4溶液和50mL 0,2mol/L Al2(SO4)3溶液混合后，溶液中SO4 2- 的物质的量浓度为？
+
+n SO4 2- = 100 mL x 0,3 mol/L = 0,03 mol
+n SO4 2- =  50 mL x 0,2 mol/L x 3 = 0,03 mol
+
+0,06 mol / 0,15 L = 0,4 mol/L
+
+
+
+
+https://www.youtube.com/watch?v=APkWv3w1-KM&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=21
+
+2:18
+
+
+https://www.youtube.com/watch?v=zpi26Eg5bAY&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=23
+0:45
+2:38
+3:31
+4:02
+
+https://www.youtube.com/watch?v=Y_G6RbI_Iwg&list=PLR1ACzwrLF_3JEmrFtjdGYHIUtnWtiPCK&index=24
+
+
+
+
+

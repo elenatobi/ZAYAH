@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clusterize.js CRUD Example</title>
+  <style>
+    #scrollArea { width: 300px; height: 300px; overflow: auto; border: 1px solid #ccc; }
+    #contentArea div { padding: 10px; border-bottom: 1px solid #eee; }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Clusterize.js CRUD Example</h2>
+  <div id="scrollArea">
+    <div id="contentArea"></div>
+  </div>
+
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="updateItem()">Update Item #1</button>
+  <button onclick="deleteItem()">Delete Last Item</button>
+  <button onclick="shuffleItems()">Shuffle Items</button>
+
+  <script src="clusterize.min.js"></script>
+  <script>
+    // Initial data
+    let rows = [];
+    for (let i = 1; i <= 1000; i++) {
+      rows.push(`<div>Item #${i}</div>`);
+    }
+
+    // Initialize Clusterize
+    const clusterize = new Clusterize({
+      rows: rows,
+      scrollId: 'scrollArea',
+      contentId: 'contentArea'
+    });
+
+    // Add item
+    function addItem() {
+      const newIndex = rows.length + 1;
+      rows.push(`<div>Item #${newIndex}</div>`);
+      clusterize.update(rows);
+    }
+
+    // Update item
+    function updateItem() {
+      if (rows.length > 0) {
+        rows[0] = `<div style="color: red;">Item #1 (Updated)</div>`;
+        clusterize.update(rows);
+      }
+    }
+
+    // Delete item
+    function deleteItem() {
+      if (rows.length > 0) {
+        rows.pop();
+        clusterize.update(rows);
+      }
+    }
+
+    // Rearrange items (shuffle)
+    function shuffleItems() {
+      for (let i = rows.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [rows[i], rows[j]] = [rows[j], rows[i]];
+      }
+      clusterize.update(rows);
+    }
+  </script>
+
+</body>
+</html>

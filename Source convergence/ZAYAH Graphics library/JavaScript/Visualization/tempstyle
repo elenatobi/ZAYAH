@@ -1,0 +1,8 @@
+PageLayout(0, 0, 300, 600):
+  CoordinatorLayout(0, 0, match-parent, match-parent):
+    Text(10, 20, 300, 45, purple, "Matematik")
+    LinearLayout(10, 70, 200, 250):
+      @foreach("Objektiv", "Vetenskap", "Matematik/Matte"):
+        CoordinatorLayout(10, 0, 50, 15):
+          Rect(0, 0, 50, 15, black, 10, 0)
+          Text(5, 0, 45, 15, white, @("."))

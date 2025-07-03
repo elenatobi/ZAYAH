@@ -1,0 +1,114 @@
+for (let list of document.body.querySelectorAll(".lesson-list")){
+    console.log(list.querySelectorAll(".label")[0].children[0].innerHTML)
+    for (let link of list.querySelectorAll(".lessons")[0].children){
+        window.open(link.href, "_blank");
+    }
+}
+
+function htmlToMarkdown(element) {
+    // Helper function to handle different types of elements
+    function parseElement(element) {
+        switch (element.nodeName) {
+            case 'H1':
+                return `# ${element.textContent.trim()}`;
+            case 'H2':
+                return `## ${element.textContent.trim()}`;
+            case 'H3':
+                return `### ${element.textContent.trim()}`;
+            case 'P':
+                return element.textContent.trim();
+            case 'UL':
+            case 'OL':
+                return parseList(element, element.nodeName === 'OL');
+            case 'LI':
+                return `- ${element.textContent.trim()}`;
+            case 'B':
+            case 'STRONG':
+                return `**${element.textContent.trim()}**`;
+            case 'I':
+            case 'EM':
+                return `*${element.textContent.trim()}*`;
+            case 'A':
+                return parseAnchor(element);
+            case 'IMG':
+                // return parseImage(element);
+                return "";
+            case 'BR':
+                return '\n';
+            case 'CODE':
+                return `\`${element.textContent.trim()}\``;
+            case 'BLOCKQUOTE':
+                return `> ${element.textContent.trim()}`;
+            case 'DIV':
+            case 'TD':
+                return parseDiv(element);
+            default:
+                return element.textContent.trim();
+        }
+    }
+
+    // Handle <ul> and <ol> lists
+    function parseList(listElement, isOrdered = false) {
+        let markdownList = '';
+        for (const item of listElement.children) {
+            const prefix = isOrdered ? `${Array.from(item.parentElement.children).indexOf(item) + 1}.` : '-';
+            markdownList += `${prefix} ${parseElement(item)}\n`;
+        }
+        return markdownList.trim();
+    }
+
+    // Handle <div> elements (here, we just process their children)
+    function parseDiv(divElement) {
+        let markdown = '';
+        for (const child of divElement.children) {
+            markdown += `${parseElement(child)}\n\n`;
+        }
+        return markdown.trim();
+    }
+
+    // Handle anchor tags <a>
+    function parseAnchor(anchorElement) {
+        const href = anchorElement.getAttribute('href');
+        return `[${anchorElement.textContent.trim()}](${href})`;
+    }
+
+    // Handle images <img>
+    function parseImage(imageElement) {
+        const alt = imageElement.getAttribute('alt') || '';
+        const src = imageElement.getAttribute('src');
+        return `![${alt}](${src})`;
+    }
+
+    // Recursively process all child elements of the given root element
+    let markdown = '';
+    for (const child of element.children) {
+        markdown += `${parseElement(child)}\n\n`;
+    }
+    return markdown.trim();
+}
+
+function process(text){
+    return text.replaceAll("<!---->", "").trim()
+}
+
+
+let result = ""
+let ts = document.body.querySelectorAll("button.tab")
+ts[0].click()
+result += "# Beskrivning:\n" + htmlToMarkdown(document.querySelector(".lesson-body"))
+ts[1].click()
+await new Promise(r => setTimeout(r, 1000));
+result += "\n\n# Transkript:\n" + htmlToMarkdown(document.querySelector(".lesson-body"))
+ts[2].click()
+let res2 = document.querySelector("table.concept-table").children[0].children
+result += "\n\n# Begrepp:\n"
+for (let i = 1; i < res2.length; i++){
+    let tr = res2[i]
+    let t0 = tr.children[0]
+    let t1 = tr.children[1]
+    
+    result += process(t0.children[0].innerHTML) + ": "
+    result += process(t0.children[2].children[0].innerHTML) + "\n"
+    result += process(t1.children[0].innerHTML) + ": "
+    result += process(t1.children[1].children[0].innerHTML) + "\n"
+}

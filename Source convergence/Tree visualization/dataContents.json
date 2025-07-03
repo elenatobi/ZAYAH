@@ -1,0 +1,60 @@
+// data = '[{"name":"Alice Company Inc","address":"Highway 37"},{"name":"Bob Company Inc","address":"Highway 241"},{"name":"Charles Company Inc","address":"Road 708"}]';
+
+// DATA DEFINITON
+parsed_data = {
+  a: {
+    
+    a1: "a1",
+    a2: {
+      a21: "a21.1",
+      a22: "a22.1",
+      a23: "a23,1"
+    },
+    a3: "a3"
+  },
+  b: {
+    
+    b1: "värdeB1",
+    b2: {
+      b21: {
+        b211: "värdeB211",
+        b212: "värdeB212"
+      },
+      b22: "värdeB22"
+    },
+    b3: "värdeB3",
+    b4: "värdeB4",
+    b5: "värdeB5",
+    b6: "värdeB6",
+    b7: "värdeB7"
+  },
+  c: "c.något",
+  d: {
+    d1: "d1",
+    d2: "d2"
+  },
+  e: {
+    e1: "e1" },
+  "*": {
+    "Livet": {
+      "Själskapelse": "Själskapelse",
+      
+      "Född": "Född",
+      ".1": {
+        "Skolan": {
+          "Kunskap": "Kunskap",
+          "Framtidsförberdelse": "(för framtiden)",
+          "Profil": "Profil"
+        }
+      },
+      ".2": ".2",
+      ".3": ".3",
+      "Död": "Död",
+      "Själen går sönder": "själen går sönder"
+    },
+    "Gemensam": "gemensam",
+    "After-work": "afterwork",
+    "Profil": "Profil",
+    "Annat": "annat"
+  }
+};

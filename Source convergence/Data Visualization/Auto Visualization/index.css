@@ -1,0 +1,9 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.page {
+  border: 1px solid silver;
+}
+p.page-number {
+  font-weight: bold;
+}

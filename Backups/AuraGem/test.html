@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        td {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <canvas class="my-canvas" id="myCanvas">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+
+    <script>
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+
+        function render() {
+            ctx.fillStyle = "grey";
+            ctx.fillRect(0, 0, c.width, c.height);
+        }
+
+        function resize() {
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+            render()
+        }
+
+        resize();
+        window.addEventListener("resize", resize);
+
+    </script>
+
+</body>
+
+</html>
