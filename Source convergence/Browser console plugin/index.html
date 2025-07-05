@@ -1,37 +1,58 @@
 <html>
     <head>
-        <title>AuraConsole</title>
+        <title>MobileConsole</title>
         <style>
-            .AuraConsoleOpen{
+            .MobileConsoleOpen {
                 position: fixed;
                 right: 10px;
                 bottom: 10px;
+                z-index: 9999;
             }
-            
-            .AuraConsole{
+
+            .MobileConsole {
                 position: fixed;
-                left: 0px;
-                bottom: 0px;
+                left: 0;
+                bottom: 0;
                 width: 100%;
-                height: 33.3%;
-                background: #333;
+                height: 40%;
+                background: #222;
                 display: none;
-                overflow: auto;
-            }
-            
-            .AuraConsoleLog, .AuraConsoleError{
-                margin: 2px 5px;
-                padding: 0;
+                overflow-y: auto;
+                font-family: monospace;
+                font-size: 14px;
                 color: white;
+                z-index: 9998;
+                border-top: 2px solid #555;
             }
-            
-            .AuraConsoleClose{
-                position: -webkit-sticky;
+
+            .MobileConsoleControls {
+                display: flex;
+                background: #444;
                 position: sticky;
                 top: 0;
+                padding: 5px;
+                gap: 5px;
+                z-index: 10000;
             }
-            
-            .AuraConsoleError{
+
+            .MobileConsole input {
+                flex: 1;
+                background: #000;
+                color: white;
+                border: none;
+                padding: 5px;
+            }
+
+            .MobileConsole button {
+                padding: 5px 10px;
+            }
+
+            .MobileConsoleLog, .MobileConsoleError {
+                margin: 2px 5px;
+                word-break: break-word;
+            }
+
+            .MobileConsoleError {
                 color: red;
             }
         </style>
@@ -39,90 +60,147 @@
     <body>
         <script>
             "use strict";
-            class AuraConsole{
-                constructor(){
+            
+            function getCallerPosition(skip = 3) {
+                try {
+                    throw new Error();
+                } catch (e) {
+                    if (e.stack) {
+                        let stackLines = e.stack.split("\n");
+                        if (stackLines.length > skip) {
+                            return stackLines[skip].trim();
+                        }
+                    }
+                }
+                return "";
+            }
+
+
+
+            class MobileConsole {
+                constructor() {
                     this.button = document.createElement("button");
-                    this.button.innerHTML = "Open console";
-                    this.button.className = "AuraConsoleOpen";
+                    this.button.innerHTML = "Open Console";
+                    this.button.className = "MobileConsoleOpen";
                     document.body.appendChild(this.button);
-            
+
                     this.consoleView = document.createElement("div");
-                    this.consoleView.className = "AuraConsole"
+                    this.consoleView.className = "MobileConsole";
                     document.body.appendChild(this.consoleView);
-            
+
+                    this.controls = document.createElement("div");
+                    this.controls.className = "MobileConsoleControls";
+                    this.consoleView.appendChild(this.controls);
+
                     this.closeButton = document.createElement("button");
                     this.closeButton.innerHTML = "Close";
-                    this.closeButton.className = "AuraConsoleClose";
-                    this.consoleView.appendChild(this.closeButton);
-                    
+                    this.controls.appendChild(this.closeButton);
+
+                    this.clearButton = document.createElement("button");
+                    this.clearButton.innerHTML = "Clear";
+                    this.controls.appendChild(this.clearButton);
+
+                    this.inputField = document.createElement("input");
+                    this.inputField.type = "text";
+                    this.inputField.placeholder = "Enter JS code";
+                    this.controls.appendChild(this.inputField);
+
                     this.start();
                 }
-                
-                open(){
+
+                open() {
                     this.consoleView.style.display = "block";
                 }
-                
-                close(){
+
+                close() {
                     this.consoleView.style.display = "none";
                 }
-                
-                start(){
-                    let auraConsole = this;
-                    this.button.addEventListener("click", function(){
-                        auraConsole.open();
-                    });
-                    
-                    this.closeButton.addEventListener("click", function(){
-                        auraConsole.close();
+
+                clear() {
+                    while (this.consoleView.children.length > 1) {
+                        this.consoleView.removeChild(this.consoleView.lastChild);
+                    }
+                }
+
+                start() {
+                    this.button.addEventListener("click", () => this.open());
+                    this.closeButton.addEventListener("click", () => this.close());
+                    this.clearButton.addEventListener("click", () => this.clear());
+
+                    this.inputField.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter") {
+                            try {
+                                let result = eval(this.inputField.value);
+                                this.log(result);
+                            } catch (err) {
+                                this.error(err.message);
+                            }
+                            this.inputField.value = "";
+                        }
                     });
                 }
-                
-                createMessage(message){
+
+                createMessage(message, className = "MobileConsoleLog") {
                     let p = document.createElement('p');
+                    p.className = className;
+                    p.innerHTML = message;
                     this.consoleView.appendChild(p);
                     this.consoleView.scrollTop = this.consoleView.scrollHeight;
-                    p.innerHTML = message;
-                    return p;
                 }
-                
-                log(...messages){
-                    let message = messages.join(" ");
-                    let p = this.createMessage(message);
-                    p.className = "AuraConsoleLog";
-                    
+
+                log(...messages) {
+                    let position = getCallerPosition();
+                    this.createMessage(`${messages.join(" ")} <br><span style="color:gray">${position}</span>`, "MobileConsoleLog");
+                }  
+
+                error(...messages) {
+                    let position = getCallerPosition();
+                    this.createMessage(`${messages.join(" ")} <br><span style="color:gray">${position}</span>`, "MobileConsoleError");
                 }
-                
-                error(message, source = "module", lineno = NaN, colno = NaN){
-                    message = `${message} (${source}: Line ${lineno}, Col ${colno})`;
-                    let p = this.createMessage(message);
-                    p.className = "AuraConsoleError";
-                }
+
             }
-            
-            let auraConsole = new AuraConsole();
+
+            let mobileConsole = new MobileConsole();
+
+            // Correct error override
             let originalLog = console.log;
-            console.log = function(...message){
-                auraConsole.log(...message);
-                originalLog(...message)
-            }
-            
-            let originalError = console.log;
-            console.error = function(...message){
-                auraConsole.error(message);
-                originalError(...message)
-            }
-            
-            window.onerror = function(message, source, lineno, colno, error) {
-            auraConsole.error(message, source, lineno, colno);
-        };
-            
-            console.log(3+5)
-            console.log("ABCDEF")
-            console.error("AAA")
-            
-            nonExistent();
- 
-            
+            console.log = function (...messages) {
+                let position = getCallerPosition(3);
+                mobileConsole.log(...messages, `\n<span style="color:gray">${position}</span>`);
+                originalLog.apply(console, messages);
+            };
+
+            let originalError = console.error;           
+            console.error = function (...messages) {
+                messages.forEach(msg => {
+                    if (msg instanceof Error && msg.stack) {
+                        mobileConsole.error(msg.stack);
+                    } else {
+                        mobileConsole.error(msg);
+                    }
+                });
+                originalError.apply(console, messages);
+            };
+
+
+            window.onerror = function (message, source, lineno, colno, error) {
+                if (error && error.stack) {
+                    mobileConsole.error(`${message}\n${error.stack}`);
+                } else {
+                    mobileConsole.error(`${message} (${source}: Line ${lineno}, Col ${colno})`);
+                }
+            };
+
+
+
+            // Example Logs
+            console.log("Hello from MobileConsole!");
+            console.error("Sample error log.");
+
+            // Intentionally cause an error
+            setTimeout(() => {
+                nonExistentFunction();
+            }, 1000);
         </script>
     </body>
 </html>
