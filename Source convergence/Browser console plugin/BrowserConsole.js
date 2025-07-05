@@ -1,0 +1,144 @@
+"use strict";
+
+function getCallerPosition(skip = 3) {
+    try {
+        throw new Error();
+    } catch (e) {
+        if (e.stack) {
+            let stackLines = e.stack.split("\n");
+            if (stackLines.length > skip) {
+                return stackLines[skip].trim();
+            }
+        }
+    }
+    return "";
+}
+
+function extractCallerFromStack(stack, skip = 1) {
+    let stackLines = stack.split('\n');
+    if (stackLines.length > skip) {
+        return stackLines[skip].trim();
+    }
+    return 'Unknown caller';
+}
+
+
+
+
+class MobileConsole {
+    constructor() {
+        this.button = document.createElement("button");
+        this.button.innerHTML = "Open Console";
+        this.button.className = "MobileConsoleOpen";
+        document.body.appendChild(this.button);
+
+        this.consoleView = document.createElement("div");
+        this.consoleView.className = "MobileConsole";
+        document.body.appendChild(this.consoleView);
+
+        this.controls = document.createElement("div");
+        this.controls.className = "MobileConsoleControls";
+        this.consoleView.appendChild(this.controls);
+
+        this.closeButton = document.createElement("button");
+        this.closeButton.innerHTML = "Close";
+        this.controls.appendChild(this.closeButton);
+
+        this.clearButton = document.createElement("button");
+        this.clearButton.innerHTML = "Clear";
+        this.controls.appendChild(this.clearButton);
+
+        this.inputField = document.createElement("input");
+        this.inputField.type = "text";
+        this.inputField.placeholder = "Enter JS code";
+        this.controls.appendChild(this.inputField);
+
+        this.start();
+    }
+
+    open() {
+        this.consoleView.style.display = "block";
+    }
+
+    close() {
+        this.consoleView.style.display = "none";
+    }
+
+    clear() {
+        while (this.consoleView.children.length > 1) {
+            this.consoleView.removeChild(this.consoleView.lastChild);
+        }
+    }
+
+    start() {
+        this.button.addEventListener("click", () => this.open());
+        this.closeButton.addEventListener("click", () => this.close());
+        this.clearButton.addEventListener("click", () => this.clear());
+
+        this.inputField.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                try {
+                    let result = eval(this.inputField.value);
+                    this.log(result);
+                } catch (err) {
+                    this.error(err.message);
+                }
+                this.inputField.value = "";
+            }
+        });
+    }
+
+    createMessage(message, className = "MobileConsoleLog") {
+        let p = document.createElement('p');
+        p.className = className;
+        p.innerHTML = message;
+        this.consoleView.appendChild(p);
+        this.consoleView.scrollTop = this.consoleView.scrollHeight;
+    }
+
+    log(...messages) {
+        let position = getCallerPosition();
+        this.createMessage(`${messages.join(" ")} <br><span style="color:gray">${position}</span>`, "MobileConsoleLog");
+    }  
+
+    error(...messages) {
+        let position = getCallerPosition();
+        this.createMessage(`${messages.join(" ")} <br><span style="color:gray">${position}</span>`, "MobileConsoleError");
+    }
+
+}
+
+let mobileConsole = new MobileConsole();
+
+// Correct error override
+let originalLog = console.log;
+console.log = function (...messages) {
+    let position = getCallerPosition(3);
+    mobileConsole.log(...messages, `\n<span style="color:gray">${position}</span>`);
+    originalLog.apply(console, messages);
+};
+
+let originalError = console.error;
+console.error = function (...messages) {
+    messages.forEach(msg => {
+        if (msg instanceof Error && msg.stack) {
+            mobileConsole.error(msg.stack);
+        } else {
+            mobileConsole.error(msg);
+        }
+    });
+    originalError.apply(console, messages);
+};
+
+
+window.onerror = function(message, source, lineno, colno, error) {
+    if (error && error.stack) {
+        mobileConsole.error(`${message}\n${error.stack}`);
+    } else {
+        mobileConsole.error(`${message} (${source}:${lineno}:${colno})`);
+    }
+};
+
+window.addEventListener('error', function (event) {
+    mobileConsole.error(`${event.message}\n${event.filename}:${event.lineno}:${event.colno}`);
+});

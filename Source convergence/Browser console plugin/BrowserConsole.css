@@ -1,0 +1,53 @@
+.MobileConsoleOpen {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 9999;
+}
+
+.MobileConsole {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: #222;
+    display: none;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    z-index: 9998;
+    border-top: 2px solid #555;
+}
+
+.MobileConsoleControls {
+    display: flex;
+    background: #444;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    gap: 5px;
+    z-index: 10000;
+}
+
+.MobileConsole input {
+    flex: 1;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.MobileConsole button {
+    padding: 5px 10px;
+}
+
+.MobileConsoleLog, .MobileConsoleError {
+    margin: 2px 5px;
+    word-break: break-word;
+}
+
+.MobileConsoleError {
+    color: red;
+}
