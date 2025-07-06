@@ -5,9 +5,10 @@ body {
 }
 
 .center-content {
-    margin: auto;
-    width: 1000px;
-    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1000px;
 }
 
 .vertical-layout,
@@ -31,4 +32,13 @@ body {
 .vertical-layout-center > img,
 .vertical-layout-center > a {
     vertical-align: middle;
+}
+
+
+@media screen and (max-width: 995px) {
+    .vertical-layout.clusterize,
+    .vertical-layout.clusterize > div{
+        display: block;
+        width: 100% !important;
+    }
 }

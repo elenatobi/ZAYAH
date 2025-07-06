@@ -59,7 +59,6 @@
 
 .table-view,
 .calendar-view {
-    padding: 0 7px;
     border-collapse: collapse;
     table-layout: fixed;
     background: #ffffff;
@@ -74,8 +73,9 @@
 .table-view td,
 .calendar-view th,
 .calendar-view td {
+    padding: 0 7px;
     border: 1px solid #f0f0f0;
-    font-size: 13px;
+    font-size: 15px;
     color: #2d2d2f;
     text-align: center;
 }

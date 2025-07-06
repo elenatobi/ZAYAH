@@ -1,0 +1,13 @@
+body {
+  font-family: 'SangBleu Empire', serif;
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 900; /* Black */
+}
+
+em {
+  font-style: italic;
+}
