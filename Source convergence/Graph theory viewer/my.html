@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Refactored Element Registry</title>
+<style>
+  body { font-family: sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+  .viewer { background: white; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); padding: 15px; max-width: 800px; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 10px; }
+  td, th { border: 1px solid #ccc; padding: 4px 6px; text-align: center; }
+  .kv-list { list-style: none; padding: 0; }
+  .kv-list li { padding: 2px 0; }
+  .ref { color: #aa0000; font-weight: bold; cursor: pointer; text-decoration: underline; }
+  svg { border: 1px solid #ccc; background: #fafafa; }
+  .node { fill: lightblue; stroke: black; stroke-width: 1px; }
+  .edge { stroke: black; stroke-width: 1px; marker-end: url(#arrow); }
+</style>
+</head>
+<body>
+
+<h1>Element Viewer</h1>
+<div id="elementViewer" class="viewer"></div>
+
+<script>
+/* ========= Basic Data Classes ========= */
+class Table {
+  constructor(rows = [[]], refs = []) {
+    this.type = "Table";
+    this.rows = rows;
+    this.refs = refs;
+  }
+}
+
+class Graph {
+  constructor(nodes = [], edges = [], refs = []) {
+    this.type = "Graph";
+    this.nodes = nodes;
+    this.edges = edges;
+    this.refs = refs;
+  }
+}
+
+class KeyValuePair {
+  constructor(data = {}, refs = []) {
+    this.type = "KeyValuePair";
+    this.data = data;
+    this.refs = refs;
+  }
+}
+
+/* ========= Data Registry ========= */
+class ElementRegistry {
+  constructor() {
+    this.elements = [];
+  }
+  addElement(el) {
+    this.elements.push(el);
+    return this.elements.length - 1;
+  }
+  getElement(index) {
+    return this.elements[index];
+  }
+}
+
+/* ========= Renderer ========= */
+class ElementRenderer {
+  constructor(registry, containerId) {
+    this.registry = registry;
+    this.containerId = containerId;
+    this.currentIndex = 0;
+  }
+
+  show(index) {
+    if (index < 0 || index >= this.registry.elements.length) return;
+    this.currentIndex = index;
+    const el = this.registry.getElement(index);
+    const container = document.getElementById(this.containerId);
+    container.innerHTML = "";
+
+    const title = document.createElement("h2");
+    title.textContent = `${el.type} [${index}]`;
+    container.appendChild(title);
+
+    // Render based on type
+    if (el.type === "Table") this.renderTable(el, container);
+    else if (el.type === "Graph") this.renderGraph(el, container);
+    else if (el.type === "KeyValuePair") this.renderKeyValue(el, container);
+
+    // Render references
+    if (el.refs.length) {
+      const refP = document.createElement("p");
+      refP.textContent = "References: ";
+      el.refs.forEach(r => {
+        const span = document.createElement("span");
+        span.className = "ref";
+        span.textContent = `[${r}]`;
+        span.addEventListener("click", () => this.show(r));
+        refP.appendChild(span);
+        refP.append(" ");
+      });
+      container.appendChild(refP);
+    }
+  }
+
+  renderTable(tableEl, container) {
+    const table = document.createElement("table");
+    tableEl.rows.forEach(row => {
+      const tr = document.createElement("tr");
+      row.forEach(cell => {
+        const td = document.createElement("td");
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+    container.appendChild(table);
+  }
+
+  renderKeyValue(kvEl, container) {
+    const ul = document.createElement("ul");
+    ul.className = "kv-list";
+    for (const [k, v] of Object.entries(kvEl.data)) {
+      const li = document.createElement("li");
+      li.textContent = `${k}: ${v}`;
+      ul.appendChild(li);
+    }
+    container.appendChild(ul);
+  }
+
+  renderGraph(graphEl, container) {
+    const width = 700, height = 500;
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", width);
+    svg.setAttribute("height", height);
+
+    const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
+    marker.setAttribute("id", "arrow");
+    marker.setAttribute("markerWidth", "10");
+    marker.setAttribute("markerHeight", "10");
+    marker.setAttribute("refX", "10");
+    marker.setAttribute("refY", "5");
+    marker.setAttribute("orient", "auto");
+    marker.setAttribute("markerUnits", "strokeWidth");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M0,0 L10,5 L0,10 Z");
+    path.setAttribute("fill", "black");
+    marker.appendChild(path);
+    defs.appendChild(marker);
+    svg.appendChild(defs);
+
+    const positions = {};
+    let layoutX = 30, layoutY = 0;
+    const nodeSize = 20;
+
+    const layoutCircle = (nodes, radius = 60) => {
+      const centerX = layoutX + radius + 50;
+      const centerY = layoutY + radius + 50;
+      const angleStep = (2 * Math.PI) / nodes.length;
+      nodes.forEach((node, i) => {
+        const angle = i * angleStep - Math.PI / 2;
+        positions[node] = {
+          x: centerX + radius * Math.cos(angle),
+          y: centerY + radius * Math.sin(angle)
+        };
+      });
+      layoutY += radius * 2 + 100;
+    };
+
+    const layoutLinear = nodes => {
+      nodes.forEach((node, i) => {
+        positions[node] = { x: layoutX + i * 120, y: layoutY };
+      });
+      layoutY += 150;
+    };
+
+    const normalizePositions = () => {
+      let minX = Infinity, minY = Infinity;
+      for (const node in positions) {
+        minX = Math.min(minX, positions[node].x);
+        minY = Math.min(minY, positions[node].y);
+      }
+      const offsetX = minX < 0 ? -minX + 20 : 0;
+      const offsetY = minY < 0 ? -minY + 20 : 0;
+      for (const node in positions) {
+        positions[node].x += offsetX;
+        positions[node].y += offsetY;
+      }
+    };
+
+    const findSCCs = graph => {
+      let index = 0;
+      const indices = {}, lowlink = {}, stack = [], onStack = {};
+      const sccs = [];
+      const strongConnect = v => {
+        indices[v] = lowlink[v] = index++;
+        stack.push(v);
+        onStack[v] = true;
+        for (const w of graph[v] || []) {
+          if (indices[w] === undefined) {
+            strongConnect(w);
+            lowlink[v] = Math.min(lowlink[v], lowlink[w]);
+          } else if (onStack[w]) {
+            lowlink[v] = Math.min(lowlink[v], indices[w]);
+          }
+        }
+        if (lowlink[v] === indices[v]) {
+          const scc = [];
+          let w;
+          do {
+            w = stack.pop();
+            onStack[w] = false;
+            scc.push(w);
+          } while (w !== v);
+          sccs.push(scc);
+        }
+      };
+      for (const v in graph) if (indices[v] === undefined) strongConnect(v);
+      return sccs;
+    };
+
+    const drawNode = (name, x, y) => {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", x);
+      circle.setAttribute("cy", y);
+      circle.setAttribute("r", nodeSize);
+      circle.setAttribute("class", "node");
+      svg.appendChild(circle);
+
+      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("x", x);
+      text.setAttribute("y", y + 5);
+      text.setAttribute("text-anchor", "middle");
+      text.textContent = name;
+      svg.appendChild(text);
+    };
+
+    const drawEdge = (from, to) => {
+      const x1 = positions[from].x;
+      const y1 = positions[from].y;
+      const x2 = positions[to].x;
+      const y2 = positions[to].y;
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", x1);
+      line.setAttribute("y1", y1);
+      line.setAttribute("x2", x2);
+      line.setAttribute("y2", y2);
+      line.setAttribute("class", "edge");
+      svg.appendChild(line);
+    };
+
+    // Convert graph element to adjacency list
+    const adj = {};
+    graphEl.nodes.forEach((label, idx) => {
+      adj[label] = graphEl.edges
+        .filter(e => e[0] === idx)
+        .map(e => graphEl.nodes[e[1]]);
+    });
+
+    const sccs = findSCCs(adj);
+    for (const scc of sccs) {
+      if (scc.length > 1) layoutCircle(scc, 60 + scc.length * 5);
+      else layoutLinear(scc);
+    }
+    normalizePositions();
+
+    for (const node in positions) drawNode(node, positions[node].x, positions[node].y);
+    for (const from in adj) for (const to of adj[from]) drawEdge(from, to);
+
+    container.appendChild(svg);
+  }
+}
+
+/* ========= Demo ========= */
+const registry = new ElementRegistry();
+const t1 = registry.addElement(new Table([["A1", "B1"], ["A2", "B2"]], [1,2,3]));
+const g1 = registry.addElement(new Graph(["A","B","C","D","E","F","G"], [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,2]], [t1]));
+const kv1 = registry.addElement(new KeyValuePair({ name: "Example", value: 42 }, [t1, g1]));
+registry.addElement(new Table([["X1", "Y1"], ["X2", "Y2"]], [kv1]));
+
+const renderer = new ElementRenderer(registry, "elementViewer");
+renderer.show(1); // start with the graph
+</script>
+</body>
+</html>
