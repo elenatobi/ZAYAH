@@ -23,14 +23,12 @@ body {
     vertical-align: top;
 }
 
-.vertical-layout-center {
-    display: inline-block;
-    vertical-align: middle;
-}
-
+.vertical-layout-center,
 .vertical-layout-center > span,
 .vertical-layout-center > img,
-.vertical-layout-center > a {
+.vertical-layout-center > a,
+.vertical-layout-center > div {
+    display: inline-block;
     vertical-align: middle;
 }
 
